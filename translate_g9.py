@@ -1,0 +1,393 @@
+# -*- coding: utf-8 -*-
+import json
+
+with open("src/data/vietnamCurriculumData.json", "r", encoding="utf-8") as f:
+    lessons = json.load(f)
+
+G9_TRANSLATIONS = {
+    "$$Oxit bazơ + Axit → Muối + H₂O$$": "$$\\text{Basic Oxide} + \\text{Acid} \\longrightarrow \\text{Salt} + \\text{H}_2\\text{O}$$",
+    "$$Oxit axit + Bazơ → Muối + H₂O$$": "$$\\text{Acidic Oxide} + \\text{Base} \\longrightarrow \\text{Salt} + \\text{H}_2\\text{O}$$",
+    "$$CaCO₃ → CaO + CO₂  (Nung vôi ở 900°C)$$": "$$\\text{CaCO}_3 \\xrightarrow{900^\\circ\\text{C}} \\text{CaO} + \\text{CO}_2\\uparrow \\quad (\\text{Lime Kiln Decomposition})$$",
+    "$$Axit + Kim loại (trước H) → Muối + H₂ ↑$$": "$$\\text{Acid} + \\text{Metal (prior to H)} \\longrightarrow \\text{Salt} + \\text{H}_2\\uparrow$$",
+    "$${\\text{H₂SO₄ đặc háo nước}}$$": "$${\\text{Concentrated } \\text{H}_2\\text{SO}_4\\text{ is an exceptionally aggressive dehydrating agent}}$$",
+    "$${\\text{Nhận biết SO₄²⁻ bằng Ba²⁺}}$$": "$${\\text{Identify sulfate } \\text{SO}_4^{2-}\\text{ via precipitation of white } \\text{BaSO}_4\\text{ with } \\text{Ba}^{2+}}$$",
+    "$$Cu + 2H₂SO₄ (đặc, t°) → CuSO₄ + SO₂ \\uparrow + 2H₂O$$": "$$\\text{Cu} + 2\\text{H}_2\\text{SO}_4\\text{ (conc, } t^\\circ) \\longrightarrow \\text{CuSO}_4 + \\text{SO}_2\\uparrow + 2\\text{H}_2\\text{O}$$",
+    "$$Bazơ + Axit → Muối + H₂O$$": "$$\\text{Base} + \\text{Acid} \\longrightarrow \\text{Salt} + \\text{H}_2\\text{O} \\quad (\\text{Neutralization})$$",
+    "$$Bazơ không tan → Oxit + H₂O (t°)$$": "$$\\text{Insoluble Base} \\xrightarrow{t^\\circ} \\text{Basic Oxide} + \\text{H}_2\\text{O} \\quad (\\text{Thermal Decomposition})$$",
+    "$$Cu(OH)₂ → CuO (đen) + H₂O$$": "$$\\text{Cu(OH)}_2 \\xrightarrow{t^\\circ} \\text{CuO (black)} + \\text{H}_2\\text{O}$$",
+    "$${\\text{NaOH ăn mòn da và thủy tinh}}$$": "$${\\text{NaOH is strongly caustic, corroding skin and etching ground-glass fittings}}$$",
+    "$${\\text{Ca(OH)₂ nhận biết CO₂}}$$": "$${\\text{Limewater } \\text{Ca(OH)}_2\\text{ turns milky cloudy to test for } \\text{CO}_2}$$",
+    "$$NaOH + CO₂ → NaHCO₃ (hoặc Na₂CO₃ + H₂O)$$": "$$\\text{NaOH} + \\text{CO}_2 \\longrightarrow \\text{NaHCO}_3 \\quad (\\text{or } 2\\text{NaOH} + \\text{CO}_2 \\rightarrow \\text{Na}_2\\text{CO}_3 + \\text{H}_2\\text{O})$$",
+    "$${\\text{Kim loại trước đẩy kim loại sau ra khỏi muối}}$$": "$${\\text{A more active metal displaces a less active metal from its aqueous salt solution}}$$",
+    "$$Muối + Muối → 2 Muối mới (cần kết tủa)$$": "$$\\text{Salt}_1 + \\text{Salt}_2 \\longrightarrow \\text{Salt}_3\\downarrow + \\text{Salt}_4 \\quad (\\text{Double displacement requiring precipitate})$$",
+    "$$\\text{Điện phân dd NaCl có màng ngăn}: 2NaCl + 2H₂O → 2NaOH + Cl₂ ↑ + H₂ ↑$$": "$$\\text{Chlor-Alkali Electrolysis (Membrane)}: 2\\text{NaCl} + 2\\text{H}_2\\text{O} \\xrightarrow{\\text{electrolysis}} 2\\text{NaOH} + \\text{Cl}_2\\uparrow + \\text{H}_2\\uparrow$$",
+    "$$\\text{Thuốc nổ đen}: 2KNO₃ + 3C + S → K₂S + N₂ \\uparrow + 3CO₂ \\uparrow$$": "$$\\text{Black Powder Deflagration}: 2\\text{KNO}_3 + 3\\text{C} + \\text{S} \\xrightarrow{t^\\circ} \\text{K}_2\\text{S} + \\text{N}_2\\uparrow + 3\\text{CO}_2\\uparrow$$",
+    "$$\\text{{\\text{Đạm (N)}: Thúc đẩy lá thân}}$$": "$$\\text{Nitrogen (N) Fertilizers: Stimulate vegetative foliage, shoot growth & chlorophyll synthesis}$$",
+    "$$\\text{{\\text{Lân (P)}: Kích thích rễ}}$$": "$$\\text{Phosphorus (P) Fertilizers: Stimulate robust root proliferation & early seedling vigor}$$",
+    "$$\\text{{\\text{Kali (K)}: Tăng chống chịu}}$$": "$$\\text{Potassium (K) Fertilizers: Enhance drought resistance, cold tolerance & disease immunity}$$",
+    "$$\\text{Urê}: (NH₂)₂CO có độ dinh dưỡng cao nhất.$$": "$$\\text{Urea } (\\text{NH}_2)_2\\text{CO possesses the highest nitrogen nutrient content (}\\approx 46\\%\\text{ N).}$$",
+    "$${\\text{Kim loại ↔ Oxit bazơ ↔ Bazơ ↔ Muối}}$$": "$${\\text{Metal} \\longleftrightarrow \\text{Basic Oxide} \\longleftrightarrow \\text{Base} \\longleftrightarrow \\text{Inorganic Salt}}$$",
+    "$${\\text{Phi kim ↔ Oxit axit ↔ Axit ↔ Muối}}$$": "$${\\text{Non-metal} \\longleftrightarrow \\text{Acidic Oxide} \\longleftrightarrow \\text{Acid} \\longleftrightarrow \\text{Inorganic Salt}}$$",
+    "$${\\text{Điều kiện phản ứng trao đổi ion}}$$": "$${\\text{Conditions for Ion Exchange: Formation of a precipitate, gas, or weak electrolyte (}\\text{H}_2\\text{O)}}$$",
+    "$$\\text{Dẫn điện}: Ag > Cu > Au > Al > Fe$$": "$$\\text{Electrical Conductivity Sequence}: \\text{Ag} > \\text{Cu} > \\text{Au} > \\text{Al} > \\text{Fe}$$",
+    "$$\\text{{\\text{Dẻo nhất}: Au; Cứng nhất: Cr}}$$": "$$\\text{Most Malleable/Ductile}: \\text{Au (Gold)}; \\quad \\text{Hardest Metal}: \\text{Cr (Chromium)}$$",
+    "$$Hg ở thể lỏng ở nhiệt độ thường (-39°C)$$": "$$\\text{Mercury (Hg) is the sole liquid metal at room temperature (melting point } -38.8^\\circ\\text{C)}$$",
+    "$$Kim loại + Phi kim → Muối/Oxit$$": "$$\\text{Metal} + \\text{Non-metal} \\longrightarrow \\text{Salt or Metal Oxide}$$",
+    "$$Kim loại + Axit → Muối + H₂ ↑$$": "$$\\text{Active Metal} + \\text{Mineral Acid} \\longrightarrow \\text{Salt} + \\text{H}_2\\uparrow$$",
+    "$$2Fe + 3Cl₂ → 2FeCl₃  (Clo đưa Fe lên Fe(III))$$": "$$2\\text{Fe} + 3\\text{Cl}_2 \\xrightarrow{t^\\circ} 2\\text{FeCl}_3 \\quad (\\text{Chlorine oxidizes Fe to Fe(III)})$$",
+    "$$Fe + 2HCl → FeCl₂ + H₂ \\uparrow  (HCl đưa Fe lên Fe(II))$$": "$$\\text{Fe} + 2\\text{HCl} \\longrightarrow \\text{FeCl}_2 + \\text{H}_2\\uparrow \\quad (\\text{Dilute HCl oxidizes Fe to Fe(II)})$$",
+    "K > Na > Ca > Mg > Al > Zn > Fe > Pb > (H) > Cu > Ag > Au.": "Reactivity Series: K > Na > Ca > Mg > Al > Zn > Fe > Pb > (H) > Cu > Ag > Au.",
+    "$${\\text{Đứng trước H đẩy H₂ khỏi axit loãng}}$$": "$${\\text{Metals positioned before (H) displace } \\text{H}_2 \\text{ from dilute acids}}$$",
+    "$${\\text{Kim loại trước đẩy kim loại sau khỏi muối}}$$": "$${\\text{A more active metal displaces a subsequent less active metal from its aqueous salt}}$$",
+    "$$2Al₂O₃ → 4Al + 3O₂ (Điện phân nóng chảy Criolit)$$": "$$2\\text{Al}_2\\text{O}_3 \\xrightarrow[\\text{Na}_3\\text{AlF}_6]{\\text{electrolysis}} 4\\text{Al} + 3\\text{O}_2\\uparrow \\quad (\\text{Hall-Héroult Process})$$",
+    "$$Fe bị thụ động trong HNO3 và H2SO4 đặc nguội.$$": "$$\\text{Iron (Fe) is passivated in cold concentrated } \\text{HNO}_3 \\text{ and } \\text{H}_2\\text{SO}_4$$",
+    "$$\\text{Luyện gang}: Fe₂O₃ + 3CO → 2Fe + 3CO₂ (t°)$$": "$$\\text{Blast Furnace Smelting}: \\text{Fe}_2\\text{O}_3 + 3\\text{CO} \\xrightarrow{t^\\circ} 2\\text{Fe} + 3\\text{CO}_2$$",
+    "$$Thép dẻo và đàn hồi tốt hơn gang.$$": "$$\\text{Steel (0.02--2\\% C) is significantly more ductile, tough, and workable than brittle cast iron}$$",
+    "Ăn mòn điện hóa: Cần 2 điện cực tiếp xúc trong dung dịch điện li": "Electrochemical Corrosion: Requires two dissimilar electrode conductors in electrical contact immersed in an electrolyte solution.",
+    "$$\\text{{\\text{Ăn mòn điện hóa}: Cần 2 điện cực tiếp xúc trong dung dịch điện li}}$$": "$${\\text{Electrochemical Corrosion: Dissimilar electrodes connected in an electrolyte environment}}$$",
+    "$$Bảo vệ tàu biến bằng cách gắn khối kẽm (Zn) vào vỏ thép$$": "$${\\text{Cathodic protection: Sacrificial Zinc (Zn) anodes attached to steel ship hulls prevent iron oxidation}}$$",
+    "$$Bảo vệ tàu biển bằng cách gắn khối kẽm (Zn) vào vỏ thép$$": "$${\\text{Cathodic protection: Sacrificial Zinc (Zn) anodes attached to steel ship hulls prevent iron oxidation}}$$",
+    "Hệ thống hóa tính chất kim loại, dãy hoạt động và bài toán tăng giảm khối lượng thanh kim loại.": "Systematic synthesis of metal chemical properties, reactivity series, and metal bar mass variation calculations in displacement reactions.",
+    "Thành thạo giải toán kim loại tác dụng dung dịch muối.": "Master stoichiometry and differential mass balance for metal displacement in single and multi-salt solutions.",
+    "Độ tăng/giảm m = |m_bám - m_tan|": "Delta Mass Δm = |m_deposited - m_dissolved|",
+    "Nhúng lá Zn vào dung dịch CuSO4, khối lượng lá kẽm tăng hay giảm?": "When a zinc plate is immersed in aqueous CuSO4, does the plate mass increase or decrease?",
+    "Khối lượng giảm (65g Zn tan ra chỉ có 64g Cu bám vào).": "The mass decreases because for every 1 mole (65g) of Zn dissolved into solution, only 1 mole (64g) of Cu precipitates onto the plate.",
+    "$$Độ tăng/giảm m = |m_bám - m_tan|$$": "$$\\Delta m = |m_{\\text{deposited}} - m_{\\text{dissolved}}| = |n \\cdot M_{\\text{deposited}} - n \\cdot M_{\\text{dissolved}}|$$",
+    "Thực hành tác dụng của Al, Fe với axit HCl và dung dịch NaOH.": "Laboratory practice: differential reactivity of Aluminum and Iron with dilute hydrochloric acid and aqueous sodium hydroxide.",
+    "Phân biệt bột Al và Fe bằng kiềm.": "Diagnostic qualitative separation of Aluminum and Iron powders using aqueous alkali solutions.",
+    "Al tan trong NaOH sủi bọt H2; Fe không tan trong NaOH": "Aluminum dissolves in aqueous NaOH with vigorous H2 gas evolution (amphoteric behavior), whereas Iron remains completely unreacted.",
+    "Thuốc thử hóa học phân biệt bột Al và bột Fe?": "Which chemical reagent conclusively distinguishes aluminum powder from iron powder in a single test tube?",
+    "Dùng dung dịch NaOH (Al tan sủi bọt khí, Fe không tan).": "Aqueous sodium hydroxide (NaOH): Aluminum dissolves with vigorous bubbling of H2 gas (2Al + 2NaOH + 2H2O → 2NaAlO2 + 3H2 ↑), while Iron does not react.",
+    "$${\\text{Al tan trong NaOH sủi bọt H2; Fe không tan trong NaOH}}$$": "$$2\\text{Al} + 2\\text{NaOH} + 2\\text{H}_2\\text{O} \\longrightarrow 2\\text{NaAlO}_2 + 3\\text{H}_2\\uparrow, \\quad \\text{Fe} + \\text{NaOH} \\rightarrow \\varnothing$$",
+    "Tổng kết toàn bộ kiến thức Oxit, Axit, Bazơ, Muối và Kim loại.": "Comprehensive grand review of inorganic chemistry: Oxides, Acids, Bases, Inorganic Salts, and Metals.",
+    "Vững vàng lý thuyết và kỹ năng giải toán vô cơ.": "Consolidate core theoretical principles and multi-step quantitative stoichiometry for secondary chemistry examinations.",
+    "Ôn tập toàn diện chuẩn bị thi học kì.": "Comprehensive review for semester examinations and competitive chemistry assessments.",
+    "Hệ thống hóa toàn bộ phản ứng vô cơ": "Grand Inorganic Reaction Transformation Network",
+    "Chất nào tác dụng được cả HCl và NaOH: Fe, Al, Cu?": "Which metal reacts with both dilute hydrochloric acid and aqueous sodium hydroxide: Fe, Al, or Cu?",
+    "Nhôm (Al).": "Aluminum (Al), exhibiting amphoteric metal dissolution in strong alkaline and acidic media.",
+    "$${\\text{Hệ thống hóa toàn bộ phản ứng vô cơ}}$$": "$${\\text{Synthesis: Inorganic Transformation Matrix (Oxides, Acids, Bases, Salts, Metals)}}$$",
+    "$$Ôn tập toàn diện chuẩn bị thi học kì.$$": "$${\\text{Comprehensive Semester Review & Problem Solving Mastery}}$$",
+    "Phi kim ở thể rắn (C, S), lỏng (Br2), khí (O2, Cl2). Tác dụng kim loại và H2.": "Non-metals exist as solids (C, S, P), liquid (Br2), and gases (O2, N2, Cl2). They react with metals to form salts/oxides and with H2 to form gaseous hydrides.",
+    "Mức độ hoạt động dựa vào phản ứng với H2 và kim loại.": "Non-metallic reactivity is evaluated by the vigor of their reactions with hydrogen and representative electropositive metals.",
+    "Phi kim mạnh: F₂, Cl₂, O₂; yếu: C, Si, S": "Strong non-metals: F2, Cl2, O2; Weaker non-metals: C, Si, S, P",
+    "Phi kim nào ở thể lỏng ở điều kiện thường?": "Which non-metallic chemical element exists in the liquid state under standard room temperature and pressure?",
+    "Brom (Br2) là phi kim thể lỏng màu nâu đỏ duy nhất.": "Bromine (Br2) is the sole non-metallic element that is liquid at room temperature, forming a dense, fuming reddish-brown liquid.",
+    "$$\\text{{\\text{Phi kim mạnh}: F₂, Cl₂, O₂; yếu: C, Si, S}}$$": "$$\\text{Strong Non-metals}: \\text{F}_2, \\text{Cl}_2, \\text{O}_2 \\quad \\gg \\quad \\text{Weak Non-metals}: \\text{C, Si, S, P}$$",
+    "Khí clo vàng lục, mùi hắc độc. Nước clo tẩy màu và nước Javel tẩy trắng.": "Chlorine (Cl2) is a pungent, suffocating greenish-yellow toxic gas. Chlorine water and Javel water (NaClO + NaCl) exhibit strong oxidizing bleaching properties.",
+    "Axit HClO có tính oxi hóa mạnh tẩy màu.": "Hypochlorous acid (HClO) is an unstable, powerful oxidizing agent responsible for the rapid bleaching of organic dyes.",
+    "Nước clo: Cl₂ + H₂O ⇌ HCl + HClO (tẩy màu)": "Chlorine water: Cl2 + H2O ⇌ HCl + HClO (Bleaching and disinfectant action)",
+    "Tại sao nước clo có tính tẩy màu?": "Why does freshly prepared chlorine water bleach colored fabrics and dye indicators?",
+    "Do chứa axit hipoclorơ HClO là chất oxi hóa rất mạnh.": "Because it contains hypochlorous acid (HClO), which readily decomposes to release nascent atomic oxygen, intensely oxidizing and destroying organic chromophores.",
+    "$$\\text{Nước clo}: Cl₂ + H₂O \\rightleftharpoons HCl + HClO (tẩy màu)$$": "$$\\text{Chlorine Water Equilibrium}: \\text{Cl}_2 + \\text{H}_2\\text{O} \\rightleftharpoons \\text{HCl} + \\text{HClO} \\quad (\\text{Bleaching})$$",
+    "$$\\text{Nước Javel}: Cl₂ + 2NaOH → NaCl + NaClO + H₂O$$": "$$\\text{Javel Water Synthesis}: \\text{Cl}_2 + 2\\text{NaOH} \\longrightarrow \\text{NaCl} + \\text{NaClO} + \\text{H}_2\\text{O} \\quad (\\text{Disinfectant})$$",
+    "Thù hình của cacbon (kim cương, than chì, vô định hình). Tính hấp phụ và tính khử.": "Carbon allotropes: Diamond (giant tetrahedral covalent lattice, extreme hardness), Graphite (layered sp² sheets, electrical conductor), and Amorphous carbon (high porosity, adsorption, high-temperature reducing agent).",
+    "Than hoạt tính dùng trong mặt nạ phòng độc.": "Activated carbon is extensively utilized in gas masks, industrial water purifiers, and medicinal detoxifiers due to its immense porous surface area.",
+    "Kim cương cứng nhất, than chì dẫn điện.": "Diamond is the hardest natural mineral on Mohs scale; graphite is an excellent electrical conductor due to delocalized pi electrons.",
+    "Than hoạt tính hấp phụ khí độc và màu": "Activated charcoal physically adsorbs noxious gases, vapors, and organic pigments onto its microporous surface.",
+    "Ứng dụng của than hoạt tính?": "What are the primary practical applications of activated charcoal?",
+    "Khử mùi, lọc nước và chế tạo mặt nạ phòng độc.": "Water purification, environmental odor removal, air filtration in gas masks, and medical emergency treatment of poisonings.",
+    "$${\\text{Than hoạt tính hấp phụ khí độc và màu}}$$": "$${\\text{Activated carbon features high specific surface area for toxic gas & color adsorption}}$$",
+    "$$Kim cương cứng nhất, than chì dẫn điện.$$": "$$\\text{Diamond (Hardest 3D Covalent Crystal)} \\quad \\longleftrightarrow \\quad \\text{Graphite (Conductive Layered Lattice)}$$",
+    "CO là oxit không tạo muối, khử mạnh, rất độc. CO2 là oxit axit gây hiệu ứng nhà kính.": "Carbon monoxide (CO) is a neutral non-salt-forming oxide, powerful high-temperature reducing agent, and deadly poison. Carbon dioxide (CO2) is an acidic oxide and primary greenhouse gas.",
+    "CO2 không duy trì sự cháy (dùng dập lửa thông thường).": "Carbon dioxide does not support combustion and is denser than air, making it an effective fire-extinguishing agent for standard fires.",
+    "CO kết hợp chặt với hemoglobin gây ngạt.": "Carbon monoxide binds tightly with hemoglobin in red blood cells with 200× greater affinity than oxygen, forming carboxyhemoglobin and causing fatal cellular hypoxia.",
+    "CO khử oxit kim loại: Fe₂O₃ + 3CO → 2Fe + 3CO₂": "CO reduces metal oxides at high temperatures: Fe2O3 + 3CO → 2Fe + 3CO2 (Blast furnace iron smelting)",
+    "Tại sao khí CO cực kỳ nguy hiểm?": "Why is carbon monoxide (CO) gas an insidious, lethal poison even at low atmospheric concentrations?",
+    "Vì liên kết chặt với Hemoglobin làm mất khả năng vận chuyển O2 gây tử vong.": "Because CO irreversibly binds to blood hemoglobin to form carboxyhemoglobin, permanently blocking oxygen transport and resulting in asphyxiation.",
+    "$$\\text{CO khử oxit kim loại}: Fe₂O₃ + 3CO → 2Fe + 3CO₂$$": "$$\\text{Fe}_2\\text{O}_3 + 3\\text{CO} \\xrightarrow{t^\\circ} 2\\text{Fe} + 3\\text{CO}_2\\uparrow \\quad (\\text{Metallurgical Reduction})$$",
+    "$$CO kết hợp chặt với hemoglobin gây ngạt.$$": "$$\\text{CO} + \\text{Hb} \\longrightarrow \\text{HbCO} \\quad (\\text{Irreversible blockage of oxygen transport})$$",
+    "H2CO3 là axit yếu không bền. Muối cacbonat tác dụng axit sủi bọt khí CO2.": "Carbonic acid (H2CO3) is a weak, unstable diprotic acid decomposing to CO2 and H2O. Carbonate and bicarbonate salts react with mineral acids to effervesce CO2 gas.",
+    "Baking soda dùng trong làm bánh và y tế.": "Baking soda (Sodium bicarbonate, NaHCO3) is widely applied in baking leaveners, fire extinguishers, and antacid medications.",
+    "NaHCO3 có tính lưỡng tính và dễ tan.": "Sodium bicarbonate (NaHCO3) is an amphoteric, water-soluble salt capable of reacting with both strong acids and strong alkalis.",
+    "Muối cacbonat + Axit → Muối mới + H₂O + CO₂ ↑": "Carbonate Salt + Mineral Acid → New Salt + H2O + CO2 ↑ (Diagnostic effervescence)",
+    "Hiện tượng nhỏ giấm ăn vào baking soda (NaHCO3)?": "What visible phenomenon occurs when table vinegar (dilute acetic acid) is poured onto baking soda (NaHCO3)?",
+    "Sủi bọt khí CO2 mãnh liệt và dung dịch mát lạnh.": "Vigorous bubbling and effervescence of CO2 gas occurs immediately with noticeable endothermic cooling (CH3COOH + NaHCO3 → CH3COONa + CO2 ↑ + H2O).",
+    "$$Muối cacbonat + Axit → Muối mới + H₂O + CO₂ ↑$$": "$$\\text{CO}_3^{2-} + 2\\text{H}^+ \\longrightarrow \\text{CO}_2\\uparrow + \\text{H}_2\\text{O} \\quad (\\text{Characteristic Effervescence})$$",
+    "$$NaHCO3 có tính lưỡng tính và dễ tan.$$": "$$\\text{NaHCO}_3\\text{ is an amphoteric salt: reacts with both } \\text{H}^+ \\text{ and } \\text{OH}^-$$",
+    "Silic là chất bán dẫn vi mạch. Công nghiệp silicat sản xuất thủy tinh, gốm sứ, xi măng.": "Silicon (Si) is the paramount semiconductor material for computer microchips and photovoltaics. The silicate industry manufactures glass, ceramics, refractory porcelain, and Portland cement.",
+    "Cát trắng SiO2 là nguyên liệu chính sản xuất thủy tinh.": "High-purity quartz white sand (silica, SiO2) is the fundamental raw material in commercial soda-lime glass manufacturing.",
+    "Silic siêu tinh khiết chế tạo chip điện tử.": "Ultra-high purity monocrystalline silicon (99.9999999% electronic grade) is required for integrated circuit microprocessor wafers.",
+    "SiO₂ + 2NaOH (đặc, t°) → Na₂SiO₃ + H₂O": "SiO2 + 2NaOH (concentrated, hot) → Na2SiO3 (Water glass) + H2O",
+    "Thủy tinh: Na₂O.CaO.6SiO₂": "Commercial soda-lime glass approximate composition: Na2O · CaO · 6SiO2",
+    "Nguyên liệu chính sản xuất thủy tinh thông thường?": "What are the three essential raw materials used in standard commercial soda-lime glass production?",
+    "Cát trắng (SiO2), đá vôi (CaCO3) và soda (Na2CO3).": "Quartz sand (SiO2), limestone (CaCO3), and soda ash (Na2CO3), fused together at 1400°C.",
+    "$$SiO₂ + 2NaOH (đặc, t°) → Na₂SiO₃ + H₂O$$": "$$\\text{SiO}_2 + 2\\text{NaOH} \\xrightarrow{t^\\circ} \\text{Na}_2\\text{SiO}_3\\text{ (Water Glass)} + \\text{H}_2\\text{O}$$",
+    "$$\\text{{\\text{Thủy tinh}: Na₂O.CaO.6SiO₂}}$$": "$$\\text{Soda-Lime Glass Formulation}: \\text{Na}_2\\text{O} \\cdot \\text{CaO} \\cdot 6\\text{SiO}_2$$",
+    "$$Silic siêu tinh khiết chế tạo chip điện tử.$$": "$${\\text{Electronic-grade monocrystalline silicon is the basis for semiconductor microchips}}$$",
+    "Sắp xếp theo Z tăng dần gồm Ô nguyên tố, Chu kì và Nhóm.": "Elements are arranged in the Periodic Table by increasing atomic number Z, organized systematically into 7 Periods and 8 Main Groups (A/B).",
+    "Nhóm IA: kim loại kiềm; Nhóm VIIA: halogen.": "Group IA comprises highly reactive Alkali Metals; Group VIIA comprises highly electronegative Halogens.",
+    "Quy luật biến đổi tính chất trong chu kì và nhóm.": "Systematic periodic variation of atomic radii, ionization energies, electronegativities, and metallic/non-metallic character.",
+    "STT ô = Z = Số p = Số e": "Cell Position = Atomic Number Z = Number of Protons p = Number of Electrons e",
+    "STT chu kì = Số lớp e": "Period Number = Number of Occupied Electron Shells",
+    "STT nhóm A = Số e ngoài cùng": "Group A Number = Number of Outer Shell Valence Electrons",
+    "Nguyên tố ở ô số 11, chu kì 3, nhóm IA là nguyên tố nào?": "Identify the element located at atomic number Z = 11, Period 3, Group IA in the Periodic Table.",
+    "Natri (Na, Sodium).": "Sodium (Na, Z = 11, [Ne] 3s¹), an alkali metal with vigorous reactivity.",
+    "$$STT ô = Z = Số p = Số e$$": "$$\\text{Element Box Number} = Z = p = e$$",
+    "$$STT chu kì = Số lớp e$$": "$$\\text{Period Number} = \\text{Total Electron Shells}$$",
+    "$$STT nhóm A = Số e ngoài cùng$$": "$$\\text{Group A Number} = \\text{Valence Electrons}$$",
+    "$$Quy luật biến đổi tính chất trong chu kì và nhóm.$$": "$${\\text{Periodic trends in atomic radius, electronegativity, and redox character}}$$",
+    "Tổng kết tính chất phi kim, chuỗi biến hóa C, Cl, Si và quy luật BTH.": "Comprehensive synthesis of Non-metals: transformation networks of Chlorine, Carbon, and Silicon alongside Periodic Table laws.",
+    "Vận dụng vị trí BTH suy ra tính chất.": "Deduce elemental reactivity, oxide acid-base properties, and valence formulas directly from periodic table coordinates.",
+    "Biến đổi tuần hoàn tính kim loại / phi kim": "Periodic variation of metallic and non-metallic character across periods and groups",
+    "Trong chu kì từ trái qua phải, tính phi kim biến đổi thế nào?": "Across any period from left to right, how does the non-metallic character of elements change?",
+    "Tính phi kim tăng dần, tính kim loại giảm dần.": "Non-metallic character steadily increases while metallic character decreases due to increasing nuclear pull on valence electrons.",
+    "$${\\text{Biến đổi tuần hoàn tính kim loại / phi kim}}$$": "$${\\text{Across Period: Non-metallic character increases} \\longleftrightarrow \\text{Metallic character decreases}}$$",
+    "$$Cl₂ → HCl → NaCl → Cl₂ → Nước Javel$$": "$$\\text{Cl}_2 \\longrightarrow \\text{HCl} \\longrightarrow \\text{NaCl} \\longrightarrow \\text{Cl}_2 \\longrightarrow \\text{Javel Water}$$",
+    "Thực hành tính tẩy màu của clo và tính khử của cacbon với CuO.": "Laboratory experiments: demonstration of chlorine bleaching in moist air and high-temperature reduction of black CuO by carbon to red metallic copper.",
+    "Khí clo có tính tẩy màu khi có mặt nước.": "Moist chlorine gas exhibits bleaching action due to the formation of oxidizing hypochlorous acid (HClO).",
+    "CO2 làm đục nước vôi trong.": "Carbon dioxide gas reacts with clear limewater Ca(OH)2 to precipitate insoluble calcium carbonate CaCO3, turning the solution milky cloudy.",
+    "Cl₂ + H₂O ⇌ HCl + HClO (tẩy màu)": "Cl2 + H2O ⇌ HCl + HClO (Active bleaching agent)",
+    "Nhúng giấy màu ẩm vào bình khí clo khô có hiện tượng gì?": "What occurs when a strip of moist colored indicator paper is lowered into a gas jar of dry chlorine?",
+    "Giấy màu ẩm bị mất màu nhanh chóng.": "The moist paper is rapidly and irreversibly bleached of color due to oxidizing HClO generated in situ.",
+    "$$Cl₂ + H₂O \\rightleftharpoons HCl + HClO (tẩy màu)$$": "$$\\text{Cl}_2 + \\text{H}_2\\text{O} \\rightleftharpoons \\text{HCl} + \\text{HClO} \\quad (\\text{Bleaching Reaction})$$",
+    "$$CO2 làm đục nước vôi trong.$$": "$$\\text{CO}_2 + \\text{Ca(OH)}_2 \\longrightarrow \\text{CaCO}_3\\downarrow\\text{ (Milky White)} + \\text{H}_2\\text{O}$$",
+    "Hợp chất hữu cơ là hợp chất của cacbon (trừ CO, CO2, muối cacbonat).": "Organic compounds are carbon-containing compounds (excluding carbon monoxide CO, carbon dioxide CO2, carbonic acid H2CO3, and inorganic metal carbonates/cyanides).",
+    "Nhiệt độ nóng chảy thấp, dễ bay hơi.": "Organic compounds generally possess covalent molecular lattices, exhibiting low melting points, high volatility, and combustibility in air.",
+    "Hiđrocacbon (chỉ C, H) vs Dẫn xuất (chứa O, N, Cl)": "Hydrocarbons (composed solely of C and H) vs Hydrocarbon Derivatives (containing O, N, halogens, S, P)",
+    "Hóa hữu cơ là ngành nghiên cứu hợp chất của carbon.": "Organic chemistry is the discipline dedicated to the structure, properties, reactions, and synthesis of carbon compounds.",
+    "Chất nào là hợp chất hữu cơ: CaCO3, CH4, CO, C2H6O?": "Which of the following are classified as organic compounds: CaCO3, CH4, CO, C2H6O?",
+    "CH4 (Metan) và C2H6O (Rượu etylic).": "Methane (CH4) and Ethanol / Dimethyl ether (C2H6O).",
+    "$${\\text{Hiđrocacbon (chỉ C, H) vs Dẫn xuất (chứa O, N, Cl)}}$$": "$${\\text{Hydrocarbons (C, H only)} \\quad \\longleftrightarrow \\quad \\text{Derivatives (containing O, N, Halogens)}}$$",
+    "Hóa trị C(IV), H(I), O(II). Mạch cacbon thẳng, nhánh, vòng. Hiện tượng đồng phân.": "Constant valences: Carbon (IV), Hydrogen (I), Oxygen (II), Nitrogen (III). Carbon chain topologies: unbranched, branched, and cyclic. Constitutional isomerism.",
+    "Trật tự liên kết quy định tính chất của chất.": "The unique bonding connectivity of atoms dictates the specific identity and properties of organic substances.",
+    "CH₃-O-CH₃ và C₂H₅OH cùng C₂H₆O": "Dimethyl ether (CH3-O-CH3, gas, b.p. -24°C) and Ethanol (C2H5OH, liquid, b.p. 78.3°C) share the same formula C2H6O.",
+    "Đồng phân: Cùng CTPT khác CTCT": "Isomerism: Compounds having identical molecular formulas but distinct structural arrangements.",
+    "Đồng phân là gì?": "What is the scientific definition of structural isomerism in organic chemistry?",
+    "Là những hợp chất có cùng CTPT nhưng khác nhau về công thức cấu tạo.": "Substances possessing the exact same molecular formula but different atomic connectivity or spatial structural arrangements, resulting in distinct physical and chemical properties.",
+    "$$\\text{{\\text{Đồng phân}: Cùng CTPT khác CTCT}}$$": "$$\\text{Isomers: Same Molecular Formula } (\\text{e.g. } \\text{C}_2\\text{H}_6\\text{O}) \\longleftrightarrow \\text{Distinct Structural Formulas}$$",
+    "$$CH₃-O-CH₃ và C₂H₅OH cùng C₂H₆O$$": "$$\\text{CH}_3\\text{-O-CH}_3\\text{ (Dimethyl Ether)} \\longleftrightarrow \\text{C}_2\\text{H}_5\\text{OH (Ethanol)} \\quad [\\text{C}_2\\text{H}_6\\text{O}]$$",
+    "Metan là alkane đầu dãy, không màu, nhẹ hơn không khí. Phản ứng đặc trưng: thế clo.": "Methane (CH4) is the simplest saturated alkane, a colorless, odorless gas lighter than air (d = 16/29). Characteristic reaction: photochemical free-radical chlorination.",
+    "Thành phần chính của khí thiên nhiên và Biogas.": "Methane is the predominant component (up to 95%) of natural gas, compressed natural gas (CNG), and renewable biogas generated from anaerobic waste digesters.",
+    "CH₄ + 2O₂ → CO₂ + 2H₂O (Tỏa nhiệt mạnh)": "CH4 + 2O2 → CO2 + 2H2O  ΔH = -890 kJ/mol (Highly exothermic combustion)",
+    "CH₄ + Cl₂ → CH₃Cl + HCl (Ánh sáng)": "CH4 + Cl2 → CH3Cl + HCl (Photochemical free-radical substitution yielding chloromethane)",
+    "Khí Biogas có thành phần chính là khí gì?": "What is the principal energetic combustible gas found in renewable agricultural biogas?",
+    "Khí Metan (CH4), chiếm khoảng 60-70%.": "Methane gas (CH4), constituting approximately 60% to 70% of biogas volume.",
+    "$$CH₄ + Cl₂ → CH₃Cl + HCl (Ánh sáng)$$": "$$\\text{CH}_4 + \\text{Cl}_2 \\xrightarrow{h\\nu} \\text{CH}_3\\text{Cl} + \\text{HCl} \\quad (\\text{Photochemical Halogenation})$$",
+    "$$CH₄ + 2O₂ → CO₂ + 2H₂O (Tỏa nhiệt mạnh)$$": "$$\\text{CH}_4 + 2\\text{O}_2 \\xrightarrow{t^\\circ} \\text{CO}_2 + 2\\text{H}_2\\text{O} \\quad (\\Delta H = -890\\text{ kJ/mol})$$",
+    "Etilen có liên kết đôi C=C kém bền. Phản ứng đặc trưng: cộng brom và trùng hợp PE.": "Ethylene (C2H4, CH2=CH2) possesses an unsaturated C=C double bond containing a reactive pi π-bond. Characteristic reactions: electrophilic bromine addition and addition polymerization into Polyethylene (PE).",
+    "Dùng kích thích quả mau chín và sản xuất nhựa.": "Ethylene is a natural plant ripening hormone and a cornerstone industrial monomer for polyethylene plastics and synthetic organics.",
+    "n CH₂=CH₂ → (-CH₂-CH₂-)_n (Nhựa PE)": "n CH2=CH2 → (-CH2-CH2-)n (Addition polymerization to Polyethylene plastic)",
+    "CH₂=CH₂ + Br₂ → CH₂Br-CH₂Br (mất màu nâu đỏ)": "CH2=CH2 + Br2 → CH2Br-CH2Br (1,2-dibromoethane, discolors bromine water)",
+    "Thuốc thử nhận biết khí Etilen?": "What is the standard diagnostic laboratory reagent to identify unsaturated ethylene gas?",
+    "Dung dịch nước Brom màu nâu đỏ (bị mất màu).": "Aqueous bromine water: Ethylene rapidly discolors the orange-brown bromine solution by addition reaction to form colorless 1,2-dibromoethane.",
+    "$$CH₂=CH₂ + Br₂ → CH₂Br-CH₂Br (mất màu nâu đỏ)$$": "$$\\text{CH}_2\\text{=CH}_2 + \\text{Br}_2 \\longrightarrow \\text{CH}_2\\text{Br-CH}_2\\text{Br} \\quad (\\text{Bromine Decolorization})$$",
+    "$$n CH₂=CH₂ → (-CH₂-CH₂-)_n (Nhựa PE)$$": "$$n\\text{ CH}_2\\text{=CH}_2 \\xrightarrow{t^\\circ, p, xt} (\\text{-CH}_2\\text{-CH}_2\\text{-})_n \\quad (\\text{Polyethylene PE Plastic})$$",
+    "Axetilen có liên kết ba C≡C. Phản ứng cộng brom 2 giai đoạn và đèn xì hàn cắt.": "Acetylene (C2H2, HC≡CH) features an unsaturated C≡C triple bond (1 sigma + 2 pi bonds). Undergoes 2-step electrophilic addition and fuels high-temperature oxy-acetylene welding torches (>3000°C).",
+    "Ngọn lửa oxy-axetilen đạt nhiệt độ trên 3000°C.": "The oxy-acetylene flame burns at temperatures exceeding 3000°C, widely employed in industrial steel cutting and welding.",
+    "Cho nước vào đất đèn (CaC2) sinh ra khí gì?": "What flammable hydrocarbon gas is evolved when water is added to calcium carbide (CaC2, white stone/carbide)?",
+    "Khí Axetilen (C2H2).": "Acetylene gas (C2H2) via hydrolysis: CaC2 + 2H2O → Ca(OH)2 + C2H2 ↑.",
+    "Benzen có vòng 6 cạnh đều với hệ liên kết liên hợp bền. 'Dễ thế, khó cộng'.": "Benzene (C6H6) possesses a planar hexagonal aromatic ring with a delocalized 6π electron sextet. Exhibits characteristic aromatic stability: readily undergoes electrophilic substitution while resisting addition reactions.",
+    "Benzen là dung môi công nghiệp quan trọng.": "Benzene is an indispensable solvent and foundational precursor for synthesizing styrene, nylon, synthetic dyes, and pharmaceuticals.",
+    "Không làm mất màu nước brom ở điều kiện thường.": "Benzene does not react with or discolor aqueous bromine water at room temperature without Lewis acid catalysts.",
+    "C₆H₆ + Br₂ → C₆H₅Br + HBr (Xúc tác Fe)": "C6H6 + Br2 → C6H5Br (Bromobenzene) + HBr (FeBr3 catalyst)",
+    "Benzen có làm mất màu nước brom ở điều kiện thường không?": "Does liquid benzene decolorize aqueous bromine water under normal room temperature conditions?",
+    "Không, do hệ vòng thơm benzen rất bền vững.": "No, because the exceptional aromatic resonance stabilization of the 6π electron sextet resists addition across double bonds.",
+    "$$C₆H₆ + Br₂ → C₆H₅Br + HBr (Xúc tác Fe)$$": "$$\\text{C}_6\\text{H}_6 + \\text{Br}_2 \\xrightarrow{\\text{Fe}, t^\\circ} \\text{C}_6\\text{H}_5\\text{Br} + \\text{HBr} \\quad (\\text{Electrophilic Substitution})$$",
+    "$$Không làm mất màu nước brom ở điều kiện thường.$$": "$${\\text{Benzene resists addition and does not decolorize aqueous bromine at room temperature}}$$",
+    "Dầu mỏ là hỗn hợp nhiều hiđrocacbon. Chưng cất phân đoạn và phương pháp Cracking.": "Crude petroleum is a complex natural mixture of liquid, gaseous, and solid hydrocarbons. Processed via fractional distillation (refining) and catalytic cracking to increase motor fuel yield.",
+    "Nguồn nguyên liệu năng lượng và hóa dầu.": "Petroleum is the premier global energy source and the foundational feedstock for modern petrochemical synthetic materials.",
+    "Chưng cất phân đoạn dựa vào nhiệt độ sôi": "Fractional distillation separates petroleum fractions based on continuous differences in boiling points.",
+    "Cracking: Bẻ gãy C dài thành C ngắn": "Catalytic Cracking: Thermal/catalytic cleavage of long-chain high-boiling alkanes into short-chain high-octane gasoline alkanes and alkenes.",
+    "Phương pháp chế biến dầu mỏ để tăng sản lượng xăng?": "Which chemical refining process is utilized to convert heavy gas oils into high-octane gasoline fuels?",
+    "Phương pháp Cracking.": "Catalytic Cracking (e.g., C16H34 → C8H18 + C8H16).",
+    "$${\\text{Chưng cất phân đoạn dựa vào nhiệt độ sôi}}$$": "$${\\text{Fractional Distillation: Separation by Boiling Point Gradients}}$$",
+    "$$\\text{{\\text{Cracking}: Bẻ gãy C dài thành C ngắn}}$$": "$$\\text{Cracking}: \\text{C}_{16}\\text{H}_{34} \\xrightarrow{t^\\circ, xt} \\text{C}_8\\text{H}_{18} + \\text{C}_8\\text{H}_{16} \\quad (\\text{Thermal Cleavage})$$",
+    "Nhiên liệu rắn, lỏng, khí. Điều kiện đốt cháy hoàn toàn và sử dụng tiết kiệm.": "Fuels: Solid (coal, wood), Liquid (petrol, kerosene), and Gaseous (natural gas, LPG). Optimization of complete combustion stoichiometry to maximize thermal efficiency and minimize pollution.",
+    "Bảo vệ môi trường khi sử dụng nhiên liệu hóa thạch.": "Mitigating environmental greenhouse gas emissions (CO2) and harmful acid pollutants (SO2, NOx, unburnt particulates) from fossil fuel combustion.",
+    "Cung cấp đủ không khí và tăng diện tích tiếp xúc.": "Ensure adequate stoichiometric oxygen/air supply and maximize contact surface area for complete, soot-free combustion.",
+    "Năng suất tỏa nhiệt: Khí > Lỏng > Rắn": "Calorific Value: Gaseous Fuels > Liquid Fuels > Solid Fuels",
+    "Làm thế nào để sử dụng nhiên liệu hiệu quả?": "What practical measures ensure optimal efficiency and economy when utilizing chemical fuels?",
+    "Cung cấp vừa đủ không khí, tăng diện tích tiếp xúc và tận dụng nhiệt.": "Supply a stoichiometric air-to-fuel ratio, maximize contact surface area, maintain clean burners, and utilize waste flue gas heat.",
+    "$$\\text{Năng suất tỏa nhiệt}: Khí > Lỏng > Rắn$$": "$$\\text{Calorific Energy Density}: \\text{Gas} > \\text{Liquid} > \\text{Solid Fuels}$$",
+    "$$Cung cấp đủ không khí và tăng diện tích tiếp xúc.$$": "$${\\text{Ensure optimal air supply and maximized surface contact for complete combustion}}$$",
+    "Tổng kết tính chất đặc trưng của Metan, Etilen, Axetilen và Benzen.": "Comprehensive comparative summary of fundamental hydrocarbons: Methane (Alkane), Ethylene (Alkene), Acetylene (Alkyne), and Benzene (Arene).",
+    "Vận dụng phân biệt các khí hidrocacbon.": "Qualitative analysis and separation of gaseous hydrocarbon mixtures in the laboratory.",
+    "CH₄ (thế Cl₂)": "CH4 (Undergoes photochemical substitution with Cl2)",
+    "C₂H₄ (cộng Br₂)": "C2H4 (Undergoes rapid addition with Br2 in 1:1 ratio)",
+    "C₂H₂ (cộng 2Br₂)": "C2H2 (Undergoes 2-step addition with Br2 in 1:2 ratio)",
+    "C₆H₆ (thế Br₂/Fe)": "C6H6 (Undergoes electrophilic aromatic bromination with Fe catalyst)",
+    "Bảng so sánh 4 hidrocacbon cơ bản": "Comparative Matrix of the Four Foundational Hydrocarbons",
+    "Dùng thuốc thử nào phân biệt Metan và Etilen?": "Which chemical reagent distinguishes methane from ethylene gas?",
+    "Dung dịch nước Brom (Etilen làm mất màu nâu đỏ).": "Aqueous bromine water: Ethylene rapidly discolors the orange-brown solution to clear, while methane is completely unreactive in the dark.",
+    "$${\\text{Bảng so sánh 4 hidrocacbon cơ bản}}$$": "$${\\text{Comparative Matrix: Methane (Alkane), Ethylene (Alkene), Acetylene (Alkyne), Benzene (Arene)}}$$",
+    "$$CH₄ (thế Cl₂)$$": "$$\\text{CH}_4: \\text{Free-radical substitution with } \\text{Cl}_2 \\text{ under light}$$",
+    "$$C₂H₄ (cộng Br₂)$$": "$$\\text{C}_2\\text{H}_4: \\text{Rapid electrophilic addition with } \\text{Br}_2 \\text{ water}$$",
+    "$$C₂H₂ (cộng 2Br₂)$$": "$$\\text{C}_2\\text{H}_2: \\text{Two-stage addition with } 2\\text{Br}_2 \\text{ to form } \\text{C}_2\\text{H}_2\\text{Br}_4$$",
+    "$$C₆H₆ (thế Br₂/Fe)$$": "$$\\text{C}_6\\text{H}_6: \\text{Electrophilic aromatic substitution with } \\text{Br}_2 \\text{ (Fe catalyst)}$$",
+    "Thực hành điều chế Etilen từ rượu etylic và Axetilen từ CaC2 thử với nước Brom.": "Laboratory synthesis: generating ethylene via ethanol dehydration (170°C, conc. H2SO4) and acetylene from calcium carbide hydrolysis, followed by bromine water testing.",
+    "Thực hành thu khí bằng phương pháp đẩy nước.": "Gas collection via pneumatic water displacement (water displacement method for nonpolar, insoluble hydrocarbon gases).",
+    "Nước brom bị mất màu nhanh chóng.": "The orange-brown bromine water is rapidly decolorized by the evolved unsaturated gas stream.",
+    "C₂H₅OH → C₂H₄ + H₂O (H₂SO₄ đặc, 170°C)": "C2H5OH → C2H4 ↑ + H2O (Intramolecular acid dehydration at 170°C with conc. H2SO4)",
+    "Hiện tượng dẫn khí C2H2 vào dung dịch brom?": "What observation is witnessed when acetylene gas is bubbled into a bromine solution?",
+    "Dung dịch nước brom bị mất màu hoàn toàn.": "The reddish-brown bromine solution is completely and rapidly decolorized due to electrophilic addition across the C≡C triple bond.",
+    "$$C₂H₅OH → C₂H₄ + H₂O (H₂SO₄ đặc, 170°C)$$": "$$\\text{C}_2\\text{H}_5\\text{OH} \\xrightarrow{\\text{H}_2\\text{SO}_4\\text{ (conc)}, 170^\\circ\\text{C}} \\text{C}_2\\text{H}_4\\uparrow + \\text{H}_2\\text{O} \\quad (\\text{Alkene Synthesis})$$",
+    "$$Nước brom bị mất màu nhanh chóng.$$": "$${\\text{Bromine water is rapidly and completely discolored by the unsaturated gas}}$$",
+    "Công thức C2H5OH có nhóm -OH. Tác dụng Na giải phóng H2 và lên men giấm.": "Ethanol (C2H5OH, contains polar -OH hydroxyl group). Displaces active hydrogen with sodium to liberate H2 gas; undergoes biological acetic fermentation in air.",
+    "Dùng làm cồn sát khuẩn y tế và nhiên liệu sinh học.": "Ethanol is widely utilized as a medical antiseptic (70° alcohol), industrial organic solvent, and renewable E5 biofuel.",
+    "C₂H₅OH + O₂ → CH₃COOH + H₂O (Men giấm)": "C2H5OH + O2 → CH3COOH + H2O (Acetobacter biological aerobic fermentation to vinegar)",
+    "Độ cồn = (V_rượu / V_dd) × 100": "Alcohol by Volume (ABV, % Vol) = (V_pure_ethanol / V_total_solution) × 100",
+    "Tại sao rượu để lâu ngoài không khí bị chua?": "Why does dilute wine or fermented alcoholic beverage turn sour upon prolonged exposure to air?",
+    "Do bị vi khuẩn men giấm oxi hóa thành axit axetic.": "Because airborne Acetobacter bacteria catalyze the aerobic biological oxidation of ethanol into acetic acid (vinegar).",
+    "$$Độ cồn = (V_rượu / V_dd) × 100$$": "$$\\text{Alcohol by Volume (ABV)} = \\left( \\frac{V_{\\text{pure ethanol}}}{V_{\\text{solution}}} \\right) \\times 100^\\circ$$",
+    "$$C₂H₅OH + O₂ → CH₃COOH + H₂O (Men giấm)$$": "$$\\text{C}_2\\text{H}_5\\text{OH} + \\text{O}_2 \\xrightarrow{\\text{Acetobacter}} \\text{CH}_3\\text{COOH} + \\text{H}_2\\text{O} \\quad (\\text{Vinegar Fermentation})$$",
+    "Chứa nhóm -COOH. Đầy đủ tính chất axit và phản ứng este hóa với rượu etylic.": "Acetic acid (CH3COOH, contains carboxyl group -COOH). Exhibits full acidic properties (turns litmus red, effervesces with carbonates) and undergoes Fischer esterification with ethanol.",
+    "Axit axetic là axit hữu cơ yếu.": "Acetic acid is a typical weak organic monocarboxylic acid (Ka = 1.8 × 10⁻⁵).",
+    "Este etyl axetat có mùi thơm hoa quả.": "The synthesized ester, ethyl acetate (CH3COOC2H5), possesses a pleasant, fruity fragrance resembling pears and apples.",
+    "CH₃COOH + C₂H₅OH ⇌ CH₃COOC₂H₅ + H₂O (H₂SO₄ đặc, t°)": "CH3COOH + C2H5OH ⇌ CH3COOC2H5 + H2O (Fischer esterification catalyzed by conc. H2SO4 under reflux)",
+    "Phản ứng giữa axit axetic và rượu etylic gọi là gì?": "What is the specific name of the condensation reaction between acetic acid and ethanol?",
+    "Là phản ứng este hóa.": "Fischer esterification, an acid-catalyzed equilibrium reaction producing ethyl acetate and water.",
+    "$$CH₃COOH + C₂H₅OH \\rightleftharpoons CH₃COOC₂H₅ + H₂O (H₂SO₄ đặc, t°)$$": "$$\\text{CH}_3\\text{COOH} + \\text{C}_2\\text{H}_5\\text{OH} \\underset{\\text{H}_2\\text{SO}_4, t^\\circ}{\\rightleftharpoons} \\text{CH}_3\\text{COOC}_2\\text{H}_5 + \\text{H}_2\\text{O} \\quad (\\text{Esterification})$$",
+    "$$Este etyl axetat có mùi thơm hoa quả.$$": "$${\\text{Ethyl acetate ester exhibits a pleasant characteristic fruity aroma}}$$",
+    "Sơ đồ chuyển hóa: Etilen → Rượu etylic → Axit axetic → Etyl axetat.": "Organic transformation cascade: Ethylene (C2H4) → Ethanol (C2H5OH) → Acetic Acid (CH3COOH) → Ethyl Acetate (CH3COOC2H5).",
+    "Mối liên hệ giữa hydrocarbon và dẫn xuất.": "Synthetic interconversions linking aliphatic unsaturated hydrocarbons directly to oxygenated functional group derivatives.",
+    "Chuỗi phản ứng cốt lõi trong công nghiệp hữu cơ.": "Foundational reaction sequence for the petrochemical and fine chemical synthetic industries.",
+    "Viết phương trình điều chế rượu etylic từ etilen?": "Write the balanced chemical equation for the industrial hydration of ethylene to produce ethanol.",
+    "C2H4 + H2O → C2H5OH (xúc tác axit H+, nhiệt độ).": "C2H4 + H2O → C2H5OH (Acid-catalyzed hydration with H3PO4 at 300°C and 60 atm).",
+    "$$Chuỗi phản ứng cốt lõi trong công nghiệp hữu cơ.$$": "$$\\text{C}_2\\text{H}_4 \\xrightarrow{+\\text{H}_2\\text{O}} \\text{C}_2\\text{H}_5\\text{OH} \\xrightarrow{+\\text{O}_2} \\text{CH}_3\\text{COOH} \\xrightarrow{+\\text{C}_2\\text{H}_5\\text{OH}} \\text{CH}_3\\text{COOC}_2\\text{H}_5$$",
+    "Chất béo là trieste của glycerol với các axit béo (RCOO)3C3H5. Phản ứng xà phòng hóa.": "Fats and oils are triglycerides (triesters of glycerol with long-chain fatty acids, (RCOO)3C3H5). Alkaline hydrolysis is known as saponification, yielding soap and glycerol.",
+    "Xà phòng hóa luôn tạo ra glycerol.": "Alkaline saponification of any triglyceride invariably yields propane-1,2,3-triol (glycerol) alongside carboxylate soaps.",
+    "Chất béo nhẹ hơn nước, không tan trong nước.": "Fats and vegetable oils have densities lower than water (d ≈ 0.9 g/mL) and are completely insoluble in water due to hydrophobic fatty chains.",
+    "(RCOO)₃C₃H₅ + 3NaOH → 3RCOONa (Xà phòng) + C₃H₅(OH)₃ (Glycerol)": "(RCOO)3C3H5 + 3NaOH → 3RCOONa (Soap salts) + C3H5(OH)3 (Glycerol)",
+    "Xà phòng hóa chất béo luôn thu được chất nào?": "Which polyol byproduct is always produced during the alkaline saponification of fats and oils?",
+    "Glycerol (C3H5(OH)3) và muối của axit béo (xà phòng).": "Glycerol / Propane-1,2,3-triol and sodium fatty acid salts (soap).",
+    "$$(RCOO)₃C₃H₅ + 3NaOH → 3RCOONa (Xà phòng) + C₃H₅(OH)₃ (Glycerol)$$": "$$(R\\text{COO})_3\\text{C}_3\\text{H}_5 + 3\\text{NaOH} \\xrightarrow{t^\\circ} 3R\\text{COONa (Soap)} + \\text{C}_3\\text{H}_5(\\text{OH})_3\\text{ (Glycerol)}$$",
+    "$$Chất béo nhẹ hơn nước, không tan trong nước.$$": "$${\\text{Fats and vegetable oils are lighter than water and completely immiscible in polar aqueous media}}$$",
+    "So sánh nhóm -OH ancol, nhóm -COOH axit và este/chất béo.": "Comparative analysis of functional groups: Alcohol (-OH), Carboxylic Acid (-COOH), and Esters/Triglycerides (-COO-).",
+    "Thành thạo nhận biết ancol, axit và este.": "Master qualitative identification and separation schemes for alcohols, carboxylic acids, and esters.",
+    "CH3COOH tác dụng NaHCO3; C2H5OH không tác dụng.": "Acetic acid reacts effervescently with NaHCO3 to liberate CO2; ethanol is completely unreactive with bicarbonates.",
+    "So sánh tính chất nhóm chức -OH và -COOH": "Functional Group Comparison: Alcoholic -OH vs Carboxylic -COOH",
+    "Thuốc thử hóa học phân biệt C2H5OH và CH3COOH?": "Which single chemical reagent definitively differentiates ethanol from acetic acid?",
+    "Dùng NaHCO3 (CH3COOH sủi bọt khí CO2).": "Sodium bicarbonate (NaHCO3) or blue litmus paper: Acetic acid causes vigorous effervescence of CO2 gas and turns litmus red; ethanol shows no reaction.",
+    "$${\\text{So sánh tính chất nhóm chức -OH và -COOH}}$$": "$${\\text{Comparative Properties: Alcoholic } -\\text{OH} \\quad\\longleftrightarrow\\quad \\text{Carboxylic } -\\text{COOH}}$$",
+    "$$CH3COOH tác dụng NaHCO3; C2H5OH không tác dụng.$$": "$$\\text{CH}_3\\text{COOH} + \\text{NaHCO}_3 \\longrightarrow \\text{CH}_3\\text{COONa} + \\text{CO}_2\\uparrow + \\text{H}_2\\text{O}, \\quad \\text{C}_2\\text{H}_5\\text{OH} + \\text{NaHCO}_3 \\rightarrow \\varnothing$$",
+    "Thực hành phản ứng este hóa và tác dụng của axit axetic với CaCO3.": "Laboratory experiments: synthesis of ethyl acetate via Fischer esterification and effervescence test of acetic acid with calcium carbonate CaCO3.",
+    "Quan sát tách lớp chất lỏng.": "Observe the distinct two-phase liquid layering in the receiver tube due to immiscible ester formation.",
+    "Etyl axetat nhẹ nổi lên trên có mùi thơm.": "Ethyl acetate is less dense than water, floating on top as a fragrant, fruity-scented clear liquid layer.",
+    "Dấu hiệu nhận biết este etyl axetat tạo thành?": "What are the two definitive physical observations confirming the synthesis of ethyl acetate ester?",
+    "Có lớp chất lỏng nhẹ nổi lên trên mặt và tỏa mùi thơm.": "A distinct, clear, insoluble liquid layer floats on top of the saline solution, emitting a pleasant, sweet, fruity apple aroma.",
+    "$$Etyl axetat nhẹ nổi lên trên có mùi thơm.$$": "$${\\text{Synthesized ethyl acetate floats as an immiscible top layer emitting a fragrant fruity aroma}}$$",
+    "Glucozơ là đường nho, cho phản ứng tráng bạc và phản ứng lên men rượu.": "Glucose (C6H12O6, grape sugar, aldohexose). Features aldehyde functionality undergoing the Silver Mirror Tollens test and enzymatic anaerobic fermentation to ethanol.",
+    "Glucozơ có nhiều trong quả nho chín.": "Glucose occurs abundantly in ripe sweet grapes, honey (≈30%), fruits, and mammalian blood (≈0.1% or 4.4--7.2 mmol/L).",
+    "Dùng tráng gương, tráng ruột phích và làm thuốc bổ.": "Extensively employed in mirror silvering, vacuum flask thermos lining, and as an immediate intravenous nutritional drip in medicine.",
+    "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂ ↑ (Lên men)": "C6H12O6 → 2C2H5OH + 2CO2 ↑ (Yeast zymase anaerobic fermentation at 30--35°C)",
+    "Tại sao glucozơ được dùng để tráng ruột phích?": "Why is glucose commercially utilized in the manufacturing of vacuum flask thermos silver linings?",
+    "Vì tham gia phản ứng tráng bạc tạo lớp kim loại Ag bám đều sáng bóng.": "Because glucose is a safe, non-toxic reducing sugar that reduces ammoniacal silver nitrate [Ag(NH3)2]OH to deposit a uniform, highly reflective metallic silver mirror coating.",
+    "$$C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂ ↑ (Lên men)$$": "$$\\text{C}_6\\text{H}_{12}\\text{O}_6 \\xrightarrow{\\text{yeast}, 30\\text{-}35^\\circ\\text{C}} 2\\text{C}_2\\text{H}_5\\text{OH} + 2\\text{CO}_2\\uparrow \\quad (\\text{Ethanol Fermentation})$$",
+    "$$Dùng tráng gương, tráng ruột phích và làm thuốc bổ.$$": "$${\\text{Applications: Mirror silvering, thermos manufacturing, and intravenous medical nutrient feeds}}$$",
+    "Saccarozơ là đường mía, không tráng bạc trực tiếp nhưng thủy phân tạo glucose và fructose.": "Sucrose (C12H22O11, cane sugar, disaccharide). Does not exhibit direct reducing properties (no free aldehyde), but undergoes acid/enzymatic hydrolysis to yield an equimolar mixture of glucose and fructose (invert sugar).",
+    "Đường mía dùng trong thực phẩm và bánh kẹo.": "Sucrose is the ubiquitous sweetener in confectionery, beverage processing, and pharmaceutical formulations.",
+    "Sản phẩm thủy phân tham gia phản ứng tráng bạc.": "The hydrolyzed monosaccharide products (glucose and fructose) readily participate in the silver mirror Tollens reaction.",
+    "Đường saccarozơ có tráng bạc trực tiếp được không?": "Does pure sucrose directly reduce Tollens' reagent to form a silver mirror?",
+    "Không, nhưng sau khi thủy phân bằng axit thì sản phẩm tráng bạc được.": "No, because sucrose has no free aldehyde group; however, following acid-catalyzed hydrolysis into glucose and fructose, the resulting invert sugar gives an intense silver mirror.",
+    "$$Sản phẩm thủy phân tham gia phản ứng tráng bạc.$$": "$$\\text{C}_{12}\\text{H}_{22}\\text{O}_{11} + \\text{H}_2\\text{O} \\xrightarrow{\\text{H}^+, t^\\circ} \\text{C}_6\\text{H}_{12}\\text{O}_6\\text{ (Glucose)} + \\text{C}_6\\text{H}_{12}\\text{O}_6\\text{ (Fructose)} \\xrightarrow{\\text{Tollens}} 4\\text{Ag}\\downarrow$$",
+    "Tinh bột và Xenlulozơ là polime thiên nhiên (C6H10O5)n. Tinh bột hóa xanh tím với Iot.": "Starch and Cellulose are natural high-molecular polysaccharides (C6H10O5)n. Amylose helical chains in starch form an intense deep-blue inclusion complex with elemental iodine (I2).",
+    "Iot là thuốc thử đặc trưng của tinh bột.": "Aqueous iodine solution (Lugol's reagent) is the definitive diagnostic indicator for detecting starch.",
+    "Xenlulozơ có mạch không phân nhánh tạo nên màng tế bào thực vật.": "Cellulose consists of unbranched, linear beta-1,4-glucan chains bundled into high-tensile microfibrils forming plant cell walls and natural fibers (cotton, wood).",
+    "Tinh bột + I₂ → Hợp chất bọc màu XANH TÍM": "Starch + I2 → Deep Blue-Purple Inclusion Complex",
+    "Thuốc thử nhận biết hồ tinh bột?": "What is the specific diagnostic test reagent for detecting starch paste in the laboratory?",
+    "Dung dịch Iot (I2) tạo hợp chất màu xanh tím.": "Aqueous iodine solution (I2/KI): It immediately produces an unmistakable, intense deep-blue/violet coloration.",
+    "$$Tinh bột + I₂ → Hợp chất bọc màu XANH TÍM$$": "$$\\text{Starch (Amylose Helices)} + \\text{I}_2 \\longrightarrow \\text{Deep Blue Inclusion Complex}$$",
+    "$$Xenlulozơ có mạch không phân nhánh tạo nên màng tế bào thực vật.$$": "$${\\text{Cellulose consists of unbranched linear } \\beta\\text{-1,4-glucan chains providing structural rigidity in plant walls}}$$",
+    "Protein là hợp chất cao phân tử. Bị đông tụ bởi nhiệt độ/axit; khi cháy có mùi khét.": "Proteins are complex biological polypeptides formed from alpha-amino acids. Undergo denaturation and coagulation when heated or exposed to acids/alcohols; emit a pungent burnt-feather odor upon combustion.",
+    "Protein là nền tảng cấu tạo nên sự sống.": "Proteins form the structural, enzymatic, immunological, and transport foundation of all biological organisms.",
+    "Đốt cháy protein (tóc, lông cừu) có mùi khét.": "Burning natural protein fibers (hair, silk, wool) emits a distinct, pungent burnt-feather sulfurous odor.",
+    "Sự đông tụ protein khi đun nóng hoặc thêm cồn/axit": "Protein denaturation and irreversible coagulation triggered by heat, concentrated ethanol, or mineral acids.",
+    "Tại sao khi đun nấu trứng hoặc sữa thì protein bị vón cục lại?": "Why do egg whites and milk proteins coagulate and solidify into a firm gel upon heating?",
+    "Do hiện tượng đông tụ protein dưới tác dụng của nhiệt độ.": "Due to thermal denaturation: elevated temperatures disrupt secondary and tertiary hydrogen bonds, causing unfolded polypeptide chains to cross-link and aggregate into insoluble curd.",
+    "$${\\text{Sự đông tụ protein khi đun nóng hoặc thêm cồn/axit}}$$": "$${\\text{Irreversible protein coagulation via thermal denaturation, strong acids, or ethanol}}$$",
+    "$$Đốt cháy protein (tóc, lông cừu) có mùi khét.$$": "$${\\text{Combustion of proteinaceous materials yields a characteristic burnt-feather odor due to nitrogen and sulfur}}$$",
+    "Khái niệm polime, phản ứng trùng hợp. Phân loại chất dẻo (PE, PVC), tơ và cao su.": "Polymers: High molecular weight macromolecules constructed from repeating monomeric units. Classified into Plastics (PE, PVC), Synthetic Fibers (Nylon), and Elastomers (Natural and Synthetic Rubbers).",
+    "Vật liệu polime cách mạng hóa ngành công nghiệp.": "Polymeric materials revolutionized modern manufacturing, electronics, packaging, and aerospace industries.",
+    "Cao su có tính đàn hồi vượt trội, không thấm nước.": "Rubber exhibits exceptional reversible elasticity, impermeability to water and gases, and high abrasion resistance.",
+    "Trùng hợp: n CH₂=CHCl → (-CH₂-CHCl-)_n (Nhựa PVC)": "Polymerization: n CH2=CHCl → (-CH2-CHCl-)n (Polyvinyl Chloride / PVC plastic)",
+    "Nhựa PVC được điều chế từ monome nào?": "From which monomer is Polyvinyl Chloride (PVC) plastic synthesized via addition polymerization?",
+    "Vinyl clorua (CH2=CHCl).": "Vinyl chloride monomer (CH2=CHCl, chloroethene).",
+    "$$\\text{Trùng hợp}: n CH₂=CHCl → (-CH₂-CHCl-)_n (Nhựa PVC)$$": "$$n\\text{ CH}_2\\text{=CHCl} \\xrightarrow{t^\\circ, p, xt} (\\text{-CH}_2\\text{-CHCl-})_n \\quad (\\text{Polyvinyl Chloride PVC Plastic})$$",
+    "$$Cao su có tính đàn hồi vượt trội, không thấm nước.$$": "$${\\text{Elastomers possess superior reversible mechanical elasticity, waterproofing, and electrical insulation}}$$",
+    "Thực hành phản ứng tráng bạc của glucozơ và phản ứng màu của hồ tinh bột với Iot.": "Laboratory experiments: demonstration of glucose silver mirror Tollens reduction and reversible thermochromic starch-iodine blue complexation.",
+    "Quan sát lớp gương bạc bám trên thành ống nghiệm.": "Observe the formation of a flawless, highly reflective metallic silver mirror coating on the inner tube glass wall.",
+    "Đun nóng màu xanh tím biến mất, để nguội xuất hiện lại.": "Upon heating, the blue starch-iodine color vanishes as helices uncoil; upon cooling, the helical geometry restores and the blue color reappears.",
+    "Glucozơ + Tollens → Gương bạc Ag sáng loáng": "Glucose + Tollens' Reagent → Brilliant Metallic Silver Mirror",
+    "Hồ tinh bột + I₂ → Màu xanh tím": "Starch Paste + I2 → Deep Blue-Purple Complex",
+    "Khi đun nóng ống nghiệm chứa tinh bột và Iot hiện tượng gì xảy ra?": "What observation is witnessed when a test tube containing blue starch-iodine complex is gently heated over a flame?",
+    "Màu xanh tím biến mất; khi để nguội lại xuất hiện trở lại.": "The deep blue color completely disappears as thermal energy uncoils the amylose helix; upon cooling to room temperature, the helical structure reforms and the blue color returns.",
+    "$$Glucozơ + Tollens → Gương bạc Ag sáng loáng$$": "$$\\text{Glucose} + 2[\\text{Ag}(\\text{NH}_3)_2]\\text{OH} \\xrightarrow{t^\\circ} \\text{Ammonium Gluconate} + 2\\text{Ag}\\downarrow\\text{ (Mirror)} + 3\\text{NH}_3 + \\text{H}_2\\text{O}$$",
+    "$$Hồ tinh bột + I₂ → Màu xanh tím$$": "$$\\text{Starch Paste} + \\text{I}_2 \\longrightarrow \\text{Intense Blue-Violet Complex}$$",
+    "$$Đun nóng màu xanh tím biến mất, để nguội xuất hiện lại.$$": "$${\\text{Thermochromism: Blue color disappears upon heating and quantitatively restores upon cooling}}$$",
+    "Tổng kết toàn bộ chương trình Hóa học 9 chuẩn bị bước vào cấp 3 THPT.": "Grand synthesis of Grade 9 Lower Secondary Chemistry, establishing a solid conceptual foundation for Upper Secondary Chemistry (GDPT 2018).",
+    "Nền tảng sẵn sàng cho Hóa học THPT GDPT 2018.": "Comprehensive readiness in atomic theory, periodic trends, reaction stoichiometry, and organic mechanisms for Grade 10--12.",
+    "Vững chắc phương pháp giải bài toán tổng hợp.": "Consolidate advanced problem-solving methodologies for combined inorganic-organic quantitative examination questions.",
+    "Hệ thống hóa toàn bộ kiến thức vô cơ và hữu cơ": "Grand Inorganic and Organic Cross-Disciplinary Synthesis",
+    "Mối quan hệ cốt lõi giữa vô cơ và hữu cơ?": "What is the foundational interrelationship between inorganic and organic chemistry disciplines?",
+    "Vô cơ nghiên cứu nguyên tố khoáng vật; hữu cơ nghiên cứu cấu trúc carbon nền tảng sự sống.": "Inorganic chemistry explores the mineral elements, coordination complexes, and metals; Organic chemistry explores covalent carbon architectures that form the structural and biochemical foundation of life.",
+    "$${\\text{Hệ thống hóa toàn bộ kiến thức vô cơ và hữu cơ}}$$": "$${\\text{Grand Synthesis: Cross-Disciplinary Unification of Inorganic Minerals & Organic Life Chemistry}}$$",
+    "$$Vững chắc phương pháp giải bài toán tổng hợp.$$": "$${\\text{Comprehensive mastery of multi-step quantitative stoichiometric problem solving}}$$"
+}
+
+# Apply to Grade 9 lessons
+count = 0
+for l in lessons:
+    if l["grade"] == 9:
+        if isinstance(l.get("summary"), dict):
+            s_vn = l["summary"].get("VN", "")
+            if s_vn in G9_TRANSLATIONS:
+                l["summary"]["EN"] = G9_TRANSLATIONS[s_vn]
+                count += 1
+        
+        for sec in l.get("sections", []):
+            if isinstance(sec.get("heading"), dict):
+                h_vn = sec["heading"].get("VN", "")
+                if h_vn in G9_TRANSLATIONS:
+                    sec["heading"]["EN"] = G9_TRANSLATIONS[h_vn]
+                    count += 1
+            for pt in sec.get("points", []):
+                if isinstance(pt, dict):
+                    p_vn = pt.get("VN", "")
+                    if p_vn in G9_TRANSLATIONS:
+                        pt["EN"] = G9_TRANSLATIONS[p_vn]
+                        count += 1
+
+        for tp in l.get("theoryPoints", []):
+            if isinstance(tp, dict):
+                tp_vn = tp.get("VN", "")
+                if tp_vn in G9_TRANSLATIONS:
+                    tp["EN"] = G9_TRANSLATIONS[tp_vn]
+                    count += 1
+
+        sq = l.get("sampleQuestion", {})
+        if isinstance(sq, dict):
+            if isinstance(sq.get("question"), dict):
+                q_vn = sq["question"].get("VN", "")
+                if isinstance(q_vn, list): q_vn = " ".join(str(x) for x in q_vn)
+                if q_vn in G9_TRANSLATIONS:
+                    sq["question"]["EN"] = G9_TRANSLATIONS[q_vn]
+                    count += 1
+            if isinstance(sq.get("answer"), dict):
+                a_vn = sq["answer"].get("VN", "")
+                if isinstance(a_vn, list): a_vn = " ".join(str(x) for x in a_vn)
+                if a_vn in G9_TRANSLATIONS:
+                    sq["answer"]["EN"] = G9_TRANSLATIONS[a_vn]
+                    count += 1
+
+        new_kf = []
+        for kf in l.get("keyFormulas", []):
+            if kf in G9_TRANSLATIONS:
+                new_kf.append(G9_TRANSLATIONS[kf])
+                count += 1
+            else:
+                new_kf.append(kf)
+        l["keyFormulas"] = new_kf
+
+        new_eq = []
+        for eq in l.get("equations", []):
+            if eq in G9_TRANSLATIONS:
+                new_eq.append(G9_TRANSLATIONS[eq])
+                count += 1
+            else:
+                new_eq.append(eq)
+        l["equations"] = new_eq
+
+with open("src/data/vietnamCurriculumData.json", "w", encoding="utf-8") as f:
+    json.dump(lessons, f, ensure_ascii=False, indent=2)
+
+print(f"Applied {count} translations to Grade 9!")

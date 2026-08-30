@@ -1,0 +1,490 @@
+[
+  {
+    "grade": 8,
+    "lessonNumber": 1,
+    "lessonId": "hh8_b1",
+    "field": "sections[1].points[0]",
+    "VN": "H₂O (l)",
+    "current_EN": "H₂O (l)"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 4,
+    "lessonId": "hh8_b4",
+    "field": "sections[1].points[0]",
+    "VN": "¹H (1p, 1e)",
+    "current_EN": "¹H (1p, 1e)"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 4,
+    "lessonId": "hh8_b4",
+    "field": "sections[1].points[1]",
+    "VN": "¹²C (6p, 6n, 6e)",
+    "current_EN": "¹²C (6p, 6n, 6e)"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 4,
+    "lessonId": "hh8_b4",
+    "field": "sections[2].points[1]",
+    "VN": "m_nt ≈ m_p + m_n",
+    "current_EN": "m_nt ≈ m_p + m_n"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 5,
+    "lessonId": "hh8_b5",
+    "field": "sections[1].points[0]",
+    "VN": "H (1), C (12), N (14), O (16), Na (23)",
+    "current_EN": "H (1), C (12), N (14), O (16), Na (23)"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 6,
+    "lessonId": "hh8_b6",
+    "field": "sections[1].points[0]",
+    "VN": "2H₂ + O₂ → 2H₂O",
+    "current_EN": "2H₂ + O₂ → 2H₂O"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 8,
+    "lessonId": "hh8_b8",
+    "field": "sampleQuestion.answer",
+    "VN": "M = 100 amu.",
+    "current_EN": "M = 100 amu."
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 8,
+    "lessonId": "hh8_b8",
+    "field": "sections[1].points[0]",
+    "VN": "M_H2SO4 = 98 amu",
+    "current_EN": "M_H2SO4 = 98 amu"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 8,
+    "lessonId": "hh8_b8",
+    "field": "sections[1].points[1]",
+    "VN": "M_CaCO3 = 100 amu",
+    "current_EN": "M_CaCO3 = 100 amu"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 10,
+    "lessonId": "hh8_b10",
+    "field": "sections[1].points[0]",
+    "VN": "Fe₂^III O₃^II : 2 × III = 3 × II",
+    "current_EN": "Fe₂^III O₃^II : 2 × III = 3 × II"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 10,
+    "lessonId": "hh8_b10",
+    "field": "sections[2].points[0]",
+    "VN": "x × a = y × b",
+    "current_EN": "x × a = y × b"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 11,
+    "lessonId": "hh8_b11",
+    "field": "sampleQuestion.answer",
+    "VN": "Fe(OH)3.",
+    "current_EN": "Fe(OH)3."
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 11,
+    "lessonId": "hh8_b11",
+    "field": "sections[1].points[0]",
+    "VN": "P (V) + O (II) → P₂O₅",
+    "current_EN": "P (V) + O (II) → P₂O₅"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 11,
+    "lessonId": "hh8_b11",
+    "field": "sections[2].points[0]",
+    "VN": "x/y = b/a",
+    "current_EN": "x/y = b/a"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 13,
+    "lessonId": "hh8_b13",
+    "field": "sections[1].points[0]",
+    "VN": "Zn + 2HCl → ZnCl₂ + H₂ ↑",
+    "current_EN": "Zn + 2HCl → ZnCl₂ + H₂ ↑"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 14,
+    "lessonId": "hh8_b14",
+    "field": "sections[2].points[0]",
+    "VN": "BaCl₂ + Na₂SO₄ → BaSO₄ ↓ + 2NaCl",
+    "current_EN": "BaCl₂ + Na₂SO₄ → BaSO₄ ↓ + 2NaCl"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 15,
+    "lessonId": "hh8_b15",
+    "field": "sampleQuestion.answer",
+    "VN": "m_CO2 = 44 gam.",
+    "current_EN": "m_CO2 = 44 gam."
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 15,
+    "lessonId": "hh8_b15",
+    "field": "sections[2].points[0]",
+    "VN": "m_A + m_B = m_C + m_D",
+    "current_EN": "m_A + m_B = m_C + m_D"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 16,
+    "lessonId": "hh8_b16",
+    "field": "sampleQuestion.answer",
+    "VN": "Fe + 2HCl → FeCl2 + H2.",
+    "current_EN": "Fe + 2HCl → FeCl2 + H2."
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 16,
+    "lessonId": "hh8_b16",
+    "field": "sections[1].points[0]",
+    "VN": "4Al + 3O₂ → 2Al₂O₃",
+    "current_EN": "4Al + 3O₂ → 2Al₂O₃"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 17,
+    "lessonId": "hh8_b17",
+    "field": "sampleQuestion.answer",
+    "VN": "2Al + 3H2SO4 → Al2(SO4)3 + 3H2.",
+    "current_EN": "2Al + 3H2SO4 → Al2(SO4)3 + 3H2."
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 17,
+    "lessonId": "hh8_b17",
+    "field": "sections[1].points[0]",
+    "VN": "2KMnO₄ → K₂MnO₄ + MnO₂ + O₂ ↑",
+    "current_EN": "2KMnO₄ → K₂MnO₄ + MnO₂ + O₂ ↑"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 18,
+    "lessonId": "hh8_b18",
+    "field": "sampleQuestion.answer",
+    "VN": "m = 0,5 × 32 = 16 gam.",
+    "current_EN": "m = 0,5 × 32 = 16 gam."
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 18,
+    "lessonId": "hh8_b18",
+    "field": "sections[2].points[0]",
+    "VN": "N_A = 6,022 × 10²³",
+    "current_EN": "N_A = 6,022 × 10²³"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 19,
+    "lessonId": "hh8_b19",
+    "field": "sections[2].points[0]",
+    "VN": "n = m / M",
+    "current_EN": "n = m / M"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 20,
+    "lessonId": "hh8_b20",
+    "field": "sections[1].points[0]",
+    "VN": "d_(CO2/kk) = 44 / 29 ≈ 1,52",
+    "current_EN": "d_(CO2/kk) = 44 / 29 ≈ 1,52"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 20,
+    "lessonId": "hh8_b20",
+    "field": "sections[2].points[0]",
+    "VN": "d_(A/B) = M_A / M_B",
+    "current_EN": "d_(A/B) = M_A / M_B"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 20,
+    "lessonId": "hh8_b20",
+    "field": "sections[2].points[1]",
+    "VN": "d_(A/kk) = M_A / 29",
+    "current_EN": "d_(A/kk) = M_A / 29"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 21,
+    "lessonId": "hh8_b21",
+    "field": "sampleQuestion.answer",
+    "VN": "%O = (16×3 / 80) × 100% = 60%.",
+    "current_EN": "%O = (16×3 / 80) × 100% = 60%."
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 21,
+    "lessonId": "hh8_b21",
+    "field": "sections[1].points[0]",
+    "VN": "Trong CH₄: %C = 75%, %H = 25%",
+    "current_EN": "Trong CH₄: %C = 75%, %H = 25%"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 21,
+    "lessonId": "hh8_b21",
+    "field": "sections[2].points[0]",
+    "VN": "%A = (x × M_A / M_AxBy) × 100%",
+    "current_EN": "%A = (x × M_A / M_AxBy) × 100%"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 22,
+    "lessonId": "hh8_b22",
+    "field": "sections[1].points[0]",
+    "VN": "Zn + 2HCl → ZnCl₂ + H₂ ↑",
+    "current_EN": "Zn + 2HCl → ZnCl₂ + H₂ ↑"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 23,
+    "lessonId": "hh8_b23",
+    "field": "sampleQuestion.answer",
+    "VN": "H% = (4,48 / 5,6) × 100% = 80%.",
+    "current_EN": "H% = (4,48 / 5,6) × 100% = 80%."
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 23,
+    "lessonId": "hh8_b23",
+    "field": "sections[1].points[0]",
+    "VN": "CaCO₃ → CaO + CO₂",
+    "current_EN": "CaCO₃ → CaO + CO₂"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 24,
+    "lessonId": "hh8_b24",
+    "field": "sections[1].points[0]",
+    "VN": "S + O₂ → SO₂",
+    "current_EN": "S + O₂ → SO₂"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 24,
+    "lessonId": "hh8_b24",
+    "field": "sections[1].points[1]",
+    "VN": "3Fe + 2O₂ → Fe₃O₄",
+    "current_EN": "3Fe + 2O₂ → Fe₃O₄"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 25,
+    "lessonId": "hh8_b25",
+    "field": "sections[1].points[0]",
+    "VN": "2H₂ + O₂ → 2H₂O",
+    "current_EN": "2H₂ + O₂ → 2H₂O"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 25,
+    "lessonId": "hh8_b25",
+    "field": "sections[1].points[1]",
+    "VN": "CaO + H₂O → Ca(OH)₂",
+    "current_EN": "CaO + H₂O → Ca(OH)₂"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 27,
+    "lessonId": "hh8_b27",
+    "field": "sections[1].points[0]",
+    "VN": "2KMnO₄ → K₂MnO₄ + MnO₂ + O₂ ↑",
+    "current_EN": "2KMnO₄ → K₂MnO₄ + MnO₂ + O₂ ↑"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 28,
+    "lessonId": "hh8_b28",
+    "field": "sections[1].points[0]",
+    "VN": "C + O₂ → CO₂",
+    "current_EN": "C + O₂ → CO₂"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 30,
+    "lessonId": "hh8_b30",
+    "field": "sections[1].points[0]",
+    "VN": "C + O₂ → CO₂",
+    "current_EN": "C + O₂ → CO₂"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 30,
+    "lessonId": "hh8_b30",
+    "field": "sections[2].points[0]",
+    "VN": "2KMnO₄ → K₂MnO₄ + MnO₂ + O₂ ↑",
+    "current_EN": "2KMnO₄ → K₂MnO₄ + MnO₂ + O₂ ↑"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 31,
+    "lessonId": "hh8_b31",
+    "field": "sections[1].points[0]",
+    "VN": "2H₂ + O₂ → 2H₂O",
+    "current_EN": "2H₂ + O₂ → 2H₂O"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 31,
+    "lessonId": "hh8_b31",
+    "field": "sections[2].points[0]",
+    "VN": "d_(H2/kk) = 2/29 ≈ 0,069",
+    "current_EN": "d_(H2/kk) = 2/29 ≈ 0,069"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 33,
+    "lessonId": "hh8_b33",
+    "field": "sections[1].points[0]",
+    "VN": "Zn + 2HCl → ZnCl₂ + H₂ ↑",
+    "current_EN": "Zn + 2HCl → ZnCl₂ + H₂ ↑"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 34,
+    "lessonId": "hh8_b34",
+    "field": "sections[1].points[0]",
+    "VN": "Zn + 2HCl → ZnCl₂ + H₂",
+    "current_EN": "Zn + 2HCl → ZnCl₂ + H₂"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 35,
+    "lessonId": "hh8_b35",
+    "field": "sections[1].points[0]",
+    "VN": "2H₂ + O₂ → 2H₂O",
+    "current_EN": "2H₂ + O₂ → 2H₂O"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 35,
+    "lessonId": "hh8_b35",
+    "field": "sections[2].points[0]",
+    "VN": "Zn + 2HCl → ZnCl₂ + H₂ ↑",
+    "current_EN": "Zn + 2HCl → ZnCl₂ + H₂ ↑"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 36,
+    "lessonId": "hh8_b36",
+    "field": "sections[1].points[0]",
+    "VN": "2Na + 2H₂O → 2NaOH + H₂ ↑",
+    "current_EN": "2Na + 2H₂O → 2NaOH + H₂ ↑"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 36,
+    "lessonId": "hh8_b36",
+    "field": "sections[1].points[1]",
+    "VN": "CaO + H₂O → Ca(OH)₂",
+    "current_EN": "CaO + H₂O → Ca(OH)₂"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 36,
+    "lessonId": "hh8_b36",
+    "field": "sections[2].points[0]",
+    "VN": "m_H : m_O = 1 : 8",
+    "current_EN": "m_H : m_O = 1 : 8"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 37,
+    "lessonId": "hh8_b37",
+    "field": "sampleQuestion.answer",
+    "VN": "Natri sunfat.",
+    "current_EN": "Natri sunfat."
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 38,
+    "lessonId": "hh8_b38",
+    "field": "sections[1].points[0]",
+    "VN": "HCl + NaOH → NaCl + H₂O",
+    "current_EN": "HCl + NaOH → NaCl + H₂O"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 39,
+    "lessonId": "hh8_b39",
+    "field": "sections[2].points[0]",
+    "VN": "2Na + 2H₂O → 2NaOH + H₂ ↑",
+    "current_EN": "2Na + 2H₂O → 2NaOH + H₂ ↑"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 41,
+    "lessonId": "hh8_b41",
+    "field": "sections[1].points[0]",
+    "VN": "S_(NaCl, 25°C) ≈ 36g / 100g H₂O",
+    "current_EN": "S_(NaCl, 25°C) ≈ 36g / 100g H₂O"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 42,
+    "lessonId": "hh8_b42",
+    "field": "sampleQuestion.answer",
+    "VN": "C% = (20 / 200) × 100% = 10%.",
+    "current_EN": "C% = (20 / 200) × 100% = 10%."
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 42,
+    "lessonId": "hh8_b42",
+    "field": "sections[1].points[0]",
+    "VN": "C% = (C_M × M) / (10 × D)",
+    "current_EN": "C% = (C_M × M) / (10 × D)"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 42,
+    "lessonId": "hh8_b42",
+    "field": "sections[2].points[0]",
+    "VN": "C% = (m_ct / m_dd) × 100%",
+    "current_EN": "C% = (m_ct / m_dd) × 100%"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 42,
+    "lessonId": "hh8_b42",
+    "field": "sections[2].points[1]",
+    "VN": "C_M = n / V (M)",
+    "current_EN": "C_M = n / V (M)"
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 44,
+    "lessonId": "hh8_b44",
+    "field": "sampleQuestion.answer",
+    "VN": "C_M = (0,1 + 0,3) / 0,2 = 2 M.",
+    "current_EN": "C_M = (0,1 + 0,3) / 0,2 = 2 M."
+  },
+  {
+    "grade": 8,
+    "lessonNumber": 44,
+    "lessonId": "hh8_b44",
+    "field": "sections[1].points[0]",
+    "VN": "C_M = n / V_L",
+    "current_EN": "C_M = n / V_L"
+  }
+]

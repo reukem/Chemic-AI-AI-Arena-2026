@@ -1,0 +1,1874 @@
+[
+  {
+    "grade": 11,
+    "lessonNumber": 1,
+    "lessonId": "hh11_b1",
+    "field": "chapterTitle",
+    "VN": "Chương 1: Cân bằng hoá học",
+    "current_EN": "Chương 1: Cân bằng hoá học"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 1,
+    "lessonId": "hh11_b1",
+    "field": "summary",
+    "VN": "Phản ứng thuận nghịch đạt cân bằng khi v_t = v_n. Nguyên lí chuyển dịch Le Chatelier.",
+    "current_EN": "Phản ứng thuận nghịch đạt cân bằng khi v_t = v_n. Nguyên lí chuyển dịch Le Chatelier."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 1,
+    "lessonId": "hh11_b1",
+    "field": "theoryPoints[0]",
+    "VN": "Chất xúc tác làm tăng tốc độ đạt cân bằng nhưng KHÔNG làm chuyển dịch cân bằng.",
+    "current_EN": "Chất xúc tác làm tăng tốc độ đạt cân bằng nhưng KHÔNG làm chuyển dịch cân bằng."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 1,
+    "lessonId": "hh11_b1",
+    "field": "sampleQuestion.question",
+    "VN": "Khi tăng nhiệt độ hệ N2 + 3H2 ⇌ 2NH3 (tỏa nhiệt), cân bằng chuyển dịch theo chiều nào?",
+    "current_EN": "Khi tăng nhiệt độ hệ N2 + 3H2 ⇌ 2NH3 (tỏa nhiệt), cân bằng chuyển dịch theo chiều nào?"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 1,
+    "lessonId": "hh11_b1",
+    "field": "sampleQuestion.answer",
+    "VN": "Chuyển dịch theo chiều NGHỊCH (chiều thu nhiệt).",
+    "current_EN": "Chuyển dịch theo chiều NGHỊCH (chiều thu nhiệt)."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 1,
+    "lessonId": "hh11_b1",
+    "field": "sections[0].points[0]",
+    "VN": "Phản ứng thuận nghịch đạt cân bằng khi v_t = v_n. Nguyên lí chuyển dịch Le Chatelier.",
+    "current_EN": "Phản ứng thuận nghịch đạt cân bằng khi v_t = v_n. Nguyên lí chuyển dịch Le Chatelier."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 1,
+    "lessonId": "hh11_b1",
+    "field": "sections[0].points[1]",
+    "VN": "Chất xúc tác làm tăng tốc độ đạt cân bằng nhưng KHÔNG làm chuyển dịch cân bằng.",
+    "current_EN": "Chất xúc tác làm tăng tốc độ đạt cân bằng nhưng KHÔNG làm chuyển dịch cân bằng."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 1,
+    "lessonId": "hh11_b1",
+    "field": "sections[1].points[0]",
+    "VN": "N₂ (g) + 3H₂ (g) ⇌ 2NH₃ (g)  Δ_r H°₂₉₈ = -92 kJ",
+    "current_EN": "N₂ (g) + 3H₂ (g) ⇌ 2NH₃ (g)  Δ_r H°₂₉₈ = -92 kJ"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 1,
+    "lessonId": "hh11_b1",
+    "field": "sections[1].points[1]",
+    "VN": "2NO₂ (g) [Nâu đỏ] ⇌ N₂O₄ (g) [Không màu]  Δ_r H°₂₉₈ = -58 kJ",
+    "current_EN": "2NO₂ (g) [Nâu đỏ] ⇌ N₂O₄ (g) [Không màu]  Δ_r H°₂₉₈ = -58 kJ"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 1,
+    "lessonId": "hh11_b1",
+    "field": "sections[2].points[0]",
+    "VN": "K_C = ([C]^c × [D]^d) / ([A]^a × [B]^b)",
+    "current_EN": "K_C = ([C]^c × [D]^d) / ([A]^a × [B]^b)"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 1,
+    "lessonId": "hh11_b1",
+    "field": "sections[2].points[1]",
+    "VN": "Tăng T: Chuyển dịch chiều THU NHIỆT (ΔH > 0)",
+    "current_EN": "Tăng T: Chuyển dịch chiều THU NHIỆT (ΔH > 0)"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 1,
+    "lessonId": "hh11_b1",
+    "field": "sections[2].points[2]",
+    "VN": "Tăng P: Chuyển dịch chiều GIẢM SỐ MOL KHÍ",
+    "current_EN": "Tăng P: Chuyển dịch chiều GIẢM SỐ Mole KHÍ"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 2,
+    "lessonId": "hh11_b2",
+    "field": "chapterTitle",
+    "VN": "Chương 1: Cân bằng hoá học",
+    "current_EN": "Chương 1: Cân bằng hoá học"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 2,
+    "lessonId": "hh11_b2",
+    "field": "summary",
+    "VN": "Sự điện li, thuyết Bronsted-Lowry (axit nhường H+, bazơ nhận H+), tích số ion nước Kw và thang pH.",
+    "current_EN": "Sự điện li, thuyết Bronsted-Lowry (Acid nhường H+, Base nhận H+), tích số ion Water Kw và thang pH."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 2,
+    "lessonId": "hh11_b2",
+    "field": "theoryPoints[0]",
+    "VN": "Chỉ thị pH: Quỳ tím, phenolphtalein, chỉ thị vạn năng.",
+    "current_EN": "Chỉ thị pH: Quỳ tím, phenolphtalein, chỉ thị vạn năng."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 2,
+    "lessonId": "hh11_b2",
+    "field": "sampleQuestion.question",
+    "VN": "Một dung dịch có [H+] = 10^-3 M thì pH bằng mấy và môi trường gì?",
+    "current_EN": "Một Solution có [H+] = 10^-3 M thì pH bằng mấy và môi trường gì?"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 2,
+    "lessonId": "hh11_b2",
+    "field": "sampleQuestion.answer",
+    "VN": "pH = 3, môi trường AXIT.",
+    "current_EN": "pH = 3, môi trường Acid."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 2,
+    "lessonId": "hh11_b2",
+    "field": "sections[0].points[0]",
+    "VN": "Sự điện li, thuyết Bronsted-Lowry (axit nhường H+, bazơ nhận H+), tích số ion nước Kw và thang pH.",
+    "current_EN": "Sự điện li, thuyết Bronsted-Lowry (Acid nhường H+, Base nhận H+), tích số ion Water Kw và thang pH."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 2,
+    "lessonId": "hh11_b2",
+    "field": "sections[0].points[1]",
+    "VN": "Chỉ thị pH: Quỳ tím, phenolphtalein, chỉ thị vạn năng.",
+    "current_EN": "Chỉ thị pH: Quỳ tím, phenolphtalein, chỉ thị vạn năng."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 2,
+    "lessonId": "hh11_b2",
+    "field": "sections[1].points[0]",
+    "VN": "HCl → H⁺ + Cl⁻ (Mạnh)",
+    "current_EN": "HCl → H⁺ + Cl⁻ (Mạnh)"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 2,
+    "lessonId": "hh11_b2",
+    "field": "sections[1].points[1]",
+    "VN": "CH₃COOH ⇌ CH₃COO⁻ + H⁺ (Yếu)",
+    "current_EN": "CH₃COOH ⇌ CH₃COO⁻ + H⁺ (Yếu)"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 2,
+    "lessonId": "hh11_b2",
+    "field": "sections[2].points[0]",
+    "VN": "K_w = [H⁺] × [OH⁻] = 1,0 × 10⁻¹⁴ (ở 25°C)",
+    "current_EN": "K_w = [H⁺] × [OH⁻] = 1,0 × 10⁻¹⁴ (ở 25°C)"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 2,
+    "lessonId": "hh11_b2",
+    "field": "sections[2].points[1]",
+    "VN": "pH = -log[H⁺]",
+    "current_EN": "pH = -log[H⁺]"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 2,
+    "lessonId": "hh11_b2",
+    "field": "sections[2].points[2]",
+    "VN": "pH + pOH = 14",
+    "current_EN": "pH + pOH = 14"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 3,
+    "lessonId": "hh11_b3",
+    "field": "chapterTitle",
+    "VN": "Chương 1: Cân bằng hoá học",
+    "current_EN": "Chương 1: Cân bằng hoá học"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 3,
+    "lessonId": "hh11_b3",
+    "field": "summary",
+    "VN": "Tổng kết hằng số Kc, nguyên lí Le Chatelier, tính pH và chuẩn độ axit - bazơ.",
+    "current_EN": "Tổng kết hằng số Kc, nguyên lí Le Chatelier, tính pH và chuẩn độ Acid - Base."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 3,
+    "lessonId": "hh11_b3",
+    "field": "theoryPoints[0]",
+    "VN": "Thành thạo tính toán pH và điều khiển chuyển dịch cân bằng.",
+    "current_EN": "Thành thạo tính toán pH và điều khiển chuyển dịch cân bằng."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 3,
+    "lessonId": "hh11_b3",
+    "field": "sampleQuestion.question",
+    "VN": "Trộn 100mL dd HCl 0,1M với 100mL dd NaOH 0,1M thu được dung dịch pH bằng mấy?",
+    "current_EN": "Trộn 100mL dd HCl 0,1M với 100mL dd NaOH 0,1M thu được Solution pH bằng mấy?"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 3,
+    "lessonId": "hh11_b3",
+    "field": "sampleQuestion.answer",
+    "VN": "pH = 7 (trung tính).",
+    "current_EN": "pH = 7 (trung tính)."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 3,
+    "lessonId": "hh11_b3",
+    "field": "sections[0].points[0]",
+    "VN": "Tổng kết hằng số Kc, nguyên lí Le Chatelier, tính pH và chuẩn độ axit - bazơ.",
+    "current_EN": "Tổng kết hằng số Kc, nguyên lí Le Chatelier, tính pH và chuẩn độ Acid - Base."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 3,
+    "lessonId": "hh11_b3",
+    "field": "sections[0].points[1]",
+    "VN": "Thành thạo tính toán pH và điều khiển chuyển dịch cân bằng.",
+    "current_EN": "Thành thạo tính toán pH và điều khiển chuyển dịch cân bằng."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 3,
+    "lessonId": "hh11_b3",
+    "field": "sections[1].points[0]",
+    "VN": "pH = 14 - pOH",
+    "current_EN": "pH = 14 - pOH"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 3,
+    "lessonId": "hh11_b3",
+    "field": "sections[2].points[0]",
+    "VN": "Chuẩn độ axit-bazơ: C_axit × V_axit = C_bazo × V_bazo",
+    "current_EN": "Chuẩn độ Acid-Base: C_axit × V_axit = C_bazo × V_bazo"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 4,
+    "lessonId": "hh11_b4",
+    "field": "chapterTitle",
+    "VN": "Chương 2: Nitrogen – Sulfur",
+    "current_EN": "Chương 2: Nitrogen – Sulfur"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 4,
+    "lessonId": "hh11_b4",
+    "field": "summary",
+    "VN": "Nitơ có liên kết ba N≡N rất bền ở nhiệt độ thường (trơ hóa học). Nhiệt độ cao thể hiện tính khử và oxh.",
+    "current_EN": "Nitơ có liên kết ba N≡N rất bền ở nhiệt độ thường (trơ hóa học). Nhiệt độ cao thể hiện tính khử và oxh."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 4,
+    "lessonId": "hh11_b4",
+    "field": "theoryPoints[0]",
+    "VN": "Khí N2 dùng làm khí trơ bảo quản thực phẩm.",
+    "current_EN": "Khí N2 dùng làm khí trơ bảo quản thực phẩm."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 4,
+    "lessonId": "hh11_b4",
+    "field": "sampleQuestion.question",
+    "VN": "Tại sao khí Nitơ trơ về mặt hóa học ở nhiệt độ phòng?",
+    "current_EN": "Tại sao khí Nitơ trơ về mặt hóa học ở nhiệt độ phòng?"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 4,
+    "lessonId": "hh11_b4",
+    "field": "sampleQuestion.answer",
+    "VN": "Do liên kết ba N≡N cực kỳ bền vững.",
+    "current_EN": "Do liên kết ba N≡N cực kỳ bền vững."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 4,
+    "lessonId": "hh11_b4",
+    "field": "sections[0].points[0]",
+    "VN": "Nitơ có liên kết ba N≡N rất bền ở nhiệt độ thường (trơ hóa học). Nhiệt độ cao thể hiện tính khử và oxh.",
+    "current_EN": "Nitơ có liên kết ba N≡N rất bền ở nhiệt độ thường (trơ hóa học). Nhiệt độ cao thể hiện tính khử và oxh."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 4,
+    "lessonId": "hh11_b4",
+    "field": "sections[0].points[1]",
+    "VN": "Khí N2 dùng làm khí trơ bảo quản thực phẩm.",
+    "current_EN": "Khí N2 dùng làm khí trơ bảo quản thực phẩm."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 4,
+    "lessonId": "hh11_b4",
+    "field": "sections[1].points[0]",
+    "VN": "N₂ + 3H₂ ⇌ 2NH₃  (Fe, 450°C, 200 bar)",
+    "current_EN": "N₂ + 3H₂ ⇌ 2NH₃  (Fe, 450°C, 200 bar)"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 4,
+    "lessonId": "hh11_b4",
+    "field": "sections[1].points[1]",
+    "VN": "N₂ + O₂ ⇌ 2NO  (3000°C hoặc tia lửa điện)",
+    "current_EN": "N₂ + O₂ ⇌ 2NO  (3000°C hoặc tia lửa điện)"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 4,
+    "lessonId": "hh11_b4",
+    "field": "sections[2].points[0]",
+    "VN": "Liên kết ba N≡N bền (Năng lượng 945 kJ/mol)",
+    "current_EN": "Liên kết ba N≡N bền (Năng lượng 945 kJ/Mole)"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 5,
+    "lessonId": "hh11_b5",
+    "field": "chapterTitle",
+    "VN": "Chương 2: Nitrogen – Sulfur",
+    "current_EN": "Chương 2: Nitrogen – Sulfur"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 5,
+    "lessonId": "hh11_b5",
+    "field": "summary",
+    "VN": "Ammonia là bazơ Bronsted yếu và chất khử mạnh. Khói trắng NH4Cl và phức đồng xanh thẫm.",
+    "current_EN": "Ammonia là Base Bronsted yếu và chất khử mạnh. Khói trắng NH4Cl và phức đồng xanh thẫm."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 5,
+    "lessonId": "hh11_b5",
+    "field": "theoryPoints[0]",
+    "VN": "Muối ammonium tác dụng kiềm giải phóng khí NH3.",
+    "current_EN": "Salt ammonium tác dụng kiềm giải phóng khí NH3."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 5,
+    "lessonId": "hh11_b5",
+    "field": "sampleQuestion.question",
+    "VN": "Hiện tượng khi đưa đầu đũa nhúng HCl đặc lại gần đũa nhúng NH3 đặc?",
+    "current_EN": "Hiện tượng khi đưa đầu đũa nhúng HCl đặc lại gần đũa nhúng NH3 đặc?"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 5,
+    "lessonId": "hh11_b5",
+    "field": "sampleQuestion.answer",
+    "VN": "Xuất hiện khói trắng dày đặc muối NH4Cl.",
+    "current_EN": "Xuất hiện khói trắng dày đặc Salt NH4Cl."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 5,
+    "lessonId": "hh11_b5",
+    "field": "sections[0].points[0]",
+    "VN": "Ammonia là bazơ Bronsted yếu và chất khử mạnh. Khói trắng NH4Cl và phức đồng xanh thẫm.",
+    "current_EN": "Ammonia là Base Bronsted yếu và chất khử mạnh. Khói trắng NH4Cl và phức đồng xanh thẫm."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 5,
+    "lessonId": "hh11_b5",
+    "field": "sections[0].points[1]",
+    "VN": "Muối ammonium tác dụng kiềm giải phóng khí NH3.",
+    "current_EN": "Salt ammonium tác dụng kiềm giải phóng khí NH3."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 5,
+    "lessonId": "hh11_b5",
+    "field": "sections[1].points[0]",
+    "VN": "Cu²⁺ + 4NH₃ → [Cu(NH₃)₄]²⁺ [Phức xanh lam thẫm]",
+    "current_EN": "Cu²⁺ + 4NH₃ → [Cu(NH₃)₄]²⁺ [Phức xanh lam thẫm]"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 5,
+    "lessonId": "hh11_b5",
+    "field": "sections[2].points[0]",
+    "VN": "NH₃ + H₂O ⇌ NH₄⁺ + OH⁻",
+    "current_EN": "NH₃ + H₂O ⇌ NH₄⁺ + OH⁻"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 5,
+    "lessonId": "hh11_b5",
+    "field": "sections[2].points[1]",
+    "VN": "NH₃ + HCl → NH₄Cl (Khói trắng mù mịt)",
+    "current_EN": "NH₃ + HCl → NH₄Cl (Khói trắng mù mịt)"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 6,
+    "lessonId": "hh11_b6",
+    "field": "chapterTitle",
+    "VN": "Chương 2: Nitrogen – Sulfur",
+    "current_EN": "Chương 2: Nitrogen – Sulfur"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 6,
+    "lessonId": "hh11_b6",
+    "field": "summary",
+    "VN": "Các oxit nitơ (NO, NO2) gây mưa axit. Axit nitric HNO3 có tính oxi hóa cực mạnh.",
+    "current_EN": "Các Oxide nitơ (NO, NO2) gây mưa Acid. Acid nitric HNO3 có tính oxi hóa cực mạnh."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 6,
+    "lessonId": "hh11_b6",
+    "field": "theoryPoints[0]",
+    "VN": "Hiện tượng phú dưỡng do dư thừa nitrat và photphat.",
+    "current_EN": "Hiện tượng phú dưỡng do dư thừa nitrat và photphat."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 6,
+    "lessonId": "hh11_b6",
+    "field": "sampleQuestion.question",
+    "VN": "Khí NO2 sinh ra khi hòa tan Cu vào HNO3 đặc có màu gì?",
+    "current_EN": "Khí NO2 sinh ra khi hòa tan Cu vào HNO3 đặc có màu gì?"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 6,
+    "lessonId": "hh11_b6",
+    "field": "sampleQuestion.answer",
+    "VN": "Có màu NÂU ĐỎ đặc trưng.",
+    "current_EN": "Có màu NÂU ĐỎ đặc trưng."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 6,
+    "lessonId": "hh11_b6",
+    "field": "sections[0].points[0]",
+    "VN": "Các oxit nitơ (NO, NO2) gây mưa axit. Axit nitric HNO3 có tính oxi hóa cực mạnh.",
+    "current_EN": "Các Oxide nitơ (NO, NO2) gây mưa Acid. Acid nitric HNO3 có tính oxi hóa cực mạnh."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 6,
+    "lessonId": "hh11_b6",
+    "field": "sections[0].points[1]",
+    "VN": "Hiện tượng phú dưỡng do dư thừa nitrat và photphat.",
+    "current_EN": "Hiện tượng phú dưỡng do dư thừa nitrat và photphat."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 6,
+    "lessonId": "hh11_b6",
+    "field": "sections[1].points[0]",
+    "VN": "Cu + 4HNO₃ (đặc) → Cu(NO₃)₂ + 2NO₂ ↑ [Nâu đỏ] + 2H₂O",
+    "current_EN": "Cu + 4HNO₃ (đặc) → Cu(NO₃)₂ + 2NO₂ ↑ [Nâu đỏ] + 2H₂O"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 6,
+    "lessonId": "hh11_b6",
+    "field": "sections[1].points[1]",
+    "VN": "3Cu + 8HNO₃ (loãng) → 3Cu(NO₃)₂ + 2NO ↑ + 4H₂O",
+    "current_EN": "3Cu + 8HNO₃ (loãng) → 3Cu(NO₃)₂ + 2NO ↑ + 4H₂O"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 6,
+    "lessonId": "hh11_b6",
+    "field": "sections[2].points[0]",
+    "VN": "HNO₃ oxi hóa hầu hết kim loại lên số oxh cao nhất",
+    "current_EN": "HNO₃ oxi hóa hầu hết Metal lên số oxh cao nhất"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 7,
+    "lessonId": "hh11_b7",
+    "field": "chapterTitle",
+    "VN": "Chương 2: Nitrogen – Sulfur",
+    "current_EN": "Chương 2: Nitrogen – Sulfur"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 7,
+    "lessonId": "hh11_b7",
+    "field": "summary",
+    "VN": "Lưu huỳnh thể hiện tính khử và tính oxi hóa. SO2 là oxit axit và chất tẩy màu.",
+    "current_EN": "Lưu huỳnh thể hiện tính khử và tính oxi hóa. SO2 là Oxide Acid và chất tẩy màu."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 7,
+    "lessonId": "hh11_b7",
+    "field": "theoryPoints[0]",
+    "VN": "Dùng bột lưu huỳnh để thu gom thủy ngân rơi vãi.",
+    "current_EN": "Dùng bột lưu huỳnh để thu gom thủy ngân rơi vãi."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 7,
+    "lessonId": "hh11_b7",
+    "field": "sampleQuestion.question",
+    "VN": "Làm thế nào để xử lý thủy ngân khi bị vỡ nhiệt kế?",
+    "current_EN": "Làm thế nào để xử lý thủy ngân khi bị vỡ nhiệt kế?"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 7,
+    "lessonId": "hh11_b7",
+    "field": "sampleQuestion.answer",
+    "VN": "Rắc bột lưu huỳnh (S) lên trên tạo muối HgS không bay hơi.",
+    "current_EN": "Rắc bột lưu huỳnh (S) lên trên tạo Salt HgS không bay hơi."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 7,
+    "lessonId": "hh11_b7",
+    "field": "sections[0].points[0]",
+    "VN": "Lưu huỳnh thể hiện tính khử và tính oxi hóa. SO2 là oxit axit và chất tẩy màu.",
+    "current_EN": "Lưu huỳnh thể hiện tính khử và tính oxi hóa. SO2 là Oxide Acid và chất tẩy màu."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 7,
+    "lessonId": "hh11_b7",
+    "field": "sections[0].points[1]",
+    "VN": "Dùng bột lưu huỳnh để thu gom thủy ngân rơi vãi.",
+    "current_EN": "Dùng bột lưu huỳnh để thu gom thủy ngân rơi vãi."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 7,
+    "lessonId": "hh11_b7",
+    "field": "sections[1].points[0]",
+    "VN": "SO₂ + Br₂ + 2H₂O → 2HBr + H₂SO₄  (Làm mất màu nước brom)",
+    "current_EN": "SO₂ + Br₂ + 2H₂O → 2HBr + H₂SO₄  (Làm mất màu Water brom)"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 7,
+    "lessonId": "hh11_b7",
+    "field": "sections[2].points[0]",
+    "VN": "S + O₂ → SO₂",
+    "current_EN": "S + O₂ → SO₂"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 7,
+    "lessonId": "hh11_b7",
+    "field": "sections[2].points[1]",
+    "VN": "Hg + S → HgS (Xảy ra ở t° thường dùng thu gom thủy ngân)",
+    "current_EN": "Hg + S → HgS (Xảy ra ở t° thường dùng thu gom thủy ngân)"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 8,
+    "lessonId": "hh11_b8",
+    "field": "chapterTitle",
+    "VN": "Chương 2: Nitrogen – Sulfur",
+    "current_EN": "Chương 2: Nitrogen – Sulfur"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 8,
+    "lessonId": "hh11_b8",
+    "field": "summary",
+    "VN": "H2SO4 loãng là axit mạnh. H2SO4 đặc oxi hóa rất mạnh và háo nước. Sản xuất theo phương pháp tiếp xúc.",
+    "current_EN": "H2SO4 loãng là Acid mạnh. H2SO4 đặc oxi hóa rất mạnh và háo Water. Sản xuất theo phương pháp tiếp xúc."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 8,
+    "lessonId": "hh11_b8",
+    "field": "theoryPoints[0]",
+    "VN": "Nhận biết ion SO4(2-) bằng dung dịch muối Ba2+ tạo kết tủa trắng BaSO4.",
+    "current_EN": "Nhận biết ion SO4(2-) bằng Solution Salt Ba2+ tạo kết tủa trắng BaSO4."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 8,
+    "lessonId": "hh11_b8",
+    "field": "sampleQuestion.question",
+    "VN": "Chất nào tác dụng H2SO4 đặc nóng giải phóng SO2: CuO, Cu, Fe2O3?",
+    "current_EN": "Chất nào tác dụng H2SO4 đặc nóng giải phóng SO2: CuO, Cu, Fe2O3?"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 8,
+    "lessonId": "hh11_b8",
+    "field": "sampleQuestion.answer",
+    "VN": "Đồng (Cu) vì Cu bị oxi hóa lên Cu(II).",
+    "current_EN": "Đồng (Cu) vì Cu bị oxi hóa lên Cu(II)."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 8,
+    "lessonId": "hh11_b8",
+    "field": "sections[0].points[0]",
+    "VN": "H2SO4 loãng là axit mạnh. H2SO4 đặc oxi hóa rất mạnh và háo nước. Sản xuất theo phương pháp tiếp xúc.",
+    "current_EN": "H2SO4 loãng là Acid mạnh. H2SO4 đặc oxi hóa rất mạnh và háo Water. Sản xuất theo phương pháp tiếp xúc."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 8,
+    "lessonId": "hh11_b8",
+    "field": "sections[0].points[1]",
+    "VN": "Nhận biết ion SO4(2-) bằng dung dịch muối Ba2+ tạo kết tủa trắng BaSO4.",
+    "current_EN": "Nhận biết ion SO4(2-) bằng Solution Salt Ba2+ tạo kết tủa trắng BaSO4."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 8,
+    "lessonId": "hh11_b8",
+    "field": "sections[1].points[0]",
+    "VN": "Cu + 2H₂SO₄ (đặc, t°) → CuSO₄ + SO₂ ↑ + 2H₂O",
+    "current_EN": "Cu + 2H₂SO₄ (đặc, t°) → CuSO₄ + SO₂ ↑ + 2H₂O"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 8,
+    "lessonId": "hh11_b8",
+    "field": "sections[1].points[1]",
+    "VN": "C₁₂H₂₂O₁₁ → 12C + 11H₂O",
+    "current_EN": "C₁₂H₂₂O₁₁ → 12C + 11H₂O"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 8,
+    "lessonId": "hh11_b8",
+    "field": "sections[2].points[0]",
+    "VN": "Tiếp xúc 3 giai đoạn: S/FeS₂ → SO₂ → SO₃ (V₂O₅) → Oleum → H₂SO₄",
+    "current_EN": "Tiếp xúc 3 giai đoạn: S/FeS₂ → SO₂ → SO₃ (V₂O₅) → Oleum → H₂SO₄"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 9,
+    "lessonId": "hh11_b9",
+    "field": "chapterTitle",
+    "VN": "Chương 2: Nitrogen – Sulfur",
+    "current_EN": "Chương 2: Nitrogen – Sulfur"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 9,
+    "lessonId": "hh11_b9",
+    "field": "summary",
+    "VN": "Hệ thống hóa chu trình nitrogen - sulfur, tính oxi hóa mạnh của HNO3, H2SO4 đặc.",
+    "current_EN": "Hệ thống hóa chu trình nitrogen - sulfur, tính oxi hóa mạnh của HNO3, H2SO4 đặc."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 9,
+    "lessonId": "hh11_b9",
+    "field": "theoryPoints[0]",
+    "VN": "Al, Fe, Cr bị thụ động trong HNO3 đặc nguội và H2SO4 đặc nguội.",
+    "current_EN": "Al, Fe, Cr bị thụ động trong HNO3 đặc nguội và H2SO4 đặc nguội."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 9,
+    "lessonId": "hh11_b9",
+    "field": "sampleQuestion.question",
+    "VN": "Kim loại nào bị thụ động trong HNO3 đặc nguội?",
+    "current_EN": "Metal nào bị thụ động trong HNO3 đặc nguội?"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 9,
+    "lessonId": "hh11_b9",
+    "field": "sampleQuestion.answer",
+    "VN": "Nhôm (Al), Sắt (Fe) và Crom (Cr).",
+    "current_EN": "Nhôm (Al), Sắt (Fe) và Crom (Cr)."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 9,
+    "lessonId": "hh11_b9",
+    "field": "sections[0].points[0]",
+    "VN": "Hệ thống hóa chu trình nitrogen - sulfur, tính oxi hóa mạnh của HNO3, H2SO4 đặc.",
+    "current_EN": "Hệ thống hóa chu trình nitrogen - sulfur, tính oxi hóa mạnh của HNO3, H2SO4 đặc."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 9,
+    "lessonId": "hh11_b9",
+    "field": "sections[0].points[1]",
+    "VN": "Al, Fe, Cr bị thụ động trong HNO3 đặc nguội và H2SO4 đặc nguội.",
+    "current_EN": "Al, Fe, Cr bị thụ động trong HNO3 đặc nguội và H2SO4 đặc nguội."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 9,
+    "lessonId": "hh11_b9",
+    "field": "sections[1].points[0]",
+    "VN": "Nhận biết: NH₄⁺ (kiềm sinh NH₃), SO₄²⁻ (Ba²⁺ sinh BaSO₄ ↓)",
+    "current_EN": "Nhận biết: NH₄⁺ (kiềm sinh NH₃), SO₄²⁻ (Ba²⁺ sinh BaSO₄ ↓)"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 9,
+    "lessonId": "hh11_b9",
+    "field": "sections[2].points[0]",
+    "VN": "So sánh HNO3 và H2SO4 đặc",
+    "current_EN": "So sánh HNO3 và H2SO4 đặc"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 10,
+    "lessonId": "hh11_b10",
+    "field": "chapterTitle",
+    "VN": "Chương 3: Đại cương về hoá học hữu cơ",
+    "current_EN": "Chương 3: Đại cương về hoá học hữu cơ"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 10,
+    "lessonId": "hh11_b10",
+    "field": "summary",
+    "VN": "Khái niệm hợp chất hữu cơ, đặc điểm cấu tạo và các nhóm chức phổ biến.",
+    "current_EN": "Khái niệm hợp chất hữu cơ, đặc điểm cấu tạo và các nhóm chức phổ biến."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 10,
+    "lessonId": "hh11_b10",
+    "field": "theoryPoints[0]",
+    "VN": "Nhóm chức quyết định tính chất hóa học của phân tử.",
+    "current_EN": "Nhóm chức quyết định tính chất hóa học của Molecule."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 10,
+    "lessonId": "hh11_b10",
+    "field": "sampleQuestion.question",
+    "VN": "Nhóm chức -COOH là nhóm chức của loại hợp chất nào?",
+    "current_EN": "Nhóm chức -COOH là nhóm chức của loại hợp chất nào?"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 10,
+    "lessonId": "hh11_b10",
+    "field": "sections[0].points[0]",
+    "VN": "Khái niệm hợp chất hữu cơ, đặc điểm cấu tạo và các nhóm chức phổ biến.",
+    "current_EN": "Khái niệm hợp chất hữu cơ, đặc điểm cấu tạo và các nhóm chức phổ biến."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 10,
+    "lessonId": "hh11_b10",
+    "field": "sections[0].points[1]",
+    "VN": "Nhóm chức quyết định tính chất hóa học của phân tử.",
+    "current_EN": "Nhóm chức quyết định tính chất hóa học của Molecule."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 10,
+    "lessonId": "hh11_b10",
+    "field": "sections[1].points[0]",
+    "VN": "Phổ hồng ngoại IR xác định các nhóm chức đặc trưng",
+    "current_EN": "Phổ hồng ngoại IR xác định các nhóm chức đặc trưng"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 10,
+    "lessonId": "hh11_b10",
+    "field": "sections[2].points[0]",
+    "VN": "Nhóm chức: -OH (Alcohol), -CHO (Aldehyde), -COOH (Carboxylic acid), -COO- (Ester), -NH₂ (Amine)",
+    "current_EN": "Nhóm chức: -OH (Alcohol), -CHO (Aldehyde), -COOH (Carboxylic acid), -COO- (Ester), -NH₂ (Amine)"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 11,
+    "lessonId": "hh11_b11",
+    "field": "chapterTitle",
+    "VN": "Chương 3: Đại cương về hoá học hữu cơ",
+    "current_EN": "Chương 3: Đại cương về hoá học hữu cơ"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 11,
+    "lessonId": "hh11_b11",
+    "field": "summary",
+    "VN": "Chiết (độ tan khác nhau), Chưng cất (nhiệt độ sôi khác nhau), Kết tinh và Sắc kí cột.",
+    "current_EN": "Chiết (Solubility khác nhau), Chưng cất (nhiệt độ sôi khác nhau), Kết tinh và Sắc kí cột."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 11,
+    "lessonId": "hh11_b11",
+    "field": "theoryPoints[0]",
+    "VN": "Ứng dụng sản xuất nước hoa và dược phẩm.",
+    "current_EN": "Ứng dụng sản xuất Water hoa và dược phẩm."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 11,
+    "lessonId": "hh11_b11",
+    "field": "sampleQuestion.question",
+    "VN": "Phương pháp tách rượu etylic ra khỏi nước rượu?",
+    "current_EN": "Phương pháp tách rượu etylic ra khỏi Water rượu?"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 11,
+    "lessonId": "hh11_b11",
+    "field": "sampleQuestion.answer",
+    "VN": "Phương pháp chưng cất phân đoạn.",
+    "current_EN": "Phương pháp chưng cất phân đoạn."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 11,
+    "lessonId": "hh11_b11",
+    "field": "sections[0].points[0]",
+    "VN": "Chiết (độ tan khác nhau), Chưng cất (nhiệt độ sôi khác nhau), Kết tinh và Sắc kí cột.",
+    "current_EN": "Chiết (Solubility khác nhau), Chưng cất (nhiệt độ sôi khác nhau), Kết tinh và Sắc kí cột."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 11,
+    "lessonId": "hh11_b11",
+    "field": "sections[0].points[1]",
+    "VN": "Ứng dụng sản xuất nước hoa và dược phẩm.",
+    "current_EN": "Ứng dụng sản xuất Water hoa và dược phẩm."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 11,
+    "lessonId": "hh11_b11",
+    "field": "sections[1].points[0]",
+    "VN": "Tách dầu ăn khỏi nước bằng phễu chiết.",
+    "current_EN": "Tách dầu ăn khỏi Water bằng phễu chiết."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 11,
+    "lessonId": "hh11_b11",
+    "field": "sections[2].points[0]",
+    "VN": "Chưng cất lôi cuốn hơi nước tách tinh dầu",
+    "current_EN": "Chưng cất lôi cuốn hơi Water tách tinh dầu"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 11,
+    "lessonId": "hh11_b11",
+    "field": "sections[2].points[1]",
+    "VN": "Chiết lỏng - lỏng dùng phễu chiết",
+    "current_EN": "Chiết lỏng - lỏng dùng phễu chiết"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 12,
+    "lessonId": "hh11_b12",
+    "field": "chapterTitle",
+    "VN": "Chương 3: Đại cương về hoá học hữu cơ",
+    "current_EN": "Chương 3: Đại cương về hoá học hữu cơ"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 12,
+    "lessonId": "hh11_b12",
+    "field": "summary",
+    "VN": "Thiết lập CTĐGN từ % khối lượng và xác định CTPT dựa trên phổ khối lượng MS.",
+    "current_EN": "Thiết lập CTĐGN từ % khối lượng và xác định CTPT dựa trên phổ khối lượng MS."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 12,
+    "lessonId": "hh11_b12",
+    "field": "theoryPoints[0]",
+    "VN": "Nắm vững kiến thức trọng tâm của bài học.",
+    "current_EN": "Nắm vững kiến thức trọng tâm của bài học."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 12,
+    "lessonId": "hh11_b12",
+    "field": "sections[0].points[0]",
+    "VN": "Thiết lập CTĐGN từ % khối lượng và xác định CTPT dựa trên phổ khối lượng MS.",
+    "current_EN": "Thiết lập CTĐGN từ % khối lượng và xác định CTPT dựa trên phổ khối lượng MS."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 12,
+    "lessonId": "hh11_b12",
+    "field": "sections[0].points[1]",
+    "VN": "Nắm vững kiến thức trọng tâm của bài học.",
+    "current_EN": "Nắm vững kiến thức trọng tâm của bài học."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 12,
+    "lessonId": "hh11_b12",
+    "field": "sections[1].points[0]",
+    "VN": "Phổ khối lượng MS cho biết giá trị ion phân tử [M⁺] chính xác bằng M.",
+    "current_EN": "Phổ khối lượng MS cho biết giá trị ion Molecule [M⁺] chính xác bằng M."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 12,
+    "lessonId": "hh11_b12",
+    "field": "sections[2].points[0]",
+    "VN": "C : H : O : N = (%C/12) : (%H/1) : (%O/16) : (%N/14)",
+    "current_EN": "C : H : O : N = (%C/12) : (%H/1) : (%O/16) : (%N/14)"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 12,
+    "lessonId": "hh11_b12",
+    "field": "sections[2].points[1]",
+    "VN": "CTPT = (CTĐGN)_n",
+    "current_EN": "CTPT = (CTĐGN)_n"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 13,
+    "lessonId": "hh11_b13",
+    "field": "chapterTitle",
+    "VN": "Chương 3: Đại cương về hoá học hữu cơ",
+    "current_EN": "Chương 3: Đại cương về hoá học hữu cơ"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 13,
+    "lessonId": "hh11_b13",
+    "field": "summary",
+    "VN": "Thuyết Butlerov, trật tự liên kết, loại mạch cacbon và hiện tượng đồng phân cấu tạo, hình học.",
+    "current_EN": "Thuyết Butlerov, trật tự liên kết, loại mạch cacbon và hiện tượng đồng phân cấu tạo, hình học."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 13,
+    "lessonId": "hh11_b13",
+    "field": "theoryPoints[0]",
+    "VN": "Trật tự liên kết quy định tính chất của chất.",
+    "current_EN": "Trật tự liên kết quy định tính chất của chất."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 13,
+    "lessonId": "hh11_b13",
+    "field": "sampleQuestion.question",
+    "VN": "Chất nào có đồng phân cis - trans: but-1-en hay but-2-en?",
+    "current_EN": "Chất nào có đồng phân cis - trans: but-1-en hay but-2-en?"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 13,
+    "lessonId": "hh11_b13",
+    "field": "sampleQuestion.answer",
+    "VN": "But-2-en (CH3-CH=CH-CH3).",
+    "current_EN": "But-2-en (CH3-CH=CH-CH3)."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 13,
+    "lessonId": "hh11_b13",
+    "field": "sections[0].points[0]",
+    "VN": "Thuyết Butlerov, trật tự liên kết, loại mạch cacbon và hiện tượng đồng phân cấu tạo, hình học.",
+    "current_EN": "Thuyết Butlerov, trật tự liên kết, loại mạch cacbon và hiện tượng đồng phân cấu tạo, hình học."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 13,
+    "lessonId": "hh11_b13",
+    "field": "sections[0].points[1]",
+    "VN": "Trật tự liên kết quy định tính chất của chất.",
+    "current_EN": "Trật tự liên kết quy định tính chất của chất."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 13,
+    "lessonId": "hh11_b13",
+    "field": "sections[1].points[0]",
+    "VN": "CH₃-CH₂-CH₂-OH và CH₃-CH(OH)-CH₃ (Đồng phân vị trí -OH)",
+    "current_EN": "CH₃-CH₂-CH₂-OH và CH₃-CH(OH)-CH₃ (Đồng phân vị trí -OH)"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 13,
+    "lessonId": "hh11_b13",
+    "field": "sections[2].points[0]",
+    "VN": "Đồng phân cấu tạo vs Đồng phân hình học cis - trans",
+    "current_EN": "Đồng phân cấu tạo vs Đồng phân hình học cis - trans"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 14,
+    "lessonId": "hh11_b14",
+    "field": "chapterTitle",
+    "VN": "Chương 3: Đại cương về hoá học hữu cơ",
+    "current_EN": "Chương 3: Đại cương về hoá học hữu cơ"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 14,
+    "lessonId": "hh11_b14",
+    "field": "summary",
+    "VN": "Tổng kết lập CTPT, viết đồng phân cấu tạo và gọi tên danh pháp IUPAC.",
+    "current_EN": "Tổng kết lập CTPT, viết đồng phân cấu tạo và gọi tên danh pháp IUPAC."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 14,
+    "lessonId": "hh11_b14",
+    "field": "theoryPoints[0]",
+    "VN": "Củng cố kỹ năng viết đồng phân.",
+    "current_EN": "Củng cố kỹ năng viết đồng phân."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 14,
+    "lessonId": "hh11_b14",
+    "field": "sampleQuestion.question",
+    "VN": "Viết các đồng phân cấu tạo của C4H10?",
+    "current_EN": "Viết các đồng phân cấu tạo của C4H10?"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 14,
+    "lessonId": "hh11_b14",
+    "field": "sampleQuestion.answer",
+    "VN": "Gồm Butan và 2-metylpropan.",
+    "current_EN": "Gồm Butan và 2-metylpropan."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 14,
+    "lessonId": "hh11_b14",
+    "field": "sections[0].points[0]",
+    "VN": "Tổng kết lập CTPT, viết đồng phân cấu tạo và gọi tên danh pháp IUPAC.",
+    "current_EN": "Tổng kết lập CTPT, viết đồng phân cấu tạo và gọi tên danh pháp IUPAC."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 14,
+    "lessonId": "hh11_b14",
+    "field": "sections[0].points[1]",
+    "VN": "Củng cố kỹ năng viết đồng phân.",
+    "current_EN": "Củng cố kỹ năng viết đồng phân."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 14,
+    "lessonId": "hh11_b14",
+    "field": "sections[1].points[0]",
+    "VN": "Thành thạo phân tích phổ MS và IR.",
+    "current_EN": "Thành thạo phân tích phổ MS và IR."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 14,
+    "lessonId": "hh11_b14",
+    "field": "sections[2].points[0]",
+    "VN": "Quy tắc tên IUPAC: Vị trí nhánh + Nhánh + Mạch chính + Hậu tố",
+    "current_EN": "Quy tắc tên IUPAC: Vị trí nhánh + Nhánh + Mạch chính + Hậu tố"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 15,
+    "lessonId": "hh11_b15",
+    "field": "summary",
+    "VN": "Công thức CnH2n+2. Chỉ có liên kết đơn C-C và C-H. Phản ứng đặc trưng: thế clo (theo quy tắc thế C bậc cao).",
+    "current_EN": "Công thức CnH2n+2. Chỉ có liên kết đơn C-C và C-H. Phản ứng đặc trưng: thế clo (theo quy tắc thế C bậc cao)."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 15,
+    "lessonId": "hh11_b15",
+    "field": "theoryPoints[0]",
+    "VN": "Alkane là thành phần chính của khí gas LPG và xăng dầu.",
+    "current_EN": "Alkane là thành phần chính của khí gas LPG và xăng dầu."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 15,
+    "lessonId": "hh11_b15",
+    "field": "sampleQuestion.question",
+    "VN": "Clo hóa propan, sản phẩm chính là gì?",
+    "current_EN": "Clo hóa propan, sản phẩm chính là gì?"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 15,
+    "lessonId": "hh11_b15",
+    "field": "sampleQuestion.answer",
+    "VN": "2-clopropan (CH3-CHCl-CH3).",
+    "current_EN": "2-clopropan (CH3-CHCl-CH3)."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 15,
+    "lessonId": "hh11_b15",
+    "field": "sections[0].points[0]",
+    "VN": "Công thức CnH2n+2. Chỉ có liên kết đơn C-C và C-H. Phản ứng đặc trưng: thế clo (theo quy tắc thế C bậc cao).",
+    "current_EN": "Công thức CnH2n+2. Chỉ có liên kết đơn C-C và C-H. Phản ứng đặc trưng: thế clo (theo quy tắc thế C bậc cao)."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 15,
+    "lessonId": "hh11_b15",
+    "field": "sections[0].points[1]",
+    "VN": "Alkane là thành phần chính của khí gas LPG và xăng dầu.",
+    "current_EN": "Alkane là thành phần chính của khí gas LPG và xăng dầu."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 15,
+    "lessonId": "hh11_b15",
+    "field": "sections[1].points[0]",
+    "VN": "CH₄ + Cl₂ → CH₃Cl + HCl",
+    "current_EN": "CH₄ + Cl₂ → CH₃Cl + HCl"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 15,
+    "lessonId": "hh11_b15",
+    "field": "sections[1].points[1]",
+    "VN": "CH₃-CH₂-CH₃ + Cl₂ → CH₃-CHCl-CH₃ (Sản phẩm chính 2-clopropan)",
+    "current_EN": "CH₃-CH₂-CH₃ + Cl₂ → CH₃-CHCl-CH₃ (Sản phẩm chính 2-clopropan)"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 15,
+    "lessonId": "hh11_b15",
+    "field": "sections[2].points[0]",
+    "VN": "C_n H₂n+₂ + Cl₂ → C_n H₂n+₁ Cl + HCl  (Ánh sáng)",
+    "current_EN": "C_n H₂n+₂ + Cl₂ → C_n H₂n+₁ Cl + HCl  (Ánh sáng)"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 15,
+    "lessonId": "hh11_b15",
+    "field": "sections[2].points[1]",
+    "VN": "Ưu tiên thế H ở C bậc cao hơn",
+    "current_EN": "Ưu tiên thế H ở C bậc cao hơn"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 16,
+    "lessonId": "hh11_b16",
+    "field": "summary",
+    "VN": "Alkene CnH2n (chứa C=C) và Alkyne CnH2n-2 (chứa C≡C). Phản ứng cộng (Markovnikov), trùng hợp và làm mất màu KMnO4.",
+    "current_EN": "Alkene CnH2n (chứa C=C) và Alkyne CnH2n-2 (chứa C≡C). Phản ứng cộng (Markovnikov), Polymerization và làm mất màu KMnO4."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 16,
+    "lessonId": "hh11_b16",
+    "field": "theoryPoints[0]",
+    "VN": "Alkyne có nối ba đầu mạch tác dụng AgNO3/NH3 tạo kết tủa vàng.",
+    "current_EN": "Alkyne có nối ba đầu mạch tác dụng AgNO3/NH3 tạo kết tủa vàng."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 16,
+    "lessonId": "hh11_b16",
+    "field": "sampleQuestion.question",
+    "VN": "Chất nào tác dụng AgNO3/NH3 tạo kết tủa vàng?",
+    "current_EN": "Chất nào tác dụng AgNO3/NH3 tạo kết tủa vàng?"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 16,
+    "lessonId": "hh11_b16",
+    "field": "sampleQuestion.answer",
+    "VN": "Các alkyne có liên kết ba đầu mạch (như Axetilen).",
+    "current_EN": "Các alkyne có liên kết ba đầu mạch (như Axetilen)."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 16,
+    "lessonId": "hh11_b16",
+    "field": "sections[0].points[0]",
+    "VN": "Alkene CnH2n (chứa C=C) và Alkyne CnH2n-2 (chứa C≡C). Phản ứng cộng (Markovnikov), trùng hợp và làm mất màu KMnO4.",
+    "current_EN": "Alkene CnH2n (chứa C=C) và Alkyne CnH2n-2 (chứa C≡C). Phản ứng cộng (Markovnikov), Polymerization và làm mất màu KMnO4."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 16,
+    "lessonId": "hh11_b16",
+    "field": "sections[0].points[1]",
+    "VN": "Alkyne có nối ba đầu mạch tác dụng AgNO3/NH3 tạo kết tủa vàng.",
+    "current_EN": "Alkyne có nối ba đầu mạch tác dụng AgNO3/NH3 tạo kết tủa vàng."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 16,
+    "lessonId": "hh11_b16",
+    "field": "sections[1].points[0]",
+    "VN": "CH₂=CH₂ + Br₂ → CH₂Br-CH₂Br",
+    "current_EN": "CH₂=CH₂ + Br₂ → CH₂Br-CH₂Br"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 16,
+    "lessonId": "hh11_b16",
+    "field": "sections[1].points[1]",
+    "VN": "CH₃-CH=CH₂ + HCl → CH₃-CHCl-CH₃ (Chính)",
+    "current_EN": "CH₃-CH=CH₂ + HCl → CH₃-CHCl-CH₃ (Chính)"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 16,
+    "lessonId": "hh11_b16",
+    "field": "sections[2].points[0]",
+    "VN": "Quy tắc Markovnikov: H cộng vào C nhiều H hơn",
+    "current_EN": "Quy tắc Markovnikov: H cộng vào C nhiều H hơn"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 16,
+    "lessonId": "hh11_b16",
+    "field": "sections[2].points[1]",
+    "VN": "Làm mất màu dung dịch Brom và thuốc tím KMnO4",
+    "current_EN": "Làm mất màu Solution Brom và thuốc tím KMnO4"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 17,
+    "lessonId": "hh11_b17",
+    "field": "summary",
+    "VN": "Chứa vòng benzen C6H6 và đồng đẳng (Toluen). Quy tắc thế vào vòng thơm và nhánh.",
+    "current_EN": "Chứa vòng benzen C6H6 và đồng đẳng (Toluen). Quy tắc thế vào vòng thơm và nhánh."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 17,
+    "lessonId": "hh11_b17",
+    "field": "theoryPoints[0]",
+    "VN": "Toluen làm mất màu KMnO4 khi đun nóng; benzen thì không.",
+    "current_EN": "Toluen làm mất màu KMnO4 khi đun nóng; benzen thì không."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 17,
+    "lessonId": "hh11_b17",
+    "field": "sampleQuestion.question",
+    "VN": "Thuốc thử hóa học phân biệt Benzen và Toluen?",
+    "current_EN": "Thuốc thử hóa học phân biệt Benzen và Toluen?"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 17,
+    "lessonId": "hh11_b17",
+    "field": "sampleQuestion.answer",
+    "VN": "Dung dịch KMnO4 đun nóng (Toluen làm mất màu thuốc tím).",
+    "current_EN": "Solution KMnO4 đun nóng (Toluen làm mất màu thuốc tím)."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 17,
+    "lessonId": "hh11_b17",
+    "field": "sections[0].points[0]",
+    "VN": "Chứa vòng benzen C6H6 và đồng đẳng (Toluen). Quy tắc thế vào vòng thơm và nhánh.",
+    "current_EN": "Chứa vòng benzen C6H6 và đồng đẳng (Toluen). Quy tắc thế vào vòng thơm và nhánh."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 17,
+    "lessonId": "hh11_b17",
+    "field": "sections[0].points[1]",
+    "VN": "Toluen làm mất màu KMnO4 khi đun nóng; benzen thì không.",
+    "current_EN": "Toluen làm mất màu KMnO4 khi đun nóng; benzen thì không."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 17,
+    "lessonId": "hh11_b17",
+    "field": "sections[1].points[0]",
+    "VN": "C₆H₆ + Br₂ → C₆H₅Br + HBr  (Fe)",
+    "current_EN": "C₆H₆ + Br₂ → C₆H₅Br + HBr  (Fe)"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 17,
+    "lessonId": "hh11_b17",
+    "field": "sections[1].points[1]",
+    "VN": "C₆H₅CH₃ + 2KMnO₄ → C₆H₅COOK + 2MnO₂ ↓ + KOH + H₂O (t°)",
+    "current_EN": "C₆H₅CH₃ + 2KMnO₄ → C₆H₅COOK + 2MnO₂ ↓ + KOH + H₂O (t°)"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 17,
+    "lessonId": "hh11_b17",
+    "field": "sections[2].points[0]",
+    "VN": "Benzen: Dễ thế Br₂ (xúc tác Fe), khó cộng",
+    "current_EN": "Benzen: Dễ thế Br₂ (xúc tác Fe), khó cộng"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 17,
+    "lessonId": "hh11_b17",
+    "field": "sections[2].points[1]",
+    "VN": "Toluen: Tác dụng KMnO₄ đun nóng tạo C₆H₅COOH",
+    "current_EN": "Toluen: Tác dụng KMnO₄ đun nóng tạo C₆H₅COOH"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 18,
+    "lessonId": "hh11_b18",
+    "field": "summary",
+    "VN": "Hệ thống hóa tính chất và phân biệt Alkane, Alkene, Alkyne và Arene.",
+    "current_EN": "Hệ thống hóa tính chất và phân biệt Alkane, Alkene, Alkyne và Arene."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 18,
+    "lessonId": "hh11_b18",
+    "field": "theoryPoints[0]",
+    "VN": "Thành thạo giải toán hỗn hợp hydrocarbon.",
+    "current_EN": "Thành thạo giải toán Mixture hydrocarbon."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 18,
+    "lessonId": "hh11_b18",
+    "field": "sampleQuestion.question",
+    "VN": "Thứ tự nhận biết: Metan, Etilen, Axetilen?",
+    "current_EN": "Thứ tự nhận biết: Metan, Etilen, Axetilen?"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 18,
+    "lessonId": "hh11_b18",
+    "field": "sampleQuestion.answer",
+    "VN": "Dùng AgNO3/NH3 nhận biết Axetilen, sau đó dùng nước Brom nhận biết Etilen.",
+    "current_EN": "Dùng AgNO3/NH3 nhận biết Axetilen, sau đó dùng Water Brom nhận biết Etilen."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 18,
+    "lessonId": "hh11_b18",
+    "field": "sections[0].points[0]",
+    "VN": "Hệ thống hóa tính chất và phân biệt Alkane, Alkene, Alkyne và Arene.",
+    "current_EN": "Hệ thống hóa tính chất và phân biệt Alkane, Alkene, Alkyne và Arene."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 18,
+    "lessonId": "hh11_b18",
+    "field": "sections[0].points[1]",
+    "VN": "Thành thạo giải toán hỗn hợp hydrocarbon.",
+    "current_EN": "Thành thạo giải toán Mixture hydrocarbon."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 18,
+    "lessonId": "hh11_b18",
+    "field": "sections[1].points[0]",
+    "VN": "Alkane (thế Cl₂) | Alkene (cộng Br₂) | Alk-1-yne (kết tủa AgNO₃/NH₃) | Toluen (KMnO₄, t°)",
+    "current_EN": "Alkane (thế Cl₂) | Alkene (cộng Br₂) | Alk-1-yne (kết tủa AgNO₃/NH₃) | Toluen (KMnO₄, t°)"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 18,
+    "lessonId": "hh11_b18",
+    "field": "sections[2].points[0]",
+    "VN": "Bảng so sánh 4 loại Hydrocarbon",
+    "current_EN": "Bảng so sánh 4 loại Hydrocarbon"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 19,
+    "lessonId": "hh11_b19",
+    "field": "summary",
+    "VN": "R-X. Phản ứng thủy phân trong kiềm và phản ứng tách HX (quy tắc Zaitsev).",
+    "current_EN": "R-X. Phản ứng Hydrolysis trong kiềm và phản ứng tách HX (quy tắc Zaitsev)."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 19,
+    "lessonId": "hh11_b19",
+    "field": "theoryPoints[0]",
+    "VN": "Dùng làm dung môi, chất gây mê và chất chống dính Teflon.",
+    "current_EN": "Dùng làm dung môi, chất gây mê và chất chống dính Teflon."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 19,
+    "lessonId": "hh11_b19",
+    "field": "sampleQuestion.question",
+    "VN": "Thủy phân etyl clorua bằng NaOH đun nóng thu được chất gì?",
+    "current_EN": "Hydrolysis etyl clorua bằng NaOH đun nóng thu được chất gì?"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 19,
+    "lessonId": "hh11_b19",
+    "field": "sampleQuestion.answer",
+    "VN": "Rượu etylic (CH3-CH2-OH) và NaCl.",
+    "current_EN": "Rượu etylic (CH3-CH2-OH) và NaCl."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 19,
+    "lessonId": "hh11_b19",
+    "field": "sections[0].points[0]",
+    "VN": "R-X. Phản ứng thủy phân trong kiềm và phản ứng tách HX (quy tắc Zaitsev).",
+    "current_EN": "R-X. Phản ứng Hydrolysis trong kiềm và phản ứng tách HX (quy tắc Zaitsev)."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 19,
+    "lessonId": "hh11_b19",
+    "field": "sections[0].points[1]",
+    "VN": "Dùng làm dung môi, chất gây mê và chất chống dính Teflon.",
+    "current_EN": "Dùng làm dung môi, chất gây mê và chất chống dính Teflon."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 19,
+    "lessonId": "hh11_b19",
+    "field": "sections[1].points[0]",
+    "VN": "CH₃-CH₂-Cl + NaOH → CH₃-CH₂-OH + NaCl (t°)",
+    "current_EN": "CH₃-CH₂-Cl + NaOH → CH₃-CH₂-OH + NaCl (t°)"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 19,
+    "lessonId": "hh11_b19",
+    "field": "sections[2].points[1]",
+    "VN": "Quy tắc Zaitsev: Tách HX ưu tiên H ở C bậc cao",
+    "current_EN": "Quy tắc Zaitsev: Tách HX ưu tiên H ở C bậc cao"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 20,
+    "lessonId": "hh11_b20",
+    "field": "summary",
+    "VN": "Nhóm -OH gắn vào C no. Tác dụng Na, phản ứng thế -OH, tách nước tạo alkene/ete và oxi hóa bằng CuO.",
+    "current_EN": "Nhóm -OH gắn vào C no. Tác dụng Na, phản ứng thế -OH, tách Water tạo alkene/ete và oxi hóa bằng CuO."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 20,
+    "lessonId": "hh11_b20",
+    "field": "theoryPoints[0]",
+    "VN": "Ancol đa chức có -OH kề nhau hòa tan Cu(OH)2 tạo dung dịch xanh lam.",
+    "current_EN": "Ancol đa chức có -OH kề nhau hòa tan Cu(OH)2 tạo Solution xanh lam."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 20,
+    "lessonId": "hh11_b20",
+    "field": "sampleQuestion.question",
+    "VN": "Chất nào tác dụng Cu(OH)2 tạo dung dịch xanh lam: Ethanol hay Glycerol?",
+    "current_EN": "Chất nào tác dụng Cu(OH)2 tạo Solution xanh lam: Ethanol hay Glycerol?"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 20,
+    "lessonId": "hh11_b20",
+    "field": "sampleQuestion.answer",
+    "VN": "Glycerol (do có 3 nhóm -OH liền kề).",
+    "current_EN": "Glycerol (do có 3 nhóm -OH liền kề)."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 20,
+    "lessonId": "hh11_b20",
+    "field": "sections[0].points[0]",
+    "VN": "Nhóm -OH gắn vào C no. Tác dụng Na, phản ứng thế -OH, tách nước tạo alkene/ete và oxi hóa bằng CuO.",
+    "current_EN": "Nhóm -OH gắn vào C no. Tác dụng Na, phản ứng thế -OH, tách Water tạo alkene/ete và oxi hóa bằng CuO."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 20,
+    "lessonId": "hh11_b20",
+    "field": "sections[0].points[1]",
+    "VN": "Ancol đa chức có -OH kề nhau hòa tan Cu(OH)2 tạo dung dịch xanh lam.",
+    "current_EN": "Ancol đa chức có -OH kề nhau hòa tan Cu(OH)2 tạo Solution xanh lam."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 20,
+    "lessonId": "hh11_b20",
+    "field": "sections[1].points[0]",
+    "VN": "2C₂H₅OH + 2Na → 2C₂H₅ONa + H₂ ↑",
+    "current_EN": "2C₂H₅OH + 2Na → 2C₂H₅ONa + H₂ ↑"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 20,
+    "lessonId": "hh11_b20",
+    "field": "sections[1].points[1]",
+    "VN": "Glycerol C₃H₅(OH)₃ hòa tan Cu(OH)₂ tạo phức xanh lam thẫm",
+    "current_EN": "Glycerol C₃H₅(OH)₃ hòa tan Cu(OH)₂ tạo phức xanh lam thẫm"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 20,
+    "lessonId": "hh11_b20",
+    "field": "sections[2].points[0]",
+    "VN": "Tách nước 170°C tạo Alkene; 140°C tạo Ete",
+    "current_EN": "Tách Water 170°C tạo Alkene; 140°C tạo Ete"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 20,
+    "lessonId": "hh11_b20",
+    "field": "sections[2].points[1]",
+    "VN": "Oxi hóa ancol bậc I bằng CuO tạo Anđehit; bậc II tạo Xeton",
+    "current_EN": "Oxi hóa ancol bậc I bằng CuO tạo Anđehit; bậc II tạo Xeton"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 21,
+    "lessonId": "hh11_b21",
+    "field": "summary",
+    "VN": "Nhóm -OH gắn trực tiếp vào vòng benzen. Có tính axit yếu. Tác dụng nước brom tạo kết tủa trắng.",
+    "current_EN": "Nhóm -OH gắn trực tiếp vào vòng benzen. Có tính Acid yếu. Tác dụng Water brom tạo kết tủa trắng."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 21,
+    "lessonId": "hh11_b21",
+    "field": "theoryPoints[0]",
+    "VN": "Dung dịch phenol làm mất tính bazơ của dung dịch NaOH.",
+    "current_EN": "Solution phenol làm mất tính Base của Solution NaOH."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 21,
+    "lessonId": "hh11_b21",
+    "field": "sampleQuestion.question",
+    "VN": "Thuốc thử đặc trưng nhận biết Phenol?",
+    "current_EN": "Thuốc thử đặc trưng nhận biết Phenol?"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 21,
+    "lessonId": "hh11_b21",
+    "field": "sampleQuestion.answer",
+    "VN": "Dung dịch nước Brom tạo kết tủa trắng 2,4,6-tribromphenol.",
+    "current_EN": "Solution Water Brom tạo kết tủa trắng 2,4,6-tribromphenol."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 21,
+    "lessonId": "hh11_b21",
+    "field": "sections[0].points[0]",
+    "VN": "Nhóm -OH gắn trực tiếp vào vòng benzen. Có tính axit yếu. Tác dụng nước brom tạo kết tủa trắng.",
+    "current_EN": "Nhóm -OH gắn trực tiếp vào vòng benzen. Có tính Acid yếu. Tác dụng Water brom tạo kết tủa trắng."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 21,
+    "lessonId": "hh11_b21",
+    "field": "sections[0].points[1]",
+    "VN": "Dung dịch phenol làm mất tính bazơ của dung dịch NaOH.",
+    "current_EN": "Solution phenol làm mất tính Base của Solution NaOH."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 21,
+    "lessonId": "hh11_b21",
+    "field": "sections[1].points[0]",
+    "VN": "Ảnh hưởng qua lại làm tăng độ linh động của nguyên tử H nhóm -OH.",
+    "current_EN": "Ảnh hưởng qua lại làm tăng độ linh động của Atom H nhóm -OH."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 21,
+    "lessonId": "hh11_b21",
+    "field": "sections[2].points[0]",
+    "VN": "C₆H₅OH + NaOH → C₆H₅ONa + H₂O",
+    "current_EN": "C₆H₅OH + NaOH → C₆H₅ONa + H₂O"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 21,
+    "lessonId": "hh11_b21",
+    "field": "sections[2].points[1]",
+    "VN": "C₆H₅OH + 3Br₂ → C₆H₂Br₃OH ↓ (Trắng) + 3HBr",
+    "current_EN": "C₆H₅OH + 3Br₂ → C₆H₂Br₃OH ↓ (Trắng) + 3HBr"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 22,
+    "lessonId": "hh11_b22",
+    "field": "summary",
+    "VN": "So sánh tính chất của Alcohol và Phenol, bài toán tách nước và phản ứng với kim loại kiềm.",
+    "current_EN": "So sánh tính chất của Alcohol và Phenol, bài toán tách Water và phản ứng với Metal kiềm."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 22,
+    "lessonId": "hh11_b22",
+    "field": "theoryPoints[0]",
+    "VN": "Nắm vững kiến thức trọng tâm của bài học.",
+    "current_EN": "Nắm vững kiến thức trọng tâm của bài học."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 22,
+    "lessonId": "hh11_b22",
+    "field": "sampleQuestion.question",
+    "VN": "Dùng Cu(OH)2 nhận biết Glycerol (xanh lam), sau đó dùng nước Brom nhận biết Phenol (kết tủa trắng).",
+    "current_EN": "Dùng Cu(OH)2 nhận biết Glycerol (xanh lam), sau đó dùng Water Brom nhận biết Phenol (kết tủa trắng)."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 22,
+    "lessonId": "hh11_b22",
+    "field": "sections[0].points[0]",
+    "VN": "So sánh tính chất của Alcohol và Phenol, bài toán tách nước và phản ứng với kim loại kiềm.",
+    "current_EN": "So sánh tính chất của Alcohol và Phenol, bài toán tách Water và phản ứng với Metal kiềm."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 22,
+    "lessonId": "hh11_b22",
+    "field": "sections[0].points[1]",
+    "VN": "Nắm vững kiến thức trọng tâm của bài học.",
+    "current_EN": "Nắm vững kiến thức trọng tâm của bài học."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 22,
+    "lessonId": "hh11_b22",
+    "field": "sections[1].points[0]",
+    "VN": "Thành thạo nhận biết Ancol đơn chức, đa chức và Phenol.",
+    "current_EN": "Thành thạo nhận biết Ancol đơn chức, đa chức và Phenol."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 22,
+    "lessonId": "hh11_b22",
+    "field": "sections[2].points[0]",
+    "VN": "So sánh: Ancol không tác dụng NaOH; Phenol tác dụng NaOH",
+    "current_EN": "So sánh: Ancol không tác dụng NaOH; Phenol tác dụng NaOH"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 22,
+    "lessonId": "hh11_b22",
+    "field": "sections[2].points[1]",
+    "VN": "Cả hai đều tác dụng với Na giải phóng H₂",
+    "current_EN": "Cả hai đều tác dụng với Na giải phóng H₂"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 23,
+    "lessonId": "hh11_b23",
+    "field": "chapterTitle",
+    "VN": "Chương 6: Hợp chất Carbonyl – Carboxylic acid",
+    "current_EN": "Chương 6: Hợp chất Carbonyl – Carboxylic acid"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 23,
+    "lessonId": "hh11_b23",
+    "field": "summary",
+    "VN": "Nhóm cacbonyl >C=O. Anđehit R-CHO tráng bạc với thuốc thử Tollens và khử Cu(OH)2 tạo Cu2O đỏ gạch.",
+    "current_EN": "Nhóm cacbonyl >C=O. Anđehit R-CHO Silver mirror test với thuốc thử Tollens và khử Cu(OH)2 tạo Cu2O đỏ gạch."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 23,
+    "lessonId": "hh11_b23",
+    "field": "theoryPoints[0]",
+    "VN": "Nắm vững kiến thức trọng tâm của bài học.",
+    "current_EN": "Nắm vững kiến thức trọng tâm của bài học."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 23,
+    "lessonId": "hh11_b23",
+    "field": "sampleQuestion.question",
+    "VN": "Sinh ra 2 mol Ag (riêng HCHO sinh 4 mol Ag).",
+    "current_EN": "Sinh ra 2 Mole Ag (riêng HCHO sinh 4 Mole Ag)."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 23,
+    "lessonId": "hh11_b23",
+    "field": "sections[0].points[0]",
+    "VN": "Nhóm cacbonyl >C=O. Anđehit R-CHO tráng bạc với thuốc thử Tollens và khử Cu(OH)2 tạo Cu2O đỏ gạch.",
+    "current_EN": "Nhóm cacbonyl >C=O. Anđehit R-CHO Silver mirror test với thuốc thử Tollens và khử Cu(OH)2 tạo Cu2O đỏ gạch."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 23,
+    "lessonId": "hh11_b23",
+    "field": "sections[0].points[1]",
+    "VN": "Nắm vững kiến thức trọng tâm của bài học.",
+    "current_EN": "Nắm vững kiến thức trọng tâm của bài học."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 23,
+    "lessonId": "hh11_b23",
+    "field": "sections[1].points[0]",
+    "VN": "CH3CHO cho phản ứng iodoform tạo kết tủa vàng CHI3.",
+    "current_EN": "CH3CHO cho phản ứng iodoform tạo kết tủa vàng CHI3."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 23,
+    "lessonId": "hh11_b23",
+    "field": "sections[2].points[1]",
+    "VN": "R-CHO + 2Cu(OH)₂ + NaOH → R-COONa + Cu₂O ↓ (Đỏ gạch) + 3H₂O",
+    "current_EN": "R-CHO + 2Cu(OH)₂ + NaOH → R-COONa + Cu₂O ↓ (Đỏ gạch) + 3H₂O"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 24,
+    "lessonId": "hh11_b24",
+    "field": "chapterTitle",
+    "VN": "Chương 6: Hợp chất Carbonyl – Carboxylic acid",
+    "current_EN": "Chương 6: Hợp chất Carbonyl – Carboxylic acid"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 24,
+    "lessonId": "hh11_b24",
+    "field": "summary",
+    "VN": "Nhóm -COOH. Đầy đủ tính axit (làm đỏ quỳ, sủi bọt NaHCO3) và phản ứng este hóa với alcohol.",
+    "current_EN": "Nhóm -COOH. Đầy đủ tính Acid (làm đỏ quỳ, sủi bọt NaHCO3) và phản ứng este hóa với alcohol."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 24,
+    "lessonId": "hh11_b24",
+    "field": "theoryPoints[0]",
+    "VN": "Nắm vững kiến thức trọng tâm của bài học.",
+    "current_EN": "Nắm vững kiến thức trọng tâm của bài học."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 24,
+    "lessonId": "hh11_b24",
+    "field": "sampleQuestion.question",
+    "VN": "Vì liên kết hydrogen liên phân tử giữa các phân tử axit bền hơn nhiều so với ancol.",
+    "current_EN": "Vì Hydrogen bond liên Molecule giữa các Molecule Acid bền hơn nhiều so với ancol."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 24,
+    "lessonId": "hh11_b24",
+    "field": "sections[0].points[0]",
+    "VN": "Nhóm -COOH. Đầy đủ tính axit (làm đỏ quỳ, sủi bọt NaHCO3) và phản ứng este hóa với alcohol.",
+    "current_EN": "Nhóm -COOH. Đầy đủ tính Acid (làm đỏ quỳ, sủi bọt NaHCO3) và phản ứng este hóa với alcohol."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 24,
+    "lessonId": "hh11_b24",
+    "field": "sections[0].points[1]",
+    "VN": "Nắm vững kiến thức trọng tâm của bài học.",
+    "current_EN": "Nắm vững kiến thức trọng tâm của bài học."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 24,
+    "lessonId": "hh11_b24",
+    "field": "sections[1].points[0]",
+    "VN": "Nhiệt độ sôi cao hơn ancol cùng C do liên kết hydrogen dạng đime.",
+    "current_EN": "Nhiệt độ sôi cao hơn ancol cùng C do Hydrogen bond dạng đime."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 24,
+    "lessonId": "hh11_b24",
+    "field": "sections[2].points[0]",
+    "VN": "R-COOH + NaHCO₃ → R-COONa + H₂O + CO₂ ↑",
+    "current_EN": "R-COOH + NaHCO₃ → R-COONa + H₂O + CO₂ ↑"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 24,
+    "lessonId": "hh11_b24",
+    "field": "sections[2].points[1]",
+    "VN": "R-COOH + R'-OH ⇌ R-COO-R' + H₂O (H₂SO₄ đặc, t°)",
+    "current_EN": "R-COOH + R'-OH ⇌ R-COO-R' + H₂O (H₂SO₄ đặc, t°)"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 25,
+    "lessonId": "hh11_b25",
+    "field": "chapterTitle",
+    "VN": "Chương 6: Hợp chất Carbonyl – Carboxylic acid",
+    "current_EN": "Chương 6: Hợp chất Carbonyl – Carboxylic acid"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 25,
+    "lessonId": "hh11_b25",
+    "field": "summary",
+    "VN": "Tổng kết hợp chất Carbonyl và Carboxylic Acid. Chuỗi biến hóa và nhận biết các nhóm chức hữu cơ.",
+    "current_EN": "Tổng kết hợp chất Carbonyl và Carboxylic Acid. Chuỗi biến hóa và nhận biết các nhóm chức hữu cơ."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 25,
+    "lessonId": "hh11_b25",
+    "field": "theoryPoints[0]",
+    "VN": "Thành thạo sơ đồ phản ứng hữu cơ lớp 11.",
+    "current_EN": "Thành thạo sơ đồ phản ứng hữu cơ lớp 11."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 25,
+    "lessonId": "hh11_b25",
+    "field": "sampleQuestion.question",
+    "VN": "Chất nào tác dụng NaHCO3 giải phóng CO2: C2H5OH, CH3CHO, CH3COOH?",
+    "current_EN": "Chất nào tác dụng NaHCO3 giải phóng CO2: C2H5OH, CH3CHO, CH3COOH?"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 25,
+    "lessonId": "hh11_b25",
+    "field": "sections[0].points[0]",
+    "VN": "Tổng kết hợp chất Carbonyl và Carboxylic Acid. Chuỗi biến hóa và nhận biết các nhóm chức hữu cơ.",
+    "current_EN": "Tổng kết hợp chất Carbonyl và Carboxylic Acid. Chuỗi biến hóa và nhận biết các nhóm chức hữu cơ."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 25,
+    "lessonId": "hh11_b25",
+    "field": "sections[0].points[1]",
+    "VN": "Thành thạo sơ đồ phản ứng hữu cơ lớp 11.",
+    "current_EN": "Thành thạo sơ đồ phản ứng hữu cơ lớp 11."
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 25,
+    "lessonId": "hh11_b25",
+    "field": "sections[1].points[0]",
+    "VN": "CH₄ → C₂H₂ → CH₃CHO → CH₃COOH → CH₃COOC₂H₅",
+    "current_EN": "CH₄ → C₂H₂ → CH₃CHO → CH₃COOH → CH₃COOC₂H₅"
+  },
+  {
+    "grade": 11,
+    "lessonNumber": 25,
+    "lessonId": "hh11_b25",
+    "field": "sections[2].points[0]",
+    "VN": "Bảng phân biệt: Ancol (-OH), Phenol (-OH thơm), Anđehit (-CHO), Axit (-COOH)",
+    "current_EN": "Bảng phân biệt: Ancol (-OH), Phenol (-OH thơm), Anđehit (-CHO), Acid (-COOH)"
+  }
+]

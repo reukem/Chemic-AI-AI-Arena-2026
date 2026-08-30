@@ -1,0 +1,3947 @@
+{
+  "kf": [
+    {
+      "grade": 8,
+      "lesson": 1,
+      "idx": 0,
+      "raw": "$$Hóa học = Chất + Biến đổi$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 2,
+      "idx": 0,
+      "raw": "$$D = \\frac{m}{V} \\quad (\\text{Khối lượng riêng / Density})$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 2,
+      "idx": 1,
+      "raw": "$$C\\% = \\frac{m_{\\text{ct}}}{m_{\\text{dd}}} \\times 100\\% \\quad (\\text{Nồng độ phần trăm / Mass \\%})$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 3,
+      "idx": 0,
+      "raw": "$${\\text{Nghiêng ống nghiệm 45°}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 4,
+      "idx": 0,
+      "raw": "$$Số p = Số e = Z$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 4,
+      "idx": 1,
+      "raw": "$$m_nt ≈ m_p + m_n$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 5,
+      "idx": 0,
+      "raw": "$${\\text{Kí hiệu hóa học}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 5,
+      "idx": 1,
+      "raw": "$${\\text{Nguyên tử khối (amu)}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 6,
+      "idx": 0,
+      "raw": "$${\\text{Đơn chất vs Hợp chất}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 7,
+      "idx": 0,
+      "raw": "$${\\text{Hiện tượng vật lí}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 8,
+      "idx": 0,
+      "raw": "$$Phân tử khối = Tổng NTK$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 9,
+      "idx": 0,
+      "raw": "$$\\text{Đơn chất}: A hoặc A_n$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 9,
+      "idx": 1,
+      "raw": "$$\\text{Hợp chất}: A_x B_y$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 10,
+      "idx": 0,
+      "raw": "$$x × a = y × b$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 10,
+      "idx": 1,
+      "raw": "$$\\text{{\\text{Quy ước}: H (I), O (II)}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 11,
+      "idx": 0,
+      "raw": "$$x/y = b/a$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 12,
+      "idx": 0,
+      "raw": "$${\\text{Hóa học sinh chất mới}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 13,
+      "idx": 0,
+      "raw": "$${\\text{Chất phản ứng → Sản phẩm}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 14,
+      "idx": 0,
+      "raw": "$$BaCl₂ + Na₂SO₄ → BaSO₄ ↓ + 2NaCl$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 15,
+      "idx": 0,
+      "raw": "$$m_A + m_B = m_C + m_D$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 16,
+      "idx": 0,
+      "raw": "$${\\text{Cân bằng số nguyên tử 2 vế}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 17,
+      "idx": 0,
+      "raw": "$$Tỉ lệ mol = Tỉ lệ hệ số$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 18,
+      "idx": 0,
+      "raw": "$$N_A = 6,022 × 10²³$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 18,
+      "idx": 1,
+      "raw": "$${\\text{M (g/mol)}}$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 19,
+      "idx": 0,
+      "raw": "$$n = m / M$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 19,
+      "idx": 1,
+      "raw": "$$V = n × 24,79 (ở 25°C, 1 bar)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 20,
+      "idx": 0,
+      "raw": "$$d_(A/B) = M_A / M_B$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 20,
+      "idx": 1,
+      "raw": "$$d_(A/kk) = M_A / 29$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 21,
+      "idx": 0,
+      "raw": "$$%A = (x × M_A / M_AxBy) × 100%$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 22,
+      "idx": 0,
+      "raw": "$$n → PTHH → n_sp → m hoặc V$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 23,
+      "idx": 0,
+      "raw": "$$H% = (m_thực tế / m_lí thuyết) × 100%$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 24,
+      "idx": 0,
+      "raw": "$${\\text{Oxi duy trì sự cháy và hô hấp}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 25,
+      "idx": 0,
+      "raw": "$$\\text{Phản ứng hóa hợp}: A + B → C$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 26,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Oxit axit}: SO₂, CO₂, P₂O₅}}$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 26,
+      "idx": 1,
+      "raw": "$$\\text{{\\text{Oxit bazơ}: Na₂O, CaO, CuO}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 27,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Phản ứng phân hủy}: 1 chất → Nhiều chất}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 28,
+      "idx": 0,
+      "raw": "$${\\text{78% N₂, 21% O₂, 1% khí khác}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 29,
+      "idx": 0,
+      "raw": "$${\\text{Hóa hợp vs Phân hủy}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 30,
+      "idx": 0,
+      "raw": "$$2KMnO₄ → K₂MnO₄ + MnO₂ + O₂ ↑$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 31,
+      "idx": 0,
+      "raw": "$$d_(H2/kk) = 2/29 ≈ 0,069$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 31,
+      "idx": 1,
+      "raw": "$${\\text{H₂ có tính khử}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 32,
+      "idx": 0,
+      "raw": "$${\\text{Khử chiếm oxi, Oxh nhường oxi}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 33,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Phản ứng thế}: Đơn chất thay thế nguyên tử trong hợp chất}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 34,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{3 loại phản ứng}: Hóa hợp, Phân hủy, Thế}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 35,
+      "idx": 0,
+      "raw": "$$Zn + 2HCl → ZnCl₂ + H₂ ↑$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 36,
+      "idx": 0,
+      "raw": "$$\\text{m_H}: m_O = 1 : 8$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 36,
+      "idx": 1,
+      "raw": "$${\\text{Nước là dung môi phổ biến}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 37,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Axit}: HCl, H₂SO₄}}$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 37,
+      "idx": 1,
+      "raw": "$$\\text{{\\text{Bazơ}: NaOH, Cu(OH)₂}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 37,
+      "idx": 2,
+      "raw": "$$\\text{{\\text{Muối}: NaCl, CuSO₄}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 38,
+      "idx": 0,
+      "raw": "$$Axit + Bazơ → Muối + H₂O$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 39,
+      "idx": 0,
+      "raw": "$$2Na + 2H₂O → 2NaOH + H₂ ↑$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 40,
+      "idx": 0,
+      "raw": "$$Dung dịch = Dung môi + Chất tan$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 41,
+      "idx": 0,
+      "raw": "$$S = (m_{\\text{ct}} / m_nước) × 100$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 42,
+      "idx": 0,
+      "raw": "$$C% = (m_{\\text{ct}} / m_{\\text{dd}}) × 100%$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 42,
+      "idx": 1,
+      "raw": "$$C_{\\text{M}} = n / V (M)$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 43,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Bước 1}: Tính toán lượng chất}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 43,
+      "idx": 1,
+      "raw": "$$\\text{{\\text{Bước 2}: Cân đong}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 43,
+      "idx": 2,
+      "raw": "$$\\text{{\\text{Bước 3}: Hòa tan định mức}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 44,
+      "idx": 0,
+      "raw": "$$\\text{Đường chéo}: (V₁/V₂) = |C₂ - C_tb| / |C₁ - C_tb|$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 45,
+      "idx": 0,
+      "raw": "$${\\text{Cân 5g NaCl hòa vào 45g nước}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 45,
+      "idx": 1,
+      "raw": "$${\\text{Cân 8g CuSO4 định mức 100mL}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 1,
+      "idx": 0,
+      "raw": "$$Oxit bazơ + Axit → Muối + H₂O$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 1,
+      "idx": 1,
+      "raw": "$$Oxit axit + Bazơ → Muối + H₂O$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 2,
+      "idx": 0,
+      "raw": "$$CaO + H₂O → Ca(OH)₂$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 2,
+      "idx": 1,
+      "raw": "$$SO₂ + H₂O → H₂SO₃$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 3,
+      "idx": 0,
+      "raw": "$$Axit + Kim loại (trước H) → Muối + H₂ ↑$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 4,
+      "idx": 0,
+      "raw": "$${\\text{H₂SO₄ đặc háo nước}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 4,
+      "idx": 1,
+      "raw": "$${\\text{Nhận biết SO₄²⁻ bằng Ba²⁺}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 5,
+      "idx": 0,
+      "raw": "$$Oxit bazơ + Axit → Muối + H₂O$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 6,
+      "idx": 0,
+      "raw": "$$CuO + 2HCl → CuCl₂ + H₂O$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 7,
+      "idx": 0,
+      "raw": "$$Bazơ + Axit → Muối + H₂O$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 7,
+      "idx": 1,
+      "raw": "$$Bazơ không tan → Oxit + H₂O (t°)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 8,
+      "idx": 0,
+      "raw": "$${\\text{NaOH ăn mòn da và thủy tinh}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 8,
+      "idx": 1,
+      "raw": "$${\\text{Ca(OH)₂ nhận biết CO₂}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 9,
+      "idx": 0,
+      "raw": "$${\\text{Kim loại trước đẩy kim loại sau ra khỏi muối}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 9,
+      "idx": 1,
+      "raw": "$$Muối + Muối → 2 Muối mới (cần kết tủa)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 10,
+      "idx": 0,
+      "raw": "$$\\text{Điện phân dd NaCl có màng ngăn}: 2NaCl + 2H₂O → 2NaOH + Cl₂ ↑ + H₂ ↑$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 11,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Đạm (N)}: Thúc đẩy lá thân}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 11,
+      "idx": 1,
+      "raw": "$$\\text{{\\text{Lân (P)}: Kích thích rễ}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 11,
+      "idx": 2,
+      "raw": "$$\\text{{\\text{Kali (K)}: Tăng chống chịu}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 12,
+      "idx": 0,
+      "raw": "$${\\text{Kim loại ↔ Oxit bazơ ↔ Bazơ ↔ Muối}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 12,
+      "idx": 1,
+      "raw": "$${\\text{Phi kim ↔ Oxit axit ↔ Axit ↔ Muối}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 13,
+      "idx": 0,
+      "raw": "$${\\text{Điều kiện phản ứng trao đổi ion}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 14,
+      "idx": 0,
+      "raw": "$$CuSO₄ + 2NaOH → Cu(OH)₂ ↓ + Na₂SO₄$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 15,
+      "idx": 0,
+      "raw": "$$\\text{Dẫn điện}: Ag > Cu > Au > Al > Fe$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 15,
+      "idx": 1,
+      "raw": "$$\\text{{\\text{Dẻo nhất}: Au; Cứng nhất: Cr}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 16,
+      "idx": 0,
+      "raw": "$$Kim loại + Phi kim → Muối/Oxit$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 16,
+      "idx": 1,
+      "raw": "$$Kim loại + Axit → Muối + H₂ ↑$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 17,
+      "idx": 0,
+      "raw": "$${\\text{Đứng trước H đẩy H₂ khỏi axit loãng}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 17,
+      "idx": 1,
+      "raw": "$${\\text{Kim loại trước đẩy kim loại sau khỏi muối}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 18,
+      "idx": 0,
+      "raw": "$$2Al + 2NaOH + 2H₂O → 2NaAlO₂ + 3H₂ ↑$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 19,
+      "idx": 0,
+      "raw": "$$Fe + S → FeS$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 19,
+      "idx": 1,
+      "raw": "$$Fe + 2HCl → FeCl₂ + H₂$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 19,
+      "idx": 2,
+      "raw": "$$2Fe + 3Cl₂ → 2FeCl₃$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 20,
+      "idx": 0,
+      "raw": "$$\\text{Luyện gang}: Fe₂O₃ + 3CO → 2Fe + 3CO₂ (t°)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 21,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Ăn mòn điện hóa}: Cần 2 điện cực tiếp xúc trong dung dịch điện li}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 22,
+      "idx": 0,
+      "raw": "$$Độ tăng/giảm m = |m_bám - m_tan|$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 23,
+      "idx": 0,
+      "raw": "$${\\text{Al tan trong NaOH sủi bọt H2; Fe không tan trong NaOH}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 24,
+      "idx": 0,
+      "raw": "$${\\text{Hệ thống hóa toàn bộ phản ứng vô cơ}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 25,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Phi kim mạnh}: F₂, Cl₂, O₂; yếu: C, Si, S}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 26,
+      "idx": 0,
+      "raw": "$$\\text{Nước clo}: Cl₂ + H₂O \\rightleftharpoons HCl + HClO (tẩy màu)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 26,
+      "idx": 1,
+      "raw": "$$\\text{Nước Javel}: Cl₂ + 2NaOH → NaCl + NaClO + H₂O$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 27,
+      "idx": 0,
+      "raw": "$${\\text{Than hoạt tính hấp phụ khí độc và màu}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 27,
+      "idx": 1,
+      "raw": "$$C + O₂ → CO₂; C + 2CuO → 2Cu + CO₂ ↑$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 28,
+      "idx": 0,
+      "raw": "$$\\text{CO khử oxit kim loại}: Fe₂O₃ + 3CO → 2Fe + 3CO₂$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 28,
+      "idx": 1,
+      "raw": "$$CO₂ + Ca(OH)₂ → CaCO₃ ↓ + H₂O$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 29,
+      "idx": 0,
+      "raw": "$$Muối cacbonat + Axit → Muối mới + H₂O + CO₂ ↑$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 29,
+      "idx": 1,
+      "raw": "$$CaCO₃ → CaO + CO₂ ↑$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 30,
+      "idx": 0,
+      "raw": "$$SiO₂ + 2NaOH (đặc, t°) → Na₂SiO₃ + H₂O$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 30,
+      "idx": 1,
+      "raw": "$$\\text{{\\text{Thủy tinh}: Na₂O.CaO.6SiO₂}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 31,
+      "idx": 0,
+      "raw": "$$STT ô = Z = Số p = Số e$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 31,
+      "idx": 1,
+      "raw": "$$STT chu kì = Số lớp e$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 31,
+      "idx": 2,
+      "raw": "$$STT nhóm A = Số e ngoài cùng$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 32,
+      "idx": 0,
+      "raw": "$${\\text{Biến đổi tuần hoàn tính kim loại / phi kim}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 33,
+      "idx": 0,
+      "raw": "$$Cl₂ + H₂O \\rightleftharpoons HCl + HClO (tẩy màu)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 33,
+      "idx": 1,
+      "raw": "$$C + 2CuO → 2Cu + CO₂ ↑$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 34,
+      "idx": 0,
+      "raw": "$${\\text{Hiđrocacbon (chỉ C, H) vs Dẫn xuất (chứa O, N, Cl)}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 35,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Đồng phân}: Cùng CTPT khác CTCT}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 36,
+      "idx": 0,
+      "raw": "$$C_n H₂n+₂$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 36,
+      "idx": 1,
+      "raw": "$$CH₄ + Cl₂ → CH₃Cl + HCl (Ánh sáng)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 37,
+      "idx": 0,
+      "raw": "$$C_n H₂n$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 37,
+      "idx": 1,
+      "raw": "$$CH₂=CH₂ + Br₂ → CH₂Br-CH₂Br (mất màu nâu đỏ)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 38,
+      "idx": 0,
+      "raw": "$$C_n H₂n-₂$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 38,
+      "idx": 1,
+      "raw": "$$CH≡CH + 2Br₂ → CHBr₂-CHBr₂$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 39,
+      "idx": 0,
+      "raw": "$$C₆H₆ + Br₂ → C₆H₅Br + HBr (Xúc tác Fe)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 39,
+      "idx": 1,
+      "raw": "$$C₆H₆ + 3H₂ → C₆H₁₂ (Ni, t°)$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 40,
+      "idx": 0,
+      "raw": "$${\\text{Chưng cất phân đoạn dựa vào nhiệt độ sôi}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 40,
+      "idx": 1,
+      "raw": "$$\\text{{\\text{Cracking}: Bẻ gãy C dài thành C ngắn}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 41,
+      "idx": 0,
+      "raw": "$$\\text{Năng suất tỏa nhiệt}: Khí > Lỏng > Rắn$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 42,
+      "idx": 0,
+      "raw": "$${\\text{Bảng so sánh 4 hidrocacbon cơ bản}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 43,
+      "idx": 0,
+      "raw": "$$C₂H₅OH → C₂H₄ + H₂O (H₂SO₄ đặc, 170°C)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 43,
+      "idx": 1,
+      "raw": "$$CaC₂ + 2H₂O → C₂H₂ + Ca(OH)₂$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 44,
+      "idx": 0,
+      "raw": "$$Độ cồn = (V_rượu / V_dd) × 100$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 44,
+      "idx": 1,
+      "raw": "$$2C₂H₅OH + 2Na → 2C₂H₅ONa + H₂ ↑$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 45,
+      "idx": 0,
+      "raw": "$$CH₃COOH + NaHCO₃ → CH₃COONa + H₂O + CO₂ ↑$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 45,
+      "idx": 1,
+      "raw": "$$CH₃COOH + C₂H₅OH \\rightleftharpoons CH₃COOC₂H₅ + H₂O (H₂SO₄ đặc, t°)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 46,
+      "idx": 0,
+      "raw": "$$C₂H₄ + H₂O → C₂H₅OH$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 46,
+      "idx": 1,
+      "raw": "$$C₂H₅OH + O₂ → CH₃COOH + H₂O$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 46,
+      "idx": 2,
+      "raw": "$$CH₃COOH + C₂H₅OH \\rightleftharpoons CH₃COOC₂H₅ + H₂O$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 47,
+      "idx": 0,
+      "raw": "$$(RCOO)₃C₃H₅ + 3NaOH → 3RCOONa (Xà phòng) + C₃H₅(OH)₃ (Glycerol)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 48,
+      "idx": 0,
+      "raw": "$${\\text{So sánh tính chất nhóm chức -OH và -COOH}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 49,
+      "idx": 0,
+      "raw": "$$CH₃COOH + C₂H₅OH \\rightleftharpoons CH₃COOC₂H₅ + H₂O$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 49,
+      "idx": 1,
+      "raw": "$$2CH₃COOH + CaCO₃ → (CH₃COO)₂Ca + H₂O + CO₂ ↑$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 50,
+      "idx": 0,
+      "raw": "$$C₆H₁₂O₆ + 2[Ag(NH₃)₂]OH → 2Ag ↓ + ...$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 50,
+      "idx": 1,
+      "raw": "$$C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂ ↑ (Lên men)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 51,
+      "idx": 0,
+      "raw": "$$C₁₂H₂₂O₁₁ + H₂O → C₆H₁₂O₆ (Glucose) + C₆H₁₂O₆ (Fructose) (Axit, t°)$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 52,
+      "idx": 0,
+      "raw": "$$Tinh bột + I₂ → Hợp chất bọc màu XANH TÍM$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 52,
+      "idx": 1,
+      "raw": "$$(C₆H₁₀O₅)_n + nH₂O → n C₆H₁₂O₆$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 53,
+      "idx": 0,
+      "raw": "$${\\text{Sự đông tụ protein khi đun nóng hoặc thêm cồn/axit}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 54,
+      "idx": 0,
+      "raw": "$$\\text{Trùng hợp}: n CH₂=CHCl → (-CH₂-CHCl-)_n (Nhựa PVC)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 55,
+      "idx": 0,
+      "raw": "$$Glucozơ + Tollens → Gương bạc Ag sáng loáng$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 55,
+      "idx": 1,
+      "raw": "$$Hồ tinh bột + I₂ → Màu xanh tím$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 56,
+      "idx": 0,
+      "raw": "$${\\text{Hệ thống hóa toàn bộ kiến thức vô cơ và hữu cơ}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 1,
+      "idx": 0,
+      "raw": "$$m_p ≈ m_n ≈ 1 amu; m_e ≈ 0,00055 amu$$",
+      "has_vn": false
+    },
+    {
+      "grade": 10,
+      "lesson": 1,
+      "idx": 1,
+      "raw": "$$Z = Số proton = Số electron$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 2,
+      "idx": 0,
+      "raw": "$$A = Z + N$$",
+      "has_vn": false
+    },
+    {
+      "grade": 10,
+      "lesson": 2,
+      "idx": 1,
+      "raw": "$$A_tb = (a×A₁ + b×A₂) / 100$$",
+      "has_vn": false
+    },
+    {
+      "grade": 10,
+      "lesson": 3,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Phân lớp}: s (2e), p (6e), d (10e), f (14e)}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 3,
+      "idx": 1,
+      "raw": "$$\\text{{\\text{Thứ tự}: 1s 2s 2p 3s 3p 4s 3d 4p...}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 4,
+      "idx": 0,
+      "raw": "$${\\text{Ôn tập Z, A, Cấu hình e}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 5,
+      "idx": 0,
+      "raw": "$$STT ô = Z$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 5,
+      "idx": 1,
+      "raw": "$$STT chu kì = Số lớp electron$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 5,
+      "idx": 2,
+      "raw": "$$STT nhóm A = Số e ngoài cùng$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 6,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Trong chu kì}: R giảm, Độ âm điện tăng, Phi kim tăng, Kim loại giảm}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 6,
+      "idx": 1,
+      "raw": "$$\\text{{\\text{Trong nhóm A}: R tăng, Độ âm điện giảm, Kim loại tăng, Phi kim giảm}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 7,
+      "idx": 0,
+      "raw": "$${\\text{Tính bazơ của oxit/hiđroxit giảm dần, tính axit tăng dần}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 8,
+      "idx": 0,
+      "raw": "$${\\text{Vị trí ↔ Cấu tạo nguyên tử ↔ Tính chất hóa học}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 9,
+      "idx": 0,
+      "raw": "$${\\text{So sánh tính kim loại, phi kim, bán kính và độ âm điện}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 10,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Quy tắc Octet}: 8 electron lớp ngoài cùng (hoặc 2e của He)}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 11,
+      "idx": 0,
+      "raw": "$${\\text{Hiệu độ âm điện Δχ ≥ 1,7 → Liên kết Ion}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 11,
+      "idx": 1,
+      "raw": "$${\\text{Mạng tinh thể ion bền vững, nhiệt độ nóng chảy cao}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 12,
+      "idx": 0,
+      "raw": "$$\\text{0 ≤ Δχ < 0,4}: CHT Không phân cực$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 12,
+      "idx": 1,
+      "raw": "$$\\text{0,4 ≤ Δχ < 1,7}: CHT Có phân cực$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 13,
+      "idx": 0,
+      "raw": "$${\\text{Liên kết Hydrogen làm tăng nhiệt độ sôi và độ tan}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 13,
+      "idx": 1,
+      "raw": "$${\\text{Tương tác Van der Waals tăng theo phân tử khối}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 14,
+      "idx": 0,
+      "raw": "$${\\text{So sánh bản chất liên kết theo hiệu độ âm điện Δχ}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 15,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Chất khử}: nhường e (tăng số oxh)}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 15,
+      "idx": 1,
+      "raw": "$$\\text{{\\text{Chất oxi hóa}: nhận e (giảm số oxh)}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 15,
+      "idx": 2,
+      "raw": "$$Σ e_nhường = Σ e_nhận$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 16,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Thăng bằng electron}: Tìm hệ số chất khử và chất oxi hóa}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 17,
+      "idx": 0,
+      "raw": "$$Δ_r H°₂₉₈ = Σ Δ_f H°₂₉₈ (Sản phẩm) - Σ Δ_f H°₂₉₈ (Chất đầu)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 17,
+      "idx": 1,
+      "raw": "$$Δ_r H°₂₉₈ = Σ E_b (Chất đầu) - Σ E_b (Sản phẩm)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 18,
+      "idx": 0,
+      "raw": "$${\\text{Công thức tính ΔrH°298 theo Eb và ΔfH°298}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 19,
+      "idx": 0,
+      "raw": "$$\\text{Định luật tác dụng khối lượng}: v = k × [A]^a × [B]^b$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 19,
+      "idx": 1,
+      "raw": "$$\\text{Hệ số Van't Hoff}: v_T2 = v_T1 × γ^((T2 - T1) / 10)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 20,
+      "idx": 0,
+      "raw": "$$v_tb = |ΔC| / Δt$$",
+      "has_vn": false
+    },
+    {
+      "grade": 10,
+      "lesson": 21,
+      "idx": 0,
+      "raw": "$$\\text{F₂ oxi hóa nước}: 2F₂ + 2H₂O → 4HF + O₂ ↑$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 21,
+      "idx": 1,
+      "raw": "$$Cl₂ + 2NaBr → 2NaCl + Br₂ (Dung dịch hóa nâu đỏ)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 22,
+      "idx": 0,
+      "raw": "$$\\text{HF ăn mòn thủy tinh}: SiO₂ + 4HF → SiF₄ ↑ + 2H₂O$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 22,
+      "idx": 1,
+      "raw": "$${\\text{AgCl ↓ (Trắng), AgBr ↓ (Vàng nhạt), AgI ↓ (Vàng đậm)}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 23,
+      "idx": 0,
+      "raw": "$${\\text{Bảng tổng kết tính chất Halogen}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 1,
+      "idx": 0,
+      "raw": "$$K_{\\text{C}} = ([C]^c × [D]^d) / ([A]^a × [B]^b)$$",
+      "has_vn": false
+    },
+    {
+      "grade": 11,
+      "lesson": 1,
+      "idx": 1,
+      "raw": "$$\\text{Tăng T}: Chuyển dịch chiều THU NHIỆT (ΔH > 0)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 1,
+      "idx": 2,
+      "raw": "$$\\text{{\\text{Tăng P}: Chuyển dịch chiều GIẢM SỐ MOL KHÍ}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 2,
+      "idx": 0,
+      "raw": "$$K_w = [H⁺] × [OH⁻] = 1,0 × 10⁻¹⁴ (ở 25°C)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 2,
+      "idx": 1,
+      "raw": "$$pH = -log[H⁺]$$",
+      "has_vn": false
+    },
+    {
+      "grade": 11,
+      "lesson": 2,
+      "idx": 2,
+      "raw": "$$pH + pOH = 14$$",
+      "has_vn": false
+    },
+    {
+      "grade": 11,
+      "lesson": 3,
+      "idx": 0,
+      "raw": "$$\\text{Chuẩn độ axit-bazơ}: C_axit × V_axit = C_bazo × V_bazo$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 4,
+      "idx": 0,
+      "raw": "$${\\text{Liên kết ba N≡N bền (Năng lượng 945 kJ/mol)}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 5,
+      "idx": 0,
+      "raw": "$$NH₃ + H₂O \\rightleftharpoons NH₄⁺ + OH⁻$$",
+      "has_vn": false
+    },
+    {
+      "grade": 11,
+      "lesson": 5,
+      "idx": 1,
+      "raw": "$$NH₃ + HCl → NH₄Cl (Khói trắng mù mịt)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 6,
+      "idx": 0,
+      "raw": "$${\\text{HNO₃ oxi hóa hầu hết kim loại lên số oxh cao nhất}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 7,
+      "idx": 0,
+      "raw": "$$S + O₂ → SO₂$$",
+      "has_vn": false
+    },
+    {
+      "grade": 11,
+      "lesson": 7,
+      "idx": 1,
+      "raw": "$$Hg + S → HgS (Xảy ra ở t° thường dùng thu gom thủy ngân)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 8,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Tiếp xúc 3 giai đoạn}: S/FeS₂ → SO₂ → SO₃ (V₂O₅) → Oleum → H₂SO₄}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 9,
+      "idx": 0,
+      "raw": "$${\\text{So sánh HNO3 và H2SO4 đặc}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 10,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Nhóm chức}: -OH (Alcohol), -CHO (Aldehyde), -COOH (Carboxylic acid), -COO- (Ester), -NH₂ (Amine)}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 11,
+      "idx": 0,
+      "raw": "$${\\text{Chưng cất lôi cuốn hơi nước tách tinh dầu}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 11,
+      "idx": 1,
+      "raw": "$${\\text{Chiết lỏng - lỏng dùng phễu chiết}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 12,
+      "idx": 0,
+      "raw": "$$\\text{C}: H : O : N = (%C/12) : (%H/1) : (%O/16) : (%N/14)$$",
+      "has_vn": false
+    },
+    {
+      "grade": 11,
+      "lesson": 12,
+      "idx": 1,
+      "raw": "$$CTPT = (CTĐGN)_n$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 13,
+      "idx": 0,
+      "raw": "$${\\text{Đồng phân cấu tạo vs Đồng phân hình học cis - trans}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 14,
+      "idx": 0,
+      "raw": "$$\\text{Quy tắc tên IUPAC}: Vị trí nhánh + Nhánh + Mạch chính + Hậu tố$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 15,
+      "idx": 0,
+      "raw": "$$C_n H₂n+₂ + Cl₂ → C_n H₂n+₁ Cl + HCl  (Ánh sáng)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 15,
+      "idx": 1,
+      "raw": "$${\\text{Ưu tiên thế H ở C bậc cao hơn}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 16,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Quy tắc Markovnikov}: H cộng vào C nhiều H hơn}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 16,
+      "idx": 1,
+      "raw": "$${\\text{Làm mất màu dung dịch Brom và thuốc tím KMnO4}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 17,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Benzen}: Dễ thế Br₂ (xúc tác Fe), khó cộng}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 17,
+      "idx": 1,
+      "raw": "$$\\text{{\\text{Toluen}: Tác dụng KMnO₄ đun nóng tạo C₆H₅COOH}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 18,
+      "idx": 0,
+      "raw": "$${\\text{Bảng so sánh 4 loại Hydrocarbon}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 19,
+      "idx": 0,
+      "raw": "$$\\text{Thủy phân}: R-X + NaOH → R-OH + NaX (t°)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 19,
+      "idx": 1,
+      "raw": "$$\\text{{\\text{Quy tắc Zaitsev}: Tách HX ưu tiên H ở C bậc cao}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 20,
+      "idx": 0,
+      "raw": "$${\\text{Tách nước 170°C tạo Alkene; 140°C tạo Ete}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 20,
+      "idx": 1,
+      "raw": "$${\\text{Oxi hóa ancol bậc I bằng CuO tạo Anđehit; bậc II tạo Xeton}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 21,
+      "idx": 0,
+      "raw": "$$C₆H₅OH + NaOH → C₆H₅ONa + H₂O$$",
+      "has_vn": false
+    },
+    {
+      "grade": 11,
+      "lesson": 21,
+      "idx": 1,
+      "raw": "$$C₆H₅OH + 3Br₂ → C₆H₂Br₃OH ↓ (Trắng) + 3HBr$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 22,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{So sánh}: Ancol không tác dụng NaOH; Phenol tác dụng NaOH}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 22,
+      "idx": 1,
+      "raw": "$${\\text{Cả hai đều tác dụng với Na giải phóng H₂}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 23,
+      "idx": 0,
+      "raw": "$$\\text{Tráng bạc}: R-CHO + 2[Ag(NH₃)₂]OH → R-COONH₄ + 2Ag ↓ + 3NH₃ + H₂O$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 23,
+      "idx": 1,
+      "raw": "$$R-CHO + 2Cu(OH)₂ + NaOH → R-COONa + Cu₂O ↓ (Đỏ gạch) + 3H₂O$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 24,
+      "idx": 0,
+      "raw": "$$R-COOH + NaHCO₃ → R-COONa + H₂O + CO₂ ↑$$",
+      "has_vn": false
+    },
+    {
+      "grade": 11,
+      "lesson": 24,
+      "idx": 1,
+      "raw": "$$R-COOH + R'-OH \\rightleftharpoons R-COO-R' + H₂O (H₂SO₄ đặc, t°)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 25,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Bảng phân biệt}: Ancol (-OH), Phenol (-OH thơm), Anđehit (-CHO), Axit (-COOH)}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 1,
+      "idx": 0,
+      "raw": "$$\\text{C}_n\\text{H}_{2n}\\text{O}_2 \\quad (n \\ge 2)$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 1,
+      "idx": 1,
+      "raw": "$$\\text{R-COO-R}' + \\text{NaOH} \\xrightarrow{t^\\circ} \\text{R-COONa} + \\text{R}'\\text{-OH}$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 1,
+      "idx": 2,
+      "raw": "$$(\\text{RCOO})_3\\text{C}_3\\text{H}_5 + 3\\text{NaOH} \\xrightarrow{t^\\circ} 3\\text{RCOONa (Xà phòng)} + \\text{C}_3\\text{H}_5(\\text{OH})_3$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 2,
+      "idx": 0,
+      "raw": "$$\\text{Cấu tạo}: \\underbrace{\\text{R-}}_{\\text{Đuôi kị nước (ưa mỡ)}} \\;-\\; \\underbrace{\\text{COO}^-\\text{Na}^+}_{\\text{Đầu ưa nước (tan trong nước)}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 2,
+      "idx": 1,
+      "raw": "$$\\text{Nước cứng làm hỏng xà phòng}: 2\\text{R-COONa} + \\text{Ca}^{2+} \\to (\\text{R-COO})_2\\text{Ca} \\downarrow + 2\\text{Na}^+$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 2,
+      "idx": 2,
+      "raw": "$$\\text{Chất giặt rửa}: \\text{R-SO}_3\\text{Na} + \\text{Ca}^{2+} \\to \\text{Tan tốt (không tạo kết tủa)}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 3,
+      "idx": 0,
+      "raw": "$$n_{\\text{NaOH}} = 3 \\times n_{\\text{glycerol}}$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 3,
+      "idx": 1,
+      "raw": "$$m_{\\text{chất béo}} + m_{\\text{NaOH}} = m_{\\text{xà phòng}} + m_{\\text{glycerol}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 3,
+      "idx": 2,
+      "raw": "$$n_{\\text{CO}_2} = n_{\\text{H}_2\\text{O}} \\quad (\\text{Đốt cháy ester no, đơn chức mạch hở})$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 3,
+      "idx": 3,
+      "raw": "$$\\text{Bảo toàn khối lượng}: m_{\\text{este}} + m_{\\text{NaOH}} = m_{\\text{muối}} + m_{\\text{ancol}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 4,
+      "idx": 0,
+      "raw": "$$1\\text{ mol Glucose (-CHO)} + 2[\\text{Ag(NH}_3)_2]\\text{OH} \\to 2\\text{ mol Ag} \\downarrow$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 4,
+      "idx": 1,
+      "raw": "$$2\\text{C}_6\\text{H}_{12}\\text{O}_6 + \\text{Cu(OH)}_2 \\to [\\text{C}_6\\text{H}_{11}\\text{O}_6]_2\\text{Cu (Xanh lam thẫm)} + 2\\text{H}_2\\text{O}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 4,
+      "idx": 2,
+      "raw": "$$\\text{Phân biệt}: \\text{Glucose làm mất màu nước } \\text{Br}_2 \\;(\\text{Fructose thì KHÔNG})$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 5,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Saccharose}: Không tráng bạc trực tiếp, hòa tan Cu(OH)₂ ở t° thường}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 5,
+      "idx": 1,
+      "raw": "$$C₁₂H₂₂O₁₁ + H₂O → C₆H₁₂O₆ (Glucose) + C₆H₁₂O₆ (Fructose)  (Axit, t°)$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 5,
+      "idx": 2,
+      "raw": "$${\\text{1 mol Saccharose bị thủy phân hoàn toàn tráng bạc thu được 4 mol Ag}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 6,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Nhận biết tinh bột}: Dung dịch I₂ → Hợp chất màu XANH TÍM (mất màu khi đun, hiện lại khi nguội)}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 6,
+      "idx": 1,
+      "raw": "$$\\text{Cellulose trinitrat (Thuốc súng không khói)}: [C₆H₇O₂(OH)₃]_n + 3n HNO₃ → [C₆H₇O₂(ONO₂)₃]_n + 3n H₂O$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 6,
+      "idx": 2,
+      "raw": "$$\\text{Thủy phân hoàn toàn tinh bột/cellulose}: (C₆H₁₀O₅)_n + n H₂O → n C₆H₁₂O₆ (Glucose)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 7,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Bảng nhận biết}: Nước Brom (Glucose) | Dung dịch I₂ (Tinh bột) | Thuốc thử Tollens (Glucose, Fructose)}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 8,
+      "idx": 0,
+      "raw": "$$\\text{Lực bazơ}: (\\text{CH}_3)_2\\text{NH} > \\text{CH}_3\\text{NH}_2 > \\text{NH}_3 > \\text{C}_6\\text{H}_5\\text{NH}_2$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 8,
+      "idx": 1,
+      "raw": "$$\\text{Nhận biết Anilin}: \\text{C}_6\\text{H}_5\\text{NH}_2 + 3\\text{Br}_2 \\to \\text{C}_6\\text{H}_2\\text{Br}_3\\text{NH}_2 \\downarrow (\\text{Trắng}) + 3\\text{HBr}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 9,
+      "idx": 0,
+      "raw": "$$\\text{Tính chất lưỡng tính}: H₂N-R-COOH + HCl → ClH₃N-R-COOH; H₂N-R-COOH + NaOH → H₂N-R-COONa + H₂O$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 9,
+      "idx": 1,
+      "raw": "$$Số liên kết peptit = Số mắt xích α-amino acid - 1$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 9,
+      "idx": 2,
+      "raw": "$$\\text{Phản ứng màu Biuret}: Peptide từ 2 liên kết peptit (Tripeptide trở lên) + Cu(OH)₂ → Phức chất màu TÍM$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 10,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Sự đông tụ protein}: Do nhiệt độ, axit, bazơ, rượu}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 10,
+      "idx": 1,
+      "raw": "$$\\text{{\\text{Phản ứng nhận biết Protein}: Phản ứng Biuret (Cu(OH)₂ → Màu Tím); Phản ứng với HNO₃ đặc (Màu Vàng)}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 11,
+      "idx": 0,
+      "raw": "$$m_peptide + m_{\\text{NaOH}} = m_{\\text{muối}} + m_H₂O (với n_H₂O = n_peptide)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 11,
+      "idx": 1,
+      "raw": "$$n_{\\text{HCl}} phản ứng = Tổng số nhóm -NH₂; n_{\\text{NaOH}} phản ứng = Tổng số nhóm -COOH$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 12,
+      "idx": 0,
+      "raw": "$$\\text{Trùng hợp}: n CH₂=CH-X → (-CH₂-CH(X)-)_n (Cần liên kết đôi C=C)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 12,
+      "idx": 1,
+      "raw": "$$\\text{Trùng ngưng}: n H₂N-(CH₂)₅-COOH → (-NH-(CH₂)₅-CO-)_n (Tơ nilon-6) + n H₂O$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 12,
+      "idx": 2,
+      "raw": "$$M_polime = n × M_mắt xích$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 13,
+      "idx": 0,
+      "raw": "$$\\text{Plexiglas (PMMA)}: Trùng hợp CH₂=C(CH₃)COOCH₃ (Metyl metacrylat)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 13,
+      "idx": 1,
+      "raw": "$$\\text{{\\text{Tơ Poliamit (Nilon-6,6)}: Kém bền trong môi trường axit và kiềm mạnh}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 13,
+      "idx": 2,
+      "raw": "$$\\text{{\\text{Cao su lưu hóa}: Cầu nối đisunfua -S-S- tạo mạng không gian 3D đàn hồi cao}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 14,
+      "idx": 0,
+      "raw": "$$M_polime = n × M_mắt xích$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 15,
+      "idx": 0,
+      "raw": "$$E^\\circ_{\\text{pin}} = E^\\circ_{\\text{catot (dương)}} - E^\\circ_{\\text{anot (âm)}} > 0$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 15,
+      "idx": 1,
+      "raw": "$$\\text{Pin Zn-Cu}: E^\\circ_{\\text{pin}} = 0.34 - (-0.76) = +1.10\\text{ V}$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 16,
+      "idx": 0,
+      "raw": "$$\\text{Định luật Faraday}: m = (A × I × t) / (n × F)  (F = 96500 C/mol)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 16,
+      "idx": 1,
+      "raw": "$$\\text{Số mol electron trao đổi}: n_e = (I × t) / F$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 16,
+      "idx": 2,
+      "raw": "$$\\text{Điện phân nóng chảy NaCl}: 2NaCl → 2Na + Cl₂ ↑$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 16,
+      "idx": 3,
+      "raw": "$$\\text{Điện phân dung dịch CuSO₄}: 2CuSO₄ + 2H₂O → 2Cu ↓ (Catot) + O₂ ↑ (Anot) + 2H₂SO₄$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 17,
+      "idx": 0,
+      "raw": "$$n_e trao đổi = (I × t) / 96500$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 17,
+      "idx": 1,
+      "raw": "$$m_dung dịch giảm = m_kết tủa + m_khí bay ra$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 18,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Mạng lập phương tâm khối (BCC)}: Li, Na, K, Ba, Cr, Fe (Độ đặc khít 68%)}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 18,
+      "idx": 1,
+      "raw": "$$\\text{{\\text{Mạng lập phương tâm diện (FCC)}: Cu, Ag, Au, Al, Pt (Độ đặc khít 74%)}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 18,
+      "idx": 2,
+      "raw": "$$\\text{{\\text{Mạng lục giác chặt khít (HCP)}: Be, Mg, Zn (Độ đặc khít 74%)}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 19,
+      "idx": 0,
+      "raw": "$$\\text{Dẫn điện}: Ag > Cu > Au > Al > Fe$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 19,
+      "idx": 1,
+      "raw": "$$\\text{{\\text{Nóng chảy cao nhất}: Vonfram W (3422°C) | Cứng nhất: Crom Cr}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 19,
+      "idx": 2,
+      "raw": "$$\\text{Tính khử}: M → Mⁿ⁺ + ne$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 20,
+      "idx": 0,
+      "raw": "$$\\text{Nhiệt luyện}: Fe₂O₃ + 3CO → 2Fe + 3CO₂  (t°)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 20,
+      "idx": 1,
+      "raw": "$$\\text{Thủy luyện}: Fe + CuSO₄ → FeSO₄ + Cu ↓$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 20,
+      "idx": 2,
+      "raw": "$$\\text{Điện phân nóng chảy oxit nhôm}: 2Al₂O₃ → 4Al + 3O₂  (Điện cực than chì, criolit Na₃AlF₆, 950°C)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 21,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Gang}: 2 - 5% Carbon | Thép: 0,01 - 2% Carbon}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 21,
+      "idx": 1,
+      "raw": "$$\\text{{\\text{Đuyra (Al-Cu-Mg)}: Hợp kim siêu nhẹ chế tạo hàng không}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 21,
+      "idx": 2,
+      "raw": "$$\\text{{\\text{Inox (Fe-Cr-Ni)}: Chống ăn mòn tuyệt hảo}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 22,
+      "idx": 0,
+      "raw": "$$\\text{Điều kiện ăn mòn điện hóa}: 2 điện cực khác nhau + Tiếp xúc nhau + Cùng trong dung dịch điện li$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 22,
+      "idx": 1,
+      "raw": "$$\\text{{\\text{Anot (-)}: Kim loại mạnh hơn bị ăn mòn phá hủy}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 22,
+      "idx": 2,
+      "raw": "$$\\text{{\\text{Bảo vệ điện hóa}: Gắn Zn vào vỏ tàu biển bằng thép để Zn bị ăn mòn bảo vệ Fe}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 23,
+      "idx": 0,
+      "raw": "$$\\text{Bảo toàn electron}: Σ n_e nhường = Σ n_e nhận$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 24,
+      "idx": 0,
+      "raw": "$$\\text{Kim loại kiềm (nhóm IA)}: Số oxi hóa duy nhất là +1$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 24,
+      "idx": 1,
+      "raw": "$$2M + 2H₂O → 2MOH + H₂ ↑  (Tỏa nhiệt nổ)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 24,
+      "idx": 2,
+      "raw": "$$\\text{{\\text{Màu ngọn lửa}: Na (Vàng tươi), K (Tím hoa cà), Li (Đỏ tía)}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 24,
+      "idx": 3,
+      "raw": "$$\\text{{\\text{Bảo quản kim loại kiềm}: Ngâm trong dầu hỏa khan}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 25,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Nước cứng tạm thời}: Chứa ion Ca²⁺, Mg²⁺, HCO₃⁻}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 25,
+      "idx": 1,
+      "raw": "$$\\text{{\\text{Làm mềm nước cứng tạm thời}: Đun sôi | Dùng Ca(OH)₂ vừa đủ | Na₂CO₃ | Na₃PO₄}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 25,
+      "idx": 2,
+      "raw": "$$\\text{{\\text{Chất làm mềm TẤT CẢ các loại nước cứng}: Na₂CO₃ hoặc Na₃PO₄}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 25,
+      "idx": 3,
+      "raw": "$$\\text{Hiện tượng thạch nhũ hang động}: CaCO₃ + CO₂ + H₂O \\rightleftharpoons Ca(HCO₃)₂$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 26,
+      "idx": 0,
+      "raw": "$$T = n_OH⁻ / n_CO₂$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 26,
+      "idx": 1,
+      "raw": "$$\\text{T = 1}: Tạo HCO₃⁻ | T = 2: Tạo CO₃²⁻$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 27,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Cấu hình electron đặc biệt}: Cr [Ar] 3d⁵ 4s¹ | Cu [Ar] 3d¹⁰ 4s¹}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 27,
+      "idx": 1,
+      "raw": "$$\\text{Nhiều số oxi hóa biến đổi}: Mn (+2 đến +7), Fe (+2, +3), Cr (+2, +3, +6)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 27,
+      "idx": 2,
+      "raw": "$${\\text{Hợp chất chuyển tiếp có màu sắc rực rỡ do dịch chuyển mức d-d}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 28,
+      "idx": 0,
+      "raw": "$$[\\text{M}(\\text{L})_n]^z \\quad (\\text{Liên kết cho - nhận giữa phối tử L và ion trung tâm M})$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 28,
+      "idx": 1,
+      "raw": "$$\\text{Cu}^{2+} + 4\\text{NH}_3 \\to [\\text{Cu(NH}_3)_4]^{2+} \\quad (\\text{Màu xanh lam thẫm})$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 28,
+      "idx": 2,
+      "raw": "$$\\text{Ag}^+ + 2\\text{NH}_3 \\to [\\text{Ag(NH}_3)_2]^+ \\quad (\\text{Thuốc thử Tollens})$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 29,
+      "idx": 0,
+      "raw": "$$\\text{{\\text{Hemoglobin trong máu}: Phức chất sinh học của ion Fe²⁺ vận chuyển oxy}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 29,
+      "idx": 1,
+      "raw": "$$\\text{{\\text{Chlorophyll (Diệp lục lá cây)}: Phức chất sinh học của ion Mg²⁺ quang hợp}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 29,
+      "idx": 2,
+      "raw": "$$\\text{{\\text{Thuốc chống ung thư Cisplatin}: [Pt(NH₃)₂Cl₂] ức chế phân chia tế bào ung thư}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 29,
+      "idx": 3,
+      "raw": "$$\\text{Hằng số bền K_bền}: K_{\\text{bền}} càng lớn phức chất càng bền vững$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 30,
+      "idx": 0,
+      "raw": "$${\\text{Vững vàng 5 trụ cột Hóa học chuẩn chương trình GDPT 2018}}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 30,
+      "idx": 1,
+      "raw": "$${\\text{Sẵn sàng bứt phá điểm 10 trong kì thi Tốt nghiệp THPT Quốc Gia}}$$",
+      "has_vn": true
+    }
+  ],
+  "eq": [
+    {
+      "grade": 8,
+      "lesson": 1,
+      "idx": 0,
+      "raw": "$$H₂O (l)$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 2,
+      "idx": 0,
+      "raw": "$$4\\text{Al} + 3\\text{O}_2 \\xrightarrow{t^\\circ} 2\\text{Al}_2\\text{O}_3 \\quad (\\text{Biến đổi hóa học / Chemical Reaction})$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 2,
+      "idx": 1,
+      "raw": "$$\\text{Fe} + \\text{S} \\xrightarrow{t^\\circ} \\text{FeS} \\quad (\\text{Biến đổi hóa học / Chemical Reaction})$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 2,
+      "idx": 2,
+      "raw": "$$\\text{NaCl (rắn)} + \\text{H}_2\\text{O (lỏng)} \\longrightarrow \\text{Nước muối} \\quad (\\text{Quá trình hòa tan vật lí / Physical})$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 3,
+      "idx": 0,
+      "raw": "$$CuSO₄ (aq) [Màu xanh lam]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 4,
+      "idx": 0,
+      "raw": "$$¹H (1p, 1e)$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 4,
+      "idx": 1,
+      "raw": "$$¹²C (6p, 6n, 6e)$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 5,
+      "idx": 0,
+      "raw": "$$H (1), C (12), N (14), O (16), Na (23)$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 6,
+      "idx": 0,
+      "raw": "$$2H₂ + O₂ → 2H₂O$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 7,
+      "idx": 0,
+      "raw": "$$H₂O (rắn) \\rightleftharpoons H₂O (lỏng) \\rightleftharpoons H₂O (hơi)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 8,
+      "idx": 0,
+      "raw": "$$M_H2SO4 = 98 amu$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 8,
+      "idx": 1,
+      "raw": "$$M_CaCO3 = 100 amu$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 9,
+      "idx": 0,
+      "raw": "$$\\text{Al₂O₃}: 2 Al liên kết với 3 O$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 10,
+      "idx": 0,
+      "raw": "$$\\text{Fe₂^III O₃^II}: 2 × III = 3 × II$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 11,
+      "idx": 0,
+      "raw": "$$P (V) + O (II) → P₂O₅$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 12,
+      "idx": 0,
+      "raw": "$$C + O₂ → CO₂  (Hóa học)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 13,
+      "idx": 0,
+      "raw": "$$Zn + 2HCl → ZnCl₂ + H₂ \\uparrow$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 14,
+      "idx": 0,
+      "raw": "$$BaSO₄ kết tủa trắng không tan trong axit$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 15,
+      "idx": 0,
+      "raw": "$$m_trước = m_sau$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 16,
+      "idx": 0,
+      "raw": "$$4Al + 3O₂ → 2Al₂O₃$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 17,
+      "idx": 0,
+      "raw": "$$2KMnO₄ → K₂MnO₄ + MnO₂ + O₂ \\uparrow$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 18,
+      "idx": 0,
+      "raw": "$$1 mol H₂O = 18 gam$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 19,
+      "idx": 0,
+      "raw": "$$1 mol khí = 24,79 Lít (đkc)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 20,
+      "idx": 0,
+      "raw": "$$d_(CO2/kk) = 44 / 29 ≈ 1,52$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 21,
+      "idx": 0,
+      "raw": "$$\\text{Trong CH₄}: %C = 75%, %H = 25%$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 22,
+      "idx": 0,
+      "raw": "$$Zn + 2HCl → ZnCl₂ + H₂ \\uparrow$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 23,
+      "idx": 0,
+      "raw": "$$CaCO₃ → CaO + CO₂$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 24,
+      "idx": 0,
+      "raw": "$$S + O₂ → SO₂$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 24,
+      "idx": 1,
+      "raw": "$$3Fe + 2O₂ → Fe₃O₄$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 25,
+      "idx": 0,
+      "raw": "$$2H₂ + O₂ → 2H₂O$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 25,
+      "idx": 1,
+      "raw": "$$CaO + H₂O → Ca(OH)₂$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 26,
+      "idx": 0,
+      "raw": "$$Tên = Tên nguyên tố + Oxit$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 27,
+      "idx": 0,
+      "raw": "$$2KMnO₄ → K₂MnO₄ + MnO₂ + O₂ \\uparrow$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 28,
+      "idx": 0,
+      "raw": "$$C + O₂ → CO₂$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 29,
+      "idx": 0,
+      "raw": "$$2H₂ + O₂ → 2H₂O (Hóa hợp)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 29,
+      "idx": 1,
+      "raw": "$$2H₂O → 2H₂ + O₂ (Phân hủy)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 30,
+      "idx": 0,
+      "raw": "$$C + O₂ → CO₂$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 31,
+      "idx": 0,
+      "raw": "$$2H₂ + O₂ → 2H₂O$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 31,
+      "idx": 1,
+      "raw": "$$H₂ + CuO (đen) → Cu (đỏ) + H₂O$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 32,
+      "idx": 0,
+      "raw": "$$H₂ (Khử) + CuO (Oxh) → Cu + H₂O$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 33,
+      "idx": 0,
+      "raw": "$$Zn + 2HCl → ZnCl₂ + H₂ \\uparrow$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 34,
+      "idx": 0,
+      "raw": "$$Zn + 2HCl → ZnCl₂ + H₂$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 35,
+      "idx": 0,
+      "raw": "$$2H₂ + O₂ → 2H₂O$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 36,
+      "idx": 0,
+      "raw": "$$2Na + 2H₂O → 2NaOH + H₂ \\uparrow$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 36,
+      "idx": 1,
+      "raw": "$$CaO + H₂O → Ca(OH)₂$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 37,
+      "idx": 0,
+      "raw": "$$Tên Muối = Tên kim loại + Gốc axit$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 38,
+      "idx": 0,
+      "raw": "$$HCl + NaOH → NaCl + H₂O$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 39,
+      "idx": 0,
+      "raw": "$$Phenolphtalein chuyển sang màu hồng trong kiềm$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 40,
+      "idx": 0,
+      "raw": "$$Khuấy, đun nóng làm tăng độ tan$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 41,
+      "idx": 0,
+      "raw": "$$S_(NaCl, 25°C) ≈ 36g / 100g H₂O$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 42,
+      "idx": 0,
+      "raw": "$$C% = (C_{\\text{M}} × M) / (10 × D)$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 43,
+      "idx": 0,
+      "raw": "$$\\text{Pha loãng}: C₁V₁ = C₂V₂$$",
+      "has_vn": true
+    },
+    {
+      "grade": 8,
+      "lesson": 44,
+      "idx": 0,
+      "raw": "$$C_{\\text{M}} = n / V_L$$",
+      "has_vn": false
+    },
+    {
+      "grade": 8,
+      "lesson": 45,
+      "idx": 0,
+      "raw": "$$Dung dịch CuSO4 có màu xanh lam trong suốt.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 1,
+      "idx": 0,
+      "raw": "$$CaO + 2HCl → CaCl₂ + H₂O$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 1,
+      "idx": 1,
+      "raw": "$$CO₂ + Ca(OH)₂ → CaCO₃ \\downarrow + H₂O$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 2,
+      "idx": 0,
+      "raw": "$$CaCO₃ → CaO + CO₂  (Nung vôi ở 900°C)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 3,
+      "idx": 0,
+      "raw": "$$Fe + 2HCl → FeCl₂ + H₂ \\uparrow$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 3,
+      "idx": 1,
+      "raw": "$$H₂SO₄ + Cu(OH)₂ → CuSO₄ + 2H₂O$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 4,
+      "idx": 0,
+      "raw": "$$Cu + 2H₂SO₄ (đặc, t°) → CuSO₄ + SO₂ \\uparrow + 2H₂O$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 4,
+      "idx": 1,
+      "raw": "$$C₁₂H₂₂O₁₁ → 12C + 11H₂O$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 5,
+      "idx": 0,
+      "raw": "$$CuO + 2HCl → CuCl₂ + H₂O$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 5,
+      "idx": 1,
+      "raw": "$$CO₂ + CaO → CaCO₃$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 6,
+      "idx": 0,
+      "raw": "$$H₂SO₄ + BaCl₂ → BaSO₄ \\downarrow + 2HCl$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 7,
+      "idx": 0,
+      "raw": "$$2NaOH + CuSO₄ → Cu(OH)₂ \\downarrow (xanh) + Na₂SO₄$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 7,
+      "idx": 1,
+      "raw": "$$Cu(OH)₂ → CuO (đen) + H₂O$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 8,
+      "idx": 0,
+      "raw": "$$NaOH + CO₂ → NaHCO₃ (hoặc Na₂CO₃ + H₂O)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 9,
+      "idx": 0,
+      "raw": "$$Fe + CuSO₄ → FeSO₄ + Cu \\downarrow$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 9,
+      "idx": 1,
+      "raw": "$$AgNO₃ + NaCl → AgCl \\downarrow + NaNO₃$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 10,
+      "idx": 0,
+      "raw": "$$\\text{Thuốc nổ đen}: 2KNO₃ + 3C + S → K₂S + N₂ \\uparrow + 3CO₂ \\uparrow$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 11,
+      "idx": 0,
+      "raw": "$$\\text{Urê}: (NH₂)₂CO có độ dinh dưỡng cao nhất.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 12,
+      "idx": 0,
+      "raw": "$$Fe → FeCl₂ → Fe(OH)₂ → FeO → Fe$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 13,
+      "idx": 0,
+      "raw": "$$BaCl₂ + H₂SO₄ → BaSO₄ \\downarrow + 2HCl$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 14,
+      "idx": 0,
+      "raw": "$$Cu(OH)₂ + 2HCl → CuCl₂ + 2H₂O$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 15,
+      "idx": 0,
+      "raw": "$$Hg ở thể lỏng ở nhiệt độ thường (-39°C)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 16,
+      "idx": 0,
+      "raw": "$$2Fe + 3Cl₂ → 2FeCl₃  (Clo đưa Fe lên Fe(III))$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 16,
+      "idx": 1,
+      "raw": "$$Fe + 2HCl → FeCl₂ + H₂ \\uparrow  (HCl đưa Fe lên Fe(II))$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 17,
+      "idx": 0,
+      "raw": "$$2Na + 2H₂O → 2NaOH + H₂ \\uparrow$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 17,
+      "idx": 1,
+      "raw": "$$Fe + CuSO₄ → FeSO₄ + Cu \\downarrow$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 18,
+      "idx": 0,
+      "raw": "$$2Al₂O₃ → 4Al + 3O₂ (Điện phân nóng chảy Criolit)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 19,
+      "idx": 0,
+      "raw": "$$Fe bị thụ động trong HNO3 và H2SO4 đặc nguội.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 20,
+      "idx": 0,
+      "raw": "$$Thép dẻo và đàn hồi tốt hơn gang.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 21,
+      "idx": 0,
+      "raw": "$$Bảo vệ tàu biển bằng cách gắn khối kẽm (Zn) vào vỏ thép$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 22,
+      "idx": 0,
+      "raw": "$$Al + 3AgNO₃ → Al(NO₃)₃ + 3Ag \\downarrow$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 23,
+      "idx": 0,
+      "raw": "$$2Al + 2NaOH + 2H₂O → 2NaAlO₂ + 3H₂ \\uparrow$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 24,
+      "idx": 0,
+      "raw": "$$Ôn tập toàn diện chuẩn bị thi học kì.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 25,
+      "idx": 0,
+      "raw": "$$H₂ + Cl₂ → 2HCl$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 26,
+      "idx": 0,
+      "raw": "$$2Fe + 3Cl₂ → 2FeCl₃$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 27,
+      "idx": 0,
+      "raw": "$$Kim cương cứng nhất, than chì dẫn điện.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 28,
+      "idx": 0,
+      "raw": "$$CO kết hợp chặt với hemoglobin gây ngạt.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 29,
+      "idx": 0,
+      "raw": "$$NaHCO3 có tính lưỡng tính và dễ tan.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 30,
+      "idx": 0,
+      "raw": "$$Silic siêu tinh khiết chế tạo chip điện tử.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 31,
+      "idx": 0,
+      "raw": "$$Quy luật biến đổi tính chất trong chu kì và nhóm.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 32,
+      "idx": 0,
+      "raw": "$$Cl₂ → HCl → NaCl → Cl₂ → Nước Javel$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 33,
+      "idx": 0,
+      "raw": "$$CO2 làm đục nước vôi trong.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 34,
+      "idx": 0,
+      "raw": "$$CH₄, C₂H₄, C₂H₅OH, CH₃COOH$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 35,
+      "idx": 0,
+      "raw": "$$CH₃-O-CH₃ và C₂H₅OH cùng C₂H₆O$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 36,
+      "idx": 0,
+      "raw": "$$CH₄ + 2O₂ → CO₂ + 2H₂O (Tỏa nhiệt mạnh)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 37,
+      "idx": 0,
+      "raw": "$$n CH₂=CH₂ → (-CH₂-CH₂-)_n (Nhựa PE)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 38,
+      "idx": 0,
+      "raw": "$$CaC₂ + 2H₂O → Ca(OH)₂ + C₂H₂ \\uparrow$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 39,
+      "idx": 0,
+      "raw": "$$Không làm mất màu nước brom ở điều kiện thường.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 40,
+      "idx": 0,
+      "raw": "$$C₁₆H₃₄ → C₈H₁₈ + C₈H₁₆$$",
+      "has_vn": false
+    },
+    {
+      "grade": 9,
+      "lesson": 41,
+      "idx": 0,
+      "raw": "$$Cung cấp đủ không khí và tăng diện tích tiếp xúc.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 42,
+      "idx": 0,
+      "raw": "$$CH₄ (thế Cl₂)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 42,
+      "idx": 1,
+      "raw": "$$C₂H₄ (cộng Br₂)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 42,
+      "idx": 2,
+      "raw": "$$C₂H₂ (cộng 2Br₂)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 42,
+      "idx": 3,
+      "raw": "$$C₆H₆ (thế Br₂/Fe)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 43,
+      "idx": 0,
+      "raw": "$$Nước brom bị mất màu nhanh chóng.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 44,
+      "idx": 0,
+      "raw": "$$C₂H₅OH + O₂ → CH₃COOH + H₂O (Men giấm)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 45,
+      "idx": 0,
+      "raw": "$$Este etyl axetat có mùi thơm hoa quả.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 46,
+      "idx": 0,
+      "raw": "$$Chuỗi phản ứng cốt lõi trong công nghiệp hữu cơ.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 47,
+      "idx": 0,
+      "raw": "$$Chất béo nhẹ hơn nước, không tan trong nước.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 48,
+      "idx": 0,
+      "raw": "$$CH3COOH tác dụng NaHCO3; C2H5OH không tác dụng.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 49,
+      "idx": 0,
+      "raw": "$$Etyl axetat nhẹ nổi lên trên có mùi thơm.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 50,
+      "idx": 0,
+      "raw": "$$Dùng tráng gương, tráng ruột phích và làm thuốc bổ.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 51,
+      "idx": 0,
+      "raw": "$$Sản phẩm thủy phân tham gia phản ứng tráng bạc.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 52,
+      "idx": 0,
+      "raw": "$$Xenlulozơ có mạch không phân nhánh tạo nên màng tế bào thực vật.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 53,
+      "idx": 0,
+      "raw": "$$Đốt cháy protein (tóc, lông cừu) có mùi khét.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 54,
+      "idx": 0,
+      "raw": "$$Cao su có tính đàn hồi vượt trội, không thấm nước.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 55,
+      "idx": 0,
+      "raw": "$$Đun nóng màu xanh tím biến mất, để nguội xuất hiện lại.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 9,
+      "lesson": 56,
+      "idx": 0,
+      "raw": "$$Vững chắc phương pháp giải bài toán tổng hợp.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 1,
+      "idx": 0,
+      "raw": "$$¹H (1p, 1e)$$",
+      "has_vn": false
+    },
+    {
+      "grade": 10,
+      "lesson": 1,
+      "idx": 1,
+      "raw": "$$¹²C (6p, 6n, 6e)$$",
+      "has_vn": false
+    },
+    {
+      "grade": 10,
+      "lesson": 2,
+      "idx": 0,
+      "raw": "$$¹H, ²H (Đơteri), ³H (Triti) là 3 đồng vị của Hydro$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 3,
+      "idx": 0,
+      "raw": "$$\\text{Na (Z=11)}: 1s² 2s² 2p⁶ 3s¹$$",
+      "has_vn": false
+    },
+    {
+      "grade": 10,
+      "lesson": 3,
+      "idx": 1,
+      "raw": "$$\\text{Fe (Z=26)}: 1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁶ 4s²$$",
+      "has_vn": false
+    },
+    {
+      "grade": 10,
+      "lesson": 4,
+      "idx": 0,
+      "raw": "$$1s² 2s² 2p⁶ 3s² 3p⁶$$",
+      "has_vn": false
+    },
+    {
+      "grade": 10,
+      "lesson": 5,
+      "idx": 0,
+      "raw": "$$Khối nguyên tố s, p, d, f$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 6,
+      "idx": 0,
+      "raw": "$$F có độ âm điện lớn nhất (3,98); Cs có tính kim loại mạnh nhất$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 7,
+      "idx": 0,
+      "raw": "$$Na₂O (Bazơ mạnh) → Al₂O₃ (Lưỡng tính) → SO₃ → Cl₂O₇ (Axit cực mạnh)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 8,
+      "idx": 0,
+      "raw": "$$Từ vị trí suy ra oxit và hiđroxit cao nhất.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 9,
+      "idx": 0,
+      "raw": "$$F > Cl > Br > I (Tính phi kim giảm dần)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 10,
+      "idx": 0,
+      "raw": "$$Na → Na⁺ + 1e$$",
+      "has_vn": false
+    },
+    {
+      "grade": 10,
+      "lesson": 10,
+      "idx": 1,
+      "raw": "$$Cl + 1e → Cl⁻$$",
+      "has_vn": false
+    },
+    {
+      "grade": 10,
+      "lesson": 11,
+      "idx": 0,
+      "raw": "$$Na⁺ + Cl⁻ → NaCl (Mạng tinh thể lập phương)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 12,
+      "idx": 0,
+      "raw": "$$H-H (Liên kết đơn σ)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 12,
+      "idx": 1,
+      "raw": "$$O=O (Liên kết đôi)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 12,
+      "idx": 2,
+      "raw": "$$N≡N (Liên kết ba rất bền)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 13,
+      "idx": 0,
+      "raw": "$$...H-O-H ... O(H)-H... (Mạng liên kết hydrogen trong nước)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 14,
+      "idx": 0,
+      "raw": "$$NaCl (Ion) vs HCl (CHT phân cực) vs Cl₂ (CHT không cực)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 15,
+      "idx": 0,
+      "raw": "$$2KMnO₄ + 16HCl → 2KCl + 2MnCl₂ + 5Cl₂ \\uparrow + 8H₂O$$",
+      "has_vn": false
+    },
+    {
+      "grade": 10,
+      "lesson": 15,
+      "idx": 1,
+      "raw": "$$Cu + 4HNO₃ → Cu(NO₃)₂ + 2NO₂ \\uparrow + 2H₂O$$",
+      "has_vn": false
+    },
+    {
+      "grade": 10,
+      "lesson": 16,
+      "idx": 0,
+      "raw": "$$3Cu + 8HNO₃ (loãng) → 3Cu(NO₃)₂ + 2NO \\uparrow + 4H₂O$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 17,
+      "idx": 0,
+      "raw": "$$CH₄ + 2O₂ → CO₂ + 2H₂O  Δ_r H°₂₉₈ = -890,3 kJ (Tỏa nhiệt)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 17,
+      "idx": 1,
+      "raw": "$$CaCO₃ → CaO + CO₂  Δ_r H°₂₉₈ = +178,5 kJ (Thu nhiệt)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 18,
+      "idx": 0,
+      "raw": "$$Δ_r H° = Σ E_b(chất đầu) - Σ E_b(sản phẩm)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 19,
+      "idx": 0,
+      "raw": "$$Nồng độ, nhiệt độ, áp suất, diện tích tiếp xúc, chất xúc tác$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 20,
+      "idx": 0,
+      "raw": "$$\\text{k}: Hằng số tốc độ phản ứng$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 21,
+      "idx": 0,
+      "raw": "$$Br₂ + 2NaI → 2NaBr + I₂ (I2 làm xanh hồ tinh bột)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 22,
+      "idx": 0,
+      "raw": "$$AgF tan trong nước$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 23,
+      "idx": 0,
+      "raw": "$$Cl₂ > Br₂ > I₂ (Tính oxi hóa)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 10,
+      "lesson": 23,
+      "idx": 1,
+      "raw": "$$HF < HCl < HBr < HI (Tính axit)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 1,
+      "idx": 0,
+      "raw": "$$N₂ (g) + 3H₂ (g) \\rightleftharpoons 2NH₃ (g)  Δ_r H°₂₉₈ = -92 kJ$$",
+      "has_vn": false
+    },
+    {
+      "grade": 11,
+      "lesson": 1,
+      "idx": 1,
+      "raw": "$$2NO₂ (g) [Nâu đỏ] \\rightleftharpoons N₂O₄ (g) [Không màu]  Δ_r H°₂₉₈ = -58 kJ$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 2,
+      "idx": 0,
+      "raw": "$$HCl → H⁺ + Cl⁻ (Mạnh)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 2,
+      "idx": 1,
+      "raw": "$$CH₃COOH \\rightleftharpoons CH₃COO⁻ + H⁺ (Yếu)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 3,
+      "idx": 0,
+      "raw": "$$pH = 14 - pOH$$",
+      "has_vn": false
+    },
+    {
+      "grade": 11,
+      "lesson": 4,
+      "idx": 0,
+      "raw": "$$N₂ + 3H₂ \\rightleftharpoons 2NH₃  (Fe, 450°C, 200 bar)$$",
+      "has_vn": false
+    },
+    {
+      "grade": 11,
+      "lesson": 4,
+      "idx": 1,
+      "raw": "$$N₂ + O₂ \\rightleftharpoons 2NO  (3000°C hoặc tia lửa điện)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 5,
+      "idx": 0,
+      "raw": "$$Cu²⁺ + 4NH₃ → [Cu(NH₃)₄]²⁺ [Phức xanh lam thẫm]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 6,
+      "idx": 0,
+      "raw": "$$Cu + 4HNO₃ (đặc) → Cu(NO₃)₂ + 2NO₂ \\uparrow [Nâu đỏ] + 2H₂O$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 6,
+      "idx": 1,
+      "raw": "$$3Cu + 8HNO₃ (loãng) → 3Cu(NO₃)₂ + 2NO \\uparrow + 4H₂O$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 7,
+      "idx": 0,
+      "raw": "$$SO₂ + Br₂ + 2H₂O → 2HBr + H₂SO₄  (Làm mất màu nước brom)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 8,
+      "idx": 0,
+      "raw": "$$Cu + 2H₂SO₄ (đặc, t°) → CuSO₄ + SO₂ \\uparrow + 2H₂O$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 8,
+      "idx": 1,
+      "raw": "$$C₁₂H₂₂O₁₁ → 12C + 11H₂O$$",
+      "has_vn": false
+    },
+    {
+      "grade": 11,
+      "lesson": 9,
+      "idx": 0,
+      "raw": "$$\\text{Nhận biết}: NH₄⁺ (kiềm sinh NH₃), SO₄²⁻ (Ba²⁺ sinh BaSO₄ \\downarrow)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 10,
+      "idx": 0,
+      "raw": "$$Phổ hồng ngoại IR xác định các nhóm chức đặc trưng$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 11,
+      "idx": 0,
+      "raw": "$$Tách dầu ăn khỏi nước bằng phễu chiết.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 12,
+      "idx": 0,
+      "raw": "$$Phổ khối lượng MS cho biết giá trị ion phân tử [M⁺] chính xác bằng M.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 13,
+      "idx": 0,
+      "raw": "$$CH₃-CH₂-CH₂-OH và CH₃-CH(OH)-CH₃ (Đồng phân vị trí -OH)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 14,
+      "idx": 0,
+      "raw": "$$Thành thạo phân tích phổ MS và IR.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 15,
+      "idx": 0,
+      "raw": "$$CH₄ + Cl₂ → CH₃Cl + HCl$$",
+      "has_vn": false
+    },
+    {
+      "grade": 11,
+      "lesson": 15,
+      "idx": 1,
+      "raw": "$$CH₃-CH₂-CH₃ + Cl₂ → CH₃-CHCl-CH₃ (Sản phẩm chính 2-clopropan)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 16,
+      "idx": 0,
+      "raw": "$$CH₂=CH₂ + Br₂ → CH₂Br-CH₂Br$$",
+      "has_vn": false
+    },
+    {
+      "grade": 11,
+      "lesson": 16,
+      "idx": 1,
+      "raw": "$$CH₃-CH=CH₂ + HCl → CH₃-CHCl-CH₃ (Chính)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 17,
+      "idx": 0,
+      "raw": "$$C₆H₆ + Br₂ → C₆H₅Br + HBr  (Fe)$$",
+      "has_vn": false
+    },
+    {
+      "grade": 11,
+      "lesson": 17,
+      "idx": 1,
+      "raw": "$$C₆H₅CH₃ + 2KMnO₄ → C₆H₅COOK + 2MnO₂ \\downarrow + KOH + H₂O (t°)$$",
+      "has_vn": false
+    },
+    {
+      "grade": 11,
+      "lesson": 18,
+      "idx": 0,
+      "raw": "$$Alkane (thế Cl₂) | Alkene (cộng Br₂) | Alk-1-yne (kết tủa AgNO₃/NH₃) | Toluen (KMnO₄, t°)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 19,
+      "idx": 0,
+      "raw": "$$CH₃-CH₂-Cl + NaOH → CH₃-CH₂-OH + NaCl (t°)$$",
+      "has_vn": false
+    },
+    {
+      "grade": 11,
+      "lesson": 20,
+      "idx": 0,
+      "raw": "$$2C₂H₅OH + 2Na → 2C₂H₅ONa + H₂ \\uparrow$$",
+      "has_vn": false
+    },
+    {
+      "grade": 11,
+      "lesson": 20,
+      "idx": 1,
+      "raw": "$$Glycerol C₃H₅(OH)₃ hòa tan Cu(OH)₂ tạo phức xanh lam thẫm$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 21,
+      "idx": 0,
+      "raw": "$$Ảnh hưởng qua lại làm tăng độ linh động của nguyên tử H nhóm -OH.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 22,
+      "idx": 0,
+      "raw": "$$Thành thạo nhận biết Ancol đơn chức, đa chức và Phenol.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 23,
+      "idx": 0,
+      "raw": "$$CH3CHO cho phản ứng iodoform tạo kết tủa vàng CHI3.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 24,
+      "idx": 0,
+      "raw": "$$Nhiệt độ sôi cao hơn ancol cùng C do liên kết hydrogen dạng đime.$$",
+      "has_vn": true
+    },
+    {
+      "grade": 11,
+      "lesson": 25,
+      "idx": 0,
+      "raw": "$$CH₄ → C₂H₂ → CH₃CHO → CH₃COOH → CH₃COOC₂H₅$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 1,
+      "idx": 0,
+      "raw": "$$\\text{CH}_3\\text{COOC}_2\\text{H}_5 + \\text{NaOH} \\xrightarrow{t^\\circ} \\text{CH}_3\\text{COONa} + \\text{C}_2\\text{H}_5\\text{OH}$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 1,
+      "idx": 1,
+      "raw": "$$(\\text{C}_{17}\\text{H}_{35}\\text{COO})_3\\text{C}_3\\text{H}_5 + 3\\text{NaOH} \\xrightarrow{t^\\circ} 3\\text{C}_{17}\\text{H}_{35}\\text{COONa} + \\text{C}_3\\text{H}_5(\\text{OH})_3$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 1,
+      "idx": 2,
+      "raw": "$$(\\text{C}_{17}\\text{H}_{33}\\text{COO})_3\\text{C}_3\\text{H}_5 + 3\\text{H}_2 \\xrightarrow{\\text{Ni}, t^\\circ} (\\text{C}_{17}\\text{H}_{35}\\text{COO})_3\\text{C}_3\\text{H}_5$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 2,
+      "idx": 0,
+      "raw": "$$(\\text{RCOO})_3\\text{C}_3\\text{H}_5 + 3\\text{NaOH} \\xrightarrow{t^\\circ} 3\\text{RCOONa (Xà phòng)} + \\text{C}_3\\text{H}_5(\\text{OH})_3$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 2,
+      "idx": 1,
+      "raw": "$$2\\text{C}_{17}\\text{H}_{35}\\text{COONa} + \\text{Ca}^{2+} \\to (\\text{C}_{17}\\text{H}_{35}\\text{COO})_2\\text{Ca} \\downarrow (\\text{Cặn trắng}) + 2\\text{Na}^+$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 3,
+      "idx": 0,
+      "raw": "$$(RCOO)₃C₃H₅ + 3NaOH → 3RCOONa + C₃H₅(OH)₃$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 4,
+      "idx": 0,
+      "raw": "$$\\text{CH}_2\\text{OH(CHOH)}_4\\text{CHO} + 2[\\text{Ag(NH}_3)_2]\\text{OH} \\to \\text{CH}_2\\text{OH(CHOH)}_4\\text{COONH}_4 + 2\\text{Ag} \\downarrow + 3\\text{NH}_3 + \\text{H}_2\\text{O}$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 4,
+      "idx": 1,
+      "raw": "$$2\\text{C}_6\\text{H}_{12}\\text{O}_6 + \\text{Cu(OH)}_2 \\to [\\text{C}_6\\text{H}_{11}\\text{O}_6]_2\\text{Cu} + 2\\text{H}_2\\text{O}$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 4,
+      "idx": 2,
+      "raw": "$$\\text{CH}_2\\text{OH(CHOH)}_4\\text{CHO} + \\text{Br}_2 + \\text{H}_2\\text{O} \\to \\text{CH}_2\\text{OH(CHOH)}_4\\text{COOH} + 2\\text{HBr}$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 5,
+      "idx": 0,
+      "raw": "$$2C₁₂H₂₂O₁₁ + Cu(OH)₂ → [C₁₂H₂₁O₁₁]₂Cu + 2H₂O  [Xanh lam thẫm]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 5,
+      "idx": 1,
+      "raw": "$$C₁₂H₂₂O₁₁ + H₂O → C₆H₁₂O₆ (Glucose) + C₆H₁₂O₆ (Fructose)  [H⁺, t°]$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 6,
+      "idx": 0,
+      "raw": "$$Tinh bột + I₂ \\rightleftharpoons Hợp chất màu xanh tím  [Hiện tượng bọc phân tử Iot]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 6,
+      "idx": 1,
+      "raw": "$$[C₆H₇O₂(OH)₃]_n + 3nHNO₃ → [C₆H₇O₂(ONO₂)₃]_n (Thuốc súng không khói) + 3nH₂O  [H₂SO₄ đặc, t°]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 7,
+      "idx": 0,
+      "raw": "$$Glucose + Br₂ + H₂O → Axit gluconic + 2HBr$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 7,
+      "idx": 1,
+      "raw": "$$Tinh bột + I₂ → Hợp chất màu xanh tím$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 8,
+      "idx": 0,
+      "raw": "$$\\text{CH}_3\\text{NH}_2 + \\text{HCl} \\to \\text{CH}_3\\text{NH}_3\\text{Cl} \\quad (\\text{Khói trắng muối amoni})$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 8,
+      "idx": 1,
+      "raw": "$$\\text{C}_6\\text{H}_5\\text{NH}_2 + 3\\text{Br}_2 \\to \\text{C}_6\\text{H}_2\\text{Br}_3\\text{NH}_2 \\downarrow (\\text{Kết tủa trắng}) + 3\\text{HBr}$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 9,
+      "idx": 0,
+      "raw": "$$H₂N-CH₂-COOH + HCl → ClH₃N-CH₂-COOH  [Tác dụng axit]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 9,
+      "idx": 1,
+      "raw": "$$H₂N-CH₂-COOH + NaOH → H₂N-CH₂-COONa + H₂O  [Tác dụng bazơ]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 9,
+      "idx": 2,
+      "raw": "$$H₂N-CH₂-CO-NH-CH(CH₃)-COOH + 2NaOH → H₂N-CH₂-COONa + H₂N-CH(CH₃)-COONa + H₂O  [Thủy phân dipeptide]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 10,
+      "idx": 0,
+      "raw": "$$Protein + Cu(OH)₂ / NaOH → Phức chất màu TÍM đặc trưng$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 10,
+      "idx": 1,
+      "raw": "$$Protein + HNO₃ (đặc) → Kết tủa màu VÀNG (Phản ứng xanthoproteic)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 11,
+      "idx": 0,
+      "raw": "$$Gly-Ala-Val + 3NaOH → Gly-Na + Ala-Na + Val-Na + H₂O$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 12,
+      "idx": 0,
+      "raw": "$$n CH₂=CH₂ → (-CH₂-CH₂-)_n  [Nhựa PE]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 12,
+      "idx": 1,
+      "raw": "$$n CH₂=CHCl → (-CH₂-CHCl-)_n  [Nhựa PVC]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 12,
+      "idx": 2,
+      "raw": "$$n H₂N-(CH₂)₆-NH₂ + n HOOC-(CH₂)₄-COOH → (-NH-(CH₂)₆-NH-CO-(CH₂)₄-CO-)_n + 2nH₂O  [Tơ Nilon-6,6]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 13,
+      "idx": 0,
+      "raw": "$$n CH₂=C(CH₃)COOCH₃ → (-CH₂-C(CH₃)(COOCH₃)-)_n  [Thủy tinh hữu cơ Plexiglas]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 13,
+      "idx": 1,
+      "raw": "$$n CH₂=CH-CH=CH₂ → (-CH₂-CH=CH-CH₂-)_n  [Cao su Buna]$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 14,
+      "idx": 0,
+      "raw": "$$n CH₂=CHCl → (-CH₂-CHCl-)_n$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 15,
+      "idx": 0,
+      "raw": "$$\\text{Anot (-)}: \\text{Zn} \\to \\text{Zn}^{2+} + 2e$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 15,
+      "idx": 1,
+      "raw": "$$\\text{Catot (+)}: \\text{Cu}^{2+} + 2e \\to \\text{Cu} \\downarrow$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 15,
+      "idx": 2,
+      "raw": "$$\\text{Phản ứng tổng}: \\text{Zn} + \\text{Cu}^{2+} \\to \\text{Zn}^{2+} + \\text{Cu} \\quad (E^\\circ_{\\text{pin}} = +1.10\\text{V})$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 16,
+      "idx": 0,
+      "raw": "$$\\text{Catot (-)}: Cu²⁺ + 2e → Cu \\downarrow  [Điện phân dung dịch CuSO₄]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 16,
+      "idx": 1,
+      "raw": "$$\\text{Anot (+)}: 2H₂O → O₂ \\uparrow + 4H⁺ + 4e  [Dung dịch chuyển sang môi trường axit H₂SO₄]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 16,
+      "idx": 2,
+      "raw": "$$2NaCl + 2H₂O → 2NaOH + Cl₂ \\uparrow (Anot) + H₂ \\uparrow (Catot)  [Điện phân dd có màng ngăn]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 17,
+      "idx": 0,
+      "raw": "$$CuSO₄ + 2NaCl → Cu \\downarrow + Cl₂ \\uparrow + Na₂SO₄  [Điện phân trơ trơ không màng]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 18,
+      "idx": 0,
+      "raw": "$$\\text{Liên kết kim loại}: Cation kim loại Mⁿ⁺ + Khí electron tự do (e⁻)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 19,
+      "idx": 0,
+      "raw": "$$2Al + 3Cl₂ → 2AlCl₃$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 19,
+      "idx": 1,
+      "raw": "$$Fe + 2HCl → FeCl₂ + H₂ \\uparrow$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 19,
+      "idx": 2,
+      "raw": "$$3Cu + 8HNO₃ (loãng) → 3Cu(NO₃)₂ + 2NO \\uparrow + 4H₂O$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 20,
+      "idx": 0,
+      "raw": "$$Fe₂O₃ + 3CO → 2Fe + 3CO₂  [Lò cao]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 20,
+      "idx": 1,
+      "raw": "$$2Al₂O₃ → 4Al + 3O₂  [Điện phân nóng chảy]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 21,
+      "idx": 0,
+      "raw": "$$Fe + Cr + Ni → Hợp kim Inox không rỉ$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 22,
+      "idx": 0,
+      "raw": "$$\\text{Anot (-)}: Fe → Fe²⁺ + 2e  [Ăn mòn thép]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 22,
+      "idx": 1,
+      "raw": "$$\\text{Catot (+)}: O₂ + 2H₂O + 4e → 4OH⁻  [Trong không khí ẩm]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 22,
+      "idx": 2,
+      "raw": "$$Fe²⁺ + 2OH⁻ → Fe(OH)₂ \\downarrow ➔ Fe₂O₃.nH₂O  [Gỉ sắt màu nâu đỏ]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 23,
+      "idx": 0,
+      "raw": "$$Fe + 2AgNO₃ → Fe(NO₃)₂ + 2Ag \\downarrow$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 24,
+      "idx": 0,
+      "raw": "$$2Na + 2H₂O → 2NaOH + H₂ \\uparrow  [Phản ứng mãnh liệt]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 24,
+      "idx": 1,
+      "raw": "$$2Na + O₂ → Na₂O₂  (Natri peoxit khi đốt trong oxi dư)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 25,
+      "idx": 0,
+      "raw": "$$Ca(HCO₃)₂ → CaCO₃ \\downarrow + CO₂ \\uparrow + H₂O  [Đun sôi làm mềm nước cứng tạm thời]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 25,
+      "idx": 1,
+      "raw": "$$Ca²⁺ + CO₃²⁻ → CaCO₃ \\downarrow  [Dùng Na₂CO₃ làm mềm nước cứng]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 25,
+      "idx": 2,
+      "raw": "$$CaO + H₂O → Ca(OH)₂  [Vôi tôi tỏa nhiệt]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 26,
+      "idx": 0,
+      "raw": "$$CO₂ + Ca(OH)₂ → CaCO₃ \\downarrow + H₂O  [Tạo kết tủa trắng]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 26,
+      "idx": 1,
+      "raw": "$$CaCO₃ + CO₂ (dư) + H₂O → Ca(HCO₃)₂  [Kết tủa tan khi CO₂ dư]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 27,
+      "idx": 0,
+      "raw": "$$2KMnO₄ → K₂MnO₄ + MnO₂ + O₂ \\uparrow  (t°)$$",
+      "has_vn": false
+    },
+    {
+      "grade": 12,
+      "lesson": 27,
+      "idx": 1,
+      "raw": "$$Cr₂O₃ + 2Al → 2Cr + Al₂O₃  (Nhiệt nhôm)$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 28,
+      "idx": 0,
+      "raw": "$$\\text{CuSO}_4 + 2\\text{NH}_3 + 2\\text{H}_2\\text{O} \\to \\text{Cu(OH)}_2 \\downarrow (\\text{Xanh nhạt}) + (\\text{NH}_4)_2\\text{SO}_4$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 28,
+      "idx": 1,
+      "raw": "$$\\text{Cu(OH)}_2 + 4\\text{NH}_3 \\to [\\text{Cu(NH}_3)_4](\\text{OH})_2 \\quad (\\text{Dung dịch xanh lam thẫm})$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 29,
+      "idx": 0,
+      "raw": "$$Fe²⁺ (Hemoglobin) + O₂ \\rightleftharpoons Oxyhemoglobin  [Vận chuyển O₂ nuôi cơ thể]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 29,
+      "idx": 1,
+      "raw": "$$Mg²⁺ (Diệp lục) + hν + CO₂ + H₂O → C₆H₁₂O₆ + O₂  [Quang hợp cây xanh]$$",
+      "has_vn": true
+    },
+    {
+      "grade": 12,
+      "lesson": 30,
+      "idx": 0,
+      "raw": "$$Chemic-AI \\times RMIT Vietnam \\times AI Riser 2026  [Đột phá công nghệ Giáo dục tương tác 3D]$$",
+      "has_vn": true
+    }
+  ]
+}

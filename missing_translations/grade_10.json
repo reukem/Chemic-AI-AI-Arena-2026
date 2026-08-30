@@ -1,0 +1,1746 @@
+[
+  {
+    "grade": 10,
+    "lessonNumber": 1,
+    "lessonId": "hh10_b1",
+    "field": "summary",
+    "VN": "Hạt nhân gồm proton (p+), neutron (n0) và lớp vỏ electron (e-).",
+    "current_EN": "Hạt nhân gồm proton (p+), neutron (n0) và lớp vỏ electron (e-)."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 1,
+    "lessonId": "hh10_b1",
+    "field": "theoryPoints[0]",
+    "VN": "Khối lượng nguyên tử tập trung chủ yếu ở hạt nhân.",
+    "current_EN": "Khối lượng Atom tập trung chủ yếu ở hạt nhân."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 1,
+    "lessonId": "hh10_b1",
+    "field": "sampleQuestion.question",
+    "VN": "Tại sao nguyên tử trung hòa về điện?",
+    "current_EN": "Tại sao Atom trung hòa về điện?"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 1,
+    "lessonId": "hh10_b1",
+    "field": "sampleQuestion.answer",
+    "VN": "Vì số proton (+1) bằng số electron (-1).",
+    "current_EN": "Vì số proton (+1) bằng số electron (-1)."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 1,
+    "lessonId": "hh10_b1",
+    "field": "sections[0].points[0]",
+    "VN": "Hạt nhân gồm proton (p+), neutron (n0) và lớp vỏ electron (e-).",
+    "current_EN": "Hạt nhân gồm proton (p+), neutron (n0) và lớp vỏ electron (e-)."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 1,
+    "lessonId": "hh10_b1",
+    "field": "sections[0].points[1]",
+    "VN": "Khối lượng nguyên tử tập trung chủ yếu ở hạt nhân.",
+    "current_EN": "Khối lượng Atom tập trung chủ yếu ở hạt nhân."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 1,
+    "lessonId": "hh10_b1",
+    "field": "sections[1].points[0]",
+    "VN": "¹H (1p, 1e)",
+    "current_EN": "¹H (1p, 1e)"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 1,
+    "lessonId": "hh10_b1",
+    "field": "sections[1].points[1]",
+    "VN": "¹²C (6p, 6n, 6e)",
+    "current_EN": "¹²C (6p, 6n, 6e)"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 1,
+    "lessonId": "hh10_b1",
+    "field": "sections[2].points[0]",
+    "VN": "m_p ≈ m_n ≈ 1 amu; m_e ≈ 0,00055 amu",
+    "current_EN": "m_p ≈ m_n ≈ 1 amu; m_e ≈ 0,00055 amu"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 1,
+    "lessonId": "hh10_b1",
+    "field": "sections[2].points[1]",
+    "VN": "Z = Số proton = Số electron",
+    "current_EN": "Z = Số proton = Số electron"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 2,
+    "lessonId": "hh10_b2",
+    "field": "summary",
+    "VN": "Số hiệu nguyên tử Z, số khối A = Z + N. Đồng vị là các nguyên tử cùng Z khác A.",
+    "current_EN": "Số hiệu Atom Z, số khối A = Z + N. Đồng vị là các Atom cùng Z khác A."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 2,
+    "lessonId": "hh10_b2",
+    "field": "theoryPoints[0]",
+    "VN": "Kí hiệu nguyên tử: ᴬ_Z X.",
+    "current_EN": "Kí hiệu Atom: ᴬ_Z X."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 2,
+    "lessonId": "hh10_b2",
+    "field": "sampleQuestion.question",
+    "VN": "Nguyên tử có 17p và 18n thì số khối A bằng mấy?",
+    "current_EN": "Atom có 17p và 18n thì số khối A bằng mấy?"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 2,
+    "lessonId": "hh10_b2",
+    "field": "sampleQuestion.answer",
+    "VN": "A = 17 + 18 = 35.",
+    "current_EN": "A = 17 + 18 = 35."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 2,
+    "lessonId": "hh10_b2",
+    "field": "sections[0].points[0]",
+    "VN": "Số hiệu nguyên tử Z, số khối A = Z + N. Đồng vị là các nguyên tử cùng Z khác A.",
+    "current_EN": "Số hiệu Atom Z, số khối A = Z + N. Đồng vị là các Atom cùng Z khác A."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 2,
+    "lessonId": "hh10_b2",
+    "field": "sections[0].points[1]",
+    "VN": "Kí hiệu nguyên tử: ᴬ_Z X.",
+    "current_EN": "Kí hiệu Atom: ᴬ_Z X."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 2,
+    "lessonId": "hh10_b2",
+    "field": "sections[1].points[0]",
+    "VN": "¹H, ²H (Đơteri), ³H (Triti) là 3 đồng vị của Hydro",
+    "current_EN": "¹H, ²H (Đơteri), ³H (Triti) là 3 đồng vị của Hydro"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 2,
+    "lessonId": "hh10_b2",
+    "field": "sections[2].points[0]",
+    "VN": "A = Z + N",
+    "current_EN": "A = Z + N"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 2,
+    "lessonId": "hh10_b2",
+    "field": "sections[2].points[1]",
+    "VN": "A_tb = (a×A₁ + b×A₂) / 100",
+    "current_EN": "A_tb = (a×A₁ + b×A₂) / 100"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 3,
+    "lessonId": "hh10_b3",
+    "field": "summary",
+    "VN": "Mô hình Rutherford-Bohr và orbital nguyên tử (AO). Cấu hình e theo mức năng lượng.",
+    "current_EN": "Mô hình Rutherford-Bohr và orbital Atom (AO). Cấu hình e theo mức năng lượng."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 3,
+    "lessonId": "hh10_b3",
+    "field": "theoryPoints[0]",
+    "VN": "Quy tắc Hund và nguyên lí Pauli xác định spin electron.",
+    "current_EN": "Quy tắc Hund và nguyên lí Pauli xác định spin electron."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 3,
+    "lessonId": "hh10_b3",
+    "field": "sampleQuestion.question",
+    "VN": "Viết cấu hình e của Cl (Z = 17)?",
+    "current_EN": "Viết cấu hình e của Cl (Z = 17)?"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 3,
+    "lessonId": "hh10_b3",
+    "field": "sampleQuestion.answer",
+    "VN": "1s² 2s² 2p⁶ 3s² 3p⁵ (Có 7 electron lớp ngoài cùng).",
+    "current_EN": "1s² 2s² 2p⁶ 3s² 3p⁵ (Có 7 electron lớp ngoài cùng)."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 3,
+    "lessonId": "hh10_b3",
+    "field": "sections[0].points[0]",
+    "VN": "Mô hình Rutherford-Bohr và orbital nguyên tử (AO). Cấu hình e theo mức năng lượng.",
+    "current_EN": "Mô hình Rutherford-Bohr và orbital Atom (AO). Cấu hình e theo mức năng lượng."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 3,
+    "lessonId": "hh10_b3",
+    "field": "sections[0].points[1]",
+    "VN": "Quy tắc Hund và nguyên lí Pauli xác định spin electron.",
+    "current_EN": "Quy tắc Hund và nguyên lí Pauli xác định spin electron."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 3,
+    "lessonId": "hh10_b3",
+    "field": "sections[1].points[0]",
+    "VN": "Na (Z=11): 1s² 2s² 2p⁶ 3s¹",
+    "current_EN": "Na (Z=11): 1s² 2s² 2p⁶ 3s¹"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 3,
+    "lessonId": "hh10_b3",
+    "field": "sections[1].points[1]",
+    "VN": "Fe (Z=26): 1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁶ 4s²",
+    "current_EN": "Fe (Z=26): 1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁶ 4s²"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 3,
+    "lessonId": "hh10_b3",
+    "field": "sections[2].points[0]",
+    "VN": "Phân lớp: s (2e), p (6e), d (10e), f (14e)",
+    "current_EN": "Phân lớp: s (2e), p (6e), d (10e), f (14e)"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 3,
+    "lessonId": "hh10_b3",
+    "field": "sections[2].points[1]",
+    "VN": "Thứ tự: 1s 2s 2p 3s 3p 4s 3d 4p...",
+    "current_EN": "Thứ tự: 1s 2s 2p 3s 3p 4s 3d 4p..."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 4,
+    "lessonId": "hh10_b4",
+    "field": "summary",
+    "VN": "Tổng kết thành phần nguyên tử, đồng vị, cấu hình electron và orbital AO.",
+    "current_EN": "Tổng kết thành phần Atom, đồng vị, cấu hình electron và orbital AO."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 4,
+    "lessonId": "hh10_b4",
+    "field": "theoryPoints[0]",
+    "VN": "Củng cố bài tập xác định vị trí nguyên tố theo cấu hình e.",
+    "current_EN": "Củng cố bài tập xác định vị trí nguyên tố theo cấu hình e."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 4,
+    "lessonId": "hh10_b4",
+    "field": "sampleQuestion.question",
+    "VN": "Nguyên tố có cấu hình kết thúc ở 3d5 4s1 là gì?",
+    "current_EN": "Nguyên tố có cấu hình kết thúc ở 3d5 4s1 là gì?"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 4,
+    "lessonId": "hh10_b4",
+    "field": "sampleQuestion.answer",
+    "VN": "Crom (Cr, Z = 24).",
+    "current_EN": "Crom (Cr, Z = 24)."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 4,
+    "lessonId": "hh10_b4",
+    "field": "sections[0].points[0]",
+    "VN": "Tổng kết thành phần nguyên tử, đồng vị, cấu hình electron và orbital AO.",
+    "current_EN": "Tổng kết thành phần Atom, đồng vị, cấu hình electron và orbital AO."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 4,
+    "lessonId": "hh10_b4",
+    "field": "sections[0].points[1]",
+    "VN": "Củng cố bài tập xác định vị trí nguyên tố theo cấu hình e.",
+    "current_EN": "Củng cố bài tập xác định vị trí nguyên tố theo cấu hình e."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 4,
+    "lessonId": "hh10_b4",
+    "field": "sections[1].points[0]",
+    "VN": "1s² 2s² 2p⁶ 3s² 3p⁶",
+    "current_EN": "1s² 2s² 2p⁶ 3s² 3p⁶"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 4,
+    "lessonId": "hh10_b4",
+    "field": "sections[2].points[0]",
+    "VN": "Ôn tập Z, A, Cấu hình e",
+    "current_EN": "Ôn tập Z, A, Cấu hình e"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 5,
+    "lessonId": "hh10_b5",
+    "field": "chapterTitle",
+    "VN": "Chương 2: Bảng tuần hoàn & Định luật tuần hoàn",
+    "current_EN": "Chương 2: Bảng tuần hoàn & Định luật tuần hoàn"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 5,
+    "lessonId": "hh10_b5",
+    "field": "summary",
+    "VN": "Nguyên tắc sắp xếp theo Z tăng dần gồm Ô nguyên tố, Chu kì và Nhóm.",
+    "current_EN": "Nguyên tắc sắp xếp theo Z tăng dần gồm Ô nguyên tố, Chu kì và Nhóm."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 5,
+    "lessonId": "hh10_b5",
+    "field": "theoryPoints[0]",
+    "VN": "Phân biệt nguyên tố s, p (nhóm A) và d, f (nhóm B).",
+    "current_EN": "Phân biệt nguyên tố s, p (nhóm A) và d, f (nhóm B)."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 5,
+    "lessonId": "hh10_b5",
+    "field": "sampleQuestion.question",
+    "VN": "Nguyên tố có cấu hình [Ne] 3s2 3p4 ở chu kì mấy, nhóm mấy?",
+    "current_EN": "Nguyên tố có cấu hình [Ne] 3s2 3p4 ở chu kì mấy, nhóm mấy?"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 5,
+    "lessonId": "hh10_b5",
+    "field": "sampleQuestion.answer",
+    "VN": "Chu kì 3, nhóm VIA.",
+    "current_EN": "Chu kì 3, nhóm VIA."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 5,
+    "lessonId": "hh10_b5",
+    "field": "sections[0].points[0]",
+    "VN": "Nguyên tắc sắp xếp theo Z tăng dần gồm Ô nguyên tố, Chu kì và Nhóm.",
+    "current_EN": "Nguyên tắc sắp xếp theo Z tăng dần gồm Ô nguyên tố, Chu kì và Nhóm."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 5,
+    "lessonId": "hh10_b5",
+    "field": "sections[0].points[1]",
+    "VN": "Phân biệt nguyên tố s, p (nhóm A) và d, f (nhóm B).",
+    "current_EN": "Phân biệt nguyên tố s, p (nhóm A) và d, f (nhóm B)."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 5,
+    "lessonId": "hh10_b5",
+    "field": "sections[1].points[0]",
+    "VN": "Khối nguyên tố s, p, d, f",
+    "current_EN": "Khối nguyên tố s, p, d, f"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 5,
+    "lessonId": "hh10_b5",
+    "field": "sections[2].points[0]",
+    "VN": "STT ô = Z",
+    "current_EN": "STT ô = Z"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 5,
+    "lessonId": "hh10_b5",
+    "field": "sections[2].points[1]",
+    "VN": "STT chu kì = Số lớp electron",
+    "current_EN": "STT chu kì = Số lớp electron"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 5,
+    "lessonId": "hh10_b5",
+    "field": "sections[2].points[2]",
+    "VN": "STT nhóm A = Số e ngoài cùng",
+    "current_EN": "STT nhóm A = Số e ngoài cùng"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 6,
+    "lessonId": "hh10_b6",
+    "field": "chapterTitle",
+    "VN": "Chương 2: Bảng tuần hoàn & Định luật tuần hoàn",
+    "current_EN": "Chương 2: Bảng tuần hoàn & Định luật tuần hoàn"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 6,
+    "lessonId": "hh10_b6",
+    "field": "summary",
+    "VN": "Quy luật biến đổi bán kính, độ âm điện, tính kim loại và phi kim.",
+    "current_EN": "Quy luật biến đổi bán kính, độ âm điện, tính Metal và Non-metal."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 6,
+    "lessonId": "hh10_b6",
+    "field": "theoryPoints[0]",
+    "VN": "Bán kính nguyên tử giảm do điện tích hạt nhân tăng.",
+    "current_EN": "Bán kính Atom giảm do điện tích hạt nhân tăng."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 6,
+    "lessonId": "hh10_b6",
+    "field": "sampleQuestion.question",
+    "VN": "Trong nhóm IA, kim loại nào có tính khử mạnh nhất?",
+    "current_EN": "Trong nhóm IA, Metal nào có tính khử mạnh nhất?"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 6,
+    "lessonId": "hh10_b6",
+    "field": "sampleQuestion.answer",
+    "VN": "Cs (Xesi).",
+    "current_EN": "Cs (Xesi)."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 6,
+    "lessonId": "hh10_b6",
+    "field": "sections[0].points[0]",
+    "VN": "Quy luật biến đổi bán kính, độ âm điện, tính kim loại và phi kim.",
+    "current_EN": "Quy luật biến đổi bán kính, độ âm điện, tính Metal và Non-metal."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 6,
+    "lessonId": "hh10_b6",
+    "field": "sections[0].points[1]",
+    "VN": "Bán kính nguyên tử giảm do điện tích hạt nhân tăng.",
+    "current_EN": "Bán kính Atom giảm do điện tích hạt nhân tăng."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 6,
+    "lessonId": "hh10_b6",
+    "field": "sections[1].points[0]",
+    "VN": "F có độ âm điện lớn nhất (3,98); Cs có tính kim loại mạnh nhất",
+    "current_EN": "F có độ âm điện lớn nhất (3,98); Cs có tính Metal mạnh nhất"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 6,
+    "lessonId": "hh10_b6",
+    "field": "sections[2].points[0]",
+    "VN": "Trong chu kì: R giảm, Độ âm điện tăng, Phi kim tăng, Kim loại giảm",
+    "current_EN": "Trong chu kì: R giảm, Độ âm điện tăng, Non-metal tăng, Metal giảm"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 6,
+    "lessonId": "hh10_b6",
+    "field": "sections[2].points[1]",
+    "VN": "Trong nhóm A: R tăng, Độ âm điện giảm, Kim loại tăng, Phi kim giảm",
+    "current_EN": "Trong nhóm A: R tăng, Độ âm điện giảm, Metal tăng, Non-metal giảm"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 7,
+    "lessonId": "hh10_b7",
+    "field": "chapterTitle",
+    "VN": "Chương 2: Bảng tuần hoàn & Định luật tuần hoàn",
+    "current_EN": "Chương 2: Bảng tuần hoàn & Định luật tuần hoàn"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 7,
+    "lessonId": "hh10_b7",
+    "field": "summary",
+    "VN": "Biến đổi hóa trị cao nhất với oxi và hiđroxit. Tính axit-bazơ của oxit và hiđroxit.",
+    "current_EN": "Biến đổi Valence cao nhất với oxi và hiđroxit. Tính Acid-Base của Oxide và hiđroxit."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 7,
+    "lessonId": "hh10_b7",
+    "field": "theoryPoints[0]",
+    "VN": "Hiđroxit cao nhất của Cl là HClO4 (axit cực mạnh).",
+    "current_EN": "Hiđroxit cao nhất của Cl là HClO4 (Acid cực mạnh)."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 7,
+    "lessonId": "hh10_b7",
+    "field": "sampleQuestion.question",
+    "VN": "Axit nào mạnh nhất trong dãy: H3PO4, H2SO4, HClO4?",
+    "current_EN": "Acid nào mạnh nhất trong dãy: H3PO4, H2SO4, HClO4?"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 7,
+    "lessonId": "hh10_b7",
+    "field": "sampleQuestion.answer",
+    "VN": "HClO4 là axit mạnh nhất.",
+    "current_EN": "HClO4 là Acid mạnh nhất."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 7,
+    "lessonId": "hh10_b7",
+    "field": "sections[0].points[0]",
+    "VN": "Biến đổi hóa trị cao nhất với oxi và hiđroxit. Tính axit-bazơ của oxit và hiđroxit.",
+    "current_EN": "Biến đổi Valence cao nhất với oxi và hiđroxit. Tính Acid-Base của Oxide và hiđroxit."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 7,
+    "lessonId": "hh10_b7",
+    "field": "sections[0].points[1]",
+    "VN": "Hiđroxit cao nhất của Cl là HClO4 (axit cực mạnh).",
+    "current_EN": "Hiđroxit cao nhất của Cl là HClO4 (Acid cực mạnh)."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 7,
+    "lessonId": "hh10_b7",
+    "field": "sections[1].points[0]",
+    "VN": "Na₂O (Bazơ mạnh) → Al₂O₃ (Lưỡng tính) → SO₃ → Cl₂O₇ (Axit cực mạnh)",
+    "current_EN": "Na₂O (Base mạnh) → Al₂O₃ (Lưỡng tính) → SO₃ → Cl₂O₇ (Acid cực mạnh)"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 7,
+    "lessonId": "hh10_b7",
+    "field": "sections[2].points[0]",
+    "VN": "Tính bazơ của oxit/hiđroxit giảm dần, tính axit tăng dần",
+    "current_EN": "Tính Base của Oxide/hiđroxit giảm dần, tính Acid tăng dần"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 8,
+    "lessonId": "hh10_b8",
+    "field": "chapterTitle",
+    "VN": "Chương 2: Bảng tuần hoàn & Định luật tuần hoàn",
+    "current_EN": "Chương 2: Bảng tuần hoàn & Định luật tuần hoàn"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 8,
+    "lessonId": "hh10_b8",
+    "field": "summary",
+    "VN": "Tính chất của các đơn chất và hợp chất biến đổi tuần hoàn theo Z.",
+    "current_EN": "Tính chất của các đơn chất và hợp chất biến đổi tuần hoàn theo Z."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 8,
+    "lessonId": "hh10_b8",
+    "field": "theoryPoints[0]",
+    "VN": "Định luật tuần hoàn là nền tảng hóa học.",
+    "current_EN": "Định luật tuần hoàn là nền tảng hóa học."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 8,
+    "lessonId": "hh10_b8",
+    "field": "sampleQuestion.question",
+    "VN": "Biết S ở ô 16, chu kì 3, nhóm VIA. Viết oxit cao nhất?",
+    "current_EN": "Biết S ở ô 16, chu kì 3, nhóm VIA. Viết Oxide cao nhất?"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 8,
+    "lessonId": "hh10_b8",
+    "field": "sampleQuestion.answer",
+    "VN": "SO3 (tương ứng axit sunfuric H2SO4).",
+    "current_EN": "SO3 (tương ứng Acid sunfuric H2SO4)."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 8,
+    "lessonId": "hh10_b8",
+    "field": "sections[0].points[0]",
+    "VN": "Tính chất của các đơn chất và hợp chất biến đổi tuần hoàn theo Z.",
+    "current_EN": "Tính chất của các đơn chất và hợp chất biến đổi tuần hoàn theo Z."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 8,
+    "lessonId": "hh10_b8",
+    "field": "sections[0].points[1]",
+    "VN": "Định luật tuần hoàn là nền tảng hóa học.",
+    "current_EN": "Định luật tuần hoàn là nền tảng hóa học."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 8,
+    "lessonId": "hh10_b8",
+    "field": "sections[1].points[0]",
+    "VN": "Từ vị trí suy ra oxit và hiđroxit cao nhất.",
+    "current_EN": "Từ vị trí suy ra Oxide và hiđroxit cao nhất."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 8,
+    "lessonId": "hh10_b8",
+    "field": "sections[2].points[0]",
+    "VN": "Vị trí ↔ Cấu tạo nguyên tử ↔ Tính chất hóa học",
+    "current_EN": "Vị trí ↔ Cấu tạo Atom ↔ Tính chất hóa học"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 9,
+    "lessonId": "hh10_b9",
+    "field": "chapterTitle",
+    "VN": "Chương 2: Bảng tuần hoàn & Định luật tuần hoàn",
+    "current_EN": "Chương 2: Bảng tuần hoàn & Định luật tuần hoàn"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 9,
+    "lessonId": "hh10_b9",
+    "field": "summary",
+    "VN": "Hệ thống hóa cấu tạo BTH và các quy luật biến đổi tuần hoàn.",
+    "current_EN": "Hệ thống hóa cấu tạo BTH và các quy luật biến đổi tuần hoàn."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 9,
+    "lessonId": "hh10_b9",
+    "field": "theoryPoints[0]",
+    "VN": "Thành thạo bài toán 2 nguyên tố ở 2 chu kì liên tiếp.",
+    "current_EN": "Thành thạo bài toán 2 nguyên tố ở 2 chu kì liên tiếp."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 9,
+    "lessonId": "hh10_b9",
+    "field": "sampleQuestion.question",
+    "VN": "So sánh bán kính của Na (Z=11) và Mg (Z=12)?",
+    "current_EN": "So sánh bán kính của Na (Z=11) và Mg (Z=12)?"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 9,
+    "lessonId": "hh10_b9",
+    "field": "sampleQuestion.answer",
+    "VN": "R_Na > R_Mg (trong cùng chu kì bán kính giảm dần).",
+    "current_EN": "R_Na > R_Mg (trong cùng chu kì bán kính giảm dần)."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 9,
+    "lessonId": "hh10_b9",
+    "field": "sections[0].points[0]",
+    "VN": "Hệ thống hóa cấu tạo BTH và các quy luật biến đổi tuần hoàn.",
+    "current_EN": "Hệ thống hóa cấu tạo BTH và các quy luật biến đổi tuần hoàn."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 9,
+    "lessonId": "hh10_b9",
+    "field": "sections[0].points[1]",
+    "VN": "Thành thạo bài toán 2 nguyên tố ở 2 chu kì liên tiếp.",
+    "current_EN": "Thành thạo bài toán 2 nguyên tố ở 2 chu kì liên tiếp."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 9,
+    "lessonId": "hh10_b9",
+    "field": "sections[1].points[0]",
+    "VN": "F > Cl > Br > I (Tính phi kim giảm dần)",
+    "current_EN": "F > Cl > Br > I (Tính Non-metal giảm dần)"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 9,
+    "lessonId": "hh10_b9",
+    "field": "sections[2].points[0]",
+    "VN": "So sánh tính kim loại, phi kim, bán kính và độ âm điện",
+    "current_EN": "So sánh tính Metal, Non-metal, bán kính và độ âm điện"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 10,
+    "lessonId": "hh10_b10",
+    "field": "summary",
+    "VN": "Nguyên tử có xu hướng nhường, nhận hoặc góp chung e để đạt 8 electron bền vững.",
+    "current_EN": "Atom có xu hướng nhường, nhận hoặc góp chung e để đạt 8 electron bền vững."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 10,
+    "lessonId": "hh10_b10",
+    "field": "theoryPoints[0]",
+    "VN": "Động lực cốt lõi hình thành liên kết hóa học.",
+    "current_EN": "Động lực cốt lõi hình thành liên kết hóa học."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 10,
+    "lessonId": "hh10_b10",
+    "field": "sampleQuestion.question",
+    "VN": "Nguyên tử O (Z=8) có xu hướng nhận mấy electron?",
+    "current_EN": "Atom O (Z=8) có xu hướng nhận mấy electron?"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 10,
+    "lessonId": "hh10_b10",
+    "field": "sampleQuestion.answer",
+    "VN": "Nhận 2 electron để đạt cấu hình bát tử 8e giống Ne.",
+    "current_EN": "Nhận 2 electron để đạt cấu hình bát tử 8e giống Ne."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 10,
+    "lessonId": "hh10_b10",
+    "field": "sections[0].points[0]",
+    "VN": "Nguyên tử có xu hướng nhường, nhận hoặc góp chung e để đạt 8 electron bền vững.",
+    "current_EN": "Atom có xu hướng nhường, nhận hoặc góp chung e để đạt 8 electron bền vững."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 10,
+    "lessonId": "hh10_b10",
+    "field": "sections[0].points[1]",
+    "VN": "Động lực cốt lõi hình thành liên kết hóa học.",
+    "current_EN": "Động lực cốt lõi hình thành liên kết hóa học."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 10,
+    "lessonId": "hh10_b10",
+    "field": "sections[1].points[0]",
+    "VN": "Na → Na⁺ + 1e",
+    "current_EN": "Na → Na⁺ + 1e"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 10,
+    "lessonId": "hh10_b10",
+    "field": "sections[1].points[1]",
+    "VN": "Cl + 1e → Cl⁻",
+    "current_EN": "Cl + 1e → Cl⁻"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 10,
+    "lessonId": "hh10_b10",
+    "field": "sections[2].points[0]",
+    "VN": "Quy tắc Octet: 8 electron lớp ngoài cùng (hoặc 2e của He)",
+    "current_EN": "Quy tắc Octet: 8 electron lớp ngoài cùng (hoặc 2e của He)"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 11,
+    "lessonId": "hh10_b11",
+    "field": "summary",
+    "VN": "Hình thành do lực hút tĩnh điện giữa các ion mang điện tích trái dấu (Cation và Anion).",
+    "current_EN": "Hình thành do lực hút tĩnh điện giữa các ion mang điện tích trái dấu (Cation và Anion)."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 11,
+    "lessonId": "hh10_b11",
+    "field": "theoryPoints[0]",
+    "VN": "Dẫn điện khi nóng chảy hoặc tan trong nước.",
+    "current_EN": "Dẫn điện khi nóng chảy hoặc tan trong Water."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 11,
+    "lessonId": "hh10_b11",
+    "field": "sampleQuestion.question",
+    "VN": "Tại sao NaCl có nhiệt độ nóng chảy rất cao (801°C)?",
+    "current_EN": "Tại sao NaCl có nhiệt độ nóng chảy rất cao (801°C)?"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 11,
+    "lessonId": "hh10_b11",
+    "field": "sampleQuestion.answer",
+    "VN": "Vì lực hút tĩnh điện giữa ion Na+ và Cl- trong mạng tinh thể rất mạnh.",
+    "current_EN": "Vì lực hút tĩnh điện giữa ion Na+ và Cl- trong mạng tinh thể rất mạnh."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 11,
+    "lessonId": "hh10_b11",
+    "field": "sections[0].points[0]",
+    "VN": "Hình thành do lực hút tĩnh điện giữa các ion mang điện tích trái dấu (Cation và Anion).",
+    "current_EN": "Hình thành do lực hút tĩnh điện giữa các ion mang điện tích trái dấu (Cation và Anion)."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 11,
+    "lessonId": "hh10_b11",
+    "field": "sections[0].points[1]",
+    "VN": "Dẫn điện khi nóng chảy hoặc tan trong nước.",
+    "current_EN": "Dẫn điện khi nóng chảy hoặc tan trong Water."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 11,
+    "lessonId": "hh10_b11",
+    "field": "sections[1].points[0]",
+    "VN": "Na⁺ + Cl⁻ → NaCl (Mạng tinh thể lập phương)",
+    "current_EN": "Na⁺ + Cl⁻ → NaCl (Mạng tinh thể lập phương)"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 11,
+    "lessonId": "hh10_b11",
+    "field": "sections[2].points[0]",
+    "VN": "Hiệu độ âm điện Δχ ≥ 1,7 → Liên kết Ion",
+    "current_EN": "Hiệu độ âm điện Δχ ≥ 1,7 → Ionic bond"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 11,
+    "lessonId": "hh10_b11",
+    "field": "sections[2].points[1]",
+    "VN": "Mạng tinh thể ion bền vững, nhiệt độ nóng chảy cao",
+    "current_EN": "Mạng tinh thể ion bền vững, nhiệt độ nóng chảy cao"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 12,
+    "lessonId": "hh10_b12",
+    "field": "summary",
+    "VN": "Hình thành giữa các nguyên tử bằng một hay nhiều đôi electron dùng chung.",
+    "current_EN": "Hình thành giữa các Atom bằng một hay nhiều đôi electron dùng chung."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 12,
+    "lessonId": "hh10_b12",
+    "field": "theoryPoints[0]",
+    "VN": "Đôi electron dùng chung bị lệch về phía nguyên tử âm điện hơn.",
+    "current_EN": "Đôi electron dùng chung bị lệch về phía Atom âm điện hơn."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 12,
+    "lessonId": "hh10_b12",
+    "field": "sampleQuestion.question",
+    "VN": "Liên kết trong phân tử N2 (N≡N) là liên kết gì?",
+    "current_EN": "Liên kết trong Molecule N2 (N≡N) là liên kết gì?"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 12,
+    "lessonId": "hh10_b12",
+    "field": "sampleQuestion.answer",
+    "VN": "Liên kết cộng hóa trị không phân cực (liên kết ba rất bền).",
+    "current_EN": "Liên kết cộng Valence không phân cực (liên kết ba rất bền)."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 12,
+    "lessonId": "hh10_b12",
+    "field": "sections[0].points[0]",
+    "VN": "Hình thành giữa các nguyên tử bằng một hay nhiều đôi electron dùng chung.",
+    "current_EN": "Hình thành giữa các Atom bằng một hay nhiều đôi electron dùng chung."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 12,
+    "lessonId": "hh10_b12",
+    "field": "sections[0].points[1]",
+    "VN": "Đôi electron dùng chung bị lệch về phía nguyên tử âm điện hơn.",
+    "current_EN": "Đôi electron dùng chung bị lệch về phía Atom âm điện hơn."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 12,
+    "lessonId": "hh10_b12",
+    "field": "sections[1].points[0]",
+    "VN": "H-H (Liên kết đơn σ)",
+    "current_EN": "H-H (Liên kết đơn σ)"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 12,
+    "lessonId": "hh10_b12",
+    "field": "sections[1].points[1]",
+    "VN": "O=O (Liên kết đôi)",
+    "current_EN": "O=O (Liên kết đôi)"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 12,
+    "lessonId": "hh10_b12",
+    "field": "sections[1].points[2]",
+    "VN": "N≡N (Liên kết ba rất bền)",
+    "current_EN": "N≡N (Liên kết ba rất bền)"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 12,
+    "lessonId": "hh10_b12",
+    "field": "sections[2].points[0]",
+    "VN": "0 ≤ Δχ < 0,4 : CHT Không phân cực",
+    "current_EN": "0 ≤ Δχ < 0,4 : CHT Không phân cực"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 12,
+    "lessonId": "hh10_b12",
+    "field": "sections[2].points[1]",
+    "VN": "0,4 ≤ Δχ < 1,7 : CHT Có phân cực",
+    "current_EN": "0,4 ≤ Δχ < 1,7 : CHT Có phân cực"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 13,
+    "lessonId": "hh10_b13",
+    "field": "summary",
+    "VN": "Liên kết hydrogen hình thành giữa H liên kết F, O, N với nguyên tử âm điện khác.",
+    "current_EN": "Hydrogen bond hình thành giữa H liên kết F, O, N với Atom âm điện khác."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 13,
+    "lessonId": "hh10_b13",
+    "field": "theoryPoints[0]",
+    "VN": "Nước có nhiệt độ sôi cao bất thường (100°C) nhờ liên kết hydrogen.",
+    "current_EN": "Water có nhiệt độ sôi cao bất thường (100°C) nhờ Hydrogen bond."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 13,
+    "lessonId": "hh10_b13",
+    "field": "sampleQuestion.question",
+    "VN": "Tại sao ethanol C2H5OH có nhiệt độ sôi cao hơn etan C2H6?",
+    "current_EN": "Tại sao ethanol C2H5OH có nhiệt độ sôi cao hơn etan C2H6?"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 13,
+    "lessonId": "hh10_b13",
+    "field": "sampleQuestion.answer",
+    "VN": "Do ethanol tạo được liên kết hydrogen liên phân tử.",
+    "current_EN": "Do ethanol tạo được Hydrogen bond liên Molecule."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 13,
+    "lessonId": "hh10_b13",
+    "field": "sections[0].points[0]",
+    "VN": "Liên kết hydrogen hình thành giữa H liên kết F, O, N với nguyên tử âm điện khác.",
+    "current_EN": "Hydrogen bond hình thành giữa H liên kết F, O, N với Atom âm điện khác."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 13,
+    "lessonId": "hh10_b13",
+    "field": "sections[0].points[1]",
+    "VN": "Nước có nhiệt độ sôi cao bất thường (100°C) nhờ liên kết hydrogen.",
+    "current_EN": "Water có nhiệt độ sôi cao bất thường (100°C) nhờ Hydrogen bond."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 13,
+    "lessonId": "hh10_b13",
+    "field": "sections[1].points[0]",
+    "VN": "...H-O-H ... O(H)-H... (Mạng liên kết hydrogen trong nước)",
+    "current_EN": "...H-O-H ... O(H)-H... (Mạng Hydrogen bond trong Water)"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 13,
+    "lessonId": "hh10_b13",
+    "field": "sections[2].points[0]",
+    "VN": "Liên kết Hydrogen làm tăng nhiệt độ sôi và độ tan",
+    "current_EN": "Hydrogen bond làm tăng nhiệt độ sôi và Solubility"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 13,
+    "lessonId": "hh10_b13",
+    "field": "sections[2].points[1]",
+    "VN": "Tương tác Van der Waals tăng theo phân tử khối",
+    "current_EN": "Tương tác Van der Waals tăng theo Molecule khối"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 14,
+    "lessonId": "hh10_b14",
+    "field": "summary",
+    "VN": "So sánh liên kết ion, liên kết cộng hóa trị, liên kết hydrogen và tinh thể.",
+    "current_EN": "So sánh Ionic bond, liên kết cộng Valence, Hydrogen bond và tinh thể."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 14,
+    "lessonId": "hh10_b14",
+    "field": "theoryPoints[0]",
+    "VN": "Củng cố vẽ công thức Lewis.",
+    "current_EN": "Củng cố vẽ công thức Lewis."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 14,
+    "lessonId": "hh10_b14",
+    "field": "sampleQuestion.question",
+    "VN": "Xác định loại liên kết trong H2O (O=3,44; H=2,20)?",
+    "current_EN": "Xác định loại liên kết trong H2O (O=3,44; H=2,20)?"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 14,
+    "lessonId": "hh10_b14",
+    "field": "sampleQuestion.answer",
+    "VN": "Δχ = 1,24 ⇒ Liên kết cộng hóa trị có phân cực.",
+    "current_EN": "Δχ = 1,24 ⇒ Liên kết cộng Valence có phân cực."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 14,
+    "lessonId": "hh10_b14",
+    "field": "sections[0].points[0]",
+    "VN": "So sánh liên kết ion, liên kết cộng hóa trị, liên kết hydrogen và tinh thể.",
+    "current_EN": "So sánh Ionic bond, liên kết cộng Valence, Hydrogen bond và tinh thể."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 14,
+    "lessonId": "hh10_b14",
+    "field": "sections[0].points[1]",
+    "VN": "Củng cố vẽ công thức Lewis.",
+    "current_EN": "Củng cố vẽ công thức Lewis."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 14,
+    "lessonId": "hh10_b14",
+    "field": "sections[1].points[0]",
+    "VN": "NaCl (Ion) vs HCl (CHT phân cực) vs Cl₂ (CHT không cực)",
+    "current_EN": "NaCl (Ion) vs HCl (CHT phân cực) vs Cl₂ (CHT không cực)"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 14,
+    "lessonId": "hh10_b14",
+    "field": "sections[2].points[0]",
+    "VN": "So sánh bản chất liên kết theo hiệu độ âm điện Δχ",
+    "current_EN": "So sánh bản chất liên kết theo hiệu độ âm điện Δχ"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 15,
+    "lessonId": "hh10_b15",
+    "field": "summary",
+    "VN": "Phản ứng có sự chuyển dịch electron làm thay đổi số oxi hóa.",
+    "current_EN": "Phản ứng có sự chuyển dịch electron làm thay đổi số oxi hóa."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 15,
+    "lessonId": "hh10_b15",
+    "field": "theoryPoints[0]",
+    "VN": "Thành thạo phương pháp thăng bằng electron 4 bước.",
+    "current_EN": "Thành thạo phương pháp thăng bằng electron 4 bước."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 15,
+    "lessonId": "hh10_b15",
+    "field": "sampleQuestion.question",
+    "VN": "Trong phản ứng Zn + 2HCl → ZnCl2 + H2, chất nào là chất khử?",
+    "current_EN": "Trong phản ứng Zn + 2HCl → ZnCl2 + H2, chất nào là chất khử?"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 15,
+    "lessonId": "hh10_b15",
+    "field": "sampleQuestion.answer",
+    "VN": "Zn là chất khử vì số oxi hóa tăng từ 0 lên +2.",
+    "current_EN": "Zn là chất khử vì số oxi hóa tăng từ 0 lên +2."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 15,
+    "lessonId": "hh10_b15",
+    "field": "sections[0].points[0]",
+    "VN": "Phản ứng có sự chuyển dịch electron làm thay đổi số oxi hóa.",
+    "current_EN": "Phản ứng có sự chuyển dịch electron làm thay đổi số oxi hóa."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 15,
+    "lessonId": "hh10_b15",
+    "field": "sections[0].points[1]",
+    "VN": "Thành thạo phương pháp thăng bằng electron 4 bước.",
+    "current_EN": "Thành thạo phương pháp thăng bằng electron 4 bước."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 15,
+    "lessonId": "hh10_b15",
+    "field": "sections[1].points[0]",
+    "VN": "2KMnO₄ + 16HCl → 2KCl + 2MnCl₂ + 5Cl₂ ↑ + 8H₂O",
+    "current_EN": "2KMnO₄ + 16HCl → 2KCl + 2MnCl₂ + 5Cl₂ ↑ + 8H₂O"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 15,
+    "lessonId": "hh10_b15",
+    "field": "sections[1].points[1]",
+    "VN": "Cu + 4HNO₃ → Cu(NO₃)₂ + 2NO₂ ↑ + 2H₂O",
+    "current_EN": "Cu + 4HNO₃ → Cu(NO₃)₂ + 2NO₂ ↑ + 2H₂O"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 15,
+    "lessonId": "hh10_b15",
+    "field": "sections[2].points[0]",
+    "VN": "Chất khử: nhường e (tăng số oxh)",
+    "current_EN": "Chất khử: nhường e (tăng số oxh)"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 15,
+    "lessonId": "hh10_b15",
+    "field": "sections[2].points[1]",
+    "VN": "Chất oxi hóa: nhận e (giảm số oxh)",
+    "current_EN": "Chất oxi hóa: nhận e (giảm số oxh)"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 15,
+    "lessonId": "hh10_b15",
+    "field": "sections[2].points[2]",
+    "VN": "Σ e_nhường = Σ e_nhận",
+    "current_EN": "Σ e_nhường = Σ e_nhận"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 16,
+    "lessonId": "hh10_b16",
+    "field": "summary",
+    "VN": "Rèn luyện cân bằng các phản ứng oxi hóa - khử phức tạp.",
+    "current_EN": "Rèn luyện cân bằng các phản ứng oxi hóa - khử phức tạp."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 16,
+    "lessonId": "hh10_b16",
+    "field": "theoryPoints[0]",
+    "VN": "Nắm vững vai trò chất oxi hóa, chất khử và môi trường.",
+    "current_EN": "Nắm vững vai trò chất oxi hóa, chất khử và môi trường."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 16,
+    "lessonId": "hh10_b16",
+    "field": "sampleQuestion.question",
+    "VN": "Hệ số tối giản của HNO3 trong Cu + HNO3 loãng → Cu(NO3)2 + NO + H2O?",
+    "current_EN": "Hệ số tối giản của HNO3 trong Cu + HNO3 loãng → Cu(NO3)2 + NO + H2O?"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 16,
+    "lessonId": "hh10_b16",
+    "field": "sampleQuestion.answer",
+    "VN": "Hệ số là 8 (3Cu + 8HNO3 → 3Cu(NO3)2 + 2NO + 4H2O).",
+    "current_EN": "Hệ số là 8 (3Cu + 8HNO3 → 3Cu(NO3)2 + 2NO + 4H2O)."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 16,
+    "lessonId": "hh10_b16",
+    "field": "sections[0].points[0]",
+    "VN": "Rèn luyện cân bằng các phản ứng oxi hóa - khử phức tạp.",
+    "current_EN": "Rèn luyện cân bằng các phản ứng oxi hóa - khử phức tạp."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 16,
+    "lessonId": "hh10_b16",
+    "field": "sections[0].points[1]",
+    "VN": "Nắm vững vai trò chất oxi hóa, chất khử và môi trường.",
+    "current_EN": "Nắm vững vai trò chất oxi hóa, chất khử và môi trường."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 16,
+    "lessonId": "hh10_b16",
+    "field": "sections[1].points[0]",
+    "VN": "3Cu + 8HNO₃ (loãng) → 3Cu(NO₃)₂ + 2NO ↑ + 4H₂O",
+    "current_EN": "3Cu + 8HNO₃ (loãng) → 3Cu(NO₃)₂ + 2NO ↑ + 4H₂O"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 16,
+    "lessonId": "hh10_b16",
+    "field": "sections[2].points[0]",
+    "VN": "Thăng bằng electron: Tìm hệ số chất khử và chất oxi hóa",
+    "current_EN": "Thăng bằng electron: Tìm hệ số chất khử và chất oxi hóa"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 17,
+    "lessonId": "hh10_b17",
+    "field": "chapterTitle",
+    "VN": "Chương 5: Năng lượng hóa học",
+    "current_EN": "Chương 5: Năng lượng hóa học"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 17,
+    "lessonId": "hh10_b17",
+    "field": "summary",
+    "VN": "Phản ứng tỏa nhiệt (ΔrH°298 < 0) giải phóng nhiệt; phản ứng thu nhiệt (ΔrH°298 > 0) hấp thu nhiệt.",
+    "current_EN": "Phản ứng tỏa nhiệt (ΔrH°298 < 0) giải phóng nhiệt; phản ứng thu nhiệt (ΔrH°298 > 0) hấp thu nhiệt."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 17,
+    "lessonId": "hh10_b17",
+    "field": "theoryPoints[0]",
+    "VN": "Nhiệt tạo thành chuẩn Δ_f H°298 của đơn chất bền nhất bằng 0.",
+    "current_EN": "Nhiệt tạo thành chuẩn Δ_f H°298 của đơn chất bền nhất bằng 0."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 17,
+    "lessonId": "hh10_b17",
+    "field": "sampleQuestion.question",
+    "VN": "Phản ứng đốt cháy than có ΔrH°298 mang dấu dương hay âm?",
+    "current_EN": "Phản ứng đốt cháy than có ΔrH°298 mang dấu dương hay âm?"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 17,
+    "lessonId": "hh10_b17",
+    "field": "sampleQuestion.answer",
+    "VN": "Mang dấu ÂM (ΔrH°298 < 0) vì là phản ứng tỏa nhiệt.",
+    "current_EN": "Mang dấu ÂM (ΔrH°298 < 0) vì là phản ứng tỏa nhiệt."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 17,
+    "lessonId": "hh10_b17",
+    "field": "sections[0].points[0]",
+    "VN": "Phản ứng tỏa nhiệt (ΔrH°298 < 0) giải phóng nhiệt; phản ứng thu nhiệt (ΔrH°298 > 0) hấp thu nhiệt.",
+    "current_EN": "Phản ứng tỏa nhiệt (ΔrH°298 < 0) giải phóng nhiệt; phản ứng thu nhiệt (ΔrH°298 > 0) hấp thu nhiệt."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 17,
+    "lessonId": "hh10_b17",
+    "field": "sections[0].points[1]",
+    "VN": "Nhiệt tạo thành chuẩn Δ_f H°298 của đơn chất bền nhất bằng 0.",
+    "current_EN": "Nhiệt tạo thành chuẩn Δ_f H°298 của đơn chất bền nhất bằng 0."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 17,
+    "lessonId": "hh10_b17",
+    "field": "sections[1].points[0]",
+    "VN": "CH₄ + 2O₂ → CO₂ + 2H₂O  Δ_r H°₂₉₈ = -890,3 kJ (Tỏa nhiệt)",
+    "current_EN": "CH₄ + 2O₂ → CO₂ + 2H₂O  Δ_r H°₂₉₈ = -890,3 kJ (Tỏa nhiệt)"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 17,
+    "lessonId": "hh10_b17",
+    "field": "sections[1].points[1]",
+    "VN": "CaCO₃ → CaO + CO₂  Δ_r H°₂₉₈ = +178,5 kJ (Thu nhiệt)",
+    "current_EN": "CaCO₃ → CaO + CO₂  Δ_r H°₂₉₈ = +178,5 kJ (Thu nhiệt)"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 17,
+    "lessonId": "hh10_b17",
+    "field": "sections[2].points[0]",
+    "VN": "Δ_r H°₂₉₈ = Σ Δ_f H°₂₉₈ (Sản phẩm) - Σ Δ_f H°₂₉₈ (Chất đầu)",
+    "current_EN": "Δ_r H°₂₉₈ = Σ Δ_f H°₂₉₈ (Sản phẩm) - Σ Δ_f H°₂₉₈ (Chất đầu)"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 17,
+    "lessonId": "hh10_b17",
+    "field": "sections[2].points[1]",
+    "VN": "Δ_r H°₂₉₈ = Σ E_b (Chất đầu) - Σ E_b (Sản phẩm)",
+    "current_EN": "Δ_r H°₂₉₈ = Σ E_b (Chất đầu) - Σ E_b (Sản phẩm)"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 18,
+    "lessonId": "hh10_b18",
+    "field": "chapterTitle",
+    "VN": "Chương 5: Năng lượng hóa học",
+    "current_EN": "Chương 5: Năng lượng hóa học"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 18,
+    "lessonId": "hh10_b18",
+    "field": "summary",
+    "VN": "Tính toán biến thiên enthalpy theo nhiệt tạo thành chuẩn và năng lượng liên kết.",
+    "current_EN": "Tính toán biến thiên enthalpy theo nhiệt tạo thành chuẩn và năng lượng liên kết."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 18,
+    "lessonId": "hh10_b18",
+    "field": "theoryPoints[0]",
+    "VN": "Ý nghĩa dự đoán phản ứng tự diễn biến.",
+    "current_EN": "Ý nghĩa dự đoán phản ứng tự diễn biến."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 18,
+    "lessonId": "hh10_b18",
+    "field": "sampleQuestion.question",
+    "VN": "Năng lượng liên kết H-H là 436, Cl-Cl là 243, H-Cl là 432 kJ/mol. Tính ΔrH° của H2 + Cl2 → 2HCl?",
+    "current_EN": "Năng lượng liên kết H-H là 436, Cl-Cl là 243, H-Cl là 432 kJ/Mole. Tính ΔrH° của H2 + Cl2 → 2HCl?"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 18,
+    "lessonId": "hh10_b18",
+    "field": "sampleQuestion.answer",
+    "VN": "Δ_r H° = (436 + 243) - 2×432 = -185 kJ (Tỏa nhiệt).",
+    "current_EN": "Δ_r H° = (436 + 243) - 2×432 = -185 kJ (Tỏa nhiệt)."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 18,
+    "lessonId": "hh10_b18",
+    "field": "sections[0].points[0]",
+    "VN": "Tính toán biến thiên enthalpy theo nhiệt tạo thành chuẩn và năng lượng liên kết.",
+    "current_EN": "Tính toán biến thiên enthalpy theo nhiệt tạo thành chuẩn và năng lượng liên kết."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 18,
+    "lessonId": "hh10_b18",
+    "field": "sections[0].points[1]",
+    "VN": "Ý nghĩa dự đoán phản ứng tự diễn biến.",
+    "current_EN": "Ý nghĩa dự đoán phản ứng tự diễn biến."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 18,
+    "lessonId": "hh10_b18",
+    "field": "sections[1].points[0]",
+    "VN": "Δ_r H° = Σ E_b(chất đầu) - Σ E_b(sản phẩm)",
+    "current_EN": "Δ_r H° = Σ E_b(chất đầu) - Σ E_b(sản phẩm)"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 18,
+    "lessonId": "hh10_b18",
+    "field": "sections[2].points[0]",
+    "VN": "Công thức tính ΔrH°298 theo Eb và ΔfH°298",
+    "current_EN": "Công thức tính ΔrH°298 theo Eb và ΔfH°298"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 19,
+    "lessonId": "hh10_b19",
+    "field": "chapterTitle",
+    "VN": "Chương 6: Tốc độ phản ứng",
+    "current_EN": "Chương 6: Tốc độ phản ứng"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 19,
+    "lessonId": "hh10_b19",
+    "field": "summary",
+    "VN": "Tốc độ phản ứng là độ biến thiên nồng độ trong một đơn vị thời gian. Các yếu tố ảnh hưởng.",
+    "current_EN": "Reaction rate là độ biến thiên nồng độ trong một đơn vị thời gian. Các yếu tố ảnh hưởng."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 19,
+    "lessonId": "hh10_b19",
+    "field": "theoryPoints[0]",
+    "VN": "Chất xúc tác làm giảm năng lượng hoạt hóa Ea.",
+    "current_EN": "Chất xúc tác làm giảm năng lượng hoạt hóa Ea."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 19,
+    "lessonId": "hh10_b19",
+    "field": "sampleQuestion.question",
+    "VN": "Tại sao than nghiền nhỏ lại cháy nhanh hơn than tảng?",
+    "current_EN": "Tại sao than nghiền nhỏ lại cháy nhanh hơn than tảng?"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 19,
+    "lessonId": "hh10_b19",
+    "field": "sampleQuestion.answer",
+    "VN": "Do tăng diện tích bề mặt tiếp xúc với oxi không khí.",
+    "current_EN": "Do tăng diện tích bề mặt tiếp xúc với oxi không khí."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 19,
+    "lessonId": "hh10_b19",
+    "field": "sections[0].points[0]",
+    "VN": "Tốc độ phản ứng là độ biến thiên nồng độ trong một đơn vị thời gian. Các yếu tố ảnh hưởng.",
+    "current_EN": "Reaction rate là độ biến thiên nồng độ trong một đơn vị thời gian. Các yếu tố ảnh hưởng."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 19,
+    "lessonId": "hh10_b19",
+    "field": "sections[0].points[1]",
+    "VN": "Chất xúc tác làm giảm năng lượng hoạt hóa Ea.",
+    "current_EN": "Chất xúc tác làm giảm năng lượng hoạt hóa Ea."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 19,
+    "lessonId": "hh10_b19",
+    "field": "sections[1].points[0]",
+    "VN": "Nồng độ, nhiệt độ, áp suất, diện tích tiếp xúc, chất xúc tác",
+    "current_EN": "Nồng độ, nhiệt độ, áp suất, diện tích tiếp xúc, chất xúc tác"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 19,
+    "lessonId": "hh10_b19",
+    "field": "sections[2].points[0]",
+    "VN": "Định luật tác dụng khối lượng: v = k × [A]^a × [B]^b",
+    "current_EN": "Định luật tác dụng khối lượng: v = k × [A]^a × [B]^b"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 19,
+    "lessonId": "hh10_b19",
+    "field": "sections[2].points[1]",
+    "VN": "Hệ số Van't Hoff: v_T2 = v_T1 × γ^((T2 - T1) / 10)",
+    "current_EN": "Hệ số Van't Hoff: v_T2 = v_T1 × γ^((T2 - T1) / 10)"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 20,
+    "lessonId": "hh10_b20",
+    "field": "chapterTitle",
+    "VN": "Chương 6: Tốc độ phản ứng",
+    "current_EN": "Chương 6: Tốc độ phản ứng"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 20,
+    "lessonId": "hh10_b20",
+    "field": "summary",
+    "VN": "Hệ thống hóa tốc độ trung bình và bài toán hệ số nhiệt độ Van't Hoff.",
+    "current_EN": "Hệ thống hóa tốc độ trung bình và bài toán hệ số nhiệt độ Van't Hoff."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 20,
+    "lessonId": "hh10_b20",
+    "field": "theoryPoints[0]",
+    "VN": "Vận dụng điều khiển tốc độ phản ứng trong thực tế.",
+    "current_EN": "Vận dụng điều khiển Reaction rate trong thực tế."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 20,
+    "lessonId": "hh10_b20",
+    "field": "sampleQuestion.question",
+    "VN": "Nếu γ = 2, khi tăng nhiệt độ từ 20°C lên 50°C thì tốc độ tăng bao nhiêu lần?",
+    "current_EN": "Nếu γ = 2, khi tăng nhiệt độ từ 20°C lên 50°C thì tốc độ tăng bao nhiêu lần?"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 20,
+    "lessonId": "hh10_b20",
+    "field": "sampleQuestion.answer",
+    "VN": "Tăng 2^3 = 8 lần.",
+    "current_EN": "Tăng 2^3 = 8 lần."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 20,
+    "lessonId": "hh10_b20",
+    "field": "sections[0].points[0]",
+    "VN": "Hệ thống hóa tốc độ trung bình và bài toán hệ số nhiệt độ Van't Hoff.",
+    "current_EN": "Hệ thống hóa tốc độ trung bình và bài toán hệ số nhiệt độ Van't Hoff."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 20,
+    "lessonId": "hh10_b20",
+    "field": "sections[0].points[1]",
+    "VN": "Vận dụng điều khiển tốc độ phản ứng trong thực tế.",
+    "current_EN": "Vận dụng điều khiển Reaction rate trong thực tế."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 20,
+    "lessonId": "hh10_b20",
+    "field": "sections[1].points[0]",
+    "VN": "k: Hằng số tốc độ phản ứng",
+    "current_EN": "k: Hằng số Reaction rate"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 20,
+    "lessonId": "hh10_b20",
+    "field": "sections[2].points[0]",
+    "VN": "v_tb = |ΔC| / Δt",
+    "current_EN": "v_tb = |ΔC| / Δt"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 21,
+    "lessonId": "hh10_b21",
+    "field": "chapterTitle",
+    "VN": "Chương 7: Nguyên tố nhóm halogen",
+    "current_EN": "Chương 7: Nguyên tố nhóm halogen"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 21,
+    "lessonId": "hh10_b21",
+    "field": "summary",
+    "VN": "Cấu hình ns2 np5. Tính oxi hóa giảm dần F2 > Cl2 > Br2 > I2. Halogen trước đẩy halogen sau.",
+    "current_EN": "Cấu hình ns2 np5. Tính oxi hóa giảm dần F2 > Cl2 > Br2 > I2. Halogen trước đẩy halogen sau."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 21,
+    "lessonId": "hh10_b21",
+    "field": "theoryPoints[0]",
+    "VN": "Nhận biết Iot bằng hồ tinh bột.",
+    "current_EN": "Nhận biết Iot bằng hồ tinh bột."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 21,
+    "lessonId": "hh10_b21",
+    "field": "sampleQuestion.question",
+    "VN": "Dẫn khí Clo vào dung dịch NaBr có hiện tượng gì?",
+    "current_EN": "Dẫn khí Clo vào Solution NaBr có hiện tượng gì?"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 21,
+    "lessonId": "hh10_b21",
+    "field": "sampleQuestion.answer",
+    "VN": "Dung dịch chuyển sang màu nâu đỏ do giải phóng Br2.",
+    "current_EN": "Solution chuyển sang màu nâu đỏ do giải phóng Br2."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 21,
+    "lessonId": "hh10_b21",
+    "field": "sections[0].points[0]",
+    "VN": "Cấu hình ns2 np5. Tính oxi hóa giảm dần F2 > Cl2 > Br2 > I2. Halogen trước đẩy halogen sau.",
+    "current_EN": "Cấu hình ns2 np5. Tính oxi hóa giảm dần F2 > Cl2 > Br2 > I2. Halogen trước đẩy halogen sau."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 21,
+    "lessonId": "hh10_b21",
+    "field": "sections[0].points[1]",
+    "VN": "Nhận biết Iot bằng hồ tinh bột.",
+    "current_EN": "Nhận biết Iot bằng hồ tinh bột."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 21,
+    "lessonId": "hh10_b21",
+    "field": "sections[1].points[0]",
+    "VN": "Br₂ + 2NaI → 2NaBr + I₂ (I2 làm xanh hồ tinh bột)",
+    "current_EN": "Br₂ + 2NaI → 2NaBr + I₂ (I2 làm xanh hồ tinh bột)"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 21,
+    "lessonId": "hh10_b21",
+    "field": "sections[2].points[0]",
+    "VN": "F₂ oxi hóa nước: 2F₂ + 2H₂O → 4HF + O₂ ↑",
+    "current_EN": "F₂ oxi hóa Water: 2F₂ + 2H₂O → 4HF + O₂ ↑"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 21,
+    "lessonId": "hh10_b21",
+    "field": "sections[2].points[1]",
+    "VN": "Cl₂ + 2NaBr → 2NaCl + Br₂ (Dung dịch hóa nâu đỏ)",
+    "current_EN": "Cl₂ + 2NaBr → 2NaCl + Br₂ (Solution hóa nâu đỏ)"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 22,
+    "lessonId": "hh10_b22",
+    "field": "chapterTitle",
+    "VN": "Chương 7: Nguyên tố nhóm halogen",
+    "current_EN": "Chương 7: Nguyên tố nhóm halogen"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 22,
+    "lessonId": "hh10_b22",
+    "field": "summary",
+    "VN": "Axit halogenhiđric: Tính axit tăng dần HF < HCl < HBr < HI. Nhận biết halide bằng AgNO3.",
+    "current_EN": "Acid halogenhiđric: Tính Acid tăng dần HF < HCl < HBr < HI. Nhận biết halide bằng AgNO3."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 22,
+    "lessonId": "hh10_b22",
+    "field": "theoryPoints[0]",
+    "VN": "Muối iodized chứa KI chống bướu cổ.",
+    "current_EN": "Salt iodized chứa KI chống bướu cổ."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 22,
+    "lessonId": "hh10_b22",
+    "field": "sampleQuestion.question",
+    "VN": "Nhỏ AgNO3 vào dung dịch NaCl và NaBr, hiện tượng là gì?",
+    "current_EN": "Nhỏ AgNO3 vào Solution NaCl và NaBr, hiện tượng là gì?"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 22,
+    "lessonId": "hh10_b22",
+    "field": "sampleQuestion.answer",
+    "VN": "NaCl tạo kết tủa trắng AgCl; NaBr tạo kết tủa vàng nhạt AgBr.",
+    "current_EN": "NaCl tạo kết tủa trắng AgCl; NaBr tạo kết tủa vàng nhạt AgBr."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 22,
+    "lessonId": "hh10_b22",
+    "field": "sections[0].points[0]",
+    "VN": "Axit halogenhiđric: Tính axit tăng dần HF < HCl < HBr < HI. Nhận biết halide bằng AgNO3.",
+    "current_EN": "Acid halogenhiđric: Tính Acid tăng dần HF < HCl < HBr < HI. Nhận biết halide bằng AgNO3."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 22,
+    "lessonId": "hh10_b22",
+    "field": "sections[0].points[1]",
+    "VN": "Muối iodized chứa KI chống bướu cổ.",
+    "current_EN": "Salt iodized chứa KI chống bướu cổ."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 22,
+    "lessonId": "hh10_b22",
+    "field": "sections[2].points[0]",
+    "VN": "HF ăn mòn thủy tinh: SiO₂ + 4HF → SiF₄ ↑ + 2H₂O",
+    "current_EN": "HF ăn mòn thủy tinh: SiO₂ + 4HF → SiF₄ ↑ + 2H₂O"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 22,
+    "lessonId": "hh10_b22",
+    "field": "sections[2].points[1]",
+    "VN": "AgCl ↓ (Trắng), AgBr ↓ (Vàng nhạt), AgI ↓ (Vàng đậm)",
+    "current_EN": "AgCl ↓ (Trắng), AgBr ↓ (Vàng nhạt), AgI ↓ (Vàng đậm)"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 23,
+    "lessonId": "hh10_b23",
+    "field": "chapterTitle",
+    "VN": "Chương 7: Nguyên tố nhóm halogen",
+    "current_EN": "Chương 7: Nguyên tố nhóm halogen"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 23,
+    "lessonId": "hh10_b23",
+    "field": "summary",
+    "VN": "Tổng kết tính chất nhóm halogen, so sánh tính oxi hóa và nhận biết F-, Cl-, Br-, I-.",
+    "current_EN": "Tổng kết tính chất nhóm halogen, so sánh tính oxi hóa và nhận biết F-, Cl-, Br-, I-."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 23,
+    "lessonId": "hh10_b23",
+    "field": "theoryPoints[0]",
+    "VN": "Thành thạo bài toán nhận biết halogen.",
+    "current_EN": "Thành thạo bài toán nhận biết halogen."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 23,
+    "lessonId": "hh10_b23",
+    "field": "sampleQuestion.question",
+    "VN": "Axit nào được dùng để khắc chữ lên thủy tinh?",
+    "current_EN": "Acid nào được dùng để khắc chữ lên thủy tinh?"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 23,
+    "lessonId": "hh10_b23",
+    "field": "sampleQuestion.answer",
+    "VN": "Axit flohiđric (HF) vì phản ứng hòa tan SiO2.",
+    "current_EN": "Acid flohiđric (HF) vì phản ứng hòa tan SiO2."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 23,
+    "lessonId": "hh10_b23",
+    "field": "sections[0].points[0]",
+    "VN": "Tổng kết tính chất nhóm halogen, so sánh tính oxi hóa và nhận biết F-, Cl-, Br-, I-.",
+    "current_EN": "Tổng kết tính chất nhóm halogen, so sánh tính oxi hóa và nhận biết F-, Cl-, Br-, I-."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 23,
+    "lessonId": "hh10_b23",
+    "field": "sections[0].points[1]",
+    "VN": "Thành thạo bài toán nhận biết halogen.",
+    "current_EN": "Thành thạo bài toán nhận biết halogen."
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 23,
+    "lessonId": "hh10_b23",
+    "field": "sections[1].points[0]",
+    "VN": "Cl₂ > Br₂ > I₂ (Tính oxi hóa)",
+    "current_EN": "Cl₂ > Br₂ > I₂ (Tính oxi hóa)"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 23,
+    "lessonId": "hh10_b23",
+    "field": "sections[1].points[1]",
+    "VN": "HF < HCl < HBr < HI (Tính axit)",
+    "current_EN": "HF < HCl < HBr < HI (Tính Acid)"
+  },
+  {
+    "grade": 10,
+    "lessonNumber": 23,
+    "lessonId": "hh10_b23",
+    "field": "sections[2].points[0]",
+    "VN": "Bảng tổng kết tính chất Halogen",
+    "current_EN": "Bảng tổng kết tính chất Halogen"
+  }
+]

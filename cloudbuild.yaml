@@ -1,0 +1,33 @@
+# ===================================================
+# Google Cloud Build Pipeline for Chemic-AI
+# AI Riser Vietnam 2026 Submission (+10 Bonus Points)
+# ===================================================
+
+steps:
+  # 1. Build Docker Container Image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/chemic-ai:latest', '.']
+
+  # 2. Push Container Image to Google Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/chemic-ai:latest']
+
+  # 3. Deploy to Google Cloud Run (asia-southeast1 / Singapore nearest to VN)
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'chemic-ai'
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/chemic-ai:latest'
+      - '--region'
+      - 'asia-southeast1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+      - '--port'
+      - '8080'
+
+images:
+  - 'gcr.io/$PROJECT_ID/chemic-ai:latest'
