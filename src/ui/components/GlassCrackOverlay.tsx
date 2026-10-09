@@ -214,13 +214,16 @@ export const GlassCrackOverlay: React.FC<GlassCrackOverlayProps> = ({ isVi = fal
 
       {/* Cyberpunk Screen Damage Telemetry Banner */}
       <motion.div 
-        initial={{ opacity: 0, y: 15 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 15, x: '-50%' }}
+        animate={{ opacity: 1, y: 0, x: '-50%' }}
         transition={{ delay: 0.2, duration: 0.5 }}
-        className="absolute bottom-6 right-6 z-[90] flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-rose-950/80 border border-rose-500/60 backdrop-blur-xl shadow-[0_0_20px_rgba(244,63,94,0.35)] text-rose-300 font-mono text-[10px] tracking-widest uppercase pointer-events-none"
+        className="absolute bottom-6 left-1/2 z-[95] flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-rose-950/90 border border-rose-500/70 backdrop-blur-2xl shadow-[0_0_25px_rgba(244,63,94,0.45)] text-rose-200 font-mono text-[10px] sm:text-xs tracking-wider uppercase pointer-events-none whitespace-nowrap select-none"
       >
-        <span className="w-2 h-2 rounded-full bg-rose-400 animate-ping shadow-[0_0_8px_#f43f5e]" />
-        <span>
+        <span className="relative flex h-2 w-2 shrink-0">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75" />
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-rose-500 shadow-[0_0_8px_#f43f5e]" />
+        </span>
+        <span className="font-semibold tracking-wider">
           {isVi 
             ? '⚠ CẢNH BÁO PHẦN CỨNG: MÀN HÌNH BỊ NỨT DO CÚ ĐẤM CỦA GS. LUCY' 
             : '⚠ HARDWARE WARNING: SCREEN FRACTURED BY PROF. LUCY\'S QUANTUM FIST'}

@@ -340,6 +340,140 @@ class AudioManager {
         osc.start(time);
         osc.stop(time + 0.15);
     }
+
+    // ==========================================
+    // LAB ASMR PROCEDURAL SOUNDSCAPE
+    // ==========================================
+    public playGlassClink() {
+        this.init();
+        if (!this.ctx) return;
+        const time = this.ctx.currentTime;
+
+        // Dual pure crystal bell tones simulating borosilicate glassware contact
+        [2450, 4920].forEach((freq, idx) => {
+            const osc = this.ctx!.createOscillator();
+            const gain = this.ctx!.createGain();
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(freq, time);
+            osc.frequency.exponentialRampToValueAtTime(freq * 0.98, time + 0.18);
+
+            gain.gain.setValueAtTime(0.08 / (idx + 1), time);
+            gain.gain.exponentialRampToValueAtTime(0.0001, time + 0.18);
+
+            osc.connect(gain);
+            gain.connect(this.ctx!.destination);
+            osc.start(time);
+            osc.stop(time + 0.18);
+        });
+    }
+
+    public playLiquidPour() {
+        this.init();
+        if (!this.ctx) return;
+        const time = this.ctx.currentTime;
+
+        // Granular bubbling water stream with randomized droplet pitches
+        const drops = 6;
+        for (let i = 0; i < drops; i++) {
+            const dropTime = time + i * 0.045 + (Math.random() * 0.02);
+            const freq = 450 + Math.random() * 450;
+            const osc = this.ctx.createOscillator();
+            const gain = this.ctx.createGain();
+
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(freq, dropTime);
+            osc.frequency.exponentialRampToValueAtTime(freq * 1.5, dropTime + 0.05);
+
+            gain.gain.setValueAtTime(0.04, dropTime);
+            gain.gain.exponentialRampToValueAtTime(0.001, dropTime + 0.05);
+
+            osc.connect(gain);
+            gain.connect(this.ctx.destination);
+            osc.start(dropTime);
+            osc.stop(dropTime + 0.05);
+        }
+    }
+
+    public playEffervescence() {
+        this.init();
+        if (!this.ctx) return;
+        const time = this.ctx.currentTime;
+        const bufferSize = Math.floor(this.ctx.sampleRate * 1.2);
+        const buffer = this.ctx.createBuffer(1, bufferSize, this.ctx.sampleRate);
+        const data = buffer.getChannelData(0);
+
+        for (let i = 0; i < bufferSize; i++) {
+            // High-density crackle for fizzing gas bubbles (CO2/H2 release)
+            data[i] = Math.random() > 0.82 ? (Math.random() * 2 - 1) : 0;
+        }
+
+        const noiseSrc = this.ctx.createBufferSource();
+        noiseSrc.buffer = buffer;
+
+        const filter = this.ctx.createBiquadFilter();
+        filter.type = 'highpass';
+        filter.frequency.setValueAtTime(3200, time);
+
+        const gain = this.ctx.createGain();
+        gain.gain.setValueAtTime(0.12, time);
+        gain.gain.exponentialRampToValueAtTime(0.001, time + 1.2);
+
+        noiseSrc.connect(filter);
+        filter.connect(gain);
+        gain.connect(this.ctx.destination);
+        noiseSrc.start(time);
+    }
+
+    public playSteamHiss() {
+        this.init();
+        if (!this.ctx) return;
+        const time = this.ctx.currentTime;
+        const bufferSize = Math.floor(this.ctx.sampleRate * 0.8);
+        const buffer = this.ctx.createBuffer(1, bufferSize, this.ctx.sampleRate);
+        const data = buffer.getChannelData(0);
+
+        for (let i = 0; i < bufferSize; i++) {
+            data[i] = (Math.random() * 2 - 1) * Math.exp(-i / (bufferSize * 0.4));
+        }
+
+        const noiseSrc = this.ctx.createBufferSource();
+        noiseSrc.buffer = buffer;
+
+        const filter = this.ctx.createBiquadFilter();
+        filter.type = 'bandpass';
+        filter.frequency.setValueAtTime(5500, time);
+        filter.Q.setValueAtTime(2.0, time);
+
+        const gain = this.ctx.createGain();
+        gain.gain.setValueAtTime(0.18, time);
+        gain.gain.exponentialRampToValueAtTime(0.001, time + 0.8);
+
+        noiseSrc.connect(filter);
+        filter.connect(gain);
+        gain.connect(this.ctx.destination);
+        noiseSrc.start(time);
+    }
+
+    public playCrystalPrecipitate() {
+        this.init();
+        if (!this.ctx) return;
+        const time = this.ctx.currentTime;
+
+        // Crystalline sedimentation chime
+        [1800, 1400, 1100, 850].forEach((freq, idx) => {
+            const osc = this.ctx!.createOscillator();
+            const gain = this.ctx!.createGain();
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(freq, time + idx * 0.06);
+            gain.gain.setValueAtTime(0.07, time + idx * 0.06);
+            gain.gain.exponentialRampToValueAtTime(0.001, time + idx * 0.06 + 0.15);
+
+            osc.connect(gain);
+            gain.connect(this.ctx!.destination);
+            osc.start(time + idx * 0.06);
+            osc.stop(time + idx * 0.06 + 0.15);
+        });
+    }
 }
 
 export const audioManager = new AudioManager();

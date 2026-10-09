@@ -35,3 +35,15 @@ __pycache__/
 .numba_cache/
 numba_cache/
 test-results/
+*.bak
+video_frames/
+*.py
+*.mjs
+all_reagents_list.txt
+g8_g9_catalog.txt
+g8_master_data.json
+g9_master_data.json
+scratch_head_curriculum.json
+scratch_inspect.py
+registered_reagents.txt
+

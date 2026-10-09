@@ -341,7 +341,7 @@ const CanvasParticles: React.FC = () => {
   return <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none z-0" />;
 };
 
-type ModeType = 'idle' | 'start' | 'socratic' | 'learning' | 'reagent' | 'organic' | 'pet_shy1' | 'pet_shy2' | 'pet_punch' | 'pet_pout';
+type ModeType = 'idle' | 'start' | 'socratic' | 'learning' | 'reagent' | 'organic' | 'calculating' | 'pet_shy1' | 'pet_shy2' | 'pet_punch' | 'pet_pout';
 
 const MODE_DIALOGUES: Record<string, { EN: string; VN: string }> = {
   idle: {
@@ -367,6 +367,10 @@ const MODE_DIALOGUES: Record<string, { EN: string; VN: string }> = {
   organic: {
     EN: "Infinite Craft meets organic chemistry! Combine molecular radicals to synthesize real organic compounds, or solve synthesis puzzles! ⬡",
     VN: "Khám phá hóa học hữu cơ theo phong cách Infinite Craft! Tự do liên kết phân tử và chinh phục các câu đố cấu trúc! ⬡"
+  },
+  calculating: {
+    EN: "Looking for exact stoichiometry, molar concentrations, gas laws or enthalpy calculations? Let's crunch the numbers with precision! 🧮",
+    VN: "Cần tính số mol, nồng độ dung dịch C%, CM, thể tích khí hay biến thiên Enthalpy? Vào ngay Bảng Công Thức & Máy Tính Lượng Tử nhé! 🧮"
   },
   pet_shy1: {
     EN: "H-hey! Why are you suddenly poking me? Focus on your research, baka! >///<",
@@ -410,6 +414,7 @@ const MainMenu: React.FC = () => {
   const isSocraticModeActive = useSimulationStore(state => state.isSocraticModeActive);
   const isLearningModeActive = useSimulationStore(state => state.isLearningModeActive);
   const isOrganicModeActive = useSimulationStore(state => state.isOrganicModeActive);
+  const isCalculatingModeActive = useSimulationStore(state => state.isCalculatingModeActive);
   const rawLanguage = useSimulationStore(state => state.language || 'EN');
   const isVi = rawLanguage === 'VN' || rawLanguage === 'vi';
   const setActiveTab = useSimulationStore(state => state.setActiveTab);
@@ -485,10 +490,12 @@ const MainMenu: React.FC = () => {
       setActiveTab('learning');
     } else if (isOrganicModeActive) {
       setActiveTab('organic');
+    } else if (isCalculatingModeActive) {
+      setActiveTab('calculating');
     } else {
       setActiveTab('menu');
     }
-  }, [isReagentDbOpen, isSettingsOpen, isSocraticModeActive, isLearningModeActive, isOrganicModeActive, setActiveTab]);
+  }, [isReagentDbOpen, isSettingsOpen, isSocraticModeActive, isLearningModeActive, isOrganicModeActive, isCalculatingModeActive, setActiveTab]);
 
   const handleStart = () => {
     audioManager.playClick();
@@ -616,7 +623,7 @@ const MainMenu: React.FC = () => {
   const bgGridRotateX = useTransform(smoothMouseY, [-1, 1], [62, 58]);
   const bgShiftX = useTransform(smoothMouseX, [-1, 1], [-30, 30]);
 
-  const activeTab = !isReagentDbOpen && !isSettingsOpen && !isSocraticModeActive && !isLearningModeActive ? 'menu' : 'other';
+  const activeTab = !isReagentDbOpen && !isSettingsOpen && !isSocraticModeActive && !isLearningModeActive && !isOrganicModeActive && !isCalculatingModeActive ? 'menu' : 'other';
 
   return (
     <div
@@ -680,29 +687,27 @@ const MainMenu: React.FC = () => {
         <span>
           {isMenuCracked 
             ? 'CORE // QUANTUM ENGINE [SCREEN MATRIX: DAMAGED] [IMPACT DETECTED]'
-            : 'CORE // QUANTUM ENGINE ACTIVE [LATENCY: 1.2ms] [STATUS: NORMAL]'}
+            : 'CORE // QUANTUM ENGINE ACTIVE [LATENCY: 0.8ms] [STATUS: ONLINE]'}
         </span>
       </div>
 
-      {/* Absolute Language Toggle */}
-      <div className="absolute bottom-6 left-6 z-[100]">
-        <LanguageToggle />
-      </div>
-
-      {/* Smart Settings & API Config Dock */}
+      {/* Smart Command & Settings Header Dock */}
       <div className="absolute top-6 right-6 z-[100] flex items-center gap-3">
+        {/* Sleek Dual Segmented Language Toggle */}
+        <LanguageToggle variant="segmented" />
+
         {/* Status Pill Indicator */}
         {!customApiKey ? (
           <button
             onClick={() => { audioManager.playClick(); setIsSettingsOpen(true); }}
             onMouseEnter={() => audioManager.playHover()}
-            className="flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-gradient-to-r from-rose-950/80 to-red-950/80 border border-rose-500/60 hover:border-rose-400 text-rose-300 hover:text-white font-mono text-[10px] font-bold tracking-wider uppercase backdrop-blur-xl shadow-[0_0_20px_rgba(244,63,94,0.3)] hover:shadow-[0_0_25px_rgba(244,63,94,0.5)] transition-all cursor-pointer group active:scale-95"
+            className="flex items-center gap-2 px-3.5 py-2 rounded-2xl bg-gradient-to-r from-rose-950/80 to-red-950/80 border border-rose-500/60 hover:border-rose-400 text-rose-300 hover:text-white font-mono text-[10px] font-bold tracking-wider uppercase backdrop-blur-xl shadow-[0_0_20px_rgba(244,63,94,0.3)] hover:shadow-[0_0_25px_rgba(244,63,94,0.5)] transition-all cursor-pointer group active:scale-95"
           >
             <span className="w-2 h-2 rounded-full bg-rose-400 shadow-[0_0_8px_#f43f5e] animate-ping" />
-            <span>&lt; {isVi ? 'YÊU CẦU CẤU HÌNH API' : 'API CONFIG REQUIRED'}</span>
+            <span>&lt; {isVi ? 'CẤU HÌNH API' : 'API SETUP'}</span>
           </button>
         ) : (
-          <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-2xl bg-cyan-950/50 border border-cyan-800/50 text-cyan-300 font-mono text-[10px] font-bold tracking-wider uppercase backdrop-blur-xl">
+          <div className="flex items-center gap-2 px-3.5 py-2 rounded-2xl bg-[#040e1c]/90 border border-cyan-800/60 text-cyan-300 font-mono text-[10px] font-bold tracking-wider uppercase backdrop-blur-xl shadow-md">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_6px_#34d399] animate-pulse" />
             <span>{isVi ? 'API HOẠT ĐỘNG' : 'API READY'}</span>
           </div>
@@ -740,7 +745,6 @@ const MainMenu: React.FC = () => {
         {/* Standing Lucy Sprite - Living & Grounded */}
         <div 
           onClick={handleLucyInteraction}
-          title={getHoverHintText()}
           className="relative h-full w-full flex items-end justify-center pointer-events-auto cursor-pointer group"
         >
           {/* Floating Steam Puffs for Tsundere / Pout Mode */}
@@ -835,46 +839,47 @@ const MainMenu: React.FC = () => {
       </motion.div>
 
       {/* Main Menu Left Stage UI - Anchored to the Left and Scaled Up */}
-      <div className="z-30 w-full flex flex-col justify-center h-full pl-6 md:pl-12 lg:pl-16 pointer-events-none relative">
+      <div className="z-30 w-full flex flex-col justify-center h-full pl-6 md:pl-10 lg:pl-14 pointer-events-none relative overflow-y-auto max-h-screen py-6 custom-scrollbar">
         <motion.div 
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="w-full max-w-[560px] xl:max-w-[620px] pointer-events-auto flex flex-col gap-4.5 md:gap-5"
+          className="w-full max-w-[530px] xl:max-w-[570px] pointer-events-auto flex flex-col gap-3 md:gap-3.5 my-auto"
         >
-          {/* Futuristic AAA Holographic Title Plate - Enlarged */}
-          <div className="relative p-8 md:p-9 rounded-3xl bg-gradient-to-b from-[#061528]/90 via-[#030c18]/90 to-[#020610]/95 backdrop-blur-2xl border-2 border-cyan-500/35 shadow-[0_0_45px_rgba(0,0,0,0.9)] overflow-hidden group">
-            {/* Ambient glowing flare */}
-            <div className="absolute -top-16 -right-16 w-44 h-44 bg-cyan-500/20 rounded-full blur-[45px] group-hover:bg-cyan-400/30 transition-colors duration-500" />
+          {/* Futuristic AAA Holographic Title Plate */}
+          <div className="relative p-6 md:p-6.5 rounded-3xl bg-gradient-to-b from-[#061528]/92 via-[#030c18]/92 to-[#020610]/96 backdrop-blur-2xl border-2 border-cyan-500/35 shadow-[0_0_45px_rgba(0,0,0,0.9)] overflow-hidden group">
+            {/* Ambient cyber grid watermark & glowing flare */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(6,182,212,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(6,182,212,0.03)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none" />
+            <div className="absolute -top-16 -right-16 w-44 h-44 bg-cyan-500/20 rounded-full blur-[45px] group-hover:bg-cyan-400/30 transition-colors duration-500 pointer-events-none" />
 
             <div className="relative z-10">
-              <div className="flex items-center gap-2.5 mb-2.5">
-                <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_10px_#22d3ee]" />
-                <h2 className="text-cyan-400 font-mono text-xs tracking-[0.35em] uppercase opacity-90 font-bold">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_8px_#22d3ee]" />
+                <h2 className="text-cyan-400 font-mono text-[11px] tracking-[0.3em] uppercase opacity-90 font-bold">
                   {isVi ? 'DỰ ÁN PHÒNG THÍ NGHIỆM LƯỢNG TỬ' : 'QUANTUM REALITY LAB // v2.5'}
                 </h2>
               </div>
 
-              <div className="relative inline-block mb-4">
+              <div className="relative inline-block mb-3">
                 <div className="absolute -inset-3 chemic-aura-cycle rounded-3xl pointer-events-none" />
-                <h1 className="relative text-5xl md:text-6xl font-black tracking-tight uppercase chemic-gradient-cycle select-none">
+                <h1 className="relative text-4xl md:text-5xl font-black tracking-tight uppercase chemic-gradient-cycle select-none">
                   CHEMIC<span className="opacity-90 animate-pulse">_</span>AI
                 </h1>
               </div>
 
-              <div className="flex items-center gap-3">
-                <div className="inline-flex items-center gap-2 bg-cyan-950/80 border border-cyan-500/40 px-3.5 py-1.5 rounded-xl text-cyan-300 font-mono text-xs tracking-widest uppercase shadow-[0_0_12px_rgba(34,211,238,0.2)]">
+              <div className="flex items-center gap-2.5">
+                <div className="inline-flex items-center gap-1.5 bg-cyan-950/80 border border-cyan-500/40 px-3 py-1 rounded-xl text-cyan-300 font-mono text-[11px] tracking-wider uppercase shadow-[0_0_12px_rgba(34,211,238,0.2)]">
                   <span>⚛</span>
-                  <span>{isVi ? 'MÔ PHỎNG PHẢN ỨNG THỰC' : 'QUANTUM ENGINE'}</span>
+                  <span>{isVi ? 'MÔ PHỎNG THỰC' : 'QUANTUM ENGINE'}</span>
                 </div>
-                <div className="inline-flex items-center gap-2 bg-emerald-950/80 border border-emerald-500/40 px-3.5 py-1.5 rounded-xl text-emerald-300 font-mono text-xs tracking-widest uppercase">
+                <div className="inline-flex items-center gap-1.5 bg-emerald-950/80 border border-emerald-500/40 px-3 py-1 rounded-xl text-emerald-300 font-mono text-[11px] tracking-wider uppercase">
                   <span>✓</span>
                   <span>IUPAC 118</span>
                 </div>
               </div>
 
               {/* Google AI Studio & Workspace Action Bar */}
-              <div className="flex flex-wrap items-center gap-2.5 mt-3 pt-3 border-t border-cyan-900/40">
+              <div className="flex flex-wrap items-center gap-2 mt-3 pt-3 border-t border-cyan-900/40">
                 <button
                   type="button"
                   onClick={() => { audioManager.playClick(); setScannerOpen(true); }}
@@ -883,7 +888,7 @@ const MainMenu: React.FC = () => {
                   title={isVi ? 'Quét đề bài Hóa học với Gemini 2.5 Flash' : 'Scan homework with Gemini 2.5 Flash'}
                 >
                   <span>📸</span>
-                  <span>{isVi ? 'QUÉT ĐỀ BÀI (GEMINI)' : 'GEMINI VISION'}</span>
+                  <span>{isVi ? 'QUÉT ĐỀ (GEMINI)' : 'GEMINI VISION'}</span>
                 </button>
 
                 <button
@@ -905,57 +910,57 @@ const MainMenu: React.FC = () => {
                   title={isVi ? 'Hồ sơ học sinh' : 'Student Profile'}
                 >
                   <img src={googleUser.picture} alt="Avatar" className="w-4 h-4 rounded-full border border-cyan-400" />
-                  <span className="truncate max-w-[90px]">{googleUser.name.split(' ')[0]}</span>
+                  <span className="truncate max-w-[85px]">{googleUser.name.split(' ')[0]}</span>
                 </button>
               </div>
             </div>
           </div>
 
           {/* Interactive Navigation Selector Buttons (MiSide Tactile Selector Cards) */}
-          <div className="flex flex-col gap-3.5">
+          <div className="flex flex-col gap-2.5">
             {/* Primary Hero Button: START ENGINE */}
             <motion.button
-              whileHover={{ scale: 1.02, x: 6 }}
-              whileTap={{ scale: 0.98 }}
+              whileHover={{ scale: 1.015, x: 6 }}
+              whileTap={{ scale: 0.985 }}
               onClick={handleStart}
               onMouseEnter={() => { audioManager.playHover(); setCurrentMode('start'); }}
               onMouseLeave={() => setCurrentMode('idle')}
-              className="group relative px-7 py-5 md:py-5.5 bg-gradient-to-r from-[#082038]/90 via-[#06182c]/90 to-[#040e1c]/90 border-2 border-cyan-400/60 hover:border-cyan-300 rounded-3xl text-left transition-all duration-300 backdrop-blur-xl shadow-[0_0_30px_rgba(34,211,238,0.2)] hover:shadow-[0_0_45px_rgba(34,211,238,0.5)] overflow-hidden cursor-pointer"
+              className="group relative px-6 py-4 md:py-4.5 bg-gradient-to-r from-[#092542]/95 via-[#061c32]/95 to-[#041122]/95 border-2 border-cyan-400/70 hover:border-cyan-300 rounded-3xl text-left transition-all duration-300 backdrop-blur-xl shadow-[0_0_30px_rgba(34,211,238,0.25)] hover:shadow-[0_0_45px_rgba(34,211,238,0.55)] overflow-hidden cursor-pointer"
             >
               {/* Laser sweep animation on hover */}
               <div className="absolute inset-0 w-[200%] h-full bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent -translate-x-[100%] group-hover:animate-[sweep_1.4s_ease-in-out_infinite]" />
               
               <div className="relative z-10 flex items-center justify-between">
                 <div>
-                  <span className="block font-mono text-cyan-400 text-xs tracking-[0.25em] uppercase mb-1 font-bold">
+                  <span className="block font-mono text-cyan-400 text-[11px] tracking-[0.25em] uppercase mb-0.5 font-bold">
                     {isVi ? 'KHỞI TẠO // VÀO PHÒNG LAB' : 'SEQUENCE: INITIATE LAB'}
                   </span>
                   <span className="block font-black text-2xl md:text-3xl text-white tracking-wider uppercase group-hover:text-cyan-100 transition-colors">
                     {isVi ? 'BẮT ĐẦU THÍ NGHIỆM' : 'START ENGINE'}
                   </span>
                 </div>
-                <div className="w-12 h-12 rounded-2xl bg-cyan-500/20 border border-cyan-400/40 group-hover:border-cyan-300 flex items-center justify-center text-cyan-300 group-hover:text-white group-hover:translate-x-2 transition-all duration-300 shadow-[0_0_18px_rgba(34,211,238,0.35)]">
-                  <span className="text-2xl font-bold">➔</span>
+                <div className="w-11 h-11 rounded-2xl bg-cyan-500/25 border border-cyan-400/50 group-hover:border-cyan-300 group-hover:bg-cyan-400 group-hover:text-black flex items-center justify-center text-cyan-300 group-hover:translate-x-1.5 transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.35)]">
+                  <span className="text-xl font-bold">➔</span>
                 </div>
               </div>
             </motion.button>
 
             {/* Feature Modes Grid/Stack */}
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-2.5">
               {/* 01: Socratic Challenge Mode */}
               <motion.button 
                 whileHover={{ x: 6 }}
                 onClick={() => { audioManager.playClick(); useSimulationStore.getState().setSocraticMode(true); }}
                 onMouseEnter={() => { audioManager.playHover(); setCurrentMode('socratic'); }}
                 onMouseLeave={() => setCurrentMode('idle')}
-                className="px-6 py-4 md:py-4.5 bg-rose-950/25 hover:bg-rose-900/35 border border-rose-900/50 hover:border-rose-500/80 rounded-2xl text-left transition-all duration-200 backdrop-blur-xl flex items-center justify-between group shadow-[0_0_15px_rgba(244,63,94,0.15)] hover:shadow-[0_0_25px_rgba(244,63,94,0.35)] cursor-pointer"
+                className="relative px-5 py-3 md:py-3.5 bg-rose-950/20 hover:bg-rose-900/30 border border-rose-900/50 hover:border-rose-500/80 border-l-4 border-l-rose-500/80 rounded-2xl text-left transition-all duration-200 backdrop-blur-xl flex items-center justify-between group shadow-[0_0_15px_rgba(244,63,94,0.12)] hover:shadow-[0_0_25px_rgba(244,63,94,0.35)] cursor-pointer overflow-hidden"
               >
-                <div className="flex items-center gap-4">
-                  <span className="w-8 h-8 rounded-xl bg-rose-950/60 border border-rose-800/60 text-rose-400 font-mono text-xs md:text-sm font-bold flex items-center justify-center group-hover:border-rose-400 transition-colors">
+                <div className="flex items-center gap-3.5">
+                  <span className="w-8 h-8 rounded-xl bg-rose-950/70 border border-rose-800/70 text-rose-300 font-mono text-xs md:text-sm font-bold flex items-center justify-center group-hover:border-rose-400 group-hover:bg-rose-900/80 transition-all shadow-inner">
                     01
                   </span>
                   <div className="flex flex-col">
-                    <span className="text-rose-300 font-bold tracking-wider uppercase text-sm md:text-base group-hover:text-white transition-colors flex items-center gap-2">
+                    <span className="text-rose-200 font-bold tracking-wider uppercase text-sm md:text-base group-hover:text-white transition-colors flex items-center gap-2">
                       {isVi ? 'THÁCH THỨC SOCRATIC' : 'SOCRATIC CHALLENGE'}
                       <span className="text-[9px] px-1.5 py-0.5 rounded-md bg-red-500/20 border border-red-500/40 text-red-400 font-mono normal-case tracking-normal animate-pulse">
                         {isVi ? '⚠ Không khuyến khích' : '⚠ Not recommended'}
@@ -966,7 +971,10 @@ const MainMenu: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                <span className="text-rose-400 group-hover:scale-110 group-hover:text-rose-200 transition-transform text-base md:text-lg">👁️</span>
+                <div className="flex items-center gap-2">
+                  <span className="text-rose-400 group-hover:scale-110 group-hover:text-rose-200 transition-transform text-base md:text-lg">👁️</span>
+                  <span className="text-rose-400/50 group-hover:text-rose-300 group-hover:translate-x-1 transition-all text-xs font-mono font-bold">→</span>
+                </div>
               </motion.button>
 
               {/* 02: Learning Lab Mode */}
@@ -975,14 +983,14 @@ const MainMenu: React.FC = () => {
                 onClick={() => { audioManager.playClick(); useSimulationStore.getState().setLearningMode(true); }}
                 onMouseEnter={() => { audioManager.playHover(); setCurrentMode('learning'); }}
                 onMouseLeave={() => setCurrentMode('idle')}
-                className="px-6 py-4 md:py-4.5 bg-emerald-950/25 hover:bg-emerald-900/35 border border-emerald-900/50 hover:border-emerald-500/80 rounded-2xl text-left transition-all duration-200 backdrop-blur-xl flex items-center justify-between group shadow-[0_0_15px_rgba(16,185,129,0.15)] hover:shadow-[0_0_25px_rgba(16,185,129,0.35)] cursor-pointer"
+                className="relative px-5 py-3 md:py-3.5 bg-emerald-950/20 hover:bg-emerald-900/30 border border-emerald-900/50 hover:border-emerald-500/80 border-l-4 border-l-emerald-500/80 rounded-2xl text-left transition-all duration-200 backdrop-blur-xl flex items-center justify-between group shadow-[0_0_15px_rgba(16,185,129,0.12)] hover:shadow-[0_0_25px_rgba(16,185,129,0.35)] cursor-pointer overflow-hidden"
               >
-                <div className="flex items-center gap-4">
-                  <span className="w-8 h-8 rounded-xl bg-emerald-950/60 border border-emerald-800/60 text-emerald-400 font-mono text-xs md:text-sm font-bold flex items-center justify-center group-hover:border-emerald-400 transition-colors">
+                <div className="flex items-center gap-3.5">
+                  <span className="w-8 h-8 rounded-xl bg-emerald-950/70 border border-emerald-800/70 text-emerald-300 font-mono text-xs md:text-sm font-bold flex items-center justify-center group-hover:border-emerald-400 group-hover:bg-emerald-900/80 transition-all shadow-inner">
                     02
                   </span>
                   <div className="flex flex-col">
-                    <span className="text-emerald-300 font-bold tracking-wider uppercase text-sm md:text-base group-hover:text-white transition-colors">
+                    <span className="text-emerald-200 font-bold tracking-wider uppercase text-sm md:text-base group-hover:text-white transition-colors">
                       {isVi ? 'PHÒNG CỐ VẤN HỌC TẬP' : 'LEARNING LAB & MENTOR'}
                     </span>
                     <span className="text-xs text-slate-400 font-mono">
@@ -990,7 +998,10 @@ const MainMenu: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                <span className="text-emerald-400 group-hover:scale-110 group-hover:text-emerald-200 transition-transform text-base md:text-lg">🎓</span>
+                <div className="flex items-center gap-2">
+                  <span className="text-emerald-400 group-hover:scale-110 group-hover:text-emerald-200 transition-transform text-base md:text-lg">🎓</span>
+                  <span className="text-emerald-400/50 group-hover:text-emerald-300 group-hover:translate-x-1 transition-all text-xs font-mono font-bold">→</span>
+                </div>
               </motion.button>
 
               {/* 03: Reagent Database */}
@@ -999,14 +1010,14 @@ const MainMenu: React.FC = () => {
                 onClick={() => { audioManager.playClick(); setIsReagentDbOpen(true); }}
                 onMouseEnter={() => { audioManager.playHover(); setCurrentMode('reagent'); }}
                 onMouseLeave={() => setCurrentMode('idle')}
-                className="px-6 py-4 md:py-4.5 bg-cyan-950/25 hover:bg-cyan-900/35 border border-cyan-900/50 hover:border-cyan-500/80 rounded-2xl text-left transition-all duration-200 backdrop-blur-xl flex items-center justify-between group shadow-[0_0_15px_rgba(6,182,212,0.15)] hover:shadow-[0_0_25px_rgba(6,182,212,0.35)] cursor-pointer"
+                className="relative px-5 py-3 md:py-3.5 bg-cyan-950/20 hover:bg-cyan-900/30 border border-cyan-900/50 hover:border-cyan-500/80 border-l-4 border-l-cyan-500/80 rounded-2xl text-left transition-all duration-200 backdrop-blur-xl flex items-center justify-between group shadow-[0_0_15px_rgba(6,182,212,0.12)] hover:shadow-[0_0_25px_rgba(6,182,212,0.35)] cursor-pointer overflow-hidden"
               >
-                <div className="flex items-center gap-4">
-                  <span className="w-8 h-8 rounded-xl bg-cyan-950/60 border border-cyan-800/60 text-cyan-400 font-mono text-xs md:text-sm font-bold flex items-center justify-center group-hover:border-cyan-400 transition-colors">
+                <div className="flex items-center gap-3.5">
+                  <span className="w-8 h-8 rounded-xl bg-cyan-950/70 border border-cyan-800/70 text-cyan-300 font-mono text-xs md:text-sm font-bold flex items-center justify-center group-hover:border-cyan-400 group-hover:bg-cyan-900/80 transition-all shadow-inner">
                     03
                   </span>
                   <div className="flex flex-col">
-                    <span className="text-cyan-300 font-bold tracking-wider uppercase text-sm md:text-base group-hover:text-white transition-colors">
+                    <span className="text-cyan-200 font-bold tracking-wider uppercase text-sm md:text-base group-hover:text-white transition-colors">
                       {isVi ? 'TỪ ĐIỂN 118 NGUYÊN TỐ' : 'REAGENT DATABASE'}
                     </span>
                     <span className="text-xs text-slate-400 font-mono">
@@ -1014,7 +1025,10 @@ const MainMenu: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                <span className="text-cyan-400 group-hover:scale-110 group-hover:text-cyan-200 transition-transform text-base md:text-lg">📖</span>
+                <div className="flex items-center gap-2">
+                  <span className="text-cyan-400 group-hover:scale-110 group-hover:text-cyan-200 transition-transform text-base md:text-lg">📖</span>
+                  <span className="text-cyan-400/50 group-hover:text-cyan-300 group-hover:translate-x-1 transition-all text-xs font-mono font-bold">→</span>
+                </div>
               </motion.button>
 
               {/* 04: Organic Chemistry Wordle Puzzle */}
@@ -1023,15 +1037,15 @@ const MainMenu: React.FC = () => {
                 onClick={() => { audioManager.playClick(); useSimulationStore.getState().setOrganicMode(true); }}
                 onMouseEnter={() => { audioManager.playHover(); setCurrentMode('organic'); }}
                 onMouseLeave={() => setCurrentMode('idle')}
-                className="px-6 py-4 md:py-4.5 bg-purple-950/25 hover:bg-purple-900/35 border border-purple-900/50 hover:border-purple-500/80 rounded-2xl text-left transition-all duration-200 backdrop-blur-xl flex items-center justify-between group shadow-[0_0_15px_rgba(168,85,247,0.15)] hover:shadow-[0_0_25px_rgba(168,85,247,0.35)] cursor-pointer"
+                className="relative px-5 py-3 md:py-3.5 bg-purple-950/20 hover:bg-purple-900/30 border border-purple-900/50 hover:border-purple-500/80 border-l-4 border-l-purple-500/80 rounded-2xl text-left transition-all duration-200 backdrop-blur-xl flex items-center justify-between group shadow-[0_0_15px_rgba(168,85,247,0.12)] hover:shadow-[0_0_25px_rgba(168,85,247,0.35)] cursor-pointer overflow-hidden"
               >
-                <div className="flex items-center gap-4">
-                  <span className="w-8 h-8 rounded-xl bg-purple-950/60 border border-purple-800/60 text-purple-400 font-mono text-xs md:text-sm font-bold flex items-center justify-center group-hover:border-purple-400 transition-colors">
+                <div className="flex items-center gap-3.5">
+                  <span className="w-8 h-8 rounded-xl bg-purple-950/70 border border-purple-800/70 text-purple-300 font-mono text-xs md:text-sm font-bold flex items-center justify-center group-hover:border-purple-400 group-hover:bg-purple-900/80 transition-all shadow-inner">
                     04
                   </span>
                   <div className="flex flex-col">
                     <div className="flex items-center gap-2">
-                      <span className="text-purple-300 font-bold tracking-wider uppercase text-sm md:text-base group-hover:text-white transition-colors">
+                      <span className="text-purple-200 font-bold tracking-wider uppercase text-sm md:text-base group-hover:text-white transition-colors">
                         {isVi ? 'HÓA HỌC HỮU CƠ' : 'ORGANIC CHEMISTRY'}
                       </span>
                       <span className="text-[9px] px-2 py-0.5 rounded-md bg-purple-500/30 text-purple-200 font-mono font-bold tracking-normal border border-purple-400/40">
@@ -1043,7 +1057,10 @@ const MainMenu: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                <span className="text-purple-400 group-hover:scale-110 group-hover:text-purple-200 transition-transform text-lg md:text-xl">⬡</span>
+                <div className="flex items-center gap-2">
+                  <span className="text-purple-400 group-hover:scale-110 group-hover:text-purple-200 transition-transform text-lg md:text-xl">⬡</span>
+                  <span className="text-purple-400/50 group-hover:text-purple-300 group-hover:translate-x-1 transition-all text-xs font-mono font-bold">→</span>
+                </div>
               </motion.button>
 
               {/* 05: Complete Chemistry Curriculum Academy (Grades 8 - 12) */}
@@ -1052,18 +1069,18 @@ const MainMenu: React.FC = () => {
                 onClick={() => { audioManager.playClick(); setIsCurriculumOpen(true); }}
                 onMouseEnter={() => { audioManager.playHover(); setCurrentMode('learning'); }}
                 onMouseLeave={() => setCurrentMode('idle')}
-                className="px-6 py-4 md:py-4.5 bg-emerald-950/35 hover:bg-emerald-900/45 border border-emerald-800/60 hover:border-emerald-400 rounded-2xl text-left transition-all duration-200 backdrop-blur-xl flex items-center justify-between group shadow-[0_0_20px_rgba(16,185,129,0.2)] hover:shadow-[0_0_30px_rgba(16,185,129,0.4)] cursor-pointer"
+                className="relative px-5 py-3 md:py-3.5 bg-teal-950/25 hover:bg-teal-900/35 border border-teal-800/60 hover:border-teal-400 border-l-4 border-l-teal-400 rounded-2xl text-left transition-all duration-200 backdrop-blur-xl flex items-center justify-between group shadow-[0_0_20px_rgba(20,184,166,0.18)] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] cursor-pointer overflow-hidden"
               >
-                <div className="flex items-center gap-4">
-                  <span className="w-8 h-8 rounded-xl bg-emerald-950/80 border border-emerald-600/80 text-emerald-300 font-mono text-xs md:text-sm font-bold flex items-center justify-center group-hover:border-emerald-300 transition-colors">
+                <div className="flex items-center gap-3.5">
+                  <span className="w-8 h-8 rounded-xl bg-teal-950/80 border border-teal-600/80 text-teal-300 font-mono text-xs md:text-sm font-bold flex items-center justify-center group-hover:border-teal-300 group-hover:bg-teal-900/80 transition-all shadow-inner">
                     05
                   </span>
                   <div className="flex flex-col">
                     <div className="flex items-center gap-2">
-                      <span className="text-emerald-300 font-bold tracking-wider uppercase text-sm md:text-base group-hover:text-white transition-colors">
+                      <span className="text-teal-200 font-bold tracking-wider uppercase text-sm md:text-base group-hover:text-white transition-colors">
                         {isVi ? 'GIÁO TRÌNH HÓA HỌC LỚP 8 - 12' : 'CHEMISTRY ACADEMY (8-12)'}
                       </span>
-                      <span className="text-[9px] px-2 py-0.5 rounded-md bg-emerald-500/30 text-emerald-200 font-mono font-bold tracking-normal border border-emerald-400/40">
+                      <span className="text-[9px] px-2 py-0.5 rounded-md bg-teal-500/30 text-teal-200 font-mono font-bold tracking-normal border border-teal-400/40">
                         KẾT NỐI TRI THỨC
                       </span>
                     </div>
@@ -1072,7 +1089,42 @@ const MainMenu: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                <span className="text-emerald-400 group-hover:scale-110 group-hover:text-emerald-200 transition-transform text-lg md:text-xl">📚</span>
+                <div className="flex items-center gap-2">
+                  <span className="text-teal-400 group-hover:scale-110 group-hover:text-teal-200 transition-transform text-lg md:text-xl">📚</span>
+                  <span className="text-teal-400/50 group-hover:text-teal-300 group-hover:translate-x-1 transition-all text-xs font-mono font-bold">→</span>
+                </div>
+              </motion.button>
+
+              {/* 06: Calculating Mode (Formula Sheet & Grade 8-12 Calculations) */}
+              <motion.button 
+                whileHover={{ x: 6 }}
+                onClick={() => { audioManager.playClick(); useSimulationStore.getState().setCalculatingMode(true); }}
+                onMouseEnter={() => { audioManager.playHover(); setCurrentMode('calculating'); }}
+                onMouseLeave={() => setCurrentMode('idle')}
+                className="relative px-5 py-3 md:py-3.5 bg-amber-950/25 hover:bg-amber-900/35 border border-amber-800/60 hover:border-amber-400 border-l-4 border-l-amber-400 rounded-2xl text-left transition-all duration-200 backdrop-blur-xl flex items-center justify-between group shadow-[0_0_20px_rgba(245,158,11,0.18)] hover:shadow-[0_0_30px_rgba(245,158,11,0.4)] cursor-pointer overflow-hidden"
+              >
+                <div className="flex items-center gap-3.5">
+                  <span className="w-8 h-8 rounded-xl bg-amber-950/80 border border-amber-600/80 text-amber-300 font-mono text-xs md:text-sm font-bold flex items-center justify-center group-hover:border-amber-300 group-hover:bg-amber-900/80 transition-all shadow-inner">
+                    06
+                  </span>
+                  <div className="flex flex-col">
+                    <div className="flex items-center gap-2">
+                      <span className="text-amber-200 font-bold tracking-wider uppercase text-sm md:text-base group-hover:text-white transition-colors">
+                        {isVi ? 'CHẾ ĐỘ TÍNH TOÁN // BẢNG CÔNG THỨC' : 'CALCULATING MODE // FORMULA LAB'}
+                      </span>
+                      <span className="text-[9px] px-2 py-0.5 rounded-md bg-amber-500/30 text-amber-200 font-mono font-bold tracking-normal border border-amber-400/40">
+                        GDPT 2018
+                      </span>
+                    </div>
+                    <span className="text-xs text-slate-400 font-mono">
+                      {isVi ? 'Bảng công thức 8-12, máy tính thế số & bài tập lượng giác' : 'Formula Sheet, Variable Solvers & Stoichiometry Practice'}
+                    </span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-amber-400 group-hover:scale-110 group-hover:text-amber-200 transition-transform text-lg md:text-xl">🧮</span>
+                  <span className="text-amber-400/50 group-hover:text-amber-300 group-hover:translate-x-1 transition-all text-xs font-mono font-bold">→</span>
+                </div>
               </motion.button>
             </div>
           </div>

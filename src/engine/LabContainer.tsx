@@ -20,6 +20,11 @@ const LabContainer: React.FC<LabContainerProps> = ({ id, isDragging, onDragStart
     const env = useSimulationStore(state => state.env);
     const language = useSimulationStore(state => state.language);
     const isVi = String(language).toLowerCase().includes('v');
+    const selectedContainerId = useSimulationStore(state => state.selectedContainerId);
+    const setSelectedContainerId = useSimulationStore(state => state.setSelectedContainerId);
+    const clearContainer = useSimulationStore(state => state.clearContainer);
+    const removeContainer = useSimulationStore(state => state.removeContainer);
+    const isSelected = selectedContainerId === id;
 
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const particlesRef = useRef<any[]>([]);
@@ -28,6 +33,7 @@ const LabContainer: React.FC<LabContainerProps> = ({ id, isDragging, onDragStart
     const pourIntervalRef = useRef<any>(null);
 
     const [isSnapping, setIsSnapping] = useState(false);
+    const [showBreakdown, setShowBreakdown] = useState(false);
 
     // Compute live thermodynamic state for this container
     const thermoState = container ? evaluateThermodynamicState(container, env) : null;
@@ -351,11 +357,48 @@ const LabContainer: React.FC<LabContainerProps> = ({ id, isDragging, onDragStart
                 }
 
                 if (p.life > 0 && p.radius > 0.5) {
-                    ctx.beginPath();
-                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-                    ctx.fillStyle = p.color;
-                    ctx.globalAlpha = p.life;
-                    ctx.fill();
+                    ctx.globalAlpha = Math.max(0, Math.min(1, p.life));
+                    if (p.isBoilingBubble) {
+                        // Gas bubbles expand slightly as hydrostatic pressure drops near the surface
+                        if (!isPaused) p.radius = Math.min(p.radius * 1.004, 5.5);
+                        const br = p.radius;
+                        // Transparent core with thin refracting rim (bubbles are not opaque white dots)
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, br, 0, Math.PI * 2);
+                        ctx.fillStyle = 'rgba(255, 255, 255, 0.08)';
+                        ctx.fill();
+                        ctx.lineWidth = Math.max(0.6, br * 0.28);
+                        ctx.strokeStyle = 'rgba(255, 255, 255, 0.7)';
+                        ctx.stroke();
+                        // Specular highlight (upper-left light source)
+                        if (br > 1.2) {
+                            ctx.beginPath();
+                            ctx.arc(p.x - br * 0.35, p.y - br * 0.35, br * 0.32, 0, Math.PI * 2);
+                            ctx.fillStyle = 'rgba(255, 255, 255, 0.95)';
+                            ctx.fill();
+                        }
+                    } else if (p.isSteam) {
+                        const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius);
+                        grad.addColorStop(0, 'rgba(240, 248, 255, 0.45)');
+                        grad.addColorStop(1, 'rgba(240, 248, 255, 0)');
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                        ctx.fillStyle = grad;
+                        ctx.fill();
+                    } else if (p.isExplosion) {
+                        ctx.shadowBlur = 8;
+                        ctx.shadowColor = p.color;
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                        ctx.fillStyle = p.color;
+                        ctx.fill();
+                        ctx.shadowBlur = 0;
+                    } else {
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                        ctx.fillStyle = p.color;
+                        ctx.fill();
+                    }
                     ctx.globalAlpha = 1.0;
                 } else if (!isPaused) {
                     particles.splice(i, 1);
@@ -374,8 +417,109 @@ const LabContainer: React.FC<LabContainerProps> = ({ id, isDragging, onDragStart
     if (!container) return null;
 
     const heightPct = (container.volume / container.maxVol) * 90;
-    const rgbaColor = `rgba(${container.color.r}, ${container.color.g}, ${container.color.b}, 0.8)`;
-    const rgbColor = `rgb(${container.color.r}, ${container.color.g}, ${container.color.b})`;
+    const r = container.color.r;
+    const g = container.color.g;
+    const b = container.color.b;
+    const rgbaColor = `rgba(${r}, ${g}, ${b}, 0.8)`;
+    const rgbColor = `rgb(${r}, ${g}, ${b})`;
+
+    // Precipitate detection & sediment bed physics
+    const PRECIPITATE_DEFINITIONS: Record<string, { color: string; label: string; bgGrad: string }> = {
+        'CuOH2_PRECIPITATE': { 
+            color: 'rgb(56, 189, 248)', 
+            label: 'Cu(OH)₂ ↓',
+            bgGrad: 'linear-gradient(180deg, rgba(56, 189, 248, 0.9) 0%, rgba(2, 132, 199, 0.98) 100%)' 
+        },
+        'Cu2O_PRECIPITATE': { 
+            color: 'rgb(185, 28, 28)', 
+            label: 'Cu₂O ↓',
+            bgGrad: 'linear-gradient(180deg, rgba(220, 38, 38, 0.9) 0%, rgba(153, 27, 27, 0.98) 100%)' 
+        },
+        'PbI2_PRECIPITATE': { 
+            color: 'rgb(234, 179, 8)', 
+            label: 'PbI₂ ↓',
+            bgGrad: 'linear-gradient(180deg, rgba(250, 204, 21, 0.92) 0%, rgba(202, 138, 4, 0.98) 100%)' 
+        },
+        'BaSO4_PRECIPITATE': { 
+            color: 'rgba(248, 250, 252, 0.95)', 
+            label: 'BaSO₄ ↓',
+            bgGrad: 'linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(226, 232, 240, 0.98) 100%)' 
+        },
+        'CaCO3_PRECIPITATE': { 
+            color: 'rgba(241, 245, 249, 0.95)', 
+            label: 'CaCO₃ ↓',
+            bgGrad: 'linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(203, 213, 225, 0.98) 100%)' 
+        },
+        'BaCO3_PRECIPITATE': { 
+            color: 'rgba(241, 245, 249, 0.95)', 
+            label: 'BaCO₃ ↓',
+            bgGrad: 'linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(203, 213, 225, 0.98) 100%)' 
+        },
+        'AgCl_PRECIPITATE': { 
+            color: 'rgba(241, 245, 249, 0.95)', 
+            label: 'AgCl ↓',
+            bgGrad: 'linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(203, 213, 225, 0.98) 100%)' 
+        },
+        'AgI_PRECIPITATE': { 
+            color: 'rgb(234, 179, 8)', 
+            label: 'AgI ↓',
+            bgGrad: 'linear-gradient(180deg, rgba(250, 204, 21, 0.9) 0%, rgba(202, 138, 4, 0.98) 100%)' 
+        },
+        'AlOH3_PRECIPITATE': { 
+            color: 'rgba(241, 245, 249, 0.95)', 
+            label: 'Al(OH)₃ ↓',
+            bgGrad: 'linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(226, 232, 240, 0.98) 100%)' 
+        },
+        'FeOH2_PRECIPITATE': { 
+            color: 'rgb(34, 197, 94)', 
+            label: 'Fe(OH)₂ ↓',
+            bgGrad: 'linear-gradient(180deg, rgba(74, 222, 128, 0.9) 0%, rgba(22, 101, 52, 0.98) 100%)' 
+        },
+        'FeOH3_PRECIPITATE': { 
+            color: 'rgb(180, 83, 9)', 
+            label: 'Fe(OH)₃ ↓',
+            bgGrad: 'linear-gradient(180deg, rgba(217, 119, 6, 0.9) 0%, rgba(146, 64, 14, 0.98) 100%)' 
+        },
+        'TRIBROMOPHENOL_PRECIPITATE': { 
+            color: 'rgba(248, 250, 252, 0.95)', 
+            label: '2,4,6-tribromophenol ↓',
+            bgGrad: 'linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(226, 232, 240, 0.98) 100%)' 
+        }
+    };
+
+    let activePrecipitate: { color: string; label: string; bgGrad: string; volume: number } | null = null;
+    if (container.contents) {
+        for (const [chemId, vol] of Object.entries(container.contents)) {
+            if (vol && vol > 0.05) {
+                if (PRECIPITATE_DEFINITIONS[chemId]) {
+                    activePrecipitate = { ...PRECIPITATE_DEFINITIONS[chemId], volume: vol };
+                    break;
+                } else if (chemId.endsWith('_PRECIPITATE')) {
+                    const cleanName = chemId.replace('_PRECIPITATE', '') + ' ↓';
+                    activePrecipitate = {
+                        color: 'rgba(255, 255, 255, 0.9)',
+                        label: cleanName,
+                        bgGrad: 'linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(203, 213, 225, 0.98) 100%)',
+                        volume: vol
+                    };
+                    break;
+                }
+            }
+        }
+    }
+
+    const sedimentHeightPct = activePrecipitate && container.volume > 0
+        ? Math.min(35, Math.max(10, (activePrecipitate.volume / container.maxVol) * 85 * 1.6))
+        : 0;
+
+    // Volumetric Beer-Lambert Depth Gradient
+    const isTranslucent = (r > 210 && g > 210 && b > 210) || container.volume === 0;
+    const liquidBackground = isTranslucent 
+        ? `linear-gradient(180deg, rgba(${r}, ${g}, ${b}, 0.3) 0%, rgba(${r}, ${g}, ${b}, 0.55) 70%, rgba(${Math.max(0, r - 30)}, ${Math.max(0, g - 30)}, ${Math.max(0, b - 20)}, 0.75) 100%)`
+        : `linear-gradient(180deg, rgba(${Math.min(255, r + 45)}, ${Math.min(255, g + 45)}, ${Math.min(255, b + 45)}, 0.82) 0%, rgba(${r}, ${g}, ${b}, 0.9) 55%, rgba(${Math.max(0, r - 45)}, ${Math.max(0, g - 45)}, ${Math.max(0, b - 45)}, 0.98) 100%)`;
+
+    const backWaveColor = `rgb(${Math.max(0, r - 30)}, ${Math.max(0, g - 30)}, ${Math.max(0, b - 30)})`;
+    const frontWaveColor = `rgb(${Math.min(255, r + 25)}, ${Math.min(255, g + 25)}, ${Math.min(255, b + 25)})`;
 
     const label = id === 0 ? 'Alpha' : id === 1 ? 'Beta' : id === 2 ? 'Gamma' : 'Delta';
     const isFlask = container.type === 'flask';
@@ -395,7 +539,11 @@ const LabContainer: React.FC<LabContainerProps> = ({ id, isDragging, onDragStart
             onMouseDown={handlePourMouseDown}
             onMouseUp={handlePourMouseUp}
             onMouseLeave={handlePourMouseUp}
-            className={`pointer-events-auto container-wrapper ${isFlask ? 'flask-wrapper' : 'beaker-wrapper'} ${isDragging ? 'opacity-90 scale-105' : ''} ${!isDragging && !isSnapping ? 'hover:-translate-y-2' : ''} ${isExploding ? 'animate-pulse drop-shadow-[0_0_30px_rgba(245,158,11,0.85)]' : ''}`}
+            onClick={(e) => {
+                e.stopPropagation();
+                setSelectedContainerId(id);
+            }}
+            className={`pointer-events-auto container-wrapper ${isFlask ? 'flask-wrapper' : 'beaker-wrapper'} ${isDragging ? 'opacity-90 scale-105' : ''} ${!isDragging && !isSnapping ? 'hover:-translate-y-2' : ''} ${isExploding ? 'animate-pulse drop-shadow-[0_0_30px_rgba(245,158,11,0.85)]' : ''} ${isSelected ? 'ring-2 ring-cyan-400/90 shadow-[0_0_30px_rgba(6,182,212,0.5)]' : ''}`}
             style={{
                 position: 'absolute',
                 left: `${currentX}px`,
@@ -408,11 +556,90 @@ const LabContainer: React.FC<LabContainerProps> = ({ id, isDragging, onDragStart
             onDragLeave={handleDragLeave}
             onDrop={handleDrop}
         >
+            {/* Interactive Active Vessel Toolbar */}
+            {isSelected && (
+                <div 
+                    onClick={(e) => e.stopPropagation()}
+                    onPointerDown={(e) => e.stopPropagation()}
+                    onMouseDown={(e) => e.stopPropagation()}
+                    className="absolute -top-12 left-1/2 -translate-x-1/2 flex items-center gap-1.5 bg-[#050f1e]/90 border border-cyan-500/60 rounded-full px-2.5 py-1 backdrop-blur-md shadow-[0_0_15px_rgba(6,182,212,0.4)] z-50 whitespace-nowrap cursor-default animate-fade-in"
+                >
+                    <span className="text-[9px] font-mono font-bold text-cyan-300 uppercase tracking-wider flex items-center gap-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping" />
+                        {isVi ? 'Đang Chọn' : 'Active'}
+                    </span>
+                    <span className="text-cyan-800 text-[10px]">|</span>
+                    <button
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            clearContainer(id);
+                        }}
+                        title={isVi ? "Rửa sạch bình này" : "Rinse and empty this vessel"}
+                        className="text-[10px] hover:scale-110 text-cyan-400 hover:text-amber-300 transition-transform px-1 flex items-center gap-0.5 cursor-pointer"
+                    >
+                        <span>🧹</span>
+                        <span className="text-[8px] font-mono">{isVi ? 'Rửa' : 'Rinse'}</span>
+                    </button>
+                    <button
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            setShowBreakdown(prev => !prev);
+                        }}
+                        title={isVi ? "Xem thành phần chi tiết" : "View contents breakdown"}
+                        className="text-[10px] hover:scale-110 text-cyan-400 hover:text-cyan-200 transition-transform px-1 flex items-center gap-0.5 cursor-pointer"
+                    >
+                        <span>🧪</span>
+                        <span className="text-[8px] font-mono">{isVi ? 'Soi' : 'Info'}</span>
+                    </button>
+                    <button
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            removeContainer(id);
+                        }}
+                        title={isVi ? "Cất bình này" : "Remove this vessel"}
+                        className="text-[10px] hover:scale-110 text-rose-400 hover:text-rose-300 transition-transform px-1 flex items-center gap-0.5 cursor-pointer"
+                    >
+                        <span>🗑️</span>
+                    </button>
+                </div>
+            )}
+
+            {/* Contents Breakdown Popover */}
+            {showBreakdown && container.volume > 0 && (
+                <div 
+                    onClick={(e) => e.stopPropagation()}
+                    className="absolute -top-36 left-full ml-3 w-52 bg-[#040e1c]/95 border border-cyan-800/80 rounded-xl p-2.5 shadow-2xl backdrop-blur-xl z-50 font-mono text-[10px] text-slate-200 pointer-events-auto"
+                >
+                    <div className="flex items-center justify-between border-b border-cyan-900/60 pb-1 mb-1.5 font-bold text-cyan-300">
+                        <span>{isVi ? 'Thành Phần Dung Dịch' : 'Solution Contents'}</span>
+                        <span className="text-[9px] text-slate-400">{container.volume} mL</span>
+                    </div>
+                    <div className="flex flex-col gap-1 max-h-36 overflow-y-auto custom-scrollbar pr-0.5">
+                        {Object.entries(container.contents)
+                            .filter(([chemId, vol]) => !chemId.startsWith('reacted_') && vol > 0.05)
+                            .map(([chemId, vol]) => {
+                            const chem = CHEMICAL_REGISTRY[chemId];
+                            const chemName = chem ? ((chem.name as any)[language] || chem.name.EN) : chemId;
+                            const pct = ((vol / container.volume) * 100).toFixed(0);
+                            return (
+                                <div key={chemId} className="flex items-center justify-between text-[9px]">
+                                    <span className="truncate pr-1 text-slate-300">{chemName}</span>
+                                    <span className="shrink-0 text-cyan-400 font-bold">{vol}mL ({pct}%)</span>
+                                </div>
+                            );
+                        })}
+                    </div>
+                    <div className="mt-1.5 pt-1 border-t border-cyan-950 flex justify-between text-[9px] text-amber-300 font-bold">
+                        <span>pH: {container.ph.toFixed(2)}</span>
+                        <span>{thermoState?.isFrozen ? '❄ Đông' : thermoState?.isBoiling ? '♨ Sôi' : 'Lỏng'}</span>
+                    </div>
+                </div>
+            )}
             {/* Reaction Thermal Overheat Aura */}
             {isExploding && (
                 <div className="absolute -inset-2 bg-gradient-to-t from-amber-500/30 via-yellow-400/20 to-transparent rounded-3xl animate-ping pointer-events-none blur-md" />
             )}
-            {/* Tabletop Cast Shadow Underneath Vessel */}
+            {/* Tabletop Cast Shadow & Refractive Optical Caustic Underneath Vessel */}
             <div 
                 className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 w-28 h-5 bg-black/60 rounded-full blur-[3px] pointer-events-none transition-all duration-200"
                 style={{
@@ -420,6 +647,16 @@ const LabContainer: React.FC<LabContainerProps> = ({ id, isDragging, onDragStart
                     opacity: isDragging ? 0.35 : 0.75
                 }}
             />
+            {container.volume > 0 && (
+                <div 
+                    className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-24 h-4 rounded-full blur-[6px] pointer-events-none transition-all duration-300 mix-blend-screen"
+                    style={{
+                        background: `radial-gradient(ellipse at center, rgba(${r}, ${g}, ${b}, 0.6) 0%, rgba(${r}, ${g}, ${b}, 0.15) 60%, transparent 85%)`,
+                        transform: `translateX(-50%) scale(${isDragging ? 0.7 : 1})`,
+                        opacity: isDragging ? 0.2 : 0.85
+                    }}
+                />
+            )}
 
             {/* Billowing Steam & Vapor Emitter Plume */}
             {thermoState && (thermoState.isBoiling || thermoState.isSimmering) && container.volume > 0 && (
@@ -545,13 +782,41 @@ const LabContainer: React.FC<LabContainerProps> = ({ id, isDragging, onDragStart
 
             <div className={`liquid-clip-wrapper ${isFlask ? 'flask-clip' : 'beaker-clip'}`}>
                 <div
-                    className={`container-liquid`}
-                    style={{ height: `${heightPct}%`, backgroundColor: rgbaColor }}
+                    className="container-liquid"
+                    style={{ 
+                        height: `${heightPct}%`, 
+                        background: liquidBackground 
+                    }}
                 >
                     {container.volume > 0 && !thermoState?.isFrozen && (
-                        <svg className="wave-svg" style={{ fill: rgbColor }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 40" preserveAspectRatio="none">
-                            <path d="M0,20 Q100,40 200,20 T400,20 T600,20 T800,20 L800,40 L0,40 Z"></path>
-                        </svg>
+                        <>
+                            {/* Layer 1: Out-of-phase deep ambient back wave */}
+                            <svg className="wave-svg-back" style={{ fill: backWaveColor }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 40" preserveAspectRatio="none">
+                                <path d="M0,20 Q100,5 200,20 T400,20 T600,20 T800,20 L800,40 L0,40 Z"></path>
+                            </svg>
+                            {/* Layer 2: Foreground illuminated crest wave */}
+                            <svg className="wave-svg-front" style={{ fill: frontWaveColor }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 40" preserveAspectRatio="none">
+                                <path d="M0,20 Q100,35 200,20 T400,20 T600,20 T800,20 L800,40 L0,40 Z"></path>
+                            </svg>
+                            {/* Layer 3: Physical Meniscus specular sheen line */}
+                            <div className="liquid-meniscus-sheen" />
+                        </>
+                    )}
+
+                    {/* Settled Insoluble Precipitate Sediment Layer at vessel floor */}
+                    {activePrecipitate && sedimentHeightPct > 0 && (
+                        <div 
+                            className="sediment-layer flex items-center justify-center overflow-hidden"
+                            style={{ 
+                                height: `${sedimentHeightPct}%`,
+                                background: activePrecipitate.bgGrad
+                            }}
+                            title={`${activePrecipitate.label} (${activePrecipitate.volume} mL)`}
+                        >
+                            <span className="text-[8px] font-mono font-bold text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)] opacity-90 select-none pointer-events-none truncate px-1">
+                                {activePrecipitate.label}
+                            </span>
+                        </div>
                     )}
                 </div>
             </div>

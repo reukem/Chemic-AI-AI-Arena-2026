@@ -1,13 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSimulationStore } from '../engine/store';
 import { CHEMICAL_REGISTRY } from '../data/ChemicalRegistry';
 import { audioManager } from '../engine/AudioManager';
+import { ReactionMechanismModal } from './ReactionMechanismModal';
+import { StoichiometryIceModal } from './StoichiometryIceModal';
 
 const ReactionPopup: React.FC = () => {
     const pendingReaction = useSimulationStore(state => state.pendingReaction);
     const resolvePendingReaction = useSimulationStore(state => state.resolvePendingReaction);
     const language = useSimulationStore(state => state.language);
     const isVi = language === 'VN' || language === 'vi';
+
+    const [isMechOpen, setIsMechOpen] = useState(false);
+    const [isIceOpen, setIsIceOpen] = useState(false);
 
     const handleDismiss = () => {
         try {
@@ -21,6 +26,7 @@ const ReactionPopup: React.FC = () => {
 
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
+            if (isMechOpen || isIceOpen) return;
             if (pendingReaction && (e.key === 'Enter' || e.key === ' ' || e.key === 'Escape')) {
                 e.preventDefault();
                 handleDismiss();
@@ -28,13 +34,13 @@ const ReactionPopup: React.FC = () => {
         };
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown);
-    }, [pendingReaction, resolvePendingReaction]);
+    }, [pendingReaction, resolvePendingReaction, isMechOpen, isIceOpen]);
 
     if (!pendingReaction) return null;
 
     const r0 = CHEMICAL_REGISTRY[pendingReaction.reactants?.[0]];
-    const r1 = CHEMICAL_REGISTRY[pendingReaction.reactants?.[1]];33
-    const prod = CHEMICAL_REGISTRY[pendingReaction.product];33
+    const r1 = CHEMICAL_REGISTRY[pendingReaction.reactants?.[1]];
+    const prod = CHEMICAL_REGISTRY[pendingReaction.product];
 
     const equationText = isVi 
         ? (pendingReaction.equation?.VN || `${r0?.formula || ''} + ${r1?.formula || ''} → ${prod?.formula || ''}`)
@@ -50,7 +56,7 @@ const ReactionPopup: React.FC = () => {
 
     return (
         <div 
-            onClick={(e) => { if (e.target === e.currentTarget) handleDismiss(); }}
+            onClick={(e) => { /* Critical hazard modal requires explicit acknowledgement, not backdrop dismissal */ }}
             className="fixed inset-0 z-[200] flex items-center justify-center bg-black/85 backdrop-blur-md pointer-events-auto p-4 overflow-hidden select-none animate-in fade-in duration-200"
         >
             {/* Blinding Screen Flash */}
@@ -73,7 +79,7 @@ const ReactionPopup: React.FC = () => {
                             <div className="flex items-center gap-2">
                                 <span className="w-2 h-2 rounded-full bg-red-500 shadow-[0_0_8px_#ef4444] animate-ping" />
                                 <span className="text-red-400 font-mono text-[10px] font-black tracking-[0.25em] uppercase">
-                                    {isVi ? 'CẢNH BÁO PHÒNG THÍ NGHIỆM' : 'CRITICAL LAB PROTOCOL // HAZARD'}
+                                    {isVi ? 'CẢNH BÁO: CRITICAL REACTION // NGUY HIỂM' : 'CRITICAL REACTION // LAB HAZARD PROTOCOL'}
                                 </span>
                             </div>
                             <h2 className="text-lg md:text-xl font-black text-white tracking-wide uppercase">
@@ -90,7 +96,7 @@ const ReactionPopup: React.FC = () => {
                             type="button"
                             onClick={handleDismiss}
                             className="w-8 h-8 rounded-full bg-red-950/80 hover:bg-rose-950 border border-red-700/60 hover:border-red-400 text-red-300 hover:text-white flex items-center justify-center text-xs font-mono font-bold transition-all cursor-pointer shadow-sm"
-                            title="Dismiss / Bỏ qua"
+                            title={isVi ? 'Bỏ qua' : 'Dismiss'}
                         >
                             ✕
                         </button>
@@ -144,11 +150,36 @@ const ReactionPopup: React.FC = () => {
 
                 {/* Pedagogical Deep Dive / Reaction Mechanism */}
                 <div className="relative z-10 bg-red-950/30 border border-red-500/40 rounded-2xl p-4 mb-6 shadow-inner">
-                    <div className="flex items-center gap-2 mb-1.5">
-                        <span className="text-sm">🔬</span>
-                        <span className="text-[10px] font-mono font-bold text-red-300 uppercase tracking-wider">
-                            {isVi ? 'BẢN CHẤT & CƠ CHẾ PHẢN ỨNG' : 'PEDAGOGICAL MECHANISM & INSIGHT'}
-                        </span>
+                    <div className="flex items-center justify-between gap-2 mb-1.5">
+                        <div className="flex items-center gap-2">
+                            <span className="text-sm">🔬</span>
+                            <span className="text-[10px] font-mono font-bold text-red-300 uppercase tracking-wider">
+                                {isVi ? 'BẢN CHẤT & CƠ CHẾ PHẢN ỨNG' : 'PEDAGOGICAL MECHANISM & INSIGHT'}
+                            </span>
+                        </div>
+
+                        {/* Interactive Deep-Dive Action Buttons */}
+                        <div className="flex items-center gap-1.5">
+                            <button
+                                type="button"
+                                onClick={() => { audioManager.playClick(); setIsMechOpen(true); }}
+                                className="px-2.5 py-1 bg-cyan-950/90 hover:bg-cyan-900 border border-cyan-400/60 rounded-lg text-cyan-200 font-mono text-[10px] font-bold flex items-center gap-1 shadow-sm transition-all active:scale-95 cursor-pointer"
+                                title={isVi ? 'Xem chuyển dịch electron từng bước' : 'Inspect electron arrow-pushing'}
+                            >
+                                <span>🎬</span>
+                                <span>{isVi ? 'CƠ CHẾ ELECTRON' : 'MECHANISM'}</span>
+                            </button>
+
+                            <button
+                                type="button"
+                                onClick={() => { audioManager.playClick(); setIsIceOpen(true); }}
+                                className="px-2.5 py-1 bg-amber-950/90 hover:bg-amber-900 border border-amber-400/60 rounded-lg text-amber-200 font-mono text-[10px] font-bold flex items-center gap-1 shadow-sm transition-all active:scale-95 cursor-pointer"
+                                title={isVi ? 'Xem bảng tính lượng chất I-C-E' : 'Inspect stoichiometry balance'}
+                            >
+                                <span>⚖️</span>
+                                <span>{isVi ? 'BẢNG I-C-E' : 'STOICHIOMETRY'}</span>
+                            </button>
+                        </div>
                     </div>
                     <p className="text-slate-200 text-xs md:text-sm leading-relaxed font-sans font-medium">
                         {mechanism}
@@ -168,10 +199,14 @@ const ReactionPopup: React.FC = () => {
                         }}
                         className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-mono font-bold text-xs md:text-sm rounded-xl tracking-widest uppercase transition-all shadow-[0_0_30px_rgba(239,68,68,0.5)] active:scale-95 cursor-pointer border border-red-400/60"
                     >
-                        {isVi ? 'XÁC NHẬN & TIẾP TỤC' : 'ACKNOWLEDGE & RESUME'}
+                        {isVi ? 'XÁC NHẬN (ACKNOWLEDGE)' : 'ACKNOWLEDGE & RESUME'}
                     </button>
                 </div>
             </div>
+
+            {/* Modals triggered from ReactionPopup */}
+            <ReactionMechanismModal isOpen={isMechOpen} onClose={() => setIsMechOpen(false)} isVi={isVi} />
+            <StoichiometryIceModal isOpen={isIceOpen} onClose={() => setIsIceOpen(false)} isVi={isVi} />
         </div>
     );
 };

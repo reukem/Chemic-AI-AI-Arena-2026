@@ -145,7 +145,9 @@ export const VietnamExamModal: React.FC<VietnamExamModalProps> = ({ isOpen, onCl
                                 }`}
                             >
                                 <div className="flex items-center justify-between">
-                                    <span className="text-[10px] font-mono font-bold text-red-300">Lớp {q.grade}</span>
+                                    <span className="text-[10px] font-mono font-bold text-red-300">
+                                        {isVi ? `Lớp ${q.grade}` : `Grade ${q.grade}`}
+                                    </span>
                                     {isDone && <span className="text-emerald-400 text-xs font-bold">✓</span>}
                                 </div>
                                 <span className="text-[11px] font-bold text-slate-200 line-clamp-1 mt-1">

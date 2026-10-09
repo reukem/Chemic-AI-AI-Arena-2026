@@ -157,18 +157,28 @@ export const CompetencyRadarModal: React.FC<CompetencyRadarModalProps> = ({ isOp
                             />
 
                             {/* Axis Labels */}
-                            <text x={center} y={center - radius - 8} textAnchor="middle" fill="#67e8f9" fontSize="9" fontWeight="bold" fontFamily="monospace">LƯỢNG CHẤT</text>
-                            <text x={center + radius + 15} y={center - 20} textAnchor="start" fill="#67e8f9" fontSize="9" fontWeight="bold" fontFamily="monospace">NHIỆT ĐỘNG</text>
-                            <text x={center + radius - 10} y={center + radius + 14} textAnchor="start" fill="#67e8f9" fontSize="9" fontWeight="bold" fontFamily="monospace">HỮU CƠ</text>
-                            <text x={center - radius + 10} y={center + radius + 14} textAnchor="end" fill="#67e8f9" fontSize="9" fontWeight="bold" fontFamily="monospace">AN TOÀN</text>
-                            <text x={center - radius - 15} y={center - 20} textAnchor="end" fill="#67e8f9" fontSize="9" fontWeight="bold" fontFamily="monospace">VÔ CƠ</text>
+                            <text x={center} y={center - radius - 8} textAnchor="middle" fill="#67e8f9" fontSize="9" fontWeight="bold" fontFamily="monospace">
+                                {isVi ? 'LƯỢNG CHẤT' : 'STOICHIOMETRY'}
+                            </text>
+                            <text x={center + radius + 15} y={center - 20} textAnchor="start" fill="#67e8f9" fontSize="9" fontWeight="bold" fontFamily="monospace">
+                                {isVi ? 'NHIỆT ĐỘNG' : 'THERMODYNAMICS'}
+                            </text>
+                            <text x={center + radius - 10} y={center + radius + 14} textAnchor="start" fill="#67e8f9" fontSize="9" fontWeight="bold" fontFamily="monospace">
+                                {isVi ? 'HỮU CƠ' : 'ORGANIC'}
+                            </text>
+                            <text x={center - radius + 10} y={center + radius + 14} textAnchor="end" fill="#67e8f9" fontSize="9" fontWeight="bold" fontFamily="monospace">
+                                {isVi ? 'AN TOÀN' : 'SAFETY'}
+                            </text>
+                            <text x={center - radius - 15} y={center - 20} textAnchor="end" fill="#67e8f9" fontSize="9" fontWeight="bold" fontFamily="monospace">
+                                {isVi ? 'VÔ CƠ' : 'INORGANIC'}
+                            </text>
                         </svg>
 
                         <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-[10px] font-mono text-slate-300 w-full mt-3 pt-2 border-t border-cyan-950">
-                            <div>Tính toán: <strong className="text-cyan-300">{competencies.stoichiometry}%</strong></div>
-                            <div>Nhiệt động: <strong className="text-cyan-300">{competencies.thermodynamics}%</strong></div>
-                            <div>Hóa hữu cơ: <strong className="text-cyan-300">{competencies.organic}%</strong></div>
-                            <div>An toàn: <strong className="text-cyan-300">{competencies.safety}%</strong></div>
+                            <div>{isVi ? 'Tính toán:' : 'Calculations:'} <strong className="text-cyan-300">{competencies.stoichiometry}%</strong></div>
+                            <div>{isVi ? 'Nhiệt động:' : 'Thermodynamics:'} <strong className="text-cyan-300">{competencies.thermodynamics}%</strong></div>
+                            <div>{isVi ? 'Hóa hữu cơ:' : 'Organic:'} <strong className="text-cyan-300">{competencies.organic}%</strong></div>
+                            <div>{isVi ? 'An toàn:' : 'Lab Safety:'} <strong className="text-cyan-300">{competencies.safety}%</strong></div>
                         </div>
                     </div>
 
@@ -199,10 +209,10 @@ export const CompetencyRadarModal: React.FC<CompetencyRadarModalProps> = ({ isOp
 
                         <div className="flex items-center justify-between pt-2 border-t border-cyan-900/40 text-[9px] font-mono text-slate-400">
                             <div>
-                                <span>Ký tên: </span>
-                                <strong className="text-cyan-300">Giáo sư Lucy</strong>
+                                <span>{isVi ? 'Ký tên: ' : 'Signed: '}</span>
+                                <strong className="text-cyan-300">{isVi ? 'Giáo sư Lucy' : 'Professor Lucy'}</strong>
                             </div>
-                            <span className="text-emerald-400 font-bold">✓ Xác thực trên Chuỗi</span>
+                            <span className="text-emerald-400 font-bold">{isVi ? '✓ Xác thực trên Chuỗi' : '✓ Blockchain Verified'}</span>
                         </div>
                     </div>
                 </div>

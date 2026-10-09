@@ -2,6 +2,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { OrganicTokenData } from '../../data/organicSandboxData';
 import { audioManager } from '../../engine/AudioManager';
+import ChemicalStructureViewer from './ChemicalStructureViewer';
 import lucyFacePFP from '../../assets/lucy_FACE_PFP_clean.png';
 
 interface MolecularCardModalProps {
@@ -81,17 +82,15 @@ export const MolecularCardModal: React.FC<MolecularCardModalProps> = ({
             </button>
           </div>
 
-          {/* Structural Formula Display */}
-          {compound.structuralFormula && (
-            <div className="mb-5 p-4 rounded-2xl bg-[#020712] border border-cyan-950 shadow-inner flex flex-col items-center justify-center gap-1.5">
-              <span className="text-[9px] font-mono uppercase tracking-[0.25em] text-slate-500 font-bold">
-                {isVi ? 'CẤU TRÚC PHÂN TỬ // 2D' : 'MOLECULAR STRUCTURE // 2D'}
-              </span>
-              <div className="font-mono text-xl md:text-2xl font-black text-cyan-200 tracking-widest drop-shadow-[0_0_12px_rgba(34,211,238,0.3)]">
-                {compound.structuralFormula}
-              </div>
-            </div>
-          )}
+          {/* High-Fidelity 2D Chemical Structure & Lewis Viewer */}
+          <ChemicalStructureViewer 
+            id={compound.id} 
+            name={compound.name} 
+            formula={compound.structuralFormula || compound.formula} 
+            color={compound.color} 
+            isVi={isVi} 
+            className="mb-5"
+          />
 
           {/* Description & Uses */}
           <div className="space-y-3.5 mb-6 text-xs leading-relaxed text-slate-200">

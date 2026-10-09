@@ -300,7 +300,9 @@ Use clean markdown formatting, chemical formulas (e.g. H2SO4, NaOH), reaction co
                             >
                                 <option value="Middle School Chemistry (Grades 6-8)">Middle School (Grades 6-8)</option>
                                 <option value="General High School (Grades 9-11)">General High School</option>
-                                <option value="Vietnamese High School Graduation Exam (THPTQG)">VN THPT Quốc Gia</option>
+                                <option value="Vietnamese High School Graduation Exam (THPTQG)">
+                                    {isVi ? 'VN THPT Quốc Gia' : 'VN National Exam'}
+                                </option>
                                 <option value="Advanced Placement (AP) / IB Chemistry">AP / IB Chemistry</option>
                                 <option value="University Chemistry (General & Organic)">University Level</option>
                             </select>

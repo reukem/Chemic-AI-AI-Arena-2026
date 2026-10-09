@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useSimulationStore } from '../engine/store';
 import * as RAW_REGISTRY from '../data/ChemicalRegistry';
 import { getSubstanceStructureProfile } from '../data/ChemicalStructureData';
+import ChemicalStructureViewer from './components/ChemicalStructureViewer';
 import katex from 'katex';
 import 'katex/dist/katex.min.css';
 
@@ -12,9 +13,11 @@ const ATOMIC_DATA: Record<string, { z: number, m: number, v?: string }> = {
   'F': { z: 9, m: 18.998, v: '-1' }, 'Ne': { z: 10, m: 20.180, v: '0' }, 'Na': { z: 11, m: 22.990, v: '+1' }, 'Mg': { z: 12, m: 24.305, v: '+2' },
   'Al': { z: 13, m: 26.982, v: '+3' }, 'Si': { z: 14, m: 28.085, v: '-4, +4' }, 'P': { z: 15, m: 30.974, v: '-3, +3, +5' }, 'S': { z: 16, m: 32.06, v: '-2, +4, +6' },
   'Cl': { z: 17, m: 35.45, v: '-1, +1..+7' }, 'Ar': { z: 18, m: 39.95, v: '0' }, 'K': { z: 19, m: 39.098, v: '+1' }, 'Ca': { z: 20, m: 40.078, v: '+2' },
+  'Ti': { z: 22, m: 47.87, v: '+2, +3, +4' }, 'Cr': { z: 24, m: 51.996, v: '+2, +3, +6' }, 'Mn': { z: 25, m: 54.938, v: '+2, +4, +7' },
   'Fe': { z: 26, m: 55.845, v: '+2, +3' }, 'Co': { z: 27, m: 58.933, v: '+2, +3' }, 'Ni': { z: 28, m: 58.693, v: '+2' }, 'Cu': { z: 29, m: 63.546, v: '+1, +2' },
-  'Zn': { z: 30, m: 65.38, v: '+2' }, 'Br': { z: 35, m: 79.904, v: '-1, +1..+5' }, 'Rb': { z: 37, m: 85.468, v: '+1' }, 'Ag': { z: 47, m: 107.87, v: '+1' },
-  'I': { z: 53, m: 126.90, v: '-1, +1..+7' }, 'Cs': { z: 55, m: 132.91, v: '+1' }, 'Ba': { z: 56, m: 137.33, v: '+2' }, 'Au': { z: 79, m: 196.97, v: '+1, +3' },
+  'Zn': { z: 30, m: 65.38, v: '+2' }, 'Br': { z: 35, m: 79.904, v: '-1, +1..+5' }, 'Rb': { z: 37, m: 85.468, v: '+1' }, 'Sr': { z: 38, m: 87.62, v: '+2' },
+  'Ag': { z: 47, m: 107.87, v: '+1' }, 'Sn': { z: 50, m: 118.71, v: '+2, +4' }, 'I': { z: 53, m: 126.90, v: '-1, +1..+7' }, 'Cs': { z: 55, m: 132.91, v: '+1' },
+  'Ba': { z: 56, m: 137.33, v: '+2' }, 'Pt': { z: 78, m: 195.08, v: '+2, +4' }, 'Au': { z: 79, m: 196.97, v: '+1, +3' }, 'Hg': { z: 80, m: 200.59, v: '+1, +2' },
   'Pb': { z: 82, m: 207.2, v: '+2, +4' }
 };
 
@@ -128,6 +131,126 @@ const INORGANIC_EXPANSION = [
       VN: 'Khí trơ phổ biến thứ 3 trong khí quyển, dùng làm khí bảo vệ khi hàn kim loại.' 
     }, 
     color: '#c084fc' 
+  },
+  { 
+    id: 'Be', formula: 'Be (s)', 
+    name: { EN: 'Beryllium', VN: 'Beri' }, 
+    category: 'ALKALINE_EARTH', 
+    desc: { 
+      EN: 'Lightweight, steel-gray alkaline earth metal with amphoteric chemistry.', 
+      VN: 'Kim loại kiềm thổ nhẹ màu xám thép có tính chất hóa học lưỡng tính.' 
+    }, 
+    color: '#94a3b8' 
+  },
+  { 
+    id: 'Ti', formula: 'Ti (s)', 
+    name: { EN: 'Titanium', VN: 'Titan' }, 
+    category: 'TRANSITION_METAL', 
+    desc: { 
+      EN: 'Corrosion-resistant lustrous transition metal with supreme tensile strength.', 
+      VN: 'Kim loại chuyển tiếp sáng bóng siêu bền, kháng ăn mòn hóa học vượt trội.' 
+    }, 
+    color: '#e2e8f0' 
+  },
+  { 
+    id: 'Cr', formula: 'Cr (s)', 
+    name: { EN: 'Chromium', VN: 'Crom' }, 
+    category: 'TRANSITION_METAL', 
+    desc: { 
+      EN: 'Hardest metallic element in the periodic table (8.5 Mohs), iconic mirror polish.', 
+      VN: 'Kim loại cứng nhất bảng tuần hoàn (8.5 Mohs), bề mặt bóng loáng như gương.' 
+    }, 
+    color: '#cbd5e1' 
+  },
+  { 
+    id: 'Mn', formula: 'Mn (s)', 
+    name: { EN: 'Manganese', VN: 'Mangan' }, 
+    category: 'TRANSITION_METAL', 
+    desc: { 
+      EN: 'Versatile transition metal exhibiting rich redox states from +2 to +7.', 
+      VN: 'Kim loại chuyển tiếp đa năng với nhiều trạng thái oxi hóa phong phú từ +2 đến +7.' 
+    }, 
+    color: '#94a3b8' 
+  },
+  { 
+    id: 'Co', formula: 'Co (s)', 
+    name: { EN: 'Cobalt', VN: 'Coban' }, 
+    category: 'TRANSITION_METAL', 
+    desc: { 
+      EN: 'Ferromagnetic transition metal known for vivid blue and pink coordination complexes.', 
+      VN: 'Kim loại sắt từ nổi tiếng với các phức chất màu hồng và xanh lam coban rực rỡ.' 
+    }, 
+    color: '#64748b' 
+  },
+  { 
+    id: 'Ni', formula: 'Ni (s)', 
+    name: { EN: 'Nickel', VN: 'Niken' }, 
+    category: 'TRANSITION_METAL', 
+    desc: { 
+      EN: 'Silvery-white metal with slight golden hue, renowned hydrogenation catalyst.', 
+      VN: 'Kim loại trắng bạc hơi ánh vàng, xúc tác hydro hóa danh tiếng trong hóa hữu cơ.' 
+    }, 
+    color: '#cbd5e1' 
+  },
+  { 
+    id: 'Sr', formula: 'Sr (s)', 
+    name: { EN: 'Strontium', VN: 'Stronti' }, 
+    category: 'ALKALINE_EARTH', 
+    desc: { 
+      EN: 'Alkaline earth metal producing brilliant crimson-red flame in pyrotechnics.', 
+      VN: 'Kim loại kiềm thổ cháy cho ngọn lửa màu đỏ thắm rực rỡ trong pháo hoa.' 
+    }, 
+    color: '#cbd5e1' 
+  },
+  { 
+    id: 'Sn', formula: 'Sn (s)', 
+    name: { EN: 'Tin', VN: 'Thiếc' }, 
+    category: 'POST_TRANSITION', 
+    desc: { 
+      EN: 'Malleable silvery metal with characteristic acoustic "tin cry" upon bending.', 
+      VN: 'Kim loại trắng bạc mềm dẻo, phát ra âm thanh "tiếng khóc của thiếc" khi uốn.' 
+    }, 
+    color: '#e2e8f0' 
+  },
+  { 
+    id: 'Pt', formula: 'Pt (s)', 
+    name: { EN: 'Platinum', VN: 'Bạch Kim' }, 
+    category: 'NOBLE_METAL', 
+    desc: { 
+      EN: 'Highly unreactive dense noble metal, prized for catalyst converters and jewelry.', 
+      VN: 'Kim loại quý cực kỳ trơ và bền, dùng trong trang sức và xúc tác công nghiệp.' 
+    }, 
+    color: '#e2e8f0' 
+  },
+  { 
+    id: 'Au', formula: 'Au (s)', 
+    name: { EN: 'Gold', VN: 'Vàng' }, 
+    category: 'NOBLE_METAL', 
+    desc: { 
+      EN: 'Most noble of metals, impervious to oxidation, dissolves only in royal Aqua Regia.', 
+      VN: 'Kim loại quý sáng chói, bất khả oxi hóa, chỉ tan trong nước cường toan hoàng gia.' 
+    }, 
+    color: '#facc15' 
+  },
+  { 
+    id: 'Hg', formula: 'Hg (l)', 
+    name: { EN: 'Mercury', VN: 'Thủy Ngân' }, 
+    category: 'TRANSITION_METAL', 
+    desc: { 
+      EN: 'Only elemental liquid metal at STP. Neutralized on contact by powdered sulfur.', 
+      VN: 'Kim loại thể lỏng duy nhất ở STP. Vô hiệu hóa tức thì bằng bột lưu huỳnh.' 
+    }, 
+    color: '#94a3b8' 
+  },
+  { 
+    id: 'Pb', formula: 'Pb (s)', 
+    name: { EN: 'Lead', VN: 'Chì' }, 
+    category: 'POST_TRANSITION', 
+    desc: { 
+      EN: 'Dense heavy metal with high density and excellent radiation shielding capacity.', 
+      VN: 'Kim loại nặng mềm có tỷ trọng lớn và khả năng chắn tia phóng xạ tuyệt vời.' 
+    }, 
+    color: '#475569' 
   }
 ];
 
@@ -532,7 +655,7 @@ export default function ReagentDatabase({ onBack }: { onBack: () => void }) {
         
         {/* Filter Pills & Search Ribbon */}
         <div className="flex flex-col xl:flex-row justify-between items-start xl:items-center gap-3 w-full bg-[#070f1e]/80 p-2.5 rounded-2xl border border-cyan-900/40 backdrop-blur-xl shadow-xl">
-          <div className="flex gap-1.5 overflow-x-auto custom-scrollbar flex-1 w-full items-center px-1">
+          <div className="flex gap-1.5 overflow-x-auto custom-scrollbar flex-1 w-full items-center px-1 pb-1.5 pt-0.5">
             <span className="text-[10px] font-mono text-cyan-400 font-bold mr-2 uppercase tracking-wider">
               {isVi ? 'Phân loại:' : 'Filters:'}
             </span>
@@ -794,11 +917,13 @@ export default function ReagentDatabase({ onBack }: { onBack: () => void }) {
                             <div className="py-4 px-5 rounded-2xl bg-gradient-to-br from-[#06152a] via-[#040e1d] to-[#020712] border border-cyan-500/30 flex flex-col items-center justify-center text-center shadow-[0_0_25px_rgba(6,182,212,0.15)] relative overflow-hidden group">
                               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(56,189,248,0.12)_0%,transparent_70%)] pointer-events-none" />
 
-                              {/* Rendered LaTeX Formula with Glowing Gradient Typography */}
-                              <div 
-                                className="relative z-10 text-2xl md:text-3xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-sky-100 to-indigo-300 drop-shadow-[0_0_16px_rgba(34,211,238,0.6)] py-1.5 px-3 select-text flex items-center justify-center [&_.katex]:font-bold [&_.katex]:text-cyan-200 [&_.mrel]:text-cyan-300 [&_.mbin]:text-purple-300"
-                                dangerouslySetInnerHTML={{ __html: renderLatex(structureProfile.latexFormula) }}
-                              />
+                              {/* Rendered LaTeX Formula with Responsive Typography & Overflow Protection */}
+                              <div className="relative z-10 w-full max-w-full overflow-x-auto py-2 px-3 flex items-center justify-center custom-scrollbar">
+                                <div 
+                                  className="text-lg sm:text-xl md:text-2xl font-black tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-sky-100 to-indigo-300 drop-shadow-[0_0_16px_rgba(34,211,238,0.6)] py-1 select-text whitespace-nowrap [&_.katex]:font-bold [&_.katex]:text-cyan-200 [&_.mrel]:text-cyan-300 [&_.mbin]:text-purple-300"
+                                  dangerouslySetInnerHTML={{ __html: renderLatex(structureProfile.latexFormula) }}
+                                />
+                              </div>
 
                               {/* Clean text representation */}
                               <span className="relative z-10 font-mono text-xs font-bold text-cyan-400/80 mt-1 select-text tracking-wider">
@@ -810,6 +935,15 @@ export default function ReagentDatabase({ onBack }: { onBack: () => void }) {
                                 {isVi ? structureProfile.geometry.VN : structureProfile.geometry.EN}
                               </span>
                             </div>
+
+                            {/* Interactive 2D Vector / Lewis / Electron Structure Engine */}
+                            <ChemicalStructureViewer 
+                              id={selected.id} 
+                              name={selected.name}
+                              formula={selected.formula} 
+                              isVi={isVi} 
+                              className="mt-2 border-cyan-900/40"
+                            />
 
                             {/* Detailed Chemical Bonding Description */}
                             <div className="text-[11px] text-slate-300 bg-[#071324]/60 border border-cyan-950 p-2.5 rounded-xl flex items-start gap-2">

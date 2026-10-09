@@ -7,6 +7,7 @@ import {
   OrganicPuzzle, 
   OrganicFragment 
 } from '../data/organicPuzzles';
+import ChemicalStructureViewer from './components/ChemicalStructureViewer';
 import lucyFacePFP from '../assets/lucy_FACE_PFP_clean.png';
 import lucySpeak from '../assets/lucy_learning_speak_clean.png';
 import lucyIdle from '../assets/lucy_learning_idle_clean.png';
@@ -724,15 +725,14 @@ export const OrganicPuzzleView: React.FC<OrganicPuzzleViewProps> = ({
                 </p>
               </div>
 
-              {/* Structural Formula Display */}
-              <div className="bg-black/50 border border-slate-800 rounded-2xl p-4 flex flex-col items-center justify-center gap-1">
-                <span className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">
-                  {language === 'EN' ? 'STRUCTURAL BACKBONE' : 'CẤU TRÚC PHÂN TỬ'}
-                </span>
-                <span className="text-xl md:text-2xl font-black font-mono tracking-widest text-cyan-200">
-                  {currentPuzzle.structuralFormula}
-                </span>
-              </div>
+              {/* High-Fidelity 2D Chemical Structure & Lewis Viewer */}
+              <ChemicalStructureViewer 
+                id={currentPuzzle.id} 
+                name={currentPuzzle.name} 
+                formula={currentPuzzle.structuralFormula || currentPuzzle.formula} 
+                isVi={language !== 'EN'} 
+                className="border-cyan-900/60 my-1"
+              />
 
               {/* Trivia & Applications */}
               <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-4 text-left">

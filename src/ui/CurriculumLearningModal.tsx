@@ -87,20 +87,29 @@ export const CurriculumLearningModal: React.FC<CurriculumLearningModalProps> = (
 
     const handleLoadToLab = (reagents: string[]) => {
         audioManager.playClick();
-        const addReagent = useSimulationStore.getState().addReagent;
-        const flushAll = useSimulationStore.getState().flushAll;
+        const state = useSimulationStore.getState();
 
-        flushAll();
+        // 1. Reset lab bench and spawn a fresh beaker
+        state.flushAll();
+        state.spawnContainer('beaker');
 
+        // 2. Dispense suggested chemicals into the beaker
         setTimeout(() => {
-            reagents.forEach((chemId, idx) => {
-                if (containers[idx] && CHEMICAL_REGISTRY[chemId]) {
-                    addReagent(idx, chemId);
-                }
+            const currentContainers = useSimulationStore.getState().containers;
+            const targetId = currentContainers.length > 0 ? currentContainers[0].id : 0;
+
+            const validReagents = (reagents || []).filter(rId => CHEMICAL_REGISTRY[rId]);
+            const dose = validReagents.length > 0 ? Math.min(30, Math.floor(60 / validReagents.length)) : 20;
+
+            validReagents.forEach((chemId) => {
+                useSimulationStore.getState().addReagentToContainer(targetId, chemId, dose);
             });
+
+            // 3. Switch to lab workbench and close modal
+            useSimulationStore.getState().setActiveTab('lab');
+            useSimulationStore.getState().setAppState('WORKBENCH');
             onClose();
-            setAppState('RUNNING');
-        }, 150);
+        }, 120);
     };
 
     return (
@@ -146,6 +155,17 @@ export const CurriculumLearningModal: React.FC<CurriculumLearningModalProps> = (
 
                 {/* Right Action Tools */}
                 <div className="flex items-center gap-2 md:gap-3">
+                    {/* Open Calculating Board / Formulas Button */}
+                    <button
+                        type="button"
+                        onClick={() => { audioManager.playClick(); useSimulationStore.getState().setCalculatingMode(true); }}
+                        title={isVi ? 'Mở Bảng Công Thức & Máy Tính Hóa Học' : 'Open Formula Board & Calculator'}
+                        className="px-3 py-1.5 bg-amber-950/80 hover:bg-amber-900 border border-amber-600/70 rounded-xl text-amber-300 hover:text-white font-mono text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 shadow-sm"
+                    >
+                        <span>🧮</span>
+                        <span className="hidden sm:inline">{isVi ? 'BẢNG CÔNG THỨC' : 'FORMULAS'}</span>
+                    </button>
+
                     {/* Copy Lesson Notes Button */}
                     <button
                         type="button"

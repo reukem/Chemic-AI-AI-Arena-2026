@@ -103,7 +103,7 @@ const EducationalInsightModal: React.FC = () => {
                             type="button"
                             onClick={handleAcknowledge}
                             className="w-8 h-8 rounded-full bg-cyan-950/80 hover:bg-rose-950/80 border border-cyan-700/60 hover:border-rose-500 text-cyan-300 hover:text-rose-300 flex items-center justify-center text-xs font-mono font-bold transition-all cursor-pointer shadow-sm"
-                            title="Close / Đóng"
+                            title={isVi ? 'Đóng' : 'Close'}
                         >
                             ✕
                         </button>

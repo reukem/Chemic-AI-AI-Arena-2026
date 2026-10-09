@@ -69,7 +69,7 @@ export const OrganicMode: React.FC = () => {
   }, [discoveredIds]);
 
   // Sidebar controls
-  const [activeTab, setActiveTab] = useState<'ALL' | 'STARTERS' | 'DISCOVERIES'>('ALL');
+  const [activeTab, setActiveTab] = useState<'ALL' | 'STARTERS' | 'DISCOVERIES' | 'CATALOG'>('ALL');
   const [searchQuery, setSearchQuery] = useState('');
 
   // Drag interaction states
@@ -125,8 +125,10 @@ export const OrganicMode: React.FC = () => {
       ];
     } else if (activeTab === 'STARTERS') {
       items = Object.values(STARTER_FRAGMENTS);
-    } else {
+    } else if (activeTab === 'DISCOVERIES') {
       items = discoveredIds.map(id => CRAFTABLE_COMPOUNDS[id]).filter(Boolean);
+    } else if (activeTab === 'CATALOG') {
+      items = Object.values(CRAFTABLE_COMPOUNDS);
     }
 
     if (!searchQuery.trim()) return items;
@@ -853,7 +855,7 @@ export const OrganicMode: React.FC = () => {
             />
 
             {/* Filter Tabs */}
-            <div className="grid grid-cols-3 gap-1.5 mt-2.5 font-mono text-[10px] font-bold uppercase">
+            <div className="grid grid-cols-4 gap-1 mt-2.5 font-mono text-[9px] font-bold uppercase">
               <button
                 onClick={() => { audioManager.playClick(); setActiveTab('ALL'); }}
                 className={`py-1.5 rounded-lg border transition-all cursor-pointer ${
@@ -872,7 +874,7 @@ export const OrganicMode: React.FC = () => {
                     : 'bg-[#020712]/60 border-slate-800 text-slate-400 hover:text-white'
                 }`}
               >
-                {isVi ? 'Gốc cơ bản' : 'Starters'}
+                {isVi ? 'Gốc' : 'Starters'}
               </button>
               <button
                 onClick={() => { audioManager.playClick(); setActiveTab('DISCOVERIES'); }}
@@ -882,7 +884,17 @@ export const OrganicMode: React.FC = () => {
                     : 'bg-[#020712]/60 border-slate-800 text-slate-400 hover:text-white'
                 }`}
               >
-                {isVi ? 'Đã chế tạo' : 'Discovered'} ({discoveredIds.length})
+                {isVi ? 'Đã tạo' : 'Found'} ({discoveredIds.length})
+              </button>
+              <button
+                onClick={() => { audioManager.playClick(); setActiveTab('CATALOG'); }}
+                className={`py-1.5 rounded-lg border transition-all cursor-pointer ${
+                  activeTab === 'CATALOG'
+                    ? 'bg-purple-950 border-purple-400 text-purple-200 shadow-sm'
+                    : 'bg-[#020712]/60 border-slate-800 text-slate-400 hover:text-white'
+                }`}
+              >
+                📚 {isVi ? 'Tra cứu' : 'Catalog'}
               </button>
             </div>
           </div>

@@ -696,6 +696,186 @@ export const SUBSTANCE_STRUCTURES: Record<string, SubstanceStructureProfile> = {
       EN: 'Covalent with Intermolecular Hydrogen Bonding',
       VN: 'Cộng hóa trị kèm liên kết Hydro liên phân tử'
     }
+  },
+  'GLYCEROL': {
+    electronConfig: {
+      full: {
+        EN: 'C: 1s² 2s² 2p²  •  H: 1s¹  •  O: 1s² 2s² 2p⁴',
+        VN: 'C: 1s² 2s² 2p²  •  H: 1s¹  •  O: 1s² 2s² 2p⁴'
+      },
+      nobleGas: {
+        EN: 'C: [He] 2s² 2p²  •  O: [He] 2s² 2p⁴',
+        VN: 'C: [He] 2s² 2p²  •  O: [He] 2s² 2p⁴'
+      },
+      ions: {
+        EN: 'Polyol Triol Chelation with Cu²⁺ (Tridentate / Bidentate complex)',
+        VN: 'Phức đồng chelate polyancol hòa tan xanh lam thẫm'
+      }
+    },
+    latexFormula: '\\text{CH}_2(\\text{OH})-\\text{CH}(\\text{OH})-\\text{CH}_2(\\text{OH})',
+    plainFormula: 'CH₂(OH) ── CH(OH) ── CH₂(OH)',
+    geometry: {
+      EN: 'Viscous Trihydroxy Alkane Backbone (sp³)',
+      VN: 'Mạch cacbon no 3 chức ancol (lai hóa sp³)'
+    },
+    bondType: {
+      EN: 'Covalent with Intense Intermolecular Hydrogen Bonding',
+      VN: 'Cộng hóa trị với mạng lưới liên kết hydro liên phân tử dày đặc'
+    }
+  },
+  'C3H5(OH)3': {
+    electronConfig: {
+      full: {
+        EN: 'C: 1s² 2s² 2p²  •  H: 1s¹  •  O: 1s² 2s² 2p⁴',
+        VN: 'C: 1s² 2s² 2p²  •  H: 1s¹  •  O: 1s² 2s² 2p⁴'
+      },
+      nobleGas: {
+        EN: 'C: [He] 2s² 2p²  •  O: [He] 2s² 2p⁴',
+        VN: 'C: [He] 2s² 2p²  •  O: [He] 2s² 2p⁴'
+      }
+    },
+    latexFormula: '\\text{CH}_2(\\text{OH})-\\text{CH}(\\text{OH})-\\text{CH}_2(\\text{OH})',
+    plainFormula: 'CH₂(OH) ── CH(OH) ── CH₂(OH)',
+    geometry: {
+      EN: 'Viscous Trihydroxy Alkane Backbone (sp³)',
+      VN: 'Mạch cacbon no 3 chức ancol (lai hóa sp³)'
+    },
+    bondType: {
+      EN: 'Covalent with Intense Intermolecular Hydrogen Bonding',
+      VN: 'Cộng hóa trị với mạng lưới liên kết hydro liên phân tử dày đặc'
+    }
+  },
+  'ETHYL_FORMATE': {
+    electronConfig: {
+      full: {
+        EN: 'C: 1s² 2s² 2p²  •  H: 1s¹  •  O: 1s² 2s² 2p⁴',
+        VN: 'C: 1s² 2s² 2p²  •  H: 1s¹  •  O: 1s² 2s² 2p⁴'
+      },
+      nobleGas: {
+        EN: 'C: [He] 2s² 2p²  •  O: [He] 2s² 2p⁴',
+        VN: 'C: [He] 2s² 2p²  •  O: [He] 2s² 2p⁴'
+      }
+    },
+    latexFormula: '\\text{H}-\\text{C}(=\\text{O})-\\text{O}-\\text{CH}_2\\text{CH}_3',
+    plainFormula: 'H ── C(=O) ── O ── CH₂CH₃',
+    geometry: {
+      EN: 'Planar Ester Carbonyl (120°) + Alkyl Tail',
+      VN: 'Nhóm este cacbonyl phẳng (120°) nối đuôi etyl'
+    },
+    bondType: {
+      EN: 'Covalent Ester Linkage (Peach / Rum Aroma)',
+      VN: 'Liên kết este cộng hóa trị (Hương đào / Rượu rum)'
+    }
+  },
+  'ETHYL_ACETATE': {
+    electronConfig: {
+      full: {
+        EN: 'C: 1s² 2s² 2p²  •  H: 1s¹  •  O: 1s² 2s² 2p⁴',
+        VN: 'C: 1s² 2s² 2p²  •  H: 1s¹  •  O: 1s² 2s² 2p⁴'
+      },
+      nobleGas: {
+        EN: 'C: [He] 2s² 2p²  •  O: [He] 2s² 2p⁴',
+        VN: 'C: [He] 2s² 2p²  •  O: [He] 2s² 2p⁴'
+      }
+    },
+    latexFormula: '\\text{CH}_3-\\text{C}(=\\text{O})-\\text{O}-\\text{CH}_2\\text{CH}_3',
+    plainFormula: 'CH₃ ── C(=O) ── O ── CH₂CH₃',
+    geometry: {
+      EN: 'Planar Ester Carbonyl with Alkyl Termini',
+      VN: 'Nhóm este phẳng gắn hai gốc ankyl'
+    },
+    bondType: {
+      EN: 'Covalent Ester Linkage (Sweet Apple / Banana Aroma)',
+      VN: 'Liên kết este cộng hóa trị (Hương hoa quả)'
+    }
+  },
+  'METHYL_ACETATE': {
+    electronConfig: {
+      full: {
+        EN: 'C: 1s² 2s² 2p²  •  H: 1s¹  •  O: 1s² 2s² 2p⁴',
+        VN: 'C: 1s² 2s² 2p²  •  H: 1s¹  •  O: 1s² 2s² 2p⁴'
+      },
+      nobleGas: {
+        EN: 'C: [He] 2s² 2p²  •  O: [He] 2s² 2p⁴',
+        VN: 'C: [He] 2s² 2p²  •  O: [He] 2s² 2p⁴'
+      }
+    },
+    latexFormula: '\\text{CH}_3-\\text{C}(=\\text{O})-\\text{O}-\\text{CH}_3',
+    plainFormula: 'CH₃ ── C(=O) ── O ── CH₃',
+    geometry: {
+      EN: 'Planar Ester Carbonyl (120°)',
+      VN: 'Nhóm este cacbonyl phẳng (120°)'
+    },
+    bondType: {
+      EN: 'Covalent Ester Linkage',
+      VN: 'Liên kết este cộng hóa trị'
+    }
+  },
+  'SODIUM_METHOXIDE': {
+    electronConfig: {
+      full: {
+        EN: 'Na: [Ne] 3s¹  •  C: 1s² 2s² 2p²  •  O: 1s² 2s² 2p⁴',
+        VN: 'Na: [Ne] 3s¹  •  C: 1s² 2s² 2p²  •  O: 1s² 2s² 2p⁴'
+      },
+      nobleGas: {
+        EN: 'Na⁺: [Ne]  |  CH₃O⁻: Valence octet',
+        VN: 'Na⁺: [Ne]  |  CH₃O⁻: Bát tử hoàn chỉnh'
+      }
+    },
+    latexFormula: '\\text{CH}_3\\text{O}^- \\;\\; \\text{Na}^+',
+    plainFormula: 'CH₃O⁻  Na⁺',
+    geometry: {
+      EN: 'Ionic Alkoxide Salt',
+      VN: 'Muối ancolat ion'
+    },
+    bondType: {
+      EN: 'Ionic Strong Base (Anhydrous Alkoxide)',
+      VN: 'Liên kết ion bazơ mạnh (Ancolat khan)'
+    }
+  },
+  'POTASSIUM_ETHOXIDE': {
+    electronConfig: {
+      full: {
+        EN: 'K: [Ar] 4s¹  •  C: 1s² 2s² 2p²  •  O: 1s² 2s² 2p⁴',
+        VN: 'K: [Ar] 4s¹  •  C: 1s² 2s² 2p²  •  O: 1s² 2s² 2p⁴'
+      },
+      nobleGas: {
+        EN: 'K⁺: [Ar]  |  C₂H₅O⁻: Valence octet',
+        VN: 'K⁺: [Ar]  |  C₂H₅O⁻: Bát tử hoàn chỉnh'
+      }
+    },
+    latexFormula: '\\text{CH}_3\\text{CH}_2\\text{O}^- \\;\\; \\text{K}^+',
+    plainFormula: 'C₂H₅O⁻  K⁺',
+    geometry: {
+      EN: 'Ionic Alkoxide Salt',
+      VN: 'Muối ancolat ion'
+    },
+    bondType: {
+      EN: 'Ionic Superbase (Strong Nucleophile)',
+      VN: 'Liên kết ion siêu bazơ (Tác nhân ái nhân mạnh)'
+    }
+  },
+  'PICRIC_ACID': {
+    electronConfig: {
+      full: {
+        EN: 'C: 1s² 2s² 2p²  •  N: 1s² 2s² 2p³  •  O: 1s² 2s² 2p⁴',
+        VN: 'C: 1s² 2s² 2p²  •  N: 1s² 2s² 2p³  •  O: 1s² 2s² 2p⁴'
+      },
+      nobleGas: {
+        EN: 'Aromatic Resonance Stabilization with 3 -NO₂ groups',
+        VN: 'Hệ liên hợp pi vòng thơm giải tỏa với 3 nhóm -NO₂ hút e'
+      }
+    },
+    latexFormula: '2,4,6-(\\text{NO}_2)_3\\text{C}_6\\text{H}_2\\text{OH}',
+    plainFormula: '2,4,6-(NO₂)₃C₆H₂OH',
+    geometry: {
+      EN: 'Planar Aromatic Ring with Symmetrical Nitro Substituents',
+      VN: 'Vòng thơm phẳng với 3 nhóm nitro đối xứng'
+    },
+    bondType: {
+      EN: 'Strong Organic Acid (pKa = 0.38) via Nitro Resonance',
+      VN: 'Axit hữu cơ mạnh (pKa = 0.38) do hiệu ứng hút e của 3 nhóm nitro'
+    }
   }
 };
 
@@ -710,16 +890,22 @@ export function getSubstanceStructureProfile(
   isCompound: boolean,
   isVi: boolean
 ): SubstanceStructureProfile {
-  // Direct match by ID
-  if (SUBSTANCE_STRUCTURES[id]) {
-    return SUBSTANCE_STRUCTURES[id];
-  }
+  // Normalize key lookup
+  const cleanId = (id || '').trim();
+  const upperId = cleanId.toUpperCase();
+  if (SUBSTANCE_STRUCTURES[cleanId]) return SUBSTANCE_STRUCTURES[cleanId];
+  if (SUBSTANCE_STRUCTURES[upperId]) return SUBSTANCE_STRUCTURES[upperId];
 
   // Clean formula check (e.g. 'MgCl2 (aq)' -> 'MgCl2', 'KMnO4' -> 'KMnO4')
-  const clean = rawFormula.replace(/\([a-zA-Z\s]+\)/g, '').trim();
-  if (SUBSTANCE_STRUCTURES[clean]) {
-    return SUBSTANCE_STRUCTURES[clean];
-  }
+  const clean = (rawFormula || '')
+    .replace(/\([a-zA-Z\s]+\)/g, '')
+    .replace(/₀/g, '0').replace(/₁/g, '1').replace(/₂/g, '2').replace(/₃/g, '3')
+    .replace(/₄/g, '4').replace(/₅/g, '5').replace(/₆/g, '6').replace(/₇/g, '7')
+    .replace(/₈/g, '8').replace(/₉/g, '9')
+    .trim();
+
+  if (SUBSTANCE_STRUCTURES[clean]) return SUBSTANCE_STRUCTURES[clean];
+  if (SUBSTANCE_STRUCTURES[clean.toUpperCase()]) return SUBSTANCE_STRUCTURES[clean.toUpperCase()];
 
   // Pure Element Handler
   if (!isCompound && z > 0) {
@@ -801,6 +987,20 @@ function generateElementProfile(symbol: string, z: number, isVi: boolean): Subst
 }
 
 /**
+ * Converts chemical formulas with unicode or numeric subscripts to authentic LaTeX notation.
+ */
+function formatFormulaToLatex(raw: string): string {
+  if (!raw) return '';
+  const subMap: Record<string, string> = {
+    '₀': '0', '₁': '1', '₂': '2', '₃': '3', '₄': '4',
+    '₅': '5', '₆': '6', '₇': '7', '₈': '8', '₉': '9'
+  };
+  let clean = raw.replace(/[₀-₉]/g, d => subMap[d] || d);
+  clean = clean.replace(/([A-Za-z\)])(\d+)/g, '$1_{$2}');
+  return `\\mathrm{${clean.replace(/_/g, '\\_')}}`;
+}
+
+/**
  * Fallback synthesizer for any chemical compound.
  * 100% strictly localized to English or Vietnamese.
  */
@@ -816,7 +1016,7 @@ function generateGenericCompoundProfile(formula: string, totalZ: number, isVi: b
         VN: `Cấu hình phân tử đa tâm (Tổng Z = ${totalZ})`
       }
     },
-    latexFormula: `\\text{${formula.replace(/_/g, '\\_')}}`,
+    latexFormula: formatFormulaToLatex(formula),
     plainFormula: `${formula}`,
     geometry: {
       EN: 'Polyatomic Molecular Geometry',

@@ -245,7 +245,9 @@ export const MultimodalScannerModal: React.FC<MultimodalScannerModalProps> = ({ 
                                 <div>
                                     <div className="flex items-center justify-between mb-1">
                                         <span className="text-[10px] font-mono text-cyan-400 font-bold uppercase">{p.tag}</span>
-                                        <span className="text-xs text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity">⚡ Chọn</span>
+                                        <span className="text-xs text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                                            {isVi ? '⚡ Chọn' : '⚡ Select'}
+                                        </span>
                                     </div>
                                     <h4 className="text-sm font-bold text-white group-hover:text-cyan-200 transition-colors">
                                         {p.title}

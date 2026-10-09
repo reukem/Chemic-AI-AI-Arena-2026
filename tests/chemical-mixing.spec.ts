@@ -3,7 +3,7 @@ import { test, expect, Page } from '@playwright/test';
 // Central helper for precise raw pointer physics dragging
 async function dragReagentToCenter(page: Page, reagentName: string, beakerX: number, beakerY: number, timeout: number = 30000) {
     const sanitizedName = reagentName.replace(/\\/g, '');
-    const card = page.locator('span', { hasText: sanitizedName }).locator('..').locator('..');
+    const card = page.locator('span', { hasText: sanitizedName }).first().locator('..').locator('..');
     await card.waitFor({ state: 'visible', timeout });
 
     const target = page.locator('.container-wrapper').first();
@@ -30,18 +30,18 @@ test.describe('Quantum Engine Physics & TDD Exploit Matrix', () => {
         await page.goto('http://localhost:3001');
         await page.waitForTimeout(4000); // Wait for boot
         // Navigate through Main Menu
-        const startButton = page.locator('button').filter({ hasText: /Start Engine|KHỞI ĐỘNG HỆ THỐNG/i }).first();
+        const startButton = page.locator('button').filter({ hasText: /Start Engine|KHỞI ĐỘNG HỆ THỐNG|BẮT ĐẦU THÍ NGHIỆM/i }).first();
         await startButton.waitFor({ state: 'visible', timeout: 5000 }).catch(() => {});
         if (await startButton.isVisible()) {
             await startButton.click();
             await page.waitForTimeout(2000); // wait for transition
         }
 
-        const beakerButton = page.locator('div').filter({ hasText: 'Empty Beaker' }).locator('span', { hasText: 'Empty Beaker' }).first();
+        const beakerButton = page.locator('div').filter({ hasText: /Empty Beaker|Cốc Thủy Tinh/i }).first();
         if (await beakerButton.isVisible()) {
             await beakerButton.click();
         } else {
-            await page.locator('text=Empty Beaker').first().click();
+            await page.locator('text=/Empty Beaker|Cốc Thủy Tinh/i').first().click().catch(() => {});
         }
         await page.waitForTimeout(500);
 
@@ -165,7 +165,7 @@ test.describe('Quantum Engine Physics & TDD Exploit Matrix', () => {
         ];
 
         for (const r of reagents) {
-            await dragReagentToCenter(page, r, beakerX, beakerY).catch(() => {});
+            await dragReagentToCenter(page, r, beakerX, beakerY, 2000).catch(() => {});
             // Clear any popups that might have been triggered by intermediate explosive combinations
             const ackButton = page.locator('button').filter({ hasText: 'ACKNOWLEDGE' }).first();
             await page.waitForTimeout(200); // Wait for slam animation if any

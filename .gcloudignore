@@ -12,7 +12,8 @@ web_app
 __pycache__
 .numba_cache
 numba_cache
-*.html
+/*.html
 !dist/**
+!dist/index.html
 !nginx.conf
 !Dockerfile

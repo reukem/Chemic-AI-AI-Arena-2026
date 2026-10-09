@@ -8,6 +8,10 @@ import { MultimodalScannerModal } from './MultimodalScannerModal';
 import { LabReportModal } from './LabReportModal';
 import { GoogleProfileModal } from './GoogleProfileModal';
 import { CurriculumLearningModal } from './CurriculumLearningModal';
+import ReactionCodex from './ReactionCodex';
+import { LiveTitrationModal } from './LiveTitrationModal';
+import { StoichiometryIceModal } from './StoichiometryIceModal';
+import { ReactionMechanismModal } from './ReactionMechanismModal';
 
 const PerformanceHud: React.FC = () => {
     const [stats, setStats] = useState({ fps: 60, cpu: 1.2, memMB: 48 });
@@ -73,6 +77,12 @@ const UIOverlay: React.FC = () => {
     const language = useSimulationStore(state => state.language);
     const isVi = language === 'VN' || language === 'vi';
     const containers = useSimulationStore(state => state.containers);
+    const selectedContainerId = useSimulationStore(state => state.selectedContainerId);
+    const setSelectedContainerId = useSimulationStore(state => state.setSelectedContainerId);
+    const dispenseVolume = useSimulationStore(state => state.dispenseVolume);
+    const setDispenseVolume = useSimulationStore(state => state.setDispenseVolume);
+    const addReagentToContainer = useSimulationStore(state => state.addReagentToContainer);
+    const spawnContainer = useSimulationStore(state => state.spawnContainer);
 
     const [inventoryOpen, setInventoryOpen] = useState(true);
     const [equipmentOpen, setEquipmentOpen] = useState(true);
@@ -85,11 +95,15 @@ const UIOverlay: React.FC = () => {
     const [isReportOpen, setReportOpen] = useState(false);
     const [isProfileOpen, setProfileOpen] = useState(false);
     const [isCurriculumOpen, setIsCurriculumOpen] = useState(false);
+    const [isCodexOpen, setIsCodexOpen] = useState(false);
+    const [isTitrationOpen, setIsTitrationOpen] = useState(false);
+    const [isIceOpen, setIsIceOpen] = useState(false);
+    const [isMechanismOpen, setIsMechanismOpen] = useState(false);
     const [googleUser, setGoogleUser] = useState<GoogleUserProfile>(GoogleAuthService.getUser());
 
     const categories = [
         { id: 'ALL', label: isVi ? 'Tất cả' : 'All', icon: '🧪' },
-        { id: 'element', label: isVi ? 'Kim loại' : 'Metals', icon: '⚡' },
+        { id: 'element', label: isVi ? 'Đơn chất' : 'Elements', icon: '⚡' },
         { id: 'acid', label: isVi ? 'Axit' : 'Acids', icon: '🔴' },
         { id: 'base', label: isVi ? 'Bazơ' : 'Bases', icon: '🔵' },
         { id: 'salt', label: isVi ? 'Muối' : 'Salts', icon: '🧂' },
@@ -101,6 +115,32 @@ const UIOverlay: React.FC = () => {
         e.dataTransfer.effectAllowed = 'copy';
         e.dataTransfer.setData('text/plain', id);
         e.dataTransfer.setData(`reagent-${id}`, 'true');
+    };
+
+    const handleQuickAdd = (e: React.MouseEvent, chemId: string) => {
+        e.stopPropagation();
+        try {
+            audioManager.playClick();
+            audioManager.playBubble();
+        } catch (_) {}
+
+        let targetId = selectedContainerId;
+        if (targetId === null || !containers.some(c => c.id === targetId)) {
+            if (containers.length > 0) {
+                targetId = containers[0].id;
+                setSelectedContainerId(targetId);
+            } else {
+                spawnContainer('beaker', window.innerWidth * 0.45, Math.max(250, window.innerHeight - 220));
+                setTimeout(() => {
+                    const state = useSimulationStore.getState();
+                    if (state.containers.length > 0) {
+                        state.addReagentToContainer(state.containers[0].id, chemId, dispenseVolume);
+                    }
+                }, 50);
+                return;
+            }
+        }
+        addReagentToContainer(targetId, chemId, dispenseVolume);
     };
 
     useEffect(() => {
@@ -406,6 +446,33 @@ const UIOverlay: React.FC = () => {
                                 ))}
                             </div>
 
+                            {/* Dose Volume Selector & Quick Pour Guide */}
+                            <div className="flex items-center justify-between gap-1 px-2 py-1 rounded-lg bg-[#061426]/90 border border-cyan-950/70 mb-2 shrink-0 pointer-events-auto">
+                                <div className="flex items-center gap-1">
+                                    <span className="text-[9px] font-mono text-slate-400 font-bold">{isVi ? 'Định lượng:' : 'Dose:'}</span>
+                                    {[10, 20, 50].map(vol => (
+                                        <button
+                                            key={vol}
+                                            type="button"
+                                            onClick={() => {
+                                                audioManager.playClick();
+                                                setDispenseVolume(vol);
+                                            }}
+                                            className={`px-1.5 py-0.5 rounded text-[9px] font-mono font-bold transition-all cursor-pointer ${
+                                                dispenseVolume === vol 
+                                                    ? 'bg-cyan-500/40 text-cyan-200 border border-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.4)]' 
+                                                    : 'bg-[#030914] text-slate-400 border border-cyan-950 hover:text-cyan-300'
+                                            }`}
+                                        >
+                                            {vol}ml
+                                        </button>
+                                    ))}
+                                </div>
+                                <span className="text-[9px] font-mono text-cyan-400/90 italic truncate" title={isVi ? "Kéo vào bình hoặc click nút + để rót" : "Drag or click + to add"}>
+                                    {isVi ? '💡 Kéo hoặc bấm +' : '💡 Drag or click +'}
+                                </span>
+                            </div>
+
                             {/* Scrollable Reagents Shelf */}
                             <div className="flex flex-col gap-1.5 overflow-y-auto custom-scrollbar max-h-[38vh] pr-1 pointer-events-auto">
                                 {filteredReagents.length === 0 && (
@@ -421,6 +488,7 @@ const UIOverlay: React.FC = () => {
                                             key={chem.id}
                                             draggable
                                             onDragStart={(e) => handleDragStart(e, chem.id)}
+                                            onClick={(e) => handleQuickAdd(e, chem.id)}
                                             onMouseEnter={() => {
                                                 audioManager.playHover();
                                                 setHoveredChemId(chem.id);
@@ -459,10 +527,20 @@ const UIOverlay: React.FC = () => {
                                                 </div>
                                             </div>
 
-                                            {/* pH / State Badge */}
-                                            <span className="shrink-0 px-1.5 py-0.5 rounded bg-cyan-950/80 border border-cyan-900/70 text-[9px] font-mono text-cyan-300 font-bold">
-                                                pH {chem.ph.toFixed(1)}
-                                            </span>
+                                            {/* pH Badge & Quick Pour (+) Button */}
+                                            <div className="flex items-center gap-1.5 shrink-0">
+                                                <span className="px-1.5 py-0.5 rounded bg-cyan-950/80 border border-cyan-900/70 text-[9px] font-mono text-cyan-300 font-bold">
+                                                    pH {chem.ph.toFixed(1)}
+                                                </span>
+                                                <button
+                                                    type="button"
+                                                    onClick={(e) => handleQuickAdd(e, chem.id)}
+                                                    title={isVi ? `Rót nhanh ${dispenseVolume}ml vào bình đang chọn` : `Quick pour ${dispenseVolume}ml into active vessel`}
+                                                    className="w-5 h-5 rounded-md bg-cyan-500/20 hover:bg-cyan-500/40 border border-cyan-400/50 hover:border-cyan-300 text-cyan-200 font-bold text-xs flex items-center justify-center transition-all cursor-pointer active:scale-95 shadow-sm"
+                                                >
+                                                    +
+                                                </button>
+                                            </div>
                                         </div>
                                     );
                                 })}
@@ -493,17 +571,146 @@ const UIOverlay: React.FC = () => {
 
             </div>
 
-            {/* Top Right Action Bar: Minimal Cyber Dock */}
+            {/* Top Right Action Bar: Futuristic Cyber Command Dock */}
             <div className="absolute top-4 right-4 flex items-center gap-2 pointer-events-auto z-40">
-                {/* Reset Lab Button */}
+                {/* 00: Calculating Mode / Formula Sheet & Solvers */}
+                <button
+                    type="button"
+                    onClick={() => { audioManager.playClick(); useSimulationStore.getState().setCalculatingMode(true); }}
+                    onMouseEnter={() => audioManager.playHover()}
+                    className="h-10 px-3.5 bg-gradient-to-r from-amber-950/90 to-yellow-950/90 hover:from-amber-900/90 hover:to-yellow-900/90 border border-amber-500/50 hover:border-amber-400 rounded-xl flex items-center gap-2 text-amber-300 hover:text-white shadow-[0_0_20px_rgba(245,158,11,0.3)] transition-all active:scale-95 backdrop-blur-xl group cursor-pointer shrink-0"
+                    title={isVi ? 'Bảng Công Thức & Máy Tính Hóa Học Lớp 8-12' : 'Chemistry Formula Sheet & Calculations (Grades 8-12)'}
+                >
+                    <span className="text-base group-hover:scale-110 transition-transform">🧮</span>
+                    <span className="text-xs font-mono font-bold tracking-wider hidden sm:inline">
+                        {isVi ? 'TÍNH TOÁN' : 'FORMULAS'}
+                    </span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse shadow-[0_0_6px_#f59e0b]" />
+                </button>
+
+                {/* 01: Chemistry Academy (8-12) Button */}
+                <button
+                    type="button"
+                    onClick={() => { audioManager.playClick(); setIsCurriculumOpen(true); }}
+                    onMouseEnter={() => audioManager.playHover()}
+                    className="h-10 px-3.5 bg-gradient-to-r from-emerald-950/90 to-cyan-950/90 hover:from-emerald-900/90 hover:to-cyan-900/90 border border-emerald-500/50 hover:border-emerald-400 rounded-xl flex items-center gap-2 text-emerald-300 hover:text-white shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-all active:scale-95 backdrop-blur-xl group cursor-pointer shrink-0"
+                    title={isVi ? 'Học viện Hóa học GDPT 2018 (Lớp 8-12)' : 'Chemistry Academy (Grades 8-12)'}
+                >
+                    <span className="text-base group-hover:scale-110 transition-transform">📚</span>
+                    <span className="text-xs font-mono font-bold tracking-wider hidden md:inline">
+                        {isVi ? 'HỌC VIỆN GDPT' : 'ACADEMY'}
+                    </span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_6px_#34d399]" />
+                </button>
+
+                {/* 02: Reaction Codex Button */}
+                <button
+                    type="button"
+                    onClick={() => { audioManager.playClick(); setIsCodexOpen(true); }}
+                    onMouseEnter={() => audioManager.playHover()}
+                    className="h-10 px-3 bg-[#051120]/90 hover:bg-cyan-950/70 border border-cyan-500/40 hover:border-cyan-400 rounded-xl flex items-center gap-1.5 text-cyan-300 hover:text-white shadow-[0_0_15px_rgba(6,182,212,0.25)] transition-all active:scale-95 backdrop-blur-xl group cursor-pointer shrink-0"
+                    title={isVi ? 'Từ Điển Phản Ứng (67 Phản ứng chuẩn)' : 'Reaction Codex (67 Authenticated Rules)'}
+                >
+                    <span className="text-base group-hover:scale-110 transition-transform">📖</span>
+                    <span className="text-xs font-mono font-bold tracking-wider hidden lg:inline">
+                        {isVi ? 'TỪ ĐIỂN' : 'CODEX'}
+                    </span>
+                </button>
+
+                {/* 02.1: Live Titration Station */}
+                <button
+                    type="button"
+                    onClick={() => { audioManager.playClick(); setIsTitrationOpen(true); }}
+                    onMouseEnter={() => audioManager.playHover()}
+                    className="h-10 px-3 bg-[#051120]/90 hover:bg-pink-950/70 border border-pink-500/40 hover:border-pink-400 rounded-xl flex items-center gap-1.5 text-pink-300 hover:text-white shadow-[0_0_15px_rgba(236,72,153,0.25)] transition-all active:scale-95 backdrop-blur-xl group cursor-pointer shrink-0"
+                    title={isVi ? 'Đồ thị Chuẩn độ pH Thời gian thực' : 'Live Titration & Buffer Curve'}
+                >
+                    <span className="text-base group-hover:scale-110 transition-transform">📈</span>
+                    <span className="text-xs font-mono font-bold tracking-wider hidden lg:inline">
+                        {isVi ? 'CHUẨN ĐỘ' : 'TITRATION'}
+                    </span>
+                </button>
+
+                {/* 02.2: Stoichiometry & I-C-E Table */}
+                <button
+                    type="button"
+                    onClick={() => { audioManager.playClick(); setIsIceOpen(true); }}
+                    onMouseEnter={() => audioManager.playHover()}
+                    className="h-10 px-3 bg-[#051120]/90 hover:bg-amber-950/70 border border-amber-500/40 hover:border-amber-400 rounded-xl flex items-center gap-1.5 text-amber-300 hover:text-white shadow-[0_0_15px_rgba(245,158,11,0.25)] transition-all active:scale-95 backdrop-blur-xl group cursor-pointer shrink-0"
+                    title={isVi ? 'Bảng Tính Cân Bằng I-C-E & Lượng Chất' : 'Stoichiometry & I-C-E Balance'}
+                >
+                    <span className="text-base group-hover:scale-110 transition-transform">⚖️</span>
+                    <span className="text-xs font-mono font-bold tracking-wider hidden lg:inline">
+                        {isVi ? 'I-C-E' : 'I-C-E'}
+                    </span>
+                </button>
+
+                {/* 02.3: Reaction Mechanisms */}
+                <button
+                    type="button"
+                    onClick={() => { audioManager.playClick(); setIsMechanismOpen(true); }}
+                    onMouseEnter={() => audioManager.playHover()}
+                    className="h-10 px-3 bg-[#051120]/90 hover:bg-purple-950/70 border border-purple-500/40 hover:border-purple-400 rounded-xl flex items-center gap-1.5 text-purple-300 hover:text-white shadow-[0_0_15px_rgba(168,85,247,0.25)] transition-all active:scale-95 backdrop-blur-xl group cursor-pointer shrink-0"
+                    title={isVi ? 'Cơ Chế Phản Ứng Dịch Chuyển Electron' : 'Reaction Mechanisms'}
+                >
+                    <span className="text-base group-hover:scale-110 transition-transform">🎬</span>
+                    <span className="text-xs font-mono font-bold tracking-wider hidden lg:inline">
+                        {isVi ? 'CƠ CHẾ' : 'MECHANISM'}
+                    </span>
+                </button>
+
+                {/* 03: Gemini Vision AI Scanner */}
+                <button
+                    type="button"
+                    onClick={() => { audioManager.playClick(); setScannerOpen(true); }}
+                    onMouseEnter={() => audioManager.playHover()}
+                    className="h-10 px-3 bg-[#051120]/90 hover:bg-cyan-950/70 border border-cyan-500/40 hover:border-cyan-400 rounded-xl flex items-center gap-1.5 text-cyan-300 hover:text-white shadow-[0_0_15px_rgba(6,182,212,0.25)] transition-all active:scale-95 backdrop-blur-xl group cursor-pointer shrink-0"
+                    title={isVi ? 'Quét bài tập Hóa học bằng AI Vision' : 'AI Homework & Question Scanner'}
+                >
+                    <span className="text-base group-hover:scale-110 transition-transform">📷</span>
+                    <span className="text-xs font-mono font-bold tracking-wider hidden lg:inline">
+                        GEMINI
+                    </span>
+                </button>
+
+                {/* 04: Lab Report Generator */}
+                <button
+                    type="button"
+                    onClick={() => { audioManager.playClick(); setReportOpen(true); }}
+                    onMouseEnter={() => audioManager.playHover()}
+                    className="h-10 px-3 bg-[#051120]/90 hover:bg-indigo-950/70 border border-indigo-500/40 hover:border-indigo-400 rounded-xl flex items-center gap-1.5 text-indigo-300 hover:text-white shadow-[0_0_15px_rgba(99,102,241,0.25)] transition-all active:scale-95 backdrop-blur-xl group cursor-pointer shrink-0"
+                    title={isVi ? 'Xuất báo cáo thực hành chuẩn GDPT' : 'Export Lab Report'}
+                >
+                    <span className="text-base group-hover:scale-110 transition-transform">📄</span>
+                    <span className="text-xs font-mono font-bold tracking-wider hidden lg:inline">
+                        {isVi ? 'BÁO CÁO' : 'REPORT'}
+                    </span>
+                </button>
+
+                {/* 05: Reset Lab Bench */}
                 <button
                     type="button"
                     onClick={() => { audioManager.playClick(); flushAll(); }}
                     onMouseEnter={() => audioManager.playHover()}
-                    className="h-10 w-10 bg-[#050e1c]/85 hover:bg-rose-950/50 border border-cyan-500/40 hover:border-rose-500 rounded-xl flex items-center justify-center text-slate-300 hover:text-rose-300 shadow-[0_0_20px_rgba(0,0,0,0.6)] hover:shadow-[0_0_20px_rgba(244,63,94,0.3)] transition-all active:scale-95 backdrop-blur-xl group cursor-pointer"
+                    className="h-10 w-10 bg-[#050e1c]/85 hover:bg-rose-950/50 border border-cyan-500/40 hover:border-rose-500 rounded-xl flex items-center justify-center text-slate-300 hover:text-rose-300 shadow-[0_0_20px_rgba(0,0,0,0.6)] hover:shadow-[0_0_20px_rgba(244,63,94,0.3)] transition-all active:scale-95 backdrop-blur-xl group cursor-pointer shrink-0"
                     title={language === 'EN' ? 'Reset Workbench' : 'Làm mới bàn thí nghiệm'}
                 >
                     <span className="text-base group-hover:rotate-180 transition-transform duration-500">🔄</span>
+                </button>
+
+                {/* 06: Quick Language Switch */}
+                <LanguageToggle variant="compact" />
+
+                {/* 07: Back to Menu */}
+                <button
+                    type="button"
+                    onClick={() => { audioManager.playClick(); setAppState('MENU'); }}
+                    onMouseEnter={() => audioManager.playHover()}
+                    className="h-10 px-3 bg-[#030914]/85 hover:bg-slate-800/80 border border-slate-700 hover:border-slate-500 rounded-xl flex items-center gap-1.5 text-slate-300 hover:text-white shadow-md transition-all active:scale-95 backdrop-blur-xl cursor-pointer shrink-0"
+                    title={isVi ? 'Quay lại Menu Chính' : 'Return to Main Menu'}
+                >
+                    <span className="text-sm">🏠</span>
+                    <span className="text-xs font-mono font-bold tracking-wider hidden sm:inline">MENU</span>
                 </button>
             </div>
 
@@ -536,6 +743,10 @@ const UIOverlay: React.FC = () => {
             <LabReportModal isOpen={isReportOpen} onClose={() => setReportOpen(false)} />
             <GoogleProfileModal isOpen={isProfileOpen} onClose={() => setProfileOpen(false)} onUserUpdated={setGoogleUser} />
             <CurriculumLearningModal isOpen={isCurriculumOpen} onClose={() => setIsCurriculumOpen(false)} />
+            <ReactionCodex isOpen={isCodexOpen} onClose={() => setIsCodexOpen(false)} />
+            <LiveTitrationModal isOpen={isTitrationOpen} onClose={() => setIsTitrationOpen(false)} isVi={isVi} />
+            <StoichiometryIceModal isOpen={isIceOpen} onClose={() => setIsIceOpen(false)} isVi={isVi} />
+            <ReactionMechanismModal isOpen={isMechanismOpen} onClose={() => setIsMechanismOpen(false)} isVi={isVi} />
 
             {/* PAUSE MENU OVERLAY */}
             {isPaused && (

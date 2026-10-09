@@ -34,7 +34,7 @@ interface Particle {
     life: number;
     maxLife: number;
     size: number;
-    type: 'spark' | 'smoke' | 'globule' | 'bubble';
+    type: 'spark' | 'smoke' | 'globule' | 'bubble' | 'crystal';
     chemicalType: 'sodium' | 'potassium' | 'acid_dilution' | 'alkali_acid' | 'generic';
     canBounce?: boolean;
     seed: number;
@@ -555,6 +555,15 @@ const VFXEngine: React.FC = () => {
                             p.vy = -p.vy * 0.28;
                             p.vx *= 0.65;
                         }
+                    } else if (p.type === 'bubble') {
+                        p.vy -= 0.12; // upward buoyancy
+                        p.vx += Math.sin(p.life * 10 + p.seed) * 0.1; // gentle fluid wobble
+                        p.vx *= 0.95;
+                        p.vy *= 0.98;
+                    } else if (p.type === 'crystal') {
+                        p.vy += 0.08; // slow settling precipitate
+                        p.vx *= 0.92;
+                        p.vy *= 0.92;
                     } else {
                         // Smoke
                         p.vy -= 0.06; // Buoyancy upward
@@ -608,6 +617,48 @@ const VFXEngine: React.FC = () => {
                         ? `rgba(240, 171, 252, ${lifeRatio})`
                         : (isAcid ? `rgba(186, 230, 253, ${lifeRatio})` : `rgba(254, 215, 170, ${lifeRatio})`);
                     ctx.fill();
+
+                } else if (p.type === 'bubble') {
+                    // Micro Effervescence Bubbles with Specular Highlight
+                    ctx.globalCompositeOperation = 'source-over';
+                    ctx.beginPath();
+                    const bSize = Math.max(1.5, p.size * lifeRatio);
+                    ctx.arc(p.x, p.y, bSize, 0, Math.PI * 2);
+                    ctx.strokeStyle = `rgba(186, 230, 253, ${lifeRatio * 0.75})`;
+                    ctx.lineWidth = 1;
+                    ctx.fillStyle = `rgba(224, 242, 254, ${lifeRatio * 0.25})`;
+                    ctx.fill();
+                    ctx.stroke();
+
+                    // Specular Highlight Glint
+                    ctx.beginPath();
+                    ctx.arc(p.x - bSize * 0.35, p.y - bSize * 0.35, Math.max(0.6, bSize * 0.25), 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(255, 255, 255, ${lifeRatio * 0.9})`;
+                    ctx.fill();
+
+                } else if (p.type === 'crystal') {
+                    // Twinkling Precipitate Crystal Star Nucleation
+                    ctx.globalCompositeOperation = 'lighter';
+                    ctx.save();
+                    ctx.translate(p.x, p.y);
+                    ctx.rotate(p.life * 3.5 + p.seed);
+                    const starR = Math.max(1.5, p.size * lifeRatio);
+                    ctx.fillStyle = `rgba(255, 255, 255, ${lifeRatio * 0.85})`;
+                    ctx.beginPath();
+                    ctx.moveTo(0, -starR);
+                    ctx.lineTo(starR * 0.22, 0);
+                    ctx.lineTo(0, starR);
+                    ctx.lineTo(-starR * 0.22, 0);
+                    ctx.closePath();
+                    ctx.fill();
+                    ctx.beginPath();
+                    ctx.moveTo(-starR, 0);
+                    ctx.lineTo(0, starR * 0.22);
+                    ctx.lineTo(starR, 0);
+                    ctx.lineTo(0, -starR * 0.22);
+                    ctx.closePath();
+                    ctx.fill();
+                    ctx.restore();
 
                 } else {
                     // Soft Billowing Volumetric Steam & Smoke Puffs

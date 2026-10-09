@@ -7,6 +7,7 @@
 import { create } from 'zustand';
 import { CHEMICAL_REGISTRY, REACTION_RULES } from '../data/ChemicalRegistry';
 import { evaluateThermodynamicState } from './ThermodynamicEngine';
+import { audioManager } from './AudioManager';
 
 /**
  * Global game states. Controls UI rendering boundaries and asynchronous Audio API unlocking.
@@ -78,6 +79,10 @@ interface SimulationState {
     isOrganicModeActive: boolean;
     setOrganicMode: (active: boolean) => void;
 
+    // Calculating Mode (Formula Sheet & Grade 8-12 Calculations)
+    isCalculatingModeActive: boolean;
+    setCalculatingMode: (active: boolean) => void;
+
     // Easter Egg Menu States (Permanent until simulation restart/reset)
     isMenuCracked: boolean;
     setMenuCracked: (cracked: boolean) => void;
@@ -92,12 +97,20 @@ interface SimulationState {
     pendingEducationalReaction: any | null;
     resolveEducationalReaction: () => void;
 
+    // Active Vessel Selection & Volumetric Dispensing
+    selectedContainerId: number | null;
+    setSelectedContainerId: (id: number | null) => void;
+    dispenseVolume: number;
+    setDispenseVolume: (vol: number) => void;
+
     // Actions
     initialize: () => void;
     setEnvTemp: (temp: number) => void;
     setEnvPressure: (pressure: number) => void;
     spawnContainer: (type: 'beaker' | 'flask', x?: number, y?: number) => void;
-    addReagentToContainer: (containerId: number, reagentId: string) => void;
+    clearContainer: (id: number) => void;
+    removeContainer: (id: number) => void;
+    addReagentToContainer: (containerId: number, reagentId: string, amount?: number) => void;
     pourContainer: (sourceId: number, targetId: number, heightDiff: number) => void;
     updateContainerPosition: (id: number, x: number, y: number) => void;
     triggerExplosion: (x: number, y: number, type: string) => void;
@@ -145,6 +158,47 @@ const blendColorsRMS = (c1: {r:number, g:number, b:number}, v1: number, c2: {r:n
 };
 
 /**
+ * Scientifically recalculates a container's aqueous pH based on hydrogen/hydroxide ion equilibrium
+ * across all dissolved acids, bases, and neutral salts.
+ */
+const recalculateContainerPH = (container: Container) => {
+    let totalMolesH = 0;
+    let totalMolesOH = 0;
+    let totalVol = 0;
+    for (const [id, vol] of Object.entries(container.contents)) {
+        if (id.startsWith('reacted_')) continue;
+        const rg = CHEMICAL_REGISTRY[id];
+        if (!rg || vol <= 0) continue;
+        totalVol += vol;
+        if (rg.ph < 7) {
+            totalMolesH += Math.pow(10, -rg.ph) * vol;
+        } else if (rg.ph > 7) {
+            totalMolesOH += Math.pow(10, -(14 - rg.ph)) * vol;
+        } else {
+            totalMolesH += 1e-7 * vol;
+            totalMolesOH += 1e-7 * vol;
+        }
+    }
+    
+    if (totalVol > 0) {
+        if (totalMolesH > totalMolesOH) {
+            const excessH = totalMolesH - totalMolesOH;
+            const excessHConc = excessH / totalVol;
+            container.ph = Math.max(0, Math.min(14, -Math.log10(Math.max(1e-14, excessHConc))));
+        } else if (totalMolesOH > totalMolesH) {
+            const excessOH = totalMolesOH - totalMolesH;
+            const excessOHConc = excessOH / totalVol;
+            const pOH = -Math.log10(Math.max(1e-14, excessOHConc));
+            container.ph = Math.max(0, Math.min(14, 14 - pOH));
+        } else {
+            container.ph = 7.0;
+        }
+    } else {
+        container.ph = 7.0;
+    }
+};
+
+/**
  * The core Chaining Engine algorithm. Scans a container's contents array and evaluates thermodynamic rules.
  * Automatically checks strict explicit combinations first, then falls back to generic Class-Based taxonomy logic.
  * Also scans for the Thermodynamic Sludge state to prevent infinite loops.
@@ -156,6 +210,42 @@ const evaluateDynamicReactions = (container: Container, incomingReagents: string
     // 0. The Thermodynamic Death State (NO FURTHER REACTIONS)
     if (container.contents['ENTROPY_SLUDGE'] > 0) {
         return null; // Totally inert
+    }
+
+    // 0.5. Multi-Class Entropy Collapse:
+    // When 4 or more distinct non-solvent chemical classes accumulate in the vessel,
+    // the system undergoes catastrophic thermodynamic collapse into inert ENTROPY_SLUDGE!
+    const nonSolventClasses = new Set<string>();
+    for (const [key, val] of Object.entries(container.contents)) {
+        if (!key.startsWith('reacted_') && val > 0) {
+            const rClass = CHEMICAL_REGISTRY[key]?.reactionClass;
+            if (rClass && rClass !== 'solvent') nonSolventClasses.add(rClass);
+        }
+    }
+    if (nonSolventClasses.size >= 4) {
+        container.contents = { ENTROPY_SLUDGE: container.volume };
+        container.color = hexToRgb(CHEMICAL_REGISTRY.ENTROPY_SLUDGE?.color || '#4a3b32');
+        container.ph = 7.0;
+        return {
+            reactants: ['UNKNOWN', 'UNKNOWN'],
+            product: 'ENTROPY_SLUDGE',
+            reactionType: {
+                EN: 'Thermodynamic Death State (Entropy Sludge)',
+                VN: 'Sụp Đổ Nhiệt Động (Bùn Entropy)'
+            },
+            equation: {
+                EN: 'Multi-reagent chaotic collapse → Inert Sludge (ΔS > 0)',
+                VN: 'Hỗn hợp hỗn loạn sụp đổ → Bùn trơ hóa học'
+            },
+            message: {
+                EN: 'Thermodynamic death state reached! Chaotic chemical collapse. Sludge formed.',
+                VN: 'Thermodynamic death state reached! Đạt trạng thái sụp đổ hóa học! Hoàn toàn trơ.'
+            },
+            effect: 'smoke',
+            requiresPopup: true,
+            temperatureSpike: 0,
+            hazardLevel: 'WARNING'
+        };
     }
 
     let triggeredReaction: any = null;
@@ -229,6 +319,39 @@ const evaluateDynamicReactions = (container: Container, incomingReagents: string
                 };
             }
         }
+        // Alkali Metal + Strong Acid (Li, Na, K + HCl, HNO3, H2SO4) -> Violent Detonation / Critical Hazard!
+        else if (presentClasses.includes('alkali_metal') && presentClasses.includes('strong_acid')) {
+            if (!container.contents['reacted_class_alkali_metal_strong_acid']) {
+                container.contents['reacted_class_alkali_metal_strong_acid'] = 1;
+                const metal = Object.keys(container.contents).find(id => CHEMICAL_REGISTRY[id]?.reactionClass === 'alkali_metal') || 'LITHIUM';
+                const acid = Object.keys(container.contents).find(id => CHEMICAL_REGISTRY[id]?.reactionClass === 'strong_acid') || 'HNO3';
+                triggeredReaction = {
+                    reactants: [metal, acid],
+                    product: 'SALT_WATER',
+                    products: ['SALT_WATER', 'HYDROGEN_GAS'],
+                    equation: {
+                        EN: '2M (s) + 2H⁺ (aq) → 2M⁺ (aq) + H₂ (g) ↑ (Violent Exothermic Detonation)',
+                        VN: '2M (r) + 2H⁺ (dd) → 2M⁺ (dd) + H₂ (k) ↑ (Phản Ứng Phát Nổ Mãnh Liệt)'
+                    },
+                    reactionType: {
+                        EN: 'Alkali Metal + Strong Acid Explosion',
+                        VN: 'Nổ Kim Loại Kiềm & Axit Mạnh'
+                    },
+                    mechanism: {
+                        EN: 'Alkali metals react violently with strong acids due to extreme reduction potential difference and instantaneous proton reduction, causing rapid thermal detonation.',
+                        VN: 'Kim loại kiềm khử ion H⁺ cực nhanh giải phóng nhiệt lượng khổng lồ và khí Hydro gây nổ tức thì.'
+                    },
+                    message: {
+                        EN: 'CRITICAL LAB HAZARD: Alkali metal in strong acid causes instant explosive hydrogen detonation!',
+                        VN: 'NGUY HIỂM CỰC ĐỘ: Kim loại kiềm gặp axit mạnh gây nổ khí hydro tức thì!'
+                    },
+                    effect: 'explosion',
+                    requiresPopup: true,
+                    temperatureSpike: 150,
+                    hazardLevel: 'CRITICAL'
+                };
+            }
+        }
         // Active Metal + Acid (Mg, Zn, Fe, etc.) -> Metal Salt + H2 gas bubbles
         else if ((presentClasses.includes('alkaline_earth_metal') || presentClasses.includes('transition_metal')) && presentClasses.includes('strong_acid')) {
             if (!container.contents['reacted_class_active_metal_acid']) {
@@ -292,8 +415,8 @@ const evaluateDynamicReactions = (container: Container, incomingReagents: string
                 const acid = Object.keys(container.contents).find(id => CHEMICAL_REGISTRY[id]?.reactionClass === 'strong_acid' && !incomingReagents.includes(id)) || 'H2SO4';
                 triggeredReaction = {
                     reactants: ['DISTILLED_WATER', acid],
-                    product: 'HCl',
-                    products: ['HCl'],
+                    product: acid,
+                    products: [acid],
                     equation: {
                         EN: 'H₂O (added) + H₂SO₄ (conc) → Flash Boiling & Acid Splattering!',
                         VN: 'H₂O (rót vào) + H₂SO₄ (đặc) → Sôi Bùng Nổ & Bắn Axit!'
@@ -318,29 +441,54 @@ const evaluateDynamicReactions = (container: Container, incomingReagents: string
 
     // 2.5 Reactant Consumption & Chained Stoichiometric Generation
     if (triggeredReaction) {
-        // Stoichiometrically consume reactants
+        // Stoichiometrically consume reactants based on limiting reagent
         if (triggeredReaction.reactants) {
             const r0 = triggeredReaction.reactants[0];
             const r1 = triggeredReaction.reactants[1];
             const vol0 = container.contents[r0] || 0;
             const vol1 = container.contents[r1] || 0;
-            const reactedVol = Math.max(10, Math.min(vol0 || 10, vol1 || 10));
+            const limitingVol = Math.min(vol0, vol1);
+            const reactedVol = limitingVol > 0 ? limitingVol : Math.min(vol0 || 10, vol1 || 10);
 
-            delete container.contents[r0];
-            delete container.contents[r1];
+            // Deduct consumed reactants - excess remains in vessel!
+            if (container.contents[r0] !== undefined) {
+                container.contents[r0] -= reactedVol;
+                if (container.contents[r0] <= 0.05) delete container.contents[r0];
+            }
+            if (container.contents[r1] !== undefined) {
+                container.contents[r1] -= reactedVol;
+                if (container.contents[r1] <= 0.05) delete container.contents[r1];
+            }
 
             // Add authentic products
             const productsToAdd = triggeredReaction.products || [triggeredReaction.product];
             for (const prodId of productsToAdd) {
                 if (prodId && CHEMICAL_REGISTRY[prodId]) {
-                    container.contents[prodId] = (container.contents[prodId] || 0) + reactedVol;
+                    const prodInfo = CHEMICAL_REGISTRY[prodId];
+                    // If product is a gas, maintain trace dissolved presence, remainder vents as VFX
+                    if (prodInfo.type === 'gas' || prodInfo.reactionClass === 'inert') {
+                        container.contents[prodId] = Math.min(4, (container.contents[prodId] || 0) + 2);
+                    } else {
+                        container.contents[prodId] = (container.contents[prodId] || 0) + reactedVol;
+                    }
                 }
             }
+
+            // Recalculate container net liquid/solid volume
+            let netVol = 0;
+            for (const [cId, cVol] of Object.entries(container.contents)) {
+                if (!cId.startsWith('reacted_')) {
+                    netVol += cVol;
+                }
+            }
+            container.volume = Math.min(container.maxVol, Math.round(netVol));
         }
 
         // Color and optic updates
         if (triggeredReaction.productColor) {
             container.color = hexToRgb(triggeredReaction.productColor);
+        } else if (triggeredReaction.precipitateColor) {
+            container.color = hexToRgb(triggeredReaction.precipitateColor);
         } else if (triggeredReaction.product && CHEMICAL_REGISTRY[triggeredReaction.product]) {
             container.color = hexToRgb(CHEMICAL_REGISTRY[triggeredReaction.product].color);
         }
@@ -382,11 +530,21 @@ export const useSimulationStore = create<SimulationState>((set, get) => ({
     isOrganicModeActive: false,
     setOrganicMode: (active: boolean) => set({ isOrganicModeActive: active }),
 
+    // Calculating Mode (Formula Sheet & Grade 8-12 Calculations)
+    isCalculatingModeActive: false,
+    setCalculatingMode: (active: boolean) => set({ isCalculatingModeActive: active }),
+
     // Easter Egg Menu States
     isMenuCracked: false,
     setMenuCracked: (isMenuCracked: boolean) => set({ isMenuCracked }),
     menuEasterEggStage: 0,
     setMenuEasterEggStage: (menuEasterEggStage: number) => set({ menuEasterEggStage }),
+
+    // Active Vessel Selection & Volumetric Dispensing
+    selectedContainerId: null,
+    setSelectedContainerId: (id) => set({ selectedContainerId: id }),
+    dispenseVolume: 20,
+    setDispenseVolume: (dispenseVolume) => set({ dispenseVolume }),
 
     /**
      * Toggles the global Time-Stop parameter, instantaneously halting all WebGL Canvas motion.
@@ -461,7 +619,13 @@ export const useSimulationStore = create<SimulationState>((set, get) => ({
                                   : 'alkali_acid';
                     get().triggerExplosion(c.x + 70, c.y + 100, rxnType);
                 }
-            } else if (effect === 'fizz' || effect === 'bubbles' || effect === 'smoke') {
+            } else if (effect === 'fizz' || effect === 'bubbles') {
+                audioManager.playEffervescence();
+            } else if (effect === 'smoke' || effect === 'steam') {
+                audioManager.playSteamHiss();
+            } else if (effect === 'precipitate') {
+                audioManager.playCrystalPrecipitate();
+            } else {
                 audioManager.playSizzle();
             }
         } catch (err) {
@@ -488,7 +652,7 @@ export const useSimulationStore = create<SimulationState>((set, get) => ({
     },
 
     initialize: () => {
-        set({ containers: [], env: { temp: 25, pressure: 1.0 }, isPaused: false });
+        set({ containers: [], env: { temp: 25, pressure: 1.0 }, isPaused: false, selectedContainerId: null, dispenseVolume: 20 });
         get().spawnContainer('beaker');
     },
 
@@ -519,7 +683,36 @@ export const useSimulationStore = create<SimulationState>((set, get) => ({
             x: startX,
             y: startY
         };
-        set({ containers: [...state.containers, newContainer] });
+        set({ 
+            containers: [...state.containers, newContainer],
+            selectedContainerId: newId 
+        });
+        audioManager.playGlassClink();
+    },
+
+    clearContainer: (id: number) => {
+        set((state) => ({
+            containers: state.containers.map(c => c.id === id ? {
+                ...c,
+                volume: 0,
+                color: { r: 0, g: 0, b: 0 },
+                contents: {},
+                ph: 7.0
+            } : c)
+        }));
+    },
+
+    removeContainer: (id: number) => {
+        set((state) => {
+            const nextContainers = state.containers.filter(c => c.id !== id);
+            const nextSelected = state.selectedContainerId === id
+                ? (nextContainers.length > 0 ? nextContainers[0].id : null)
+                : state.selectedContainerId;
+            return {
+                containers: nextContainers,
+                selectedContainerId: nextSelected
+            };
+        });
     },
 
     updateContainerPosition: (id: number, x: number, y: number) => {
@@ -529,12 +722,13 @@ export const useSimulationStore = create<SimulationState>((set, get) => ({
     },
 
     /**
-     * Physics event: Fires when the user fully executes a drag-and-drop of a solid/liquid onto a target.
+     * Physics event: Fires when the user executes a drag-and-drop or clicks a reagent card onto a target vessel.
      * Evaluates volume limits, triggers RMS blending, and runs the evaluation engine.
      * @param {number} containerId - The target container.
      * @param {string} reagentId - The dropped chemical.
+     * @param {number} [amount] - Optional custom volume to dispense (defaults to state.dispenseVolume || 20).
      */
-    addReagentToContainer: (containerId: number, reagentId: string) => {
+    addReagentToContainer: (containerId: number, reagentId: string, amount?: number) => {
         const state = get();
         const reagent = CHEMICAL_REGISTRY[reagentId];
         if (!reagent) return;
@@ -548,7 +742,7 @@ export const useSimulationStore = create<SimulationState>((set, get) => ({
         // Inert Sludge Protection Check
         if (container.contents['ENTROPY_SLUDGE'] > 0) return; // Prevent any additions
 
-        const addVol = 20;
+        const addVol = amount ?? state.dispenseVolume ?? 20;
 
         if (container.volume >= container.maxVol) {
             console.log("Container is FULL!");
@@ -566,65 +760,57 @@ export const useSimulationStore = create<SimulationState>((set, get) => ({
 
         container.volume += addVol;
         container.contents = { ...container.contents, [reagentId]: (container.contents[reagentId] || 0) + addVol };
+        audioManager.playLiquidPour();
 
-        // Robust pH calculation accounting for acid/base neutralization and dilution
-        let totalMolesH = 0;
-        let totalMolesOH = 0;
-        let totalVol = 0;
-        for (const [id, vol] of Object.entries(container.contents)) {
-            const rg = CHEMICAL_REGISTRY[id];
-            if (!rg) continue;
-            totalVol += vol;
-            if (rg.ph < 7) {
-                totalMolesH += Math.pow(10, -rg.ph) * vol;
-            } else if (rg.ph > 7) {
-                totalMolesOH += Math.pow(10, -(14 - rg.ph)) * vol;
-            } else {
-                totalMolesH += 1e-7 * vol;
-                totalMolesOH += 1e-7 * vol;
-            }
-        }
-        
-        if (totalVol > 0) {
-            if (totalMolesH > totalMolesOH) {
-                const excessH = totalMolesH - totalMolesOH;
-                const excessHConc = excessH / totalVol;
-                container.ph = -Math.log10(Math.max(1e-14, excessHConc));
-            } else if (totalMolesOH > totalMolesH) {
-                const excessOH = totalMolesOH - totalMolesH;
-                const excessOHConc = excessOH / totalVol;
-                const pOH = -Math.log10(Math.max(1e-14, excessOHConc));
-                container.ph = 14 - pOH;
-            } else {
-                container.ph = 7.0;
-            }
-        } else {
-            container.ph = 7.0;
-        }
+        // Recalculate pH based on initial addition
+        recalculateContainerPH(container);
 
         const triggeredReaction = evaluateDynamicReactions(container, [reagentId]);
+        // Re-evaluate container pH if products were formed/reactants consumed
+        if (triggeredReaction) {
+            recalculateContainerPH(container);
+        }
         containers[containerIndex] = container;
 
         if (triggeredReaction && triggeredReaction.requiresPopup) {
             set({
                 containers,
+                selectedContainerId: containerId,
                 pendingReaction: {
                     ...triggeredReaction,
                     containerId
                 }
             });
         } else if (triggeredReaction) {
-            const rxnId = triggeredReaction.reactants ? `rxn_${triggeredReaction.reactants[0]}_${triggeredReaction.reactants[1]}` : `rxn_class_${triggeredReaction.product}`;
-            set({
-                containers,
-                pendingEducationalReaction: {
-                    ...triggeredReaction,
-                    containerId,
-                    rxnId
+            const r0 = triggeredReaction.reactants?.[0] || '';
+            const r1 = triggeredReaction.reactants?.[1] || '';
+            const rxnId = triggeredReaction.reactants ? `rxn_${r0}_${r1}` : `rxn_class_${triggeredReaction.product}`;
+            const altRxnId = triggeredReaction.reactants ? `rxn_${r1}_${r0}` : '';
+            const classRxnId = `rxn_class_${triggeredReaction.product}`;
+
+            let isMuted = false;
+            try {
+                const muted = JSON.parse(localStorage.getItem('chemic_ai_muted_reactions') || '[]');
+                if (muted.includes(rxnId) || (altRxnId && muted.includes(altRxnId)) || muted.includes(classRxnId)) {
+                    isMuted = true;
                 }
-            });
+            } catch (_) {}
+
+            if (!isMuted) {
+                set({
+                    containers,
+                    selectedContainerId: containerId,
+                    pendingEducationalReaction: {
+                        ...triggeredReaction,
+                        containerId,
+                        rxnId
+                    }
+                });
+            } else {
+                set({ containers, selectedContainerId: containerId });
+            }
         } else {
-            set({ containers });
+            set({ containers, selectedContainerId: containerId });
         }
     },
 
@@ -685,43 +871,18 @@ export const useSimulationStore = create<SimulationState>((set, get) => ({
 
         source.volume -= actualPour;
         target.volume += actualPour;
+        if (Math.random() < 0.25) {
+            audioManager.playLiquidPour();
+        }
 
-        // Robust pH calculation accounting for acid/base neutralization and dilution
-        let totalMolesH = 0;
-        let totalMolesOH = 0;
-        let totalVol = 0;
-        for (const [id, vol] of Object.entries(target.contents)) {
-            const rg = CHEMICAL_REGISTRY[id];
-            if (!rg) continue;
-            totalVol += vol;
-            if (rg.ph < 7) {
-                totalMolesH += Math.pow(10, -rg.ph) * vol;
-            } else if (rg.ph > 7) {
-                totalMolesOH += Math.pow(10, -(14 - rg.ph)) * vol;
-            } else {
-                totalMolesH += 1e-7 * vol;
-                totalMolesOH += 1e-7 * vol;
-            }
-        }
-        
-        if (totalVol > 0) {
-            if (totalMolesH > totalMolesOH) {
-                const excessH = totalMolesH - totalMolesOH;
-                const excessHConc = excessH / totalVol;
-                target.ph = -Math.log10(Math.max(1e-14, excessHConc));
-            } else if (totalMolesOH > totalMolesH) {
-                const excessOH = totalMolesOH - totalMolesH;
-                const excessOHConc = excessOH / totalVol;
-                const pOH = -Math.log10(Math.max(1e-14, excessOHConc));
-                target.ph = 14 - pOH;
-            } else {
-                target.ph = 7.0;
-            }
-        } else {
-            target.ph = 7.0;
-        }
+        // Recalculate pH of both vessels
+        recalculateContainerPH(source);
+        recalculateContainerPH(target);
 
         const triggeredReaction = evaluateDynamicReactions(target, Object.keys(source.contents));
+        if (triggeredReaction) {
+            recalculateContainerPH(target);
+        }
 
         containers[sourceIdx] = source;
         containers[targetIdx] = target;

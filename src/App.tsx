@@ -4,7 +4,6 @@ import MainMenu from './ui/MainMenu';
 import LoadingScreen from './ui/LoadingScreen';
 import UIOverlay from './ui/UIOverlay';
 import Commlink from './ui/Commlink';
-import ReactionCodex from './ui/ReactionCodex';
 import ReactionPopup from './ui/ReactionPopup';
 import EducationalInsightModal from './ui/EducationalInsightModal';
 import { useSimulationStore } from './engine/store';
@@ -12,6 +11,7 @@ import { useSimulationStore } from './engine/store';
 import SocraticMode from './ui/SocraticMode';
 import LearningMode from './ui/LearningMode';
 import OrganicMode from './ui/OrganicMode';
+import CalculatingMode from './ui/CalculatingMode';
 
 function App() {
   const initialize = useSimulationStore(state => state.initialize);
@@ -19,6 +19,7 @@ function App() {
   const isSocraticModeActive = useSimulationStore(state => state.isSocraticModeActive);
   const isLearningModeActive = useSimulationStore(state => state.isLearningModeActive);
   const isOrganicModeActive = useSimulationStore(state => state.isOrganicModeActive);
+  const isCalculatingModeActive = useSimulationStore(state => state.isCalculatingModeActive);
 
   useEffect(() => {
     initialize();
@@ -37,7 +38,6 @@ function App() {
           <UIOverlay />
           <ReactionPopup />
           <EducationalInsightModal />
-          <ReactionCodex />
           <Commlink />
         </>
       )}
@@ -50,6 +50,9 @@ function App() {
 
       {/* Organic Chemistry Mode (Wordle Synthesis Overlay) */}
       {isOrganicModeActive && <OrganicMode />}
+
+      {/* Calculating Mode (Formula Sheet & Grade 8-12 Calculation Lab) */}
+      {isCalculatingModeActive && <CalculatingMode />}
 
     </div>
   );

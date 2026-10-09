@@ -65,11 +65,14 @@ const getShells = (totalZ: number) => {
   return shells;
 };
 
+import ChemicalStructureViewer from './components/ChemicalStructureViewer';
+
 const ElementInfoModal: React.FC<Props> = ({ element, onClose, color }) => {
     const rawLanguage = useSimulationStore(state => state.language);
     const isVi = rawLanguage === 'VN' || rawLanguage === 'vi';
     const z = element.atomicNumber || element.number || 1;
     const shells = getShells(z);
+    const [chamberMode, setChamberMode] = React.useState<'bohr' | 'lewis' | 'orbital' | 'insignia'>('bohr');
 
     const displayName = isVi ? (ELEMENT_VI_NAMES[element.name] || element.name) : element.name;
     const displayCat = isVi ? (CATEGORY_VI_NAMES[element.category] || element.category) : element.category;
@@ -91,73 +94,158 @@ const ElementInfoModal: React.FC<Props> = ({ element, onClose, color }) => {
                 className="relative w-full max-w-5xl h-[620px] bg-gradient-to-b from-[#061426]/95 via-[#030914]/95 to-[#01040a]/95 rounded-3xl border-2 flex flex-col md:flex-row overflow-hidden shadow-[0_0_60px_rgba(0,0,0,0.9)] backdrop-blur-3xl cursor-default"
                 style={{ borderColor: color }}
             >
-                {/* Left Side: SVG Bohr Model Holographic Chamber */}
-                <div className="w-full md:w-1/2 h-64 md:h-full border-b md:border-b-0 md:border-r border-cyan-900/40 relative bg-[#020712]/80 overflow-hidden flex flex-col items-center justify-center p-4">
-                    {/* Chamber Header Tag */}
-                    <div className="absolute top-4 left-5 flex items-center gap-2 z-20">
-                        <span 
-                            className="w-2 h-2 rounded-full animate-pulse shadow-[0_0_8px_currentColor]" 
-                            style={{ backgroundColor: color, color }}
-                        />
-                        <span className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider">
-                            {isVi ? `MÔ HÌNH LƯỢNG TỬ (MẪU BOHR) • (Z = ${z})` : `QUANTUM BOHR MODEL • (Z = ${z})`}
-                        </span>
+                {/* Left Side: Specimen Structural Analysis Holographic Chamber */}
+                <div className="w-full md:w-1/2 h-72 md:h-full border-b md:border-b-0 md:border-r border-cyan-900/40 relative bg-[#020712]/80 overflow-hidden flex flex-col items-center justify-between p-4">
+                    {/* Top Mode Navigation Tabs */}
+                    <div className="w-full flex items-center justify-between z-20 gap-1 pb-2 border-b border-cyan-950/60">
+                        <div className="flex items-center gap-1.5 shrink-0">
+                            <span 
+                                className="w-2 h-2 rounded-full animate-pulse shadow-[0_0_8px_currentColor]" 
+                                style={{ backgroundColor: color, color }}
+                            />
+                            <span className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider hidden sm:inline">
+                                #{z} {element.symbol}
+                            </span>
+                        </div>
+
+                        <div className="flex items-center gap-1 bg-[#040e1e]/90 p-1 rounded-xl border border-cyan-900/50 text-[10px] font-mono font-bold">
+                            <button
+                                type="button"
+                                onClick={() => setChamberMode('bohr')}
+                                className={`px-2 py-0.5 rounded-lg transition-all cursor-pointer ${
+                                    chamberMode === 'bohr' 
+                                        ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-400/50 shadow-[0_0_8px_rgba(34,211,238,0.3)]' 
+                                        : 'text-slate-400 hover:text-slate-200'
+                                }`}
+                            >
+                                ⚛️ Bohr
+                            </button>
+                            <button
+                                type="button"
+                                onClick={() => setChamberMode('lewis')}
+                                className={`px-2 py-0.5 rounded-lg transition-all cursor-pointer ${
+                                    chamberMode === 'lewis' 
+                                        ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-400/50 shadow-[0_0_8px_rgba(34,211,238,0.3)]' 
+                                        : 'text-slate-400 hover:text-slate-200'
+                                }`}
+                            >
+                                ⚡ Lewis
+                            </button>
+                            <button
+                                type="button"
+                                onClick={() => setChamberMode('orbital')}
+                                className={`px-2 py-0.5 rounded-lg transition-all cursor-pointer ${
+                                    chamberMode === 'orbital' 
+                                        ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-400/50 shadow-[0_0_8px_rgba(34,211,238,0.3)]' 
+                                        : 'text-slate-400 hover:text-slate-200'
+                                }`}
+                            >
+                                📦 Ô Orbital
+                            </button>
+                            <button
+                                type="button"
+                                onClick={() => setChamberMode('insignia')}
+                                className={`px-2 py-0.5 rounded-lg transition-all cursor-pointer ${
+                                    chamberMode === 'insignia' 
+                                        ? 'bg-amber-500/20 text-amber-300 border border-amber-400/50 shadow-[0_0_8px_rgba(245,158,11,0.3)]' 
+                                        : 'text-slate-400 hover:text-slate-200'
+                                }`}
+                            >
+                                🛡️ Insignia
+                            </button>
+                        </div>
                     </div>
 
-                    {/* SVG Simulation */}
-                    <div className="relative w-full h-full flex items-center justify-center overflow-visible">
-                        <svg viewBox="-500 -500 1000 1000" className="w-full h-full max-w-[420px] max-h-[420px] overflow-visible pointer-events-none drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]">
-                            <circle cx="0" cy="0" r="45" fill={color} />
-                            <circle cx="0" cy="0" r="95" fill={color} opacity="0.18" />
-                            <circle cx="0" cy="0" r="16" fill="#ffffff" />
-                            
-                            {(() => {
-                                const baseRadius = 160;
-                                const maxRadius = 450;
-                                const spacing = shells.length > 1 ? (maxRadius - baseRadius) / (shells.length - 1) : 0;
+                    {/* Dynamic Central Chamber Display */}
+                    <div className="relative w-full flex-1 flex items-center justify-center overflow-visible my-auto">
+                        {chamberMode === 'bohr' && (
+                            <svg viewBox="-500 -500 1000 1000" className="w-full h-full max-w-[380px] max-h-[380px] overflow-visible pointer-events-none drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]">
+                                <circle cx="0" cy="0" r="45" fill={color} />
+                                <circle cx="0" cy="0" r="95" fill={color} opacity="0.18" />
+                                <circle cx="0" cy="0" r="16" fill="#ffffff" />
+                                
+                                {(() => {
+                                    const baseRadius = 160;
+                                    const maxRadius = 450;
+                                    const spacing = shells.length > 1 ? (maxRadius - baseRadius) / (shells.length - 1) : 0;
 
-                                return shells.map((electronCount, i) => {
-                                    const radius = shells.length === 1 ? 280 : baseRadius + (i * spacing);
-                                    const duration = 18 + (i * 4);
-                                    const direction = i % 2 === 0 ? 'normal' : 'reverse';
-                                    
-                                    return (
-                                        <g key={i}>
-                                            <circle 
-                                                cx="0" 
-                                                cy="0" 
-                                                r={radius} 
-                                                fill="none" 
-                                                stroke="rgba(56, 189, 248, 0.25)" 
-                                                strokeWidth="2.5" 
-                                                strokeDasharray={i % 2 === 0 ? "8 4" : "none"}
-                                            />
-                                            
-                                            <g style={{ animation: `spinBohr ${duration}s linear infinite ${direction}`, transformOrigin: '0px 0px', willChange: 'transform' }}>
-                                                {Array.from({ length: electronCount }).map((_, eIdx) => {
-                                                    const angle = (eIdx / electronCount) * Math.PI * 2;
-                                                    const x = Math.cos(angle) * radius;
-                                                    const y = Math.sin(angle) * radius;
-                                                    return (
-                                                        <g key={eIdx}>
-                                                            <circle cx={x} cy={y} r="14" fill="#38bdf8" opacity="0.4" />
-                                                            <circle cx={x} cy={y} r="6" fill="#ffffff" />
-                                                        </g>
-                                                    );
-                                                })}
+                                    return shells.map((electronCount, i) => {
+                                        const radius = shells.length === 1 ? 280 : baseRadius + (i * spacing);
+                                        const duration = 18 + (i * 4);
+                                        const direction = i % 2 === 0 ? 'normal' : 'reverse';
+                                        
+                                        return (
+                                            <g key={i}>
+                                                <circle 
+                                                    cx="0" 
+                                                    cy="0" 
+                                                    r={radius} 
+                                                    fill="none" 
+                                                    stroke="rgba(56, 189, 248, 0.25)" 
+                                                    strokeWidth="2.5" 
+                                                    strokeDasharray={i % 2 === 0 ? "8 4" : "none"}
+                                                />
+                                                
+                                                <g style={{ animation: `spinBohr ${duration}s linear infinite ${direction}`, transformOrigin: '0px 0px', willChange: 'transform' }}>
+                                                    {Array.from({ length: electronCount }).map((_, eIdx) => {
+                                                        const angle = (eIdx / electronCount) * Math.PI * 2;
+                                                        const x = Math.cos(angle) * radius;
+                                                        const y = Math.sin(angle) * radius;
+                                                        return (
+                                                            <g key={eIdx}>
+                                                                <circle cx={x} cy={y} r="14" fill="#38bdf8" opacity="0.4" />
+                                                                <circle cx={x} cy={y} r="6" fill="#ffffff" />
+                                                            </g>
+                                                        );
+                                                    })}
+                                                </g>
                                             </g>
-                                        </g>
-                                    );
-                                });
-                            })()}
-                        </svg>
+                                        );
+                                    });
+                                })()}
+                            </svg>
+                        )}
+
+                        {chamberMode === 'lewis' && (
+                            <ChemicalStructureViewer 
+                                id={element.symbol.toLowerCase()} 
+                                color={color} 
+                                initialMode="lewis" 
+                                allowModeSwitch={false} 
+                                isVi={isVi} 
+                                className="border-0 bg-transparent shadow-none w-full"
+                            />
+                        )}
+
+                        {chamberMode === 'orbital' && (
+                            <ChemicalStructureViewer 
+                                id={element.symbol.toLowerCase()} 
+                                color={color} 
+                                initialMode="electron" 
+                                allowModeSwitch={false} 
+                                isVi={isVi} 
+                                className="border-0 bg-transparent shadow-none w-full"
+                            />
+                        )}
+
+                        {chamberMode === 'insignia' && (
+                            <ChemicalStructureViewer 
+                                id={element.symbol.toLowerCase()} 
+                                color={color} 
+                                initialMode="insignia" 
+                                allowModeSwitch={false} 
+                                isVi={isVi} 
+                                className="border-0 bg-transparent shadow-none w-full"
+                            />
+                        )}
+
                         <style>{`@keyframes spinBohr { 100% { transform: rotate(360deg) translateZ(0); } }`}</style>
                     </div>
 
                     {/* Bottom Shells Pill */}
-                    <div className="absolute bottom-4 left-5 right-5 flex items-center justify-between text-[10px] font-mono text-slate-400 bg-[#040d1a]/80 border border-cyan-950 px-3 py-1.5 rounded-xl">
+                    <div className="w-full flex items-center justify-between text-[10px] font-mono text-slate-400 bg-[#040d1a]/80 border border-cyan-950 px-3 py-1.5 rounded-xl z-10">
                         <span>{isVi ? `Tổng electron: ${z} e⁻` : `Total Electrons: ${z} e⁻`}</span>
-                        <span className="text-cyan-300 font-bold">{shells.length} {isVi ? 'Lớp orbital' : 'Shells'}</span>
+                        <span className="text-cyan-300 font-bold">{shells.length} {isVi ? 'Lớp orbital (Bohr Shells)' : 'Shells'}</span>
                     </div>
 
                     {/* Cyber Grid Background Pattern */}
